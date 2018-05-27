@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+
+
+    <div class="info">
+        <div style="margin:12px 0px;padding:12px 0;background: #eeeeee">
+                <span class="layui-breadcrumb" style="padding:0  12px;">
+                    <a href="">首页</a>
+                    <a href="">国际新闻</a>
+                    <a href="">亚太地区</a>
+                    <a><cite>正文</cite></a>
+                </span>
+        </div>
+        <div style="border: #00F7DE 1px solid">
+            <div style="background: #00F7DE ;padding: 12px;">
+                <span>日程管理</span>
+                <span style="float: right;padding-right: 20px;">
+                        <a href="#" class="layui-btn layui-btn-sm" style="margin-top: -5px">蜜汁</a>
+                    </span>
+            </div>
+
+            <table class="layui-table">
+                <colgroup>
+                    <col width="150">
+                    <col width="200">
+                    <col width="250">
+                    <col>
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>昵称</th>
+                    <th>加入时间</th>
+                    <th>签名</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+
+
+                <tr class="oneMsg"><!--vue只能对第一个有反应，第二个好像是获取不到的-->
+                    <td><input type="text" value="贤心" readonly="readonly" class="inputs layui-input"/></td>
+                    <td><input type="text" value="2016-11-29" readonly="readonly" class="inputs layui-input"/></td>
+                    <td><input type="text" value="人生就像是一场修行" readonly="readonly" class="inputs layui-input"/></td>
+                    <td>
+                        <a href="#" class="layui-btn layui-btn-sm">删除</a>
+                        <a href="#" class="layui-btn layui-btn-sm change" onclick="change(this)">修改</a>
+
+                    </td>
+                </tr>
+                <tr class="oneMsg"><!--vue只能对第一个有反应，第二个好像是获取不到的-->
+                    <td><input type="text" value="贤心" readonly="readonly" class="inputs layui-input"/></td>
+                    <td><input type="text" value="2016-11-29" readonly="readonly" class="inputs layui-input"/></td>
+                    <td><input type="text" value="人生就像是一场修行" readonly="readonly" class="inputs layui-input"/></td>
+                    <td>
+                        <a href="#" class="layui-btn layui-btn-sm">删除</a>
+                        <a href="#" class="layui-btn layui-btn-sm change" onclick="change(this)">修改</a>
+
+                    </td>
+                </tr>
+                </tbody>
+
+            </table>
+            <div style="margin:12px;">
+                <span>显示1/100条数据</span>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

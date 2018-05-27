@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.officeAuto.ssm.dao.system.ActfileDao" >
+    <select id="findByPage" resultType="com.officeAuto.ssm.model.Actfile">
+        select * from Actfile limit ${(currentPage-1)*pageSize},${(currentPage-1)*pageSize-1+pageSize}
+    </select>
+
+    <select id="findCount" resultType="java.lang.Integer">
+        select count(*) from Actfile
+    </select>
+
+    <select id="findById" resultType="com.officeAuto.ssm.model.Actfile">
+        select * from Actfile where uuid=#{id}
+    </select>
+
+    <select id="findByPageQuery" parameterType="com.officeAuto.ssm.model.ActfileQueryModel" resultType="com.officeAuto.ssm.model.Actfile">
+        select * from Actfile
+        <if test="paraMap!=null">
+            <where>
+                uuid between
+                <foreach collection="paraMap" item="item" separator="and">
+                    <if test="item.queryAcount1">
+                        ${item.queryAcount1}
+                    </if>
+                    <if test="item.queryAcount2">
+                        and ${item.queryAcount2}
+                    </if>
+                </foreach>
+            </where>
+        </if>
+
+    </select>
+
+
+    <delete id="deleteById" parameterType="java.lang.Integer" >
+        DELETE FROM Actfile WHERE uuid=#{id};
+    </delete>
+
+
+    <delete id="delete">
+        delete from Actfile where uuid in
+        <foreach collection="ids" index="index" item="item" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+    </delete>
+
+    <insert id="insert" parameterType="com.officeAuto.ssm.model.Actfile">
+        insert into Actfile
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="uuid != null" >
+                uuid,
+            </if>
+            <if test="path != null" >
+                path,
+            </if>
+            <if test="name != null" >
+                name,
+            </if>
+            <if test="format!= null" >
+                format,
+            </if>
+            <if test="size!= null" >
+                size,
+            </if>
+            <if test="createtime != null" >
+                createtime,
+            </if>
+            <if test="activity != null" >
+                activity,
+            </if>
+            <if test="employee != null" >
+                employee,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="uuid != null" >
+                #{uuid,jdbcType=INTEGER},
+            </if>
+            <if test="path != null" >
+                #{path,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null" >
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="format != null" >
+                #{format,jdbcType=VARCHAR},
+            </if>
+            <if test="size != null" >
+                #{size,jdbcType=INTEGER},
+            </if>
+            <if test="createtime != null" >
+                #{createtime,jdbcType=DATE},
+            </if>
+            <if test="activity != null" >
+                #{activity,jdbcType=INTEGER},
+            </if>
+            <if test="employee != null" >
+                #{employee,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="update" parameterType="com.officeAuto.ssm.model.Actfile">
+
+        update Actfile
+        <set >
+            <if test="path != null" >
+                createtime = #{path,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null" >
+                title = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="format!= null" >
+                dept = #{format,jdbcType=VARCHAR},
+            </if>
+            <if test="size != null" >
+                employee = #{size,jdbcType=INTEGER},
+            </if>
+            <if test="createtime != null" >
+                descript = #{createtime,jdbcType=DATE},
+            </if>
+            <if test="activity != null" >
+                descript = #{activity,jdbcType=INTEGER},
+            </if>
+            <if test="employee != null" >
+                descript = #{employee,jdbcType=INTEGER},
+            </if>
+        </set>
+        where uuid = #{uuid,jdbcType=INTEGER}
+    </update>
+    
+</mapper>

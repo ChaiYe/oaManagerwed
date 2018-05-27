@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../js/jquery-1.11.1.min.js"></script>
+    <script src="../../js/vue.js"></script>
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <script src="../../layui/layui.js"></script>
+    <link rel="stylesheet" href="../../css/homepageGrid.css">
+    <script src="../../js/homepageGrid.js"></script>
+    <script src="../../js/popup.js"></script>
+    <script src="../../js/page.js"></script>
+    <link rel="stylesheet" href="../../css/leftBox/frame.css">
+    <link rel="stylesheet" href="../../css/leftBox/tableAndAdd.css">
+    <link rel="stylesheet" href="../../css/leftBox/add.css">
+    <link rel="stylesheet" href="../../css/leftBox/table.css">
+    <link rel="stylesheet" href="../../css/pageMenu.css">
+    <script src="../../ckeditor/ckeditor.js"></script>
+    <script src="../../ckeditor/config.js"></script>
+    <script src="../../js/modify.js"></script>
+    <script type="text/javascript">
+        $(function (){
+            $(".parent").next().hide();
+            $(".parent").click(function(){
+                $(this).toggleClass("selected");
+                $(this).siblings().not(".parent").not(":first-child").hide();
+                $(this).next().show();
+            });
+        })
+    </script>
+</head>
+<body>
+<div>
+
+
+    <div class="info">
+        <div class="crumbs-nav">
+                <span class="layui-breadcrumb">
+                    <a href="">人事管理</a>
+                    <span>/</span>
+                    <a><cite>员工管理</cite></a>
+                </span>
+        </div>
+        <div style="border: #009688 1px solid">
+            <div class="panel-header">
+                <span class="panel-header-left">员工管理</span>
+                <span class="panel-header-right">
+                        <a href="#" class="layui-btn layui-btn-sm panel-header-right-btn">添加</a>
+                    </span>
+            </div>
+            <div class="content-page">
+
+                <div style="margin-top: 24px">
+                    <div style="display: inline;">
+                        <div style="display: inline;">每页显示条数：<input type="text"/></div>
+                    </div>
+                    <div style="display: inline;float: right">
+                        <div style="display: inline;">筛选：<input type="text"/></div>
+                    </div>
+                </div>
+
+
+                <table class="layui-table">
+
+                    <!--<thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>姓名</th>
+                        <th>性别</th>
+                        <th>住址</th>
+                        <th>电话</th>
+                        <th>邮件</th>
+                        <th>图片</th>
+                        <th>启用</th>
+                        <th>创建时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <div class="layui-collapse" lay-accordion>
+
+                        <div class="layui-colla-item">
+                            <h2 class="layui-colla-title">李清照</h2>
+                            <div class="layui-colla-content layui-show">内容区域</div>
+                        </div>
+                        <div class="layui-colla-item">
+                            <h2 class="layui-colla-title">鲁迅</h2>
+                            <div class="layui-colla-content layui-show">内容区域</div>
+                        </div>
+                    </div>
+                    <tr class="oneMsg">
+                        <div class="layui-collapse" lay-accordion>
+                            <td class="layui-colla-item">
+                                <input type="text" value="贤心" readonly="readonly" class="inputs layui-input layui-colla-title"/>
+                                <div layui-colla-content layui-show>
+
+                                </div>
+                            </td>
+                            <td><input type="text" value="2016-11-29" readonly="readonly" class="inputs layui-input"/></td>
+                            <td><input type="text" value="人生就像是一场修行" readonly="readonly" class="inputs layui-input"/></td>
+                            <td>
+                                <a href="#" class="layui-btn layui-btn-sm">删除</a>
+                                <a href="#" class="layui-btn layui-btn-sm change" onclick="change(this)">修改</a>
+
+                            </td>
+                        </div>
+                    </tr>
+
+                    </tbody>
+-->
+                    <tr><th>姓名</th><th>性别</th><th>暂住地</th><th>操作</th></tr>
+                    <tr class="parent" id="row_01">
+                        <td>张山</td><td>男</td><td>浙江宁波</td>
+                        <td>
+                            <a href="#" class="layui-btn layui-btn-sm">删除</a>
+                            <a href="#" class="layui-btn layui-btn-sm change">修改</a>
+
+                        </td>
+                    </tr>
+                    <tr class="child_row_01"><td colspan="4" align="center">名问你问恩额玩儿网二二维无沃尔沃</td></tr>
+
+                    <tr class="parent" id="row_01">
+                        <td>张山</td><td>男</td><td>浙江宁波</td>
+                        <td>
+                            <a href="#" class="layui-btn layui-btn-sm">删除</a>
+                            <a href="#" class="layui-btn layui-btn-sm change">修改</a>
+
+                        </td>
+                    </tr>
+                    <tr class="child_row_01"><td colspan="4" align="center">名问你问恩额玩儿网二二维无沃尔沃</td></tr>
+
+
+
+
+
+                </table>
+                <div class="pageBox1">
+                    <ul class="pageDiv clearfix">
+
+                    </ul>
+                    <div class="notContent hide">
+                        无数据
+                    </div>
+                    <div class="page">
+
+
+
+                        <ul class="pageMenu clearfix">
+                            <li class="firstPage">首页</li>
+                            <li class="prevPage"> < </li>
+                            <div class="pageObj clearfix">
+
+                            </div>
+                            <li class="nextPage"> > </li>
+                            <li class="lastPage">尾页</li>
+                            <li class="last" style="font-size: 14px;">
+                                共<span class="totalPage"></span>页，跳转至 <input type="number" class="keuInput" value="1">
+                                <button type="button" class="btnSure">确定</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</div>
+</body>
+</html>
