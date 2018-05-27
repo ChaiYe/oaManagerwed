@@ -1,0 +1,17 @@
+.panel-window{
+    border: #009688 1px solid;
+}
+.panel-header-right{
+    float: right;padding-right: 20px;
+}
+.panel-header-left{
+
+}
+.panel-header-right-btn{
+    margin-top: -5px;
+}
+.content-page{
+    width: 98%;
+    margin: 0 auto;
+}
+

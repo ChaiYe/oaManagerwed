@@ -22,7 +22,12 @@ public class UserServiceImpl implements UserService {
     public User getUserById(Long userId) {
         return userDao.selectUserById(userId);
     }
-    
+
+    @Override
+    public void delete(Long userID) {
+        userDao.deleteUser(userID);
+    }
+
     public User getUserByPhoneOrEmail(String emailOrPhone, Short state) {
         return userDao.selectUserByPhoneOrEmail(emailOrPhone,state);
     }

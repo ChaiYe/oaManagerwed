@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.officeAuto.ssm.dao.system.ActoptionDao" >
+
+
+    <select id="findByPage" resultType="com.officeAuto.ssm.model.Actoption">
+        select * from Actoption limit ${(currentPage-1)*pageSize},${(currentPage-1)*pageSize-1+pageSize}
+    </select>
+
+    <select id="findCount" resultType="java.lang.Integer">
+        select count(*) from Actoption
+    </select>
+
+    <select id="findById" resultType="com.officeAuto.ssm.model.Actoption">
+        select * from Actoption where uuid=#{id}
+    </select>
+
+    <select id="findByPageQuery" parameterType="com.officeAuto.ssm.model.ActoptionQueryModel" resultType="com.officeAuto.ssm.model.Actoption">
+        select * from Actoption
+        <if test="paraMap!=null">
+            <where>
+                uuid between
+                <foreach collection="paraMap" item="item" separator="and">
+                    <if test="item.queryAcount1">
+                        ${item.queryAcount1}
+                    </if>
+                    <if test="item.queryAcount2">
+                        and ${item.queryAcount2}
+                    </if>
+                </foreach>
+            </where>
+        </if>
+
+    </select>
+
+
+    <delete id="deleteById" parameterType="java.lang.Integer" >
+        DELETE FROM Actoption WHERE uuid=#{id};
+    </delete>
+
+
+    <delete id="delete">
+        delete from Actoption where uuid in
+        <foreach collection="ids" index="index" item="item" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+    </delete>
+
+    <insert id="insert" parameterType="com.officeAuto.ssm.model.Actoption">
+        insert into actoption
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="uuid != null" >
+                uuid,
+            </if>
+            <if test="descript != null" >
+                descript,
+            </if>
+            <if test="num != null" >
+                num,
+            </if>
+            <if test="activity != null" >
+                activity,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="uuid != null" >
+                #{uuid,jdbcType=INTEGER},
+            </if>
+            <if test="descript != null" >
+                #{descript,jdbcType=VARCHAR},
+            </if>
+            <if test="num != null" >
+                #{num,jdbcType=INTEGER},
+            </if>
+            <if test="activity != null" >
+                #{activity,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="update" parameterType="com.officeAuto.ssm.model.Actoption">
+        update actoption
+        set descript = #{descript,jdbcType=VARCHAR},
+        num = #{num,jdbcType=INTEGER},
+        activity = #{activity,jdbcType=INTEGER}
+        where uuid = #{uuid,jdbcType=INTEGER}
+    </update>
+
+    
+</mapper>

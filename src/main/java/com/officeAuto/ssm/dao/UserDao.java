@@ -16,4 +16,6 @@ public interface UserDao {
     List<User> selectAllUser();
 
     void insertUser(User user);
+
+    void deleteUser(Long userId);
 }

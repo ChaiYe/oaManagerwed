@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.officeAuto.ssm.dao.system.ActivityDao" >
+    <select id="findByPage" resultType="com.officeAuto.ssm.model.Activity">
+        select * from Activity limit ${(currentPage-1)*pageSize},${(currentPage-1)*pageSize-1+pageSize}
+    </select>
+
+    <select id="findCount" resultType="java.lang.Integer">
+        select count(*) from Activity
+    </select>
+
+    <select id="findById" resultType="com.officeAuto.ssm.model.Activity">
+        select * from Activity where uuid=#{id}
+    </select>
+
+    <select id="findByPageQuery" parameterType="com.officeAuto.ssm.model.ActivityQueryModel" resultType="com.officeAuto.ssm.model.Activity">
+        select * from Activity
+        <if test="paraMap!=null">
+            <where>
+                uuid between
+                <foreach collection="paraMap" item="item" separator="and">
+                    <if test="item.queryAcount1">
+                        ${item.queryAcount1}
+                    </if>
+                    <if test="item.queryAcount2">
+                        and ${item.queryAcount2}
+                    </if>
+                </foreach>
+            </where>
+        </if>
+
+    </select>
+
+
+    <delete id="deleteById" parameterType="java.lang.Integer" >
+        DELETE FROM Activity WHERE uuid=#{id};
+    </delete>
+
+
+    <delete id="delete">
+        delete from Activity where uuid in
+        <foreach collection="ids" index="index" item="item" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+    </delete>
+
+    <insert id="insert" parameterType="com.officeAuto.ssm.model.Activity">
+        insert into activity
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="uuid != null" >
+                uuid,
+            </if>
+            <if test="name != null" >
+                name,
+            </if>
+            <if test="begintime != null" >
+                begintime,
+            </if>
+            <if test="endtime != null" >
+                endtime,
+            </if>
+            <if test="state != null" >
+                state,
+            </if>
+            <if test="dept != null" >
+                dept,
+            </if>
+            <if test="employee != null" >
+                employee,
+            </if>
+            <if test="descript != null" >
+                descript,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="uuid != null" >
+                #{uuid,jdbcType=INTEGER},
+            </if>
+            <if test="name != null" >
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="begintime != null" >
+                #{begintime,jdbcType=DATE},
+            </if>
+            <if test="endtime != null" >
+                #{endtime,jdbcType=DATE},
+            </if>
+            <if test="state != null" >
+                #{state,jdbcType=INTEGER},
+            </if>
+            <if test="dept != null" >
+                #{dept,jdbcType=INTEGER},
+            </if>
+            <if test="employee != null" >
+                #{employee,jdbcType=INTEGER},
+            </if>
+            <if test="descript != null" >
+                #{descript,jdbcType=LONGVARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="update" parameterType="com.officeAuto.ssm.model.Activity">
+        update activity
+        set name = #{name,jdbcType=VARCHAR},
+        descript=#{descript,jdbcType=LONGVARCHAR},
+        begintime = #{begintime,jdbcType=DATE},
+        endtime = #{endtime,jdbcType=DATE},
+        state = #{state,jdbcType=INTEGER},
+        dept = #{dept,jdbcType=INTEGER},
+        employee = #{employee,jdbcType=INTEGER}
+        where uuid = #{uuid,jdbcType=INTEGER}
+    </update>
+    
+</mapper>

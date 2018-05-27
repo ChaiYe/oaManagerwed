@@ -14,6 +14,21 @@
     <!--扫描到有@Component @Controller@Service等这些注解的类，则把这些类注册为<bean>-->
     <context:component-scan base-package="com.officeAuto.ssm.controller"/>
 
+    <bean
+            class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+        <property name="order" value="1" />
+
+        <property name="defaultViews">
+            <list>
+                <!-- JSON View -->
+                <bean
+                        class="org.springframework.web.servlet.view.json.MappingJackson2JsonView">
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+
     <!--避免IE执行AJAX时，返回JSON出现下载文件 -->
     <bean id="mappingJacksonHttpMessageConverter"
           class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
@@ -30,8 +45,10 @@
                 <ref bean="mappingJacksonHttpMessageConverter"/> <!-- JSON转换器 -->
             </list>
         </property>
+        <property name="webBindingInitializer" ref="customBinder"></property>
     </bean>
-
+    <!--统一异常处理器-->
+    <bean class="com.officeAuto.ssm.exception.AnnounceExceptionResolver"></bean>
 
     <!-- 定义跳转的文件的前后缀 ，视图模式配置 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -48,4 +65,32 @@
         <!-- 内存中的最大值 -->
         <property name="maxInMemorySize" value="4096"/>
     </bean>
+
+
+    <!-- 自定义webBinder -->
+    <bean id="customBinder"
+          class="org.springframework.web.bind.support.ConfigurableWebBindingInitializer">
+        <property name="conversionService" ref="conversionService" />
+    </bean>
+    <!-- conversionService -->
+    <bean id="conversionService"
+          class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <!-- 转换器 -->
+        <property name="converters">
+            <list>
+                <!--日期类型转换器-->
+                <bean class="com.officeAuto.ssm.utils.DateConverter"/>
+            </list>
+        </property>
+    </bean>
+
+
+    <!-- 拦截器 -->
+    <mvc:interceptors>
+        <!-- 多个拦截器，顺序执行 -->
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.officeAuto.ssm.controller.interceptor.HandlerInterceptor1"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.officeAuto.ssm.dao.system.EmployeeinfoDao" >
+
+
+  <select id="findByPage" resultType="com.officeAuto.ssm.model.Dept">
+      select * from dept limit ${(currentPage-1)*pageSize},${(currentPage-1)*pageSize-1+pageSize}
+  </select>
+
+    <select id="findCount" resultType="java.lang.Integer">
+        select count(*) from dept
+    </select>
+
+    <select id="findById" resultType="com.officeAuto.ssm.model.Dept">
+        select * from dept where uuid=#{id}
+    </select>
+
+    
+</mapper>

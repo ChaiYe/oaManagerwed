@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.officeAuto.ssm.dao.system.ActvoteDao" >
+
+
+    <select id="findByPage" resultType="com.officeAuto.ssm.model.Actvote">
+        select * from Actvote limit ${(currentPage-1)*pageSize},${(currentPage-1)*pageSize-1+pageSize}
+    </select>
+
+    <select id="findCount" resultType="java.lang.Integer">
+        select count(*) from Actvote
+    </select>
+
+    <select id="findById" resultType="com.officeAuto.ssm.model.Actvote">
+        select * from Actvote where uuid=#{id}
+    </select>
+
+    <select id="findByPageQuery" parameterType="com.officeAuto.ssm.model.ActvoteQueryModel" resultType="com.officeAuto.ssm.model.Actvote">
+        select * from Actvote
+        <if test="paraMap!=null">
+            <where>
+                uuid between
+                <foreach collection="paraMap" item="item" separator="and">
+                    <if test="item.queryAcount1">
+                        ${item.queryAcount1}
+                    </if>
+                    <if test="item.queryAcount2">
+                        and ${item.queryAcount2}
+                    </if>
+                </foreach>
+            </where>
+        </if>
+
+    </select>
+
+
+    <delete id="deleteById" parameterType="java.lang.Integer" >
+        DELETE FROM Actvote WHERE uuid=#{id};
+    </delete>
+
+
+    <delete id="delete">
+        delete from Actvote where uuid in
+        <foreach collection="ids" index="index" item="item" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+    </delete>
+
+    <insert id="insert" parameterType="com.officeAuto.ssm.model.Actvote">
+        insert into actvote
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="uuid != null" >
+                uuid,
+            </if>
+            <if test="votetime != null" >
+                votetime,
+            </if>
+            <if test="actoption != null" >
+                actoption,
+            </if>
+            <if test="employee != null" >
+                employee,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="uuid != null" >
+                #{uuid,jdbcType=INTEGER},
+            </if>
+            <if test="votetime != null" >
+                #{votetime,jdbcType=DATE},
+            </if>
+            <if test="actoption != null" >
+                #{actoption,jdbcType=INTEGER},
+            </if>
+            <if test="employee != null" >
+                #{employee,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="update" parameterType="com.officeAuto.ssm.model.Actvote">
+
+        update actvote
+        <set >
+            <if test="votetime != null" >
+                votetime = #{votetime,jdbcType=DATE},
+            </if>
+            <if test="actoption != null" >
+                actoption = #{actoption,jdbcType=INTEGER},
+            </if>
+            <if test="employee != null" >
+                employee = #{employee,jdbcType=INTEGER},
+            </if>
+        </set>
+        where uuid = #{uuid,jdbcType=INTEGER}
+    </update>
+    
+</mapper>
