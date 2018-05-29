@@ -117,7 +117,7 @@ public class EmployeeController {
     @RequestMapping("/getEmployeeByPage")
     public String listPage(Integer currentPage,Model model) throws Exception
     {
-        PageBean<Employee> EmployeePageBean= new PageBean<Employee>();
+        PageBean<Employee> EmployeePageBean = new PageBean<Employee>();
         if(currentPage!=null)
         {
             EmployeePageBean.setCurrentPage(currentPage);
@@ -205,17 +205,15 @@ public class EmployeeController {
             delitems[i]=Integer.parseInt(str[i]);
         }
 
-
-
         EmployeeService.delete(delitems);
         return "redirect:/Employee/getEmployeeByPage.action";
     }
 
 
     @RequestMapping("/login")
-    public  String login(HttpServletRequest request,String account,String password, Model model,HttpSession session) throws  Exception
+    public  String login(String account, String password, HttpSession session)
     {
-        Employee employee=employeeService.login(account,password);
+        Employee employee = employeeService.login(account,password);
 
         if(employee==null){
             return "login";

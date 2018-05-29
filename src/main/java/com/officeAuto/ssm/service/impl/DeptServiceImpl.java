@@ -1,11 +1,8 @@
 package com.officeAuto.ssm.service.impl;
 
-import com.officeAuto.ssm.dao.EmployeeMapper;
-import com.officeAuto.ssm.dao.system.DeptDao;
 import com.officeAuto.ssm.dao.system.DeptDao;
 import com.officeAuto.ssm.model.Dept;
 import com.officeAuto.ssm.model.DeptQueryModel;
-import com.officeAuto.ssm.model.Dept;
 import com.officeAuto.ssm.service.DeptService;
 import com.officeAuto.ssm.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;

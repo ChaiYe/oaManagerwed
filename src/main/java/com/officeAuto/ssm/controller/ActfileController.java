@@ -11,8 +11,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
-
-
 import java.io.File;
 import java.util.Date;
 import java.util.HashMap;
@@ -65,7 +63,7 @@ public class ActfileController {
         Actfile actfile=new Actfile();
         if(file!=null && file.getOriginalFilename()!=null && file.getOriginalFilename().length()>0){
             //图片上传成功后，将图片的地址写到数据库
-            String filePath = "H:\\OAstorage\\";
+            String filePath = "D:\\OAstorage\\";
             //上传文件原始名称
             String originalFilename = file.getOriginalFilename();
             //获取上传文件的大小

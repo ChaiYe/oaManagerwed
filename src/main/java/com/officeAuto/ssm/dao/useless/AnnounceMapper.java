@@ -1,4 +1,4 @@
-package com.officeAuto.ssm.dao;
+package com.officeAuto.ssm.dao.useless;
 
 import com.officeAuto.ssm.model.Announce;
 import com.officeAuto.ssm.model.AnnounceExample;

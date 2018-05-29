@@ -1,4 +1,4 @@
-package com.officeAuto.ssm.dao;
+package com.officeAuto.ssm.dao.useless;
 
 import com.officeAuto.ssm.model.Activity;
 import com.officeAuto.ssm.model.ActivityExample;

@@ -19,7 +19,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     private EmployeeDao employeeDao;
 
     @Override
-    public Employee findById(Serializable id)  throws Exception{
+    public Employee findById(Serializable id) throws Exception{
 
         Employee employee=employeeDao.findById(id);
         if(employee==null)

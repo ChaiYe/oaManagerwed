@@ -1,8 +1,7 @@
 package com.officeAuto.ssm.service.impl;
 
-import com.officeAuto.ssm.dao.UserDao;
+import com.officeAuto.ssm.dao.useless.UserDao;
 import com.officeAuto.ssm.model.User;
-import com.officeAuto.ssm.service.UserService;
 import com.officeAuto.ssm.service.UserService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

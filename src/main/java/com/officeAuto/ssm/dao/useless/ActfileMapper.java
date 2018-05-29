@@ -1,4 +1,4 @@
-package com.officeAuto.ssm.dao;
+package com.officeAuto.ssm.dao.useless;
 
 import com.officeAuto.ssm.model.Actfile;
 import com.officeAuto.ssm.model.ActfileExample;

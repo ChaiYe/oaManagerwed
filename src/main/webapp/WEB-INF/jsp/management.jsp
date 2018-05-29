@@ -14,9 +14,6 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title></title>
 
-
-
-
     <script src="../js/jquery-1.11.1.min.js"></script>
     <script src="../js/vue.js"></script>
     <link rel="stylesheet" href="../layui/css/layui.css">
@@ -117,8 +114,6 @@
             <li class="layui-nav-item" style="float: right">
                 <a href=""><img src="http://t.cn/RCzsdCq" class="layui-nav-img">${sessionScope.employee.account}</a>
 
-
-
                 <dl class="layui-nav-child">
                     <dd><a href="javascript:;">个人主页</a></dd>
                     <dd><a href="javascript:;">退出</a></dd>
@@ -185,14 +180,6 @@
     </div>
 
 </div>
-
-
-
-
-
-
-
-
 </body>
 
 <script>

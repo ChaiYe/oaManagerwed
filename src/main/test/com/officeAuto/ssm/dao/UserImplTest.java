@@ -3,6 +3,8 @@ package com.officeAuto.ssm.dao;
 import com.officeAuto.ssm.dao.system.ActivityDao;
 import com.officeAuto.ssm.dao.system.AnnounceDao;
 import com.officeAuto.ssm.dao.system.DeptDao;
+import com.officeAuto.ssm.dao.useless.ActoptionMapper;
+import com.officeAuto.ssm.dao.useless.EmployeeMapper;
 import com.officeAuto.ssm.model.*;
 import com.officeAuto.ssm.utils.PageBean;
 import org.junit.Before;
@@ -10,10 +12,8 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class UserImplTest {
 

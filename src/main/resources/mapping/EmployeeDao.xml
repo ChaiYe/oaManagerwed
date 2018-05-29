@@ -15,8 +15,6 @@
         select * from employee where uuid=#{id}
     </select>
 
-
-
     <select id="findByActAndPwd" resultType="com.officeAuto.ssm.model.Employee">
         select * from employee where account=#{account} and password=#{password}
     </select>
@@ -34,11 +32,10 @@
     </delete>
 
     <insert id="insert" parameterType="com.officeAuto.ssm.model.Employee">
-            insert into employee (uuid, account, password,
-      state, createtime)
-    values (#{uuid,jdbcType=INTEGER}, #{account,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
-      #{state,jdbcType=VARCHAR}, #{createtime,jdbcType=DATE})
-  </insert>
+        insert into employee (uuid, account, password, state, createtime)
+        values (#{uuid,jdbcType=INTEGER}, #{account,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
+          #{state,jdbcType=VARCHAR}, #{createtime,jdbcType=DATE})
+    </insert>
     <insert id="insertSelective" parameterType="com.officeAuto.ssm.model.Employee" >
         insert into employee
         <trim prefix="(" suffix=")" suffixOverrides="," >

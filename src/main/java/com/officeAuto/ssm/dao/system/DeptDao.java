@@ -10,7 +10,6 @@ import java.util.List;
 @Repository
 public interface DeptDao extends BaseDao<Dept> {
 
-    public List<Dept> findByPage(PageBean<Dept> pageBean);
-
+    List<Dept> findByPage(PageBean<Dept> pageBean);
 
 }

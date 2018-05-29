@@ -1,4 +1,4 @@
-package com.officeAuto.ssm.dao;
+package com.officeAuto.ssm.dao.useless;
 
 import com.officeAuto.ssm.model.Job;
 import com.officeAuto.ssm.model.JobExample;

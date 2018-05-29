@@ -10,4 +10,5 @@ import org.springframework.stereotype.Repository;
 public interface EmployeeDao extends BaseDao<Employee> {
 
     Employee findByActAndPwd(@Param("account")String account, @Param("password")String password);
+
 }

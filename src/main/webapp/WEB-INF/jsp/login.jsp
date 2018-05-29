@@ -64,10 +64,7 @@
 </head>
 <body>
 <div class="login shadow login_panel">
-    <form id="app" class="layui-form layui-form-pane" action="${pageContext.request.contextPath}/employee/login.action" method="post"
-
-          <%--@submit="checkForm"--%>
-    >
+    <form id="app" class="layui-form layui-form-pane" action="${pageContext.request.contextPath}/employee/login.action" method="post" <%--@submit="checkForm"--%>>
 
         <div class="layui-form-item" id="welcome_div">
             <h2 id="welcome">欢迎登录</h2>
@@ -102,9 +99,9 @@
         </div>
 
         <div>
-				  	<span>
-				  		<input type="submit" value="登录" class="layui-btn layui-btn-fluid"/>
-				  	</span>
+            <span>
+                <input type="submit" value="登录" class="layui-btn layui-btn-fluid"/>
+            </span>
         </div>
     </form>
 </div>
