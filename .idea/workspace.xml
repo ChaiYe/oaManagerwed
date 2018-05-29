@@ -7,21 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bc6e281-01c3-4673-8e4b-0cb9b0897242" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/../oaManagerwed/.idea/vcs.xml" />
-      <change beforePath="$PROJECT_DIR$/../oaManagerwed/.idea/artifacts/oaManagerwed_war.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../oaManagerwed/.idea/artifacts/oaManagerwed_war_exploded.xml" afterPath="$PROJECT_DIR$/../oaManagerwed/.idea/artifacts/oaManagerwed_war_exploded.xml" />
-      <change beforePath="$PROJECT_DIR$/../oaManagerwed/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../oaManagerwed/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../oaManagerwed/logs/ssm.log" afterPath="$PROJECT_DIR$/../oaManagerwed/logs/ssm.log" />
-      <change beforePath="$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/controller/UserController.java" afterPath="$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/controller/UserController.java" />
-      <change beforePath="$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/dao/UserDao.java" afterPath="$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/dao/UserDao.java" />
-      <change beforePath="$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/service/UserService.java" afterPath="$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/service/UserService.java" />
-      <change beforePath="$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/service/impl/UserServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/../oaManagerwed/src/main/resources/jdbc.properties" afterPath="$PROJECT_DIR$/../oaManagerwed/src/main/resources/jdbc.properties" />
-      <change beforePath="$PROJECT_DIR$/../oaManagerwed/src/main/resources/log4j.properties" afterPath="$PROJECT_DIR$/../oaManagerwed/src/main/resources/log4j.properties" />
-      <change beforePath="$PROJECT_DIR$/../oaManagerwed/src/main/resources/mapping/UserMapper.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../oaManagerwed/src/main/resources/spring-mvc.xml" afterPath="$PROJECT_DIR$/../oaManagerwed/src/main/resources/spring-mvc.xml" />
-      <change beforePath="$PROJECT_DIR$/../oaManagerwed/src/main/resources/spring-mybatis.xml" afterPath="$PROJECT_DIR$/../oaManagerwed/src/main/resources/spring-mybatis.xml" />
-      <change beforePath="$PROJECT_DIR$/../oaManagerwed/src/main/test/com/officeAuto/ssm/dao/UserImplTest.java" afterPath="$PROJECT_DIR$/../oaManagerwed/src/main/test/com/officeAuto/ssm/dao/UserImplTest.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/oaManagerwed_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/oaManagerwed_war_exploded.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/oaManagerwed.iml" afterPath="$PROJECT_DIR$/oaManagerwed.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,80 +25,7 @@
     <option name="HIDE_WARNINGS" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="525">
-      <file leaf-file-name="ActfileController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/controller/ActfileController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5720">
-              <caret line="162" column="1" lean-forward="false" selection-start-line="162" selection-start-column="1" selection-end-line="162" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthInterceptor.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/utils/AuthInterceptor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="2" column="37" lean-forward="true" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DateConverter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/utils/DateConverter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" column="44" lean-forward="false" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activityInfo.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/webapp/WEB-INF/jsp/leftBox/activityInfo.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1960">
-              <caret line="49" column="154" lean-forward="false" selection-start-line="49" selection-start-column="154" selection-end-line="49" selection-end-column="154" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/webapp/WEB-INF/jsp/test.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="16" column="34" lean-forward="false" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="actfileInfo.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/webapp/WEB-INF/jsp/leftBox/actfileInfo.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3760">
-              <caret line="94" column="51" lean-forward="false" selection-start-line="94" selection-start-column="51" selection-end-line="94" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addActfileInfo.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/webapp/WEB-INF/jsp/leftBox/add/addActfileInfo.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2560">
-              <caret line="64" column="53" lean-forward="false" selection-start-line="64" selection-start-column="53" selection-end-line="64" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="525" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -174,7 +89,7 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../oaManagerwed" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -184,10 +99,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActvoteController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/JobController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/PlanController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapping/ActivityDao.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/actfileInfo.jsp" />
         <option value="$PROJECT_DIR$/src/main/test/com/officeAuto/ssm/dao/UserImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapping/ActfileDao.xml" />
@@ -235,6 +146,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActfileController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/utils/PrivilegeFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/utils/AuthInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/EmpAndInfoController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/EmpAndInfoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/EmpAndInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/EmployeeAndInfoDao.java" />
       </list>
     </option>
   </component>
@@ -250,6 +165,22 @@
     <option name="FILTER_INFO" value="true" />
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="oaManager.wed Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="oaManager.wed Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="260" />
@@ -321,6 +252,53 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ssm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oaManagerwed" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oaManagerwed" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oaManagerwed" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oaManagerwed" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oaManagerwed" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oaManagerwed" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oaManagerwed" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oaManagerwed" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oaManagerwed" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oaManagerwed" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="oaManagerwed" type="b2602c69:ProjectViewProjectNode" />
@@ -426,10 +404,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -440,19 +418,19 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../oaManagerwed" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\oaManagerwed\src\main\webapp\OAmanager\js" />
+      <recent name="H:\oaManagerwed\src\main\webapp\WEB-INF\jsp\leftBox" />
+      <recent name="H:\oaManagerwed\src\main\webapp\WEB-INF\jsp" />
+      <recent name="H:\oaManagerwed\src\main\webapp" />
+      <recent name="H:\oaManagerwed\src\main\webapp\WEB-INF" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.officeAuto.ssm.dao" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="H:\oaManagerwed\src\main\webapp\WEB-INF\jsp\leftBox\add" />
-      <recent name="H:\oaManagerwed\src\main\webapp\WEB-INF\jsp\leftBox" />
-      <recent name="H:\oaManagerwed\src\main\resources\mapping" />
-      <recent name="H:\oaManagerwed\src\main\webapp\WEB-INF\jsp\leftBox\edit" />
-      <recent name="H:\oaManagerwed\src\main\webapp\js" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.officeAuto.ssm.dao.system" />
@@ -461,12 +439,12 @@
       <recent name="com.officeAuto.ssm.controller" />
       <recent name="com.officeAuto.ssm.dao" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="H:\oaManagerwed\src\main\webapp\OAmanager\js" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\oaManagerwed\oaManagerwed\src\main\resources\mapping" />
+      <recent name="H:\oaManagerwed\src\main\webapp\WEB-INF\jsp\leftBox\add" />
       <recent name="H:\oaManagerwed\src\main\webapp\WEB-INF\jsp\leftBox" />
-      <recent name="H:\oaManagerwed\src\main\webapp\WEB-INF\jsp" />
-      <recent name="H:\oaManagerwed\src\main\webapp" />
-      <recent name="H:\oaManagerwed\src\main\webapp\WEB-INF" />
+      <recent name="H:\oaManagerwed\src\main\resources\mapping" />
+      <recent name="H:\oaManagerwed\src\main\webapp\WEB-INF\jsp\leftBox\edit" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -897,6 +875,7 @@
       <workItem from="1527323505276" duration="1249000" />
       <workItem from="1527338945694" duration="649000" />
       <workItem from="1527409045876" duration="879000" />
+      <workItem from="1527600265753" duration="420000" />
     </task>
     <servers />
   </component>
@@ -933,7 +912,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214701000" />
+    <option name="totallyTimeSpent" value="215121000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -945,15 +924,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-12" y="-12" width="1944" height="1034" extended-state="6" />
+    <frame x="-9" y="-9" width="1389" height="739" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3285151" sideWeight="0.5791757" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.325887" sideWeight="0.4978308" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3285151" sideWeight="0.5791757" order="14" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32931423" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26253298" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
@@ -964,15 +943,16 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37976348" sideWeight="0.5677874" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.325887" sideWeight="0.49566162" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32457292" sideWeight="0.44305858" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3285151" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3285151" sideWeight="0.4208243" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08672799" sideWeight="0.8758134" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38260868" sideWeight="0.8758134" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3269565" sideWeight="0.4208243" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3285151" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3285151" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31127983" sideWeight="0.5540541" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31574982" sideWeight="0.5540541" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29229936" sideWeight="0.50765866" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31832972" sideWeight="0.44594595" order="2" side_tool="true" content_ui="tabs" />
@@ -983,7 +963,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32457292" sideWeight="0.44305858" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298292" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1036,55 +1015,15 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/controller/AnnounceController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/EmployeeinfoDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1760">
-          <caret line="128" column="5" lean-forward="true" selection-start-line="128" selection-start-column="5" selection-end-line="128" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/service/EmployeeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="77" column="14" lean-forward="true" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/dao/system/EmployeeinfoDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/dao/system/EmployeeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/resources/mapping/EmployeeinfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9237">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="163">
+          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/resources/mapping/EmployeeinfoDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <marker date="1526722607133" expanded="true" signature="295:386" ph="select * fro... dept" />
-            <marker date="1526722607133" expanded="true" signature="467:492" ph="select count... dept" />
-            <marker date="1526722607133" expanded="true" signature="586:621" ph="select * fro... dept" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/resources/mapping/EmployeeMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/EmployeeMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="225" column="44" lean-forward="true" selection-start-line="225" selection-start-column="44" selection-end-line="225" selection-end-column="44" />
@@ -1092,66 +1031,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/service/impl/DeptServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/DeptServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
           <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/service/impl/EmployeeServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/EmployeeServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2360">
           <caret line="69" column="42" lean-forward="false" selection-start-line="69" selection-start-column="27" selection-end-line="69" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/controller/EmployeeController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/EmployeeController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="224" column="0" lean-forward="false" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/test/com/officeAuto/ssm/dao/UserImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/test/com/officeAuto/ssm/dao/UserImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2320">
           <caret line="71" column="29" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/dao/EmployeeMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/EmployeeMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/resources/mapping/EmployeeDao.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/EmployeeDao.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding>
-            <marker date="1527177560650" expanded="true" signature="299:394" ph="select * fro... employee" />
-            <marker date="1527177560650" expanded="true" signature="477:506" ph="select count... employee" />
-            <marker date="1527177560650" expanded="true" signature="604:643" ph="select * fro... employee" />
-            <marker date="1527177560650" expanded="true" signature="750:822" ph="select * fro... employee" />
-            <marker date="1527177560650" expanded="true" signature="910:947" ph="DELETE FROM employee... " />
-            <marker date="1527177560650" expanded="true" signature="1268:1498" ph="insert into employee... " />
-            <marker date="1527177560650" expanded="true" signature="2811:3361" ph="update employee... " />
-            <marker date="1527177560650" expanded="true" signature="3316:3361" ph="update employee... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/service/impl/ActivityServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/ActivityServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
           <caret line="56" column="29" lean-forward="true" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/webapp/WEB-INF/jsp/leftBox/employeeInfo.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/employeeInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="76" column="56" lean-forward="true" selection-start-line="76" selection-start-column="40" selection-end-line="76" selection-end-column="56" />
@@ -1166,77 +1096,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/service/ActivityService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/ActivityService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
           <caret line="51" column="15" lean-forward="false" selection-start-line="51" selection-start-column="15" selection-end-line="51" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/resources/mapping/ActivityDao.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/ActivityDao.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1544">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1527161078453" expanded="true" signature="297:392" ph="select * fro... Activity" />
-            <marker date="1527161078453" expanded="true" signature="475:504" ph="select count... Activity" />
-            <marker date="1527161078453" expanded="true" signature="602:641" ph="select * fro... Activity" />
-            <marker date="1527161078453" expanded="true" signature="1384:1421" ph="DELETE FROM Activity... " />
-            <marker date="1527161078453" expanded="true" signature="3486:3867" ph="update activity... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/dao/BaseDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/BaseDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="38" column="15" lean-forward="false" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/model/Activity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/Activity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/webapp/WEB-INF/jsp/leftBox/add/addAnnounceInfo.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/add/addAnnounceInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="61" column="110" lean-forward="false" selection-start-line="61" selection-start-column="53" selection-end-line="61" selection-end-column="110" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/webapp/OAmanager/html/add/addActivity.html">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/OAmanager/html/add/addActivity.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="363">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="99" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/webapp/WEB-INF/jsp/leftBox/add/addActivityInfo.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/add/addActivityInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3520">
           <caret line="88" column="59" lean-forward="false" selection-start-line="88" selection-start-column="59" selection-end-line="88" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/controller/ActivityController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActivityController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2000">
           <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/webapp/WEB-INF/jsp/leftBox/add/addDeptInfo.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/add/addDeptInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3360">
           <caret line="84" column="50" lean-forward="false" selection-start-line="84" selection-start-column="50" selection-end-line="84" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/webapp/WEB-INF/jsp/leftBox/announceInfo.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/announceInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1920">
           <caret line="48" column="93" lean-forward="false" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="93" />
@@ -1244,7 +1168,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/webapp/WEB-INF/jsp/leftBox/deptInfo.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/deptInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2040">
           <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
@@ -1252,14 +1176,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/controller/PlanController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/PlanController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="59" column="26" lean-forward="false" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/webapp/WEB-INF/jsp/leftBox/jobInfo.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/jobInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
@@ -1267,42 +1191,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/controller/JobController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/JobController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1254">
           <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/webapp/WEB-INF/jsp/leftBox/add/addJobInfo.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/add/addJobInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1000">
           <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/controller/DeptController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/DeptController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1760">
           <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/webapp/WEB-INF/jsp/leftBox/add/addPlanInfo.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/add/addPlanInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2680">
           <caret line="67" column="30" lean-forward="false" selection-start-line="67" selection-start-column="30" selection-end-line="67" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/service/impl/ActfileServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/ActfileServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1757">
           <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/webapp/WEB-INF/jsp/management.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/management.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="158" column="126" lean-forward="false" selection-start-line="158" selection-start-column="126" selection-end-line="158" selection-end-column="126" />
@@ -1310,21 +1234,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/dao/ActfileMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/ActfileMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/model/Actfile.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/Actfile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-200">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/dao/system/ActfileDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/ActfileDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
@@ -1338,36 +1262,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7200">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/service/ActfileService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/ActfileService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/resources/mapping/ActfileDao.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/ActfileDao.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4797">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1527121465974" expanded="true" signature="295:389" ph="select * fro... Actfile" />
-            <marker date="1527121465974" expanded="true" signature="472:500" ph="select count... Actfile" />
-            <marker date="1527121465974" expanded="true" signature="597:635" ph="select * fro... Actfile" />
-            <marker date="1527121465974" expanded="true" signature="1375:1411" ph="DELETE FROM Actfile... " />
-            <marker date="1527121465974" expanded="true" signature="3466:4342" ph="update Actfile... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/resources/spring-mvc.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mvc.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="59" column="31" lean-forward="false" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="31" />
@@ -1375,61 +1285,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/webapp/WEB-INF/jsp/leftBox/add/addActfileInfo.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/add/addActfileInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2560">
+        <state relative-caret-position="1792">
           <caret line="64" column="53" lean-forward="false" selection-start-line="64" selection-start-column="53" selection-end-line="64" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/webapp/WEB-INF/jsp/leftBox/actfileInfo.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/actfileInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3760">
+        <state relative-caret-position="2632">
           <caret line="94" column="51" lean-forward="false" selection-start-line="94" selection-start-column="51" selection-end-line="94" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/webapp/WEB-INF/jsp/test.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/test.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
+        <state relative-caret-position="448">
           <caret line="16" column="34" lean-forward="false" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/utils/PrivilegeFilter.java" />
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/controller/ActfileController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/utils/PrivilegeFilter.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActfileController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5720">
+        <state relative-caret-position="0">
           <caret line="162" column="1" lean-forward="false" selection-start-line="162" selection-start-column="1" selection-end-line="162" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/utils/DateConverter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/EmpAndInfoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
+        <state relative-caret-position="252">
+          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/EmpAndInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/EmpAndInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/EmployeeAndInfoDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1527498979044" expanded="true" signature="304:507" ph="select emplo... employee" />
+            <marker date="1527498979044" expanded="true" signature="606:883" ph="select emplo... employee" />
+            <marker date="1527498979044" expanded="true" signature="962:1129" ph="select count... employee" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/utils/AuthInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/EmployeeAndInfoDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="149" column="0" lean-forward="false" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/utils/DateConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
           <caret line="8" column="44" lean-forward="false" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/webapp/WEB-INF/jsp/leftBox/activityInfo.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/activityInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1960">
+        <state relative-caret-position="285">
           <caret line="49" column="154" lean-forward="false" selection-start-line="49" selection-start-column="154" selection-end-line="49" selection-end-column="154" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../oaManagerwed/src/main/java/com/officeAuto/ssm/utils/AuthInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="2" column="37" lean-forward="true" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
           <folding />
         </state>
       </provider>
