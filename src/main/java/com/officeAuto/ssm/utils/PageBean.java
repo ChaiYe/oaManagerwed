@@ -22,7 +22,6 @@ public class PageBean <T>{
     /**是否有下一页*/
     private boolean isHaveNextPage = false;
 
-
     /**
      * 条件map
      */

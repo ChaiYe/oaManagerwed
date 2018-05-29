@@ -23,17 +23,118 @@ import java.util.List;
 @RequestMapping("/employee")
 public class EmployeeController {
 
-
     @Autowired
-    private EmployeeService employeeService;
+    private EmployeeService EmployeeService;
 
+    /**
+     * 登录界面
+     * @return 页面
+     */
     @RequestMapping("/loginPage")
-    public String login(HttpServletRequest request)
+    public String login()
     {
         return "login";
     }
 
+    /**
+     * 登录操作
+     * @param account 账号
+     * @param password 密码
+     * @param session 全局session
+     * @return 页面
+     */
+    @RequestMapping("/login")
+    public  String login(String account, String password, HttpSession session)
+    {
+        Employee employee = EmployeeService.login(account,password);
 
+        if(employee==null)
+            return "login";
+
+        session.setAttribute("employee", employee);
+
+        return  "management";
+    }
+
+    /**
+     * 分页查询员工信息
+     * @param currentPage 当前页面
+     * @param model 模型
+     * @return 页面
+     * @throws Exception
+     */
+    @RequestMapping("/getEmployeeByPage")
+    public String listPage(Integer currentPage,Model model) throws Exception
+    {
+        PageBean<Employee> EmployeePageBean= new PageBean<Employee>();
+        if(currentPage!=null)
+        {
+            EmployeePageBean.setCurrentPage(currentPage);
+        }
+
+        List<Employee> Employees = EmployeeService.findByPage(EmployeePageBean);
+        EmployeePageBean.setDatas(Employees);
+
+        Integer totalCount = EmployeeService.findCount();
+        EmployeePageBean.setTotalCount(totalCount);
+
+        model.addAttribute("EmployeePageBean",EmployeePageBean);
+
+        return  "leftBox/EmployeeInfo";
+    }
+
+    @RequestMapping("delete")
+    public String delete(Integer uuid) throws Exception
+    {
+        EmployeeService.deleteById(uuid);
+        return  "redirect:/Employee/getEmployeeByPage.action";
+    }
+
+    @RequestMapping("jumpToAdd")
+    public String jumpToAdd()
+    {
+        return  "leftBox/add/addEmployeeInfo";
+    }
+
+    @RequestMapping("insert")
+    public String insert(Employee Employee) throws Exception
+    {
+        Employee.setCreatetime(new Date());
+        /*Employee.setDept(1);
+        Employee.setEmployee(1);*/
+        EmployeeService.insert(Employee);
+        return  "redirect:/Employee/getEmployeeByPage.action";
+    }
+
+    @RequestMapping("jumpToEdit")
+    public String jumpToEdit(Integer uuid,Model model) throws Exception
+    {
+        Employee Employee=EmployeeService.findById(uuid);
+        model.addAttribute("Employee",Employee);
+        return "leftBox/edit/editEmployeeInfo";
+    }
+
+    @RequestMapping("update")
+    public String updata(Integer uuid,Employee Employee) throws Exception
+    {
+        Employee.setUuid(uuid);
+        EmployeeService.update(Employee);
+        return "redirect:/Employee/getEmployeeByPage.action";
+    }
+
+    @RequestMapping("deletes")
+    public  String deletes(String dels) throws Exception
+    {
+
+        String str[] = dels.split(",");
+        Integer[] delitems=new Integer[str.length];
+        for(int i=0;i<str.length;i++){
+            delitems[i]=Integer.parseInt(str[i]);
+        }
+
+        EmployeeService.delete(delitems);
+        return "redirect:/Employee/getEmployeeByPage.action";
+    }
 
     /*@RequestMapping("/login")
     public String login(HttpServletRequest request,String account,String password, Model model,HttpSession session){
@@ -110,68 +211,6 @@ public class EmployeeController {
         return "redirect:/employee/list.action";
     }*/
 
-    @Autowired
-    private EmployeeService EmployeeService;
-
-
-    @RequestMapping("/getEmployeeByPage")
-    public String listPage(Integer currentPage,Model model) throws Exception
-    {
-        PageBean<Employee> EmployeePageBean = new PageBean<Employee>();
-        if(currentPage!=null)
-        {
-            EmployeePageBean.setCurrentPage(currentPage);
-        }
-        List<Employee> Employees=EmployeeService.findByPage(EmployeePageBean);
-        EmployeePageBean.setDatas(Employees);
-
-        Integer totalCount =EmployeeService.findCount();
-        EmployeePageBean.setTotalCount(totalCount);
-
-        model.addAttribute("EmployeePageBean",EmployeePageBean);
-
-        return  "leftBox/EmployeeInfo";
-    }
-
-    @RequestMapping("delete")
-    public String delete(Integer uuid) throws Exception
-    {
-        EmployeeService.deleteById(uuid);
-        return  "redirect:/Employee/getEmployeeByPage.action";
-    }
-
-    @RequestMapping("jumpToAdd")
-    public String jumpToAdd()
-    {
-        return  "leftBox/add/addEmployeeInfo";
-    }
-
-    @RequestMapping("insert")
-    public String insert(Employee Employee) throws Exception
-    {
-        Employee.setCreatetime(new Date());
-        /*Employee.setDept(1);
-        Employee.setEmployee(1);*/
-        EmployeeService.insert(Employee);
-        return  "redirect:/Employee/getEmployeeByPage.action";
-    }
-
-    @RequestMapping("jumpToEdit")
-    public String jumpToEdit(Integer uuid,Model model) throws Exception
-    {
-        Employee Employee=EmployeeService.findById(uuid);
-        model.addAttribute("Employee",Employee);
-        return "leftBox/edit/editEmployeeInfo";
-    }
-
-    @RequestMapping("update")
-    public String updata(Integer uuid,Employee Employee) throws Exception
-    {
-        Employee.setUuid(uuid);
-        EmployeeService.update(Employee);
-        return "redirect:/Employee/getEmployeeByPage.action";
-    }
-
    /* @RequestMapping("/query")
     public String query(Integer queryAcount1,Integer queryAcount2,Model model) throws Exception
     {
@@ -195,33 +234,4 @@ public class EmployeeController {
     }
 */
 
-    @RequestMapping("deletes")
-    public  String deletes(String dels) throws Exception
-    {
-
-        String str[] = dels.split(",");
-        Integer[] delitems=new Integer[str.length];
-        for(int i=0;i<str.length;i++){
-            delitems[i]=Integer.parseInt(str[i]);
-        }
-
-        EmployeeService.delete(delitems);
-        return "redirect:/Employee/getEmployeeByPage.action";
-    }
-
-
-    @RequestMapping("/login")
-    public  String login(String account, String password, HttpSession session)
-    {
-        Employee employee = employeeService.login(account,password);
-
-        if(employee==null){
-            return "login";
-        }
-
-        session.setAttribute("employee", employee);
-
-        return  "management";
-    }
-   
 }

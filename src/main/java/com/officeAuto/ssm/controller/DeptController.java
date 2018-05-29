@@ -28,26 +28,36 @@ public class DeptController {
     @Autowired
     private DeptService deptService;
 
-
+    /**
+     * 分页查询部门信息
+     * @param currentPage 当前页
+     * @param model 模型
+     * @return 页面
+     * @throws Exception 异常
+     */
     @RequestMapping("/getDeptByPage")
     public String listPage(Integer currentPage,Model model) throws Exception
     {
         PageBean<Dept> deptPageBean= new PageBean<Dept>();
         if(currentPage!=null)
-        {
             deptPageBean.setCurrentPage(currentPage);
-        }
-        List<Dept> depts=deptService.findByPage(deptPageBean);
+
+        List<Dept> depts = deptService.findByPage(deptPageBean);
         deptPageBean.setDatas(depts);
 
-        Integer totalCount =deptService.findCount();
+        Integer totalCount = deptService.findCount();
         deptPageBean.setTotalCount(totalCount);
 
-        model.addAttribute("deptPageBean",deptPageBean);
-
+        model.addAttribute("deptPageBean", deptPageBean);
         return  "leftBox/deptInfo";
     }
 
+    /**
+     * 删除操作
+     * @param uuid 主键
+     * @return 页面
+     * @throws Exception 异常
+     */
     @RequestMapping("delete")
     public String delete(Integer uuid) throws Exception
     {
@@ -84,6 +94,28 @@ public class DeptController {
         return "redirect:/dept/getDeptByPage.action";
     }
 
+    @RequestMapping("deletes")
+    public  String deletes(String dels) throws Exception
+    {
+
+        String str[] = dels.split(",");
+        Integer[] delitems=new Integer[str.length];
+        for(int i=0;i<str.length;i++){
+            delitems[i]=Integer.parseInt(str[i]);
+        }
+
+        deptService.delete(delitems);
+        return "redirect:/dept/getDeptByPage.action";
+    }
+
+
+    @RequestMapping("findone")
+    public  String findone(Integer id) throws  Exception
+    {
+        deptService.findById(id);
+        return "redirect:/dept/getDeptByPage.action";
+    }
+
    /* @RequestMapping("/query")
     public String query(Integer queryAcount1,Integer queryAcount2,Model model) throws Exception
     {
@@ -106,30 +138,5 @@ public class DeptController {
         return "leftBox/deptInfo";
     }
 */
-
-    @RequestMapping("deletes")
-    public  String deletes(String dels) throws Exception
-    {
-
-        String str[] = dels.split(",");
-        Integer[] delitems=new Integer[str.length];
-        for(int i=0;i<str.length;i++){
-            delitems[i]=Integer.parseInt(str[i]);
-        }
-
-
-
-        deptService.delete(delitems);
-        return "redirect:/dept/getDeptByPage.action";
-    }
-
-
-    @RequestMapping("findone")
-    public  String findone(Integer id) throws  Exception
-    {
-        deptService.findById(id);
-        return "redirect:/dept/getDeptByPage.action";
-    }
-
 
 }
