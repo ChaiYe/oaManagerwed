@@ -12,12 +12,12 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>用户登录</title>
 
-    <script src="../layui/layui.js"></script>
-    <script src="../js/vue.js"></script>
-    <script src="../js/jquery-1.11.1.min.js"></script>
-    <link rel="stylesheet" href="../layui/css/layui.css">
+    <script src="../../layui/layui.js"></script>
+    <script src="../../js/vue.js"></script>
+    <script src="../../js/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="../../layui/css/layui.css">
 
     <style>
         .layui-form{

@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title></title>
+    <title>办公自动化系统</title>
 
     <script src="../../js/jquery-1.11.1.min.js"></script>
     <script src="../../js/vue.js"></script>
@@ -114,7 +114,7 @@
 
                 <dl class="layui-nav-child">
                     <dd><a href="javascript:;">个人主页</a></dd>
-                    <dd><a href="javascript:;">退出</a></dd>
+                    <dd><a href="${pageContext.request.contextPath}/employee/logout.action">注销</a></dd>
                 </dl>
             </li>
             <li class="layui-nav-item" style="float: right">

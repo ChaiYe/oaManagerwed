@@ -49,9 +49,24 @@ public class EmployeeController {
         return  "management";
     }
 
+    /**
+     * 主站显示页面
+     * @return
+     */
     @RequestMapping("/homePage")
     public String homePage(){
         return "leftBox/homepage";
+    }
+
+    /**
+     * 注销操作
+     * @param session 删除session中的实体
+     * @return 登录页面
+     */
+    @RequestMapping("/logout")
+    public String logOut(HttpSession session){
+        session.setAttribute("employee", null);
+        return "login";
     }
 
     /**
