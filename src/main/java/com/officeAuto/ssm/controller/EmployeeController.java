@@ -1,22 +1,15 @@
 package com.officeAuto.ssm.controller;
 
-import com.alibaba.fastjson.JSON;
 import com.officeAuto.ssm.model.*;
 import com.officeAuto.ssm.service.EmployeeService;
-import com.officeAuto.ssm.service.DeptService;
-import com.officeAuto.ssm.service.EmployeeService;
 import com.officeAuto.ssm.utils.PageBean;
-import jdk.nashorn.internal.runtime.Context;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
 
 @Controller
@@ -24,7 +17,7 @@ import java.util.List;
 public class EmployeeController {
 
     @Autowired
-    private EmployeeService EmployeeService;
+    private EmployeeService employeeService;
 
     /**
      * 登录界面
@@ -46,7 +39,7 @@ public class EmployeeController {
     @RequestMapping("/login")
     public  String login(String account, String password, HttpSession session)
     {
-        Employee employee = EmployeeService.login(account,password);
+        Employee employee = employeeService.login(account,password);
 
         if(employee==null)
             return "login";
@@ -54,6 +47,11 @@ public class EmployeeController {
         session.setAttribute("employee", employee);
 
         return  "management";
+    }
+
+    @RequestMapping("/homePage")
+    public String homePage(){
+        return "leftBox/homepage";
     }
 
     /**
@@ -72,10 +70,10 @@ public class EmployeeController {
             EmployeePageBean.setCurrentPage(currentPage);
         }
 
-        List<Employee> Employees = EmployeeService.findByPage(EmployeePageBean);
+        List<Employee> Employees = employeeService.findByPage(EmployeePageBean);
         EmployeePageBean.setDatas(Employees);
 
-        Integer totalCount = EmployeeService.findCount();
+        Integer totalCount = employeeService.findCount();
         EmployeePageBean.setTotalCount(totalCount);
 
         model.addAttribute("EmployeePageBean",EmployeePageBean);
@@ -86,7 +84,7 @@ public class EmployeeController {
     @RequestMapping("delete")
     public String delete(Integer uuid) throws Exception
     {
-        EmployeeService.deleteById(uuid);
+        employeeService.deleteById(uuid);
         return  "redirect:/Employee/getEmployeeByPage.action";
     }
 
@@ -102,14 +100,14 @@ public class EmployeeController {
         Employee.setCreatetime(new Date());
         /*Employee.setDept(1);
         Employee.setEmployee(1);*/
-        EmployeeService.insert(Employee);
+        employeeService.insert(Employee);
         return  "redirect:/Employee/getEmployeeByPage.action";
     }
 
     @RequestMapping("jumpToEdit")
     public String jumpToEdit(Integer uuid,Model model) throws Exception
     {
-        Employee Employee=EmployeeService.findById(uuid);
+        Employee Employee= employeeService.findById(uuid);
         model.addAttribute("Employee",Employee);
         return "leftBox/edit/editEmployeeInfo";
     }
@@ -118,7 +116,7 @@ public class EmployeeController {
     public String updata(Integer uuid,Employee Employee) throws Exception
     {
         Employee.setUuid(uuid);
-        EmployeeService.update(Employee);
+        employeeService.update(Employee);
         return "redirect:/Employee/getEmployeeByPage.action";
     }
 
@@ -132,7 +130,7 @@ public class EmployeeController {
             delitems[i]=Integer.parseInt(str[i]);
         }
 
-        EmployeeService.delete(delitems);
+        employeeService.delete(delitems);
         return "redirect:/Employee/getEmployeeByPage.action";
     }
 
@@ -224,7 +222,7 @@ public class EmployeeController {
         paraMap.put("EmployeeQuery",EmployeeQueryModel);
 
         pageBeanQuery.setParaMap(paraMap);
-        List<Employee> Employees=EmployeeService.findByPageQuery(pageBeanQuery);
+        List<Employee> Employees=employeeService.findByPageQuery(pageBeanQuery);
 
         PageBean<Employee> EmployeePageBean= new PageBean<Employee>();
         EmployeePageBean.setDatas(Employees);

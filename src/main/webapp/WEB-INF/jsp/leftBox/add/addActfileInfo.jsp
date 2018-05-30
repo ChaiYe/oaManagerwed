@@ -12,22 +12,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="/oaManagerwed/js/jquery-1.11.1.min.js"></script>
-    <script src="/oaManagerwed/js/vue.js"></script>
-    <link rel="stylesheet" href="/oaManagerwed/layui/css/layui.css">
-    <script src="/oaManagerwed/layui/layui.js"></script>
-    <link rel="stylesheet" href="/oaManagerwed/css/homepageGrid.css">
-    <script src="/oaManagerwed/js/homepageGrid.js"></script>
-    <script src="/oaManagerwed/js/popup.js"></script>
-    <script src="/oaManagerwed/js/page.js"></script>
-    <link rel="stylesheet" href="/oaManagerwed/css/leftBox/frame.css">
-    <link rel="stylesheet" href="/oaManagerwed/css/leftBox/tableAndAdd.css">
-    <link rel="stylesheet" href="/oaManagerwed/css/leftBox/add.css">
-    <link rel="stylesheet" href="/oaManagerwed/css/leftBox/table.css">
-    <link rel="stylesheet" href="/oaManagerwed/css/pageMenu.css">
-    <script src="/oaManagerwed/ckeditor/ckeditor.js"></script>
-    <script src="/oaManagerwed/ckeditor/config.js"></script>
-    <script src="/oaManagerwed/js/modify.js"></script>
+    <link rel="stylesheet" href="../../../../css/pageMenu.css">
+    <link rel="stylesheet" href="../../../../css/leftBox/frame.css">
+    <script src="../../../../js/jquery-1.11.1.min.js"></script>
+    <script src="../../../../js/vue.js"></script>
+    <link rel="stylesheet" href="../../../../layui/css/layui.css">
+    <script src="../../../../layui/layui.js"></script>
+    <link rel="stylesheet" href="../../../../css/homepageGrid.css">
+    <script src="../../../../js/homepageGrid.js"></script>
+    <script src="../../../../js/popup.js"></script>
+    <script src="../../../../js/page.js"></script>
+    <link rel="stylesheet" href="../../../../css/leftBox/frame.css">
+    <link rel="stylesheet" href="../../../../css/leftBox/tableAndAdd.css">
+    <link rel="stylesheet" href="../../../../css/leftBox/add.css">
+    <link rel="stylesheet" href="../../../../css/leftBox/table.css">
+    <link rel="stylesheet" href="../../../../css/pageMenu.css">
+    <script src="../../../../ckeditor/ckeditor.js"></script>
+    <script src="../../../../ckeditor/config.js"></script>
+    <script src="../../../../js/modify.js"></script>
 </head>
 <body>
 <div class="info">
@@ -53,10 +55,8 @@
         <div class="panel-window">
             <div class="panel-header">
                 <span class="panel-header-left">公告管理</span>
-
             </div>
             <div class="content-page">
-
                 <div>公告</div>
                 <div class="add-content">
                     <%--注意上传文件要设计编码类型--%>
@@ -93,13 +93,7 @@
                 </div>
             </div>
         </div>
-
-
-
     </div>
-
-
-
 </div>
 </body>
 </html>

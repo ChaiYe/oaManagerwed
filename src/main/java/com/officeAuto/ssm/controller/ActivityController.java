@@ -30,13 +30,13 @@ public class ActivityController {
         {
             activityPageBean.setCurrentPage(currentPage);
         }
-        List<Activity> activitys=activityService.findByPage(activityPageBean);
+        List<Activity> activitys = activityService.findByPage(activityPageBean);
         activityPageBean.setDatas(activitys);
 
-        Integer totalCount =activityService.findCount();
+        Integer totalCount = activityService.findCount();
         activityPageBean.setTotalCount(totalCount);
 
-        model.addAttribute("activityPageBean",activityPageBean);
+        model.addAttribute("activityPageBean", activityPageBean);
 
         return  "leftBox/activityInfo";
     }

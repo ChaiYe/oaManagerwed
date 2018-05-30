@@ -14,10 +14,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title></title>
 
-    <script src="../js/jquery-1.11.1.min.js"></script>
-    <script src="../js/vue.js"></script>
-    <link rel="stylesheet" href="../layui/css/layui.css">
-    <script src="../layui/layui.js"></script>
+    <script src="../../js/jquery-1.11.1.min.js"></script>
+    <script src="../../js/vue.js"></script>
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <script src="../../layui/layui.js"></script>
     <script type="text/javascript">
 
         layui.use('laypage', function () {
@@ -81,20 +81,18 @@
 
     </style>
 
-    <link rel="stylesheet" href="../css/homepageGrid.css">
-    <script src="../js/homepageGrid.js"></script>
-    <script src="../js/popup.js"></script>
-    <script src="../js/page.js"></script>
-    <link rel="stylesheet" href="../css/leftBox/frame.css">
-    <link rel="stylesheet" href="../css/leftBox/tableAndAdd.css">
-    <link rel="stylesheet" href="../css/leftBox/add.css">
-    <link rel="stylesheet" href="../css/leftBox/table.css">
-    <link rel="stylesheet" href="../css/pageMenu.css">
-
-    <script src="../ckeditor/ckeditor.js"></script>
-    <script src="../ckeditor/config.js"></script>
-    <script src="../js/modify.js"></script>
-
+    <link rel="stylesheet" href="../../css/homepageGrid.css">
+    <script src="../../js/homepageGrid.js"></script>
+    <script src="../../js/popup.js"></script>
+    <script src="../../js/page.js"></script>
+    <link rel="stylesheet" href="../../css/leftBox/frame.css">
+    <link rel="stylesheet" href="../../css/leftBox/tableAndAdd.css">
+    <link rel="stylesheet" href="../../css/leftBox/add.css">
+    <link rel="stylesheet" href="../../css/leftBox/table.css">
+    <link rel="stylesheet" href="../../css/pageMenu.css">
+    <script src="../../ckeditor/ckeditor.js"></script>
+    <script src="../../ckeditor/config.js"></script>
+    <script src="../../js/modify.js"></script>
 </head>
 <body>
 <div class="left">
@@ -129,7 +127,7 @@
         </ul>
     </div>
 
-    <iframe name="infoContent" src="#" frameborder="0"></iframe>
+    <iframe name="infoContent" src="${pageContext.request.contextPath}/employee/homePage.action" frameborder="0"></iframe>
 </div>
 
 
@@ -137,7 +135,7 @@
     <div>
         <ul class="layui-nav layui-nav-tree layui-nav-side">
             <li><!--<p style="font-size: 25px;">后台管理系统</p>-->
-                <img src="../img/OA管理系统.png" alt="OA管理系统" width="200px" height="45px" style="padding: 7px;"/>
+                <img src="../../img/OA管理系统.png" alt="OA管理系统" width="200px" height="45px" style="padding: 7px;"/>
             </li>
             <li class="layui-nav-item layui-nav-itemed">
                 <a href="javascript:;">默认展开</a>
@@ -151,18 +149,18 @@
                 <a href="javascript:;">信息中心</a>
                 <dl class="layui-nav-child">
                     <dd><a href="${pageContext.request.contextPath}/activity/getActivityByPage.action" target="infoContent">活动管理</a></dd>
-                    <dd><a href="http://localhost:8080/oaManagerwed/actfile/getActfileByPage.action" target="infoContent">活动文件</a></dd>
-                    <dd><a href="http://localhost:8080/oaManagerwed/announce/getAnnounceByPage.action" target="infoContent">公告管理</a></dd>
-                    <dd><a href="http://localhost:8080/oaManagerwed/actoption/getActoptionByPage.action" target="infoContent">投票管理</a></dd>
+                    <dd><a href="${pageContext.request.contextPath}/actfile/getActfileByPage.action" target="infoContent">活动文件</a></dd>
+                    <dd><a href="${pageContext.request.contextPath}/announce/getAnnounceByPage.action" target="infoContent">公告管理</a></dd>
+                    <dd><a href="${pageContext.request.contextPath}/actoption/getActoptionByPage.action" target="infoContent">投票管理</a></dd>
                 </dl>
             </li>
             <li class="layui-nav-item">
                 <a href="javascript:;">人事管理</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="http://localhost:8080/oaManagerwed/dept/getDeptByPage.action" target="infoContent">部门管理</a></dd>
-                    <dd><a href="http://localhost:8080/oaManagerwed/job/getJobByPage.action" target="infoContent">职位管理</a></dd>
-                    <dd><a href="http://localhost:8080/oaManagerwed/employee/list.action" target="infoContent">员工管理</a></dd>
-                    <dd><a href="http://localhost:8080/oaManagerwed/plan/getPlanByPage.action" target="infoContent">个人计划</a></dd>
+                    <dd><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action" target="infoContent">部门管理</a></dd>
+                    <dd><a href="${pageContext.request.contextPath}/job/getJobByPage.action" target="infoContent">职位管理</a></dd>
+                    <dd><a href="${pageContext.request.contextPath}/employee/getEmployeeByPage.action" target="infoContent">员工管理</a></dd>
+                    <dd><a href="${pageContext.request.contextPath}/plan/getPlanByPage.action" target="infoContent">个人计划</a></dd>
                     <dd><a href="">财务管理</a></dd>
                 </dl>
             </li>

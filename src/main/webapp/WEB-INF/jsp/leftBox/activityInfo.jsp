@@ -12,29 +12,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="/oaManagerwed/js/jquery-1.11.1.min.js"></script>
-    <script src="/oaManagerwed/js/vue.js"></script>
-    <link rel="stylesheet" href="/oaManagerwed/layui/css/layui.css">
-    <script src="/oaManagerwed/layui/layui.js"></script>
-    <link rel="stylesheet" href="/oaManagerwed/css/homepageGrid.css">
-    <script src="/oaManagerwed/js/homepageGrid.js"></script>
-    <script src="/oaManagerwed/js/popup.js"></script>
-    <script src="/oaManagerwed/js/page.js"></script>
-    <link rel="stylesheet" href="/oaManagerwed/css/leftBox/frame.css">
-    <link rel="stylesheet" href="/oaManagerwed/css/leftBox/tableAndAdd.css">
-    <link rel="stylesheet" href="/oaManagerwed/css/leftBox/add.css">
-    <link rel="stylesheet" href="/oaManagerwed/css/leftBox/table.css">
-    <link rel="stylesheet" href="/oaManagerwed/css/pageMenu.css">
-    <script src="/oaManagerwed/ckeditor/ckeditor.js"></script>
-    <script src="/oaManagerwed/ckeditor/config.js"></script>
-
-
-
+    <link rel="stylesheet" href="../../../css/pageMenu.css">
+    <link rel="stylesheet" href="../../../css/leftBox/frame.css">
+    <script src="../../../js/jquery-1.11.1.min.js"></script>
+    <script src="../../../js/vue.js"></script>
+    <link rel="stylesheet" href="../../../layui/css/layui.css">
+    <script src="../../../layui/layui.js"></script>
+    <link rel="stylesheet" href="../../../css/homepageGrid.css">
+    <script src="../../../js/homepageGrid.js"></script>
+    <script src="../../../js/popup.js"></script>
+    <script src="../../../js/page.js"></script>
+    <link rel="stylesheet" href="../../../css/leftBox/frame.css">
+    <link rel="stylesheet" href="../../../css/leftBox/tableAndAdd.css">
+    <link rel="stylesheet" href="../../../css/leftBox/add.css">
+    <link rel="stylesheet" href="../../../css/leftBox/table.css">
+    <link rel="stylesheet" href="../../../css/pageMenu.css">
+    <script src="../../../ckeditor/ckeditor.js"></script>
+    <script src="../../../ckeditor/config.js"></script>
+    <script src="../../../js/modify.js"></script>
 </head>
 <body>
 <div>
-
-
     <div class="info">
         <div class="crumbs-nav">
                 <span class="layui-breadcrumb">
@@ -48,11 +46,9 @@
                 <span class="panel-header-right">
                         <a href="${pageContext.request.contextPath}/activity/jumpToAdd.action" class="layui-btn layui-btn-sm panel-header-right-btn">添加</a>
                         <a href="${pageContext.request.contextPath}/activity/findone.action?id=6" class="layui-btn layui-btn-sm panel-header-right-btn">看图</a>
-
-                    </span>
+                </span>
             </div>
             <div class="content-page">
-
                 <form action="${pageContext.request.contextPath}/activity/query.action">
                     <div style="margin-top: 24px">
                         <div style="display: inline;">
@@ -70,7 +66,6 @@
                                 <input type="submit" value="提交">
                             </div>
                         </div>
-
                     </div>
                 </form>
 
@@ -96,7 +91,6 @@
                                 <td><input type="text" value="${activity.begintime}" readonly="readonly" class="inputs layui-input"/></td>
                                 <td><input type="text" value="${activity.endtime}" readonly="readonly" class="inputs layui-input"/></td>
                                 <td><input type="text" value="${activity.state}" readonly="readonly" class="inputs layui-input"/></td>
-
                                 <td>
                                     <a href="${pageContext.request.contextPath}/activity/delete.action?uuid=${activity.uuid}" class="layui-btn layui-btn-sm">删除</a>
                                     <a href="${pageContext.request.contextPath}/activity/jumpToEdit.action?uuid=${activity.uuid}" class="layui-btn layui-btn-sm change">修改</a>
@@ -116,9 +110,6 @@
                         无数据
                     </div>
                     <div class="page">
-
-
-
                         <ul class="pageMenu clearfix">
                             <li class="firstPage">首页</li>
                             <li class="prevPage"> < </li>
@@ -128,7 +119,6 @@
                                 <li class="thispage"><a href="${pageContext.request.contextPath}/activity/getActivityByPage.action?currentPage=${activityPageBean.currentPage}">${activityPageBean.currentPage}</a></li>
                                 <li class="thispage"><a href="${pageContext.request.contextPath}/activity/getActivityByPage.action?currentPage=${activityPageBean.currentPage+1}">${activityPageBean.currentPage+1}</a></li>
                                 <li class="thispage"><a href="${pageContext.request.contextPath}/activity/getActivityByPage.action?currentPage=${activityPageBean.currentPage+2}">${activityPageBean.currentPage+2}</a></li>
-
                             </div>
                             <li class="nextPage"> > </li>
                             <li class="lastPage">尾页</li>
