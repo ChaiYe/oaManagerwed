@@ -30,6 +30,22 @@
     <script src="../../../ckeditor/ckeditor.js"></script>
     <script src="../../../ckeditor/config.js"></script>
     <script src="../../../js/modify.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#jumpBtn").click(function () {
+                var pagenum = $("#pageNum").val();
+                if(isNaN(pagenum))
+                    alert("请输入数字");
+                else if(pagenum < 1 || pagenum > ${page.pages})
+                    alert("请输入正确页码");
+                else{
+                    $("#jumpa").attr("href", "${pageContext.request.contextPath}/activity/getActivityByPage.action?currentPage=" + pagenum);
+                    $("#jumpa").append("<span></span>");
+                    $("#jumpa span").click();
+                }
+            })
+        })
+    </script>
 </head>
 <body>
 <div>
@@ -82,8 +98,24 @@
                     </thead>
                     <tbody>
 
-                    <c:if test="${!empty activityPageBean.datas}">
-                        <c:forEach var="activity" items="${activityPageBean.datas}">
+                    <%--<c:if test="${!empty activityPageBean.datas}">--%>
+                        <%--<c:forEach var="activity" items="${activityPageBean.datas}">--%>
+                            <%--<tr class="oneMsg">--%>
+                                <%--<td><input type="checkbox" value="${activity.uuid}" name="del"></td>--%>
+                                <%--<td><input type="text" value="${activity.name}" readonly="readonly" class="inputs layui-input"/></td>--%>
+                                <%--<td><input type="text" value="${activity.descript}" readonly="readonly" class="inputs layui-input"/></td>--%>
+                                <%--<td><input type="text" value="${activity.begintime}" readonly="readonly" class="inputs layui-input"/></td>--%>
+                                <%--<td><input type="text" value="${activity.endtime}" readonly="readonly" class="inputs layui-input"/></td>--%>
+                                <%--<td><input type="text" value="${activity.state}" readonly="readonly" class="inputs layui-input"/></td>--%>
+                                <%--<td>--%>
+                                    <%--<a href="${pageContext.request.contextPath}/activity/delete.action?uuid=${activity.uuid}" class="layui-btn layui-btn-sm">删除</a>--%>
+                                    <%--<a href="${pageContext.request.contextPath}/activity/jumpToEdit.action?uuid=${activity.uuid}" class="layui-btn layui-btn-sm change">修改</a>--%>
+                                <%--</td>--%>
+                            <%--</tr>--%>
+                        <%--</c:forEach>--%>
+                    <%--</c:if>--%>
+                    <c:if test="${!empty list}">
+                        <c:forEach var="activity" items="${list}">
                             <tr class="oneMsg">
                                 <td><input type="checkbox" value="${activity.uuid}" name="del"></td>
                                 <td><input type="text" value="${activity.name}" readonly="readonly" class="inputs layui-input"/></td>
@@ -98,9 +130,7 @@
                             </tr>
                         </c:forEach>
                     </c:if>
-
                     </tbody>
-
                 </table>
                 <div class="pageBox1">
                     <ul class="pageDiv clearfix">
@@ -111,20 +141,37 @@
                     </div>
                     <div class="page">
                         <ul class="pageMenu clearfix">
-                            <li class="firstPage">首页</li>
-                            <li class="prevPage"> < </li>
+                            <a href="${pageContext.request.contextPath}/activity/getActivityByPage.action?currentPage=${page.firstPage}"><li class="firstPage">首页</li></a>
+                            <c:if test="${page.hasPreviousPage}">
+                                <a href="${pageContext.request.contextPath}/activity/getActivityByPage.action?currentPage=${page.prePage}">
+                                    <li class="prevPage"> < </li>
+                                </a>
+                            </c:if>
                             <div class="pageObj clearfix">
-                                <li class="thispage"><a href="${pageContext.request.contextPath}/activity/getActivityByPage.action?currentPage=${activityPageBean.currentPage-2}">${activityPageBean.currentPage-2}</a></li>
-                                <li class="thispage"><a href="${pageContext.request.contextPath}/activity/getActivityByPage.action?currentPage=${activityPageBean.currentPage-1}">${activityPageBean.currentPage-1}</a></li>
-                                <li class="thispage"><a href="${pageContext.request.contextPath}/activity/getActivityByPage.action?currentPage=${activityPageBean.currentPage}">${activityPageBean.currentPage}</a></li>
-                                <li class="thispage"><a href="${pageContext.request.contextPath}/activity/getActivityByPage.action?currentPage=${activityPageBean.currentPage+1}">${activityPageBean.currentPage+1}</a></li>
-                                <li class="thispage"><a href="${pageContext.request.contextPath}/activity/getActivityByPage.action?currentPage=${activityPageBean.currentPage+2}">${activityPageBean.currentPage+2}</a></li>
+                                <c:if test="${page.hasPreviousPage}">
+                                    <a href="${pageContext.request.contextPath}/activity/getActivityByPage.action?currentPage=${page.prePage}">
+                                        <li class="thispage">${page.prePage}</li>
+                                    </a>
+                                </c:if>
+                                <a style="color:blue" href="${pageContext.request.contextPath}/activity/getActivityByPage.action?currentPage=${page.pageNum}">
+                                    <li class="thispage">${page.pageNum}</li>
+                                </a>
+                                <c:if test="${page.hasNextPage}">
+                                    <a href="${pageContext.request.contextPath}/activity/getActivityByPage.action?currentPage=${page.nextPage}">
+                                        <li class="thispage">${page.nextPage}</li>
+                                    </a>
+                                </c:if>
                             </div>
-                            <li class="nextPage"> > </li>
-                            <li class="lastPage">尾页</li>
+                            <c:if test="${page.hasNextPage}">
+                                <a href="${pageContext.request.contextPath}/activity/getActivityByPage.action?currentPage=${page.nextPage}">
+                                    <li class="nextPage"> > </li></a>
+                            </c:if>
+                            <a href="${pageContext.request.contextPath}/activity/getActivityByPage.action?currentPage=${page.lastPage}">
+                                <li class="lastPage">尾页</li>
+                            </a>
                             <li class="last" style="font-size: 14px;">
-                                共<span class="totalPage"></span>页，跳转至 <input type="number" class="keuInput" value="1">
-                                <button type="button" class="btnSure">确定</button>
+                                共<span class="totalPage">${page.pages}</span>页，跳转至 <input type="text" class="keuInput" id="pageNum">
+                                <button type="button" class="btnSure" id="jumpBtn">确定</button><a href="" id="jumpa"></a>
                             </li>
                         </ul>
                     </div>

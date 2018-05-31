@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.officeAuto.ssm.dao.system.ActfileDao" >
     <select id="findByPage" resultType="com.officeAuto.ssm.model.Actfile">
-        select * from Actfile limit ${(currentPage-1)*pageSize},${(currentPage-1)*pageSize-1+pageSize}
+        select * from Actfile limit ${(currentPage-1)*pageSize},${(currentPage-1) * pageSize + pageSize}
     </select>
 
     <select id="findCount" resultType="java.lang.Integer">

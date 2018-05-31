@@ -3,7 +3,7 @@
 <mapper namespace="com.officeAuto.ssm.dao.system.PlanDao" >
 
     <select id="findByPage" resultType="com.officeAuto.ssm.model.Plan">
-        select * from Plan limit ${(currentPage-1)*pageSize},${(currentPage-1)*pageSize-1+pageSize}
+        select * from Plan limit ${(currentPage-1)*pageSize},${(currentPage-1)*pageSize+pageSize}
     </select>
 
     <select id="findCount" resultType="java.lang.Integer">

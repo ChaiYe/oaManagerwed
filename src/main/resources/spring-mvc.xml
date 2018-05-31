@@ -91,7 +91,7 @@
         <!-- 多个拦截器，顺序执行 -->
         <mvc:interceptor>
             <mvc:mapping path="/**"/>
-            <bean class="com.officeAuto.ssm.controller.interceptor.HandlerInterceptor1"></bean>
+            <bean class="com.officeAuto.ssm.controller.interceptor.HandlerInterceptor1"/>
         </mvc:interceptor>
     </mvc:interceptors>
 </beans>

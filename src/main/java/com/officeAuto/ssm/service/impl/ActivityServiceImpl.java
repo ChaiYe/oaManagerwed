@@ -23,7 +23,7 @@ public class ActivityServiceImpl implements ActivityService{
     @Override
     public Activity findById(Serializable id)  throws Exception{
 
-        Activity Activity=ActivityDao.findById(id);
+        Activity Activity = ActivityDao.findById(id);
         if(Activity==null)
         {
            // throw  new ActivityException("该用户不存在");

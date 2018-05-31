@@ -4,7 +4,7 @@
 
 
     <select id="findByPage" resultType="com.officeAuto.ssm.model.Employee">
-        select * from employee limit ${(currentPage-1)*pageSize},${(currentPage-1)*pageSize-1+pageSize}
+        select * from employee limit ${(currentPage-1)*pageSize},${(currentPage-1)*pageSize+pageSize}
     </select>
 
     <select id="findCount" resultType="java.lang.Integer">

@@ -9,7 +9,7 @@ public class PageBean <T>{
     /**当前页*/
     private Integer currentPage=1;
     /**每也显示条数*/
-    private Integer pageSize=10;
+    private Integer pageSize=5;
     /**总记录数*/
     private Integer totalCount;
     /**总页数*/

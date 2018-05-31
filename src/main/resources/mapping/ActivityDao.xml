@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--suppress ALL -->
 <mapper namespace="com.officeAuto.ssm.dao.system.ActivityDao" >
+
+    <select id="findAll" resultType="com.officeAuto.ssm.model.Activity">
+        select * from activity
+    </select>
+
     <select id="findByPage" resultType="com.officeAuto.ssm.model.Activity">
-        select * from Activity limit ${(currentPage-1)*pageSize},${(currentPage-1)*pageSize-1+pageSize}
+        select * from Activity limit ${(currentPage-1)*pageSize},${(currentPage-1)*pageSize + pageSize}
     </select>
 
     <select id="findCount" resultType="java.lang.Integer">
@@ -31,11 +37,9 @@
 
     </select>
 
-
     <delete id="deleteById" parameterType="java.lang.Integer" >
         DELETE FROM Activity WHERE uuid=#{id};
     </delete>
-
 
     <delete id="delete">
         delete from Activity where uuid in

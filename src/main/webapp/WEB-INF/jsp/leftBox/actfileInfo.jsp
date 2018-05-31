@@ -34,8 +34,6 @@
 </head>
 <body>
 <div>
-
-
     <div class="info">
         <div class="crumbs-nav">
                 <span class="layui-breadcrumb">
@@ -49,7 +47,6 @@
                 <span class="panel-header-right">
                         <a href="${pageContext.request.contextPath}/actfile/jumpToAdd.action" class="layui-btn layui-btn-sm panel-header-right-btn">添加</a>
                         <a href="${pageContext.request.contextPath}/actfile/findone.action?id=100" class="layui-btn layui-btn-sm panel-header-right-btn">添加</a>
-
                     </span>
             </div>
             <div class="content-page">
@@ -105,9 +102,7 @@
                             </tr>
                         </c:forEach>
                     </c:if>
-
                     </tbody>
-
                 </table>
                 <div class="pageBox1">
                     <ul class="pageDiv clearfix">
@@ -117,19 +112,15 @@
                         无数据
                     </div>
                     <div class="page">
-
-
-
                         <ul class="pageMenu clearfix">
                             <li class="firstPage">首页</li>
                             <li class="prevPage"> < </li>
                             <div class="pageObj clearfix">
-                                <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${actfilePageBean.currentPage-2}">${actfilePageBean.currentPage-2}</a></li>
-                                <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${actfilePageBean.currentPage-1}">${actfilePageBean.currentPage-1}</a></li>
+                                <c:if test="${actfilePageBean.currentPage > 2}"><li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${actfilePageBean.currentPage-2}">${actfilePageBean.currentPage-2}</a></li></c:if>
+                                <c:if test="${actfilePageBean.currentPage > 1}"><li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${actfilePageBean.currentPage-1}">${actfilePageBean.currentPage-1}</a></li></c:if>
                                 <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${actfilePageBean.currentPage}">${actfilePageBean.currentPage}</a></li>
-                                <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${actfilePageBean.currentPage+1}">${actfilePageBean.currentPage+1}</a></li>
-                                <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${actfilePageBean.currentPage+2}">${actfilePageBean.currentPage+2}</a></li>
-
+                                <c:if test="${actfilePageBean.totalPage >= actfilePageBean.currentPage + 1}"><li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${actfilePageBean.currentPage+1}">${actfilePageBean.currentPage+1}</a></li></c:if>
+                                <c:if test="${actfilePageBean.totalPage >= actfilePageBean.currentPage + 2}"><li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${actfilePageBean.currentPage+2}">${actfilePageBean.currentPage+2}</a></li></c:if>
                             </div>
                             <li class="nextPage"> > </li>
                             <li class="lastPage">尾页</li>

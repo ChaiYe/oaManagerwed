@@ -8,7 +8,7 @@
   </select>
 
   <select id="findByPage" resultType="com.officeAuto.ssm.model.EmployeeAndInfo">
-    select employee.*,employeeinfo.*,job.name,dept.name from employee left join employeeinfo on employee.uuid=employeeinfo.id left join job on employee.uuid=job.employee left join dept  on dept.uuid=job.dept  limit ${(currentPage-1)*pageSize},${(currentPage-1)*pageSize-1+pageSize}
+    select employee.*,employeeinfo.*,job.name,dept.name from employee left join employeeinfo on employee.uuid=employeeinfo.id left join job on employee.uuid=job.employee left join dept  on dept.uuid=job.dept  limit ${(currentPage-1)*pageSize},${(currentPage-1)*pageSize+pageSize}
   </select>
 
     <select id="findCount" resultType="java.lang.Integer">

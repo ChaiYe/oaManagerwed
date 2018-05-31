@@ -1,6 +1,8 @@
 package com.officeAuto.ssm.controller;
 
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.officeAuto.ssm.model.Activity;
 import com.officeAuto.ssm.model.ActivityQueryModel;
 import com.officeAuto.ssm.service.ActivityService;
@@ -21,24 +23,27 @@ public class ActivityController {
     @Autowired
     private ActivityService activityService;
 
-
+    /**
+     * pagehelper 分页获取数据
+     * @param currentPage 当前页面
+     * @param model 模型
+     * @return 页面
+     * @throws Exception 异常
+     */
     @RequestMapping("/getActivityByPage")
     public String listPage(Integer currentPage,Model model) throws Exception
     {
-        PageBean<Activity> activityPageBean= new PageBean<Activity>();
-        if(currentPage!=null)
-        {
-            activityPageBean.setCurrentPage(currentPage);
-        }
-        List<Activity> activitys = activityService.findByPage(activityPageBean);
-        activityPageBean.setDatas(activitys);
+        if(currentPage==null)
+            currentPage = 1;
+        //在你需要进行分页的 MyBatis 查询方法前调用 PageHelper.startPage 静态方法即可，紧跟在这个方法后的第一个MyBatis 查询方法会被进行分页。
+        PageHelper.startPage(currentPage, 5);
+        List<Activity> list = activityService.findAll();
+        //PageInfo类包装数据
+        PageInfo<Activity> p = new PageInfo<Activity>(list);
 
-        Integer totalCount = activityService.findCount();
-        activityPageBean.setTotalCount(totalCount);
-
-        model.addAttribute("activityPageBean", activityPageBean);
-
-        return  "leftBox/activityInfo";
+        model.addAttribute("page", p);
+        model.addAttribute("list", list);
+        return "leftBox/activityInfo";
     }
 
     @RequestMapping("delete")
