@@ -220,7 +220,7 @@
   </select>
 
   <select id="findEmpInfoList" resultType="com.officeAuto.ssm.model.EmployeeAndInfo">
-    select employee.*,employeeinfo.*,job.name jobName,dept.name deptName from employee left join employeeinfo on employee.uuid=employeeinfo.id left join job on employee.uuid=job.employee left join dept  on dept.uuid=job.dept
+    select employee.*,employeeInfo.*,job.name jobName,dept.name deptName from employee left join employeeInfo on employee.uuid=employeeInfo.id left join job on employee.uuid=job.employee left join dept  on dept.uuid=job.dept
   </select>
 
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
@@ -228,7 +228,7 @@
       delete from employee
         where uuid=#{uuid,jdbcType=INTEGER};
       SET  FOREIGN_KEY_CHECKS = 1;
-        delete from employeeinfo where id= #{uuid,jdbcType=INTEGER};
+        delete from employeeInfo where id= #{uuid,jdbcType=INTEGER};
    </delete>
 
 </mapper>

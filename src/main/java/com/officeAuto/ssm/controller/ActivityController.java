@@ -67,8 +67,6 @@ public class ActivityController {
         activity.setEndtime(new Date());
         activity.setEmployee(1);
         activityService.insert(activity);
-
-
         return  "redirect:/activity/getActivityByPage.action";
     }
 

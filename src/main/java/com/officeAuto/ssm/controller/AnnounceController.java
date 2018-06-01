@@ -34,10 +34,10 @@ public class AnnounceController {
         {
             announcePageBean.setCurrentPage(currentPage);
         }
-        List<Announce> announces=announceService.findByPage(announcePageBean);
+        List<Announce> announces = announceService.findByPage(announcePageBean);
         announcePageBean.setDatas(announces);
 
-        Integer totalCount =announceService.findCount();
+        Integer totalCount = announceService.findCount();
         announcePageBean.setTotalCount(totalCount);
 
         model.addAttribute("announcePageBean",announcePageBean);

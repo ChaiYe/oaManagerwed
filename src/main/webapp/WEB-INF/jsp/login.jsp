@@ -81,14 +81,14 @@
                 账号
             </label>
             <div class="layui-input-block">
-                <input type="text" name="account" autocomplete="off" placeholder="请输入账号" class="layui-input" v-model="name">
+                <input type="text" name="account" id="account" autocomplete="off" placeholder="请输入账号" class="layui-input" v-model="name">
                 <p class="error">{{nameError}}</p>
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">密码</label>
             <div class="layui-input-block">
-                <input type="password" name="password" autocomplete="off" placeholder="请输入密码" class="layui-input"  v-model="password">
+                <input type="password" id="password" name="password" autocomplete="off" placeholder="请输入密码" class="layui-input"  v-model="password">
                 <p class="error">{{passwordError}}</p>
             </div>
         </div>
@@ -100,12 +100,42 @@
 
         <div>
             <span>
-                <input type="submit" value="登录" class="layui-btn layui-btn-fluid"/>
+                <%--<input type="submit" value="登录" class="layui-btn layui-btn-fluid"/>--%>
+                <input type="button" value="登录" class="layui-btn layui-btn-fluid" id="login"/>
             </span>
         </div>
     </form>
 </div>
-
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#login").click(function () {
+            var param = { account : $("#account").val(), password : $("#password").val()};
+            login(param);
+        });
+        function login(param){
+            $.ajax({
+                type : "post",
+                dataType: 'json',
+                url : "${pageContext.request.contextPath}/employee/loginAjax.action",
+                contentType : "application/json",
+                data : JSON.stringify(param),
+                async:false,
+                error:function(data){
+                    alert("Error");
+                },
+                success:function(data){
+                    if(data){
+                        location.href = "${pageContext.request.contextPath}/employee/managePage.action";
+                    }
+                    else{
+                        alert("账号或密码错误");
+                        $("#password").val("");
+                    }
+                }
+            })
+        }
+    })
+</script>
 <script>
    var app = new Vue({
         el:'#app',

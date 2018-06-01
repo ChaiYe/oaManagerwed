@@ -1,6 +1,6 @@
 package com.officeAuto.ssm.model;
 
-public class Employeeinfo {
+public class EmployeeInfo {
     private Integer id;
 
     private String name;
@@ -73,7 +73,7 @@ public class Employeeinfo {
 
     @Override
     public String toString() {
-        return "Employeeinfo{" +
+        return "EmployeeInfo{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", sex='" + sex + '\'' +

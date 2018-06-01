@@ -1,6 +1,6 @@
 package com.officeAuto.ssm.dao.useless;
 
-import com.officeAuto.ssm.model.Employeeinfo;
+import com.officeAuto.ssm.model.EmployeeInfo;
 import com.officeAuto.ssm.model.EmployeeinfoExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
@@ -14,19 +14,19 @@ public interface EmployeeinfoMapper {
 
     int deleteByPrimaryKey(Integer id);
 
-    int insert(Employeeinfo record);
+    int insert(EmployeeInfo record);
 
-    int insertSelective(Employeeinfo record);
+    int insertSelective(EmployeeInfo record);
 
-    List<Employeeinfo> selectByExample(EmployeeinfoExample example);
+    List<EmployeeInfo> selectByExample(EmployeeinfoExample example);
 
-    Employeeinfo selectByPrimaryKey(Integer id);
+    EmployeeInfo selectByPrimaryKey(Integer id);
 
-    int updateByExampleSelective(@Param("record") Employeeinfo record, @Param("example") EmployeeinfoExample example);
+    int updateByExampleSelective(@Param("record") EmployeeInfo record, @Param("example") EmployeeinfoExample example);
 
-    int updateByExample(@Param("record") Employeeinfo record, @Param("example") EmployeeinfoExample example);
+    int updateByExample(@Param("record") EmployeeInfo record, @Param("example") EmployeeinfoExample example);
 
-    int updateByPrimaryKeySelective(Employeeinfo record);
+    int updateByPrimaryKeySelective(EmployeeInfo record);
 
-    int updateByPrimaryKey(Employeeinfo record);
+    int updateByPrimaryKey(EmployeeInfo record);
 }

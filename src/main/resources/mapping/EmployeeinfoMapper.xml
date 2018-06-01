@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.officeAuto.ssm.dao.useless.EmployeeinfoMapper" >
-  <resultMap id="BaseResultMap" type="com.officeAuto.ssm.model.Employeeinfo" >
+  <resultMap id="BaseResultMap" type="com.officeAuto.ssm.model.EmployeeInfo" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="sex" property="sex" jdbcType="VARCHAR" />
@@ -77,7 +77,7 @@
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from employeeinfo
+    from employeeInfo
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
@@ -88,29 +88,29 @@
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
-    from employeeinfo
+    from employeeInfo
     where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from employeeinfo
+    delete from employeeInfo
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.officeAuto.ssm.model.EmployeeinfoExample" >
-    delete from employeeinfo
+    delete from employeeInfo
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.officeAuto.ssm.model.Employeeinfo" >
-    insert into employeeinfo (id, name, sex, 
+  <insert id="insert" parameterType="com.officeAuto.ssm.model.EmployeeInfo" >
+    insert into employeeInfo (id, name, sex,
       age, phone, email, 
       address)
     values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{sex,jdbcType=VARCHAR}, 
       #{age,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, 
       #{address,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.officeAuto.ssm.model.Employeeinfo" >
-    insert into employeeinfo
+  <insert id="insertSelective" parameterType="com.officeAuto.ssm.model.EmployeeInfo" >
+    insert into employeeInfo
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         id,
@@ -159,13 +159,13 @@
     </trim>
   </insert>
   <select id="countByExample" parameterType="com.officeAuto.ssm.model.EmployeeinfoExample" resultType="java.lang.Integer" >
-    select count(*) from employeeinfo
+    select count(*) from employeeInfo
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map" >
-    update employeeinfo
+    update employeeInfo
     <set >
       <if test="record.id != null" >
         id = #{record.id,jdbcType=INTEGER},
@@ -194,7 +194,7 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map" >
-    update employeeinfo
+    update employeeInfo
     set id = #{record.id,jdbcType=INTEGER},
       name = #{record.name,jdbcType=VARCHAR},
       sex = #{record.sex,jdbcType=VARCHAR},
@@ -206,8 +206,8 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.officeAuto.ssm.model.Employeeinfo" >
-    update employeeinfo
+  <update id="updateByPrimaryKeySelective" parameterType="com.officeAuto.ssm.model.EmployeeInfo" >
+    update employeeInfo
     <set >
       <if test="name != null" >
         name = #{name,jdbcType=VARCHAR},
@@ -230,8 +230,8 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.officeAuto.ssm.model.Employeeinfo" >
-    update employeeinfo
+  <update id="updateByPrimaryKey" parameterType="com.officeAuto.ssm.model.EmployeeInfo" >
+    update employeeInfo
     set name = #{name,jdbcType=VARCHAR},
       sex = #{sex,jdbcType=VARCHAR},
       age = #{age,jdbcType=VARCHAR},

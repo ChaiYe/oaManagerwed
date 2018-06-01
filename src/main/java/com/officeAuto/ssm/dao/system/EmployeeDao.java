@@ -11,4 +11,6 @@ public interface EmployeeDao extends BaseDao<Employee> {
 
     Employee findByActAndPwd(@Param("account")String account, @Param("password")String password);
 
+    Employee findByUuid(@Param("uuid")int uuid);
+
 }

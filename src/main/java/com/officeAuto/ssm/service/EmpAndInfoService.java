@@ -1,5 +1,6 @@
 package com.officeAuto.ssm.service;
 
+import com.officeAuto.ssm.model.Employee;
 import com.officeAuto.ssm.model.EmployeeAndInfo;
 import com.officeAuto.ssm.utils.PageBean;
 
@@ -14,6 +15,14 @@ public interface EmpAndInfoService {
      * @return
      */
     public EmployeeAndInfo findById(Serializable id) throws  Exception;
+
+    /**
+     * 根据唯一主键查找
+     * @param uuid 主键
+     * @return
+     * @throws Exception
+     */
+    public EmployeeAndInfo findByUuid(int uuid);
 
     /**
      * 分页查询实例
@@ -62,5 +71,11 @@ public interface EmpAndInfoService {
      */
     public int findCount() throws  Exception;
 
-
+    /**
+     * 登录检验
+     * @param account 账号
+     * @param password 密码
+     * @return 员工实体+员工信息+岗位信息
+     */
+    EmployeeAndInfo login(String account, String password);
 }

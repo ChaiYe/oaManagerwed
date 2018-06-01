@@ -32,6 +32,12 @@ public class EmpAndInfoServiceImpl implements EmpAndInfoService {
     }
 
     @Override
+    public EmployeeAndInfo findByUuid(int uuid){
+        employeeAndInfoDao.findByID(uuid);
+        return null;
+    }
+
+    @Override
     public List<EmployeeAndInfo> findByPage(PageBean<EmployeeAndInfo> employeeAndInfoPageBean) throws  Exception{
         return employeeAndInfoDao.findByPage(employeeAndInfoPageBean);
     }
@@ -64,6 +70,11 @@ public class EmpAndInfoServiceImpl implements EmpAndInfoService {
     @Override
     public int findCount() throws  Exception {
         return employeeAndInfoDao.findCount();
+    }
+
+    @Override
+    public EmployeeAndInfo login(String account, String password) {
+        return employeeAndInfoDao.login(account, password);
     }
 
 }

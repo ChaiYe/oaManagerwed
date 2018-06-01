@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt"  prefix="fmt"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -30,22 +31,6 @@
     <script src="../../../ckeditor/ckeditor.js"></script>
     <script src="../../../ckeditor/config.js"></script>
     <script src="../../../js/modify.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#jumpBtn").click(function () {
-                var pagenum = $("#pageNum").val();
-                if(isNaN(pagenum))
-                    alert("请输入数字");
-                else if(pagenum < 1 || pagenum > ${page.pages})
-                    alert("请输入正确页码");
-                else{
-                    $("#jumpa").attr("href", "${pageContext.request.contextPath}/activity/getActivityByPage.action?currentPage=" + pagenum);
-                    $("#jumpa").append("<span></span>");
-                    $("#jumpa span").click();
-                }
-            })
-        })
-    </script>
 </head>
 <body>
 <div>
@@ -84,54 +69,58 @@
                         </div>
                     </div>
                 </form>
-
+                <!--数据表格-->
                 <table class="layui-table">
-
                     <thead>
                     <tr>
                         <th></th>
-                        <th>公告标题</th>
-                        <th>公告详情</th>
-                        <th>日期</th>
-                        <th>操作</th>
+                        <th>活动标题</th>
+                        <th>活动详情</th>
+                        <th>开始时间</th>
+                        <th>结束时间</th>
+                        <th>状态</th>
+                        <th>部门</th>
+                        <th>申请人</th>
+                        <th>删除</th>
+                        <th>修改</th>
                     </tr>
                     </thead>
                     <tbody>
-
-                    <%--<c:if test="${!empty activityPageBean.datas}">--%>
-                        <%--<c:forEach var="activity" items="${activityPageBean.datas}">--%>
-                            <%--<tr class="oneMsg">--%>
-                                <%--<td><input type="checkbox" value="${activity.uuid}" name="del"></td>--%>
-                                <%--<td><input type="text" value="${activity.name}" readonly="readonly" class="inputs layui-input"/></td>--%>
-                                <%--<td><input type="text" value="${activity.descript}" readonly="readonly" class="inputs layui-input"/></td>--%>
-                                <%--<td><input type="text" value="${activity.begintime}" readonly="readonly" class="inputs layui-input"/></td>--%>
-                                <%--<td><input type="text" value="${activity.endtime}" readonly="readonly" class="inputs layui-input"/></td>--%>
-                                <%--<td><input type="text" value="${activity.state}" readonly="readonly" class="inputs layui-input"/></td>--%>
-                                <%--<td>--%>
-                                    <%--<a href="${pageContext.request.contextPath}/activity/delete.action?uuid=${activity.uuid}" class="layui-btn layui-btn-sm">删除</a>--%>
-                                    <%--<a href="${pageContext.request.contextPath}/activity/jumpToEdit.action?uuid=${activity.uuid}" class="layui-btn layui-btn-sm change">修改</a>--%>
-                                <%--</td>--%>
-                            <%--</tr>--%>
-                        <%--</c:forEach>--%>
-                    <%--</c:if>--%>
                     <c:if test="${!empty list}">
-                        <c:forEach var="activity" items="${list}">
+                        <c:forEach var="obj" items="${list}">
                             <tr class="oneMsg">
-                                <td><input type="checkbox" value="${activity.uuid}" name="del"></td>
-                                <td><input type="text" value="${activity.name}" readonly="readonly" class="inputs layui-input"/></td>
-                                <td><input type="text" value="${activity.descript}" readonly="readonly" class="inputs layui-input"/></td>
-                                <td><input type="text" value="${activity.begintime}" readonly="readonly" class="inputs layui-input"/></td>
-                                <td><input type="text" value="${activity.endtime}" readonly="readonly" class="inputs layui-input"/></td>
-                                <td><input type="text" value="${activity.state}" readonly="readonly" class="inputs layui-input"/></td>
+                                <%--<td><input type="checkbox" value="${obj.uuid}" name="del"></td>--%>
+                                <%--<td><input type="text" value="${obj.name}" readonly="readonly" class="inputs layui-input"/></td>--%>
+                                <%--<td><input type="text" value="${obj.descript}" readonly="readonly" class="inputs layui-input"/></td>--%>
+                                <%--<td><input type="text" value="${obj.begintime}" readonly="readonly" class="inputs layui-input"/></td>--%>
+                                <%--<td><input type="text" value="${obj.endtime}" readonly="readonly" class="inputs layui-input"/></td>--%>
+                                <%--<td><input type="text" value="${obj.state}" readonly="readonly" class="inputs layui-input"/></td>--%>
+                                <%--<td><input type="text" value="${obj.dept}" readonly="readonly" class="inputs layui-input"/></td>--%>
+                                <%--<td><input type="text" value="${obj.employee}" readonly="readonly" class="inputs layui-input"/></td>--%>
+                                <%--<td><a href="${pageContext.request.contextPath}/activity/delete.action?uuid=${obj.uuid}" class="layui-btn layui-btn-sm">删除</a></td>--%>
+                                <%--<td><a href="${pageContext.request.contextPath}/activity/jumpToEdit.action?uuid=${obj.uuid}" class="layui-btn layui-btn-sm change">修改</a></td>--%>
+                                <td><input type="checkbox" value="${obj.uuid}" name="del"></td>
                                 <td>
-                                    <a href="${pageContext.request.contextPath}/activity/delete.action?uuid=${activity.uuid}" class="layui-btn layui-btn-sm">删除</a>
-                                    <a href="${pageContext.request.contextPath}/activity/jumpToEdit.action?uuid=${activity.uuid}" class="layui-btn layui-btn-sm change">修改</a>
+                                    <c:if test="${obj.name.length() > 6}">${fn:substring(obj.name, 0, 6)}... ...</c:if>
+                                    <c:if test="${obj.name.length() <= 6}">${obj.name}</c:if>
                                 </td>
+                                <td>
+                                    <c:if test="${obj.descript.length() > 6}">${fn:substring(obj.descript, 0, 6)}... ...</c:if>
+                                    <c:if test="${obj.descript.length() <= 6}">${obj.descript}</c:if>
+                                </td>
+                                <td>${obj.begintime}</td>
+                                <td>${obj.endtime}</td>
+                                <td>${obj.state}</td>
+                                <td>${obj.employee}</td>
+                                <td>${obj.dept}</td>
+                                <td><a href="${pageContext.request.contextPath}/activity/delete.action?uuid=${obj.uuid}" class="layui-btn layui-btn-sm">删除</a></td>
+                                <td><a href="${pageContext.request.contextPath}/activity/jumpToEdit.action?uuid=${obj.uuid}" class="layui-btn layui-btn-sm change">修改</a></td>
                             </tr>
                         </c:forEach>
                     </c:if>
                     </tbody>
                 </table>
+                <!--分页-->
                 <div class="pageBox1">
                     <ul class="pageDiv clearfix">
 
@@ -139,6 +128,7 @@
                     <div class="notContent hide">
                         无数据
                     </div>
+                    <!--页码-->
                     <div class="page">
                         <ul class="pageMenu clearfix">
                             <a href="${pageContext.request.contextPath}/activity/getActivityByPage.action?currentPage=${page.firstPage}"><li class="firstPage">首页</li></a>
@@ -175,6 +165,23 @@
                             </li>
                         </ul>
                     </div>
+                    <!--跳转页面检验-->
+                    <script type="text/javascript">
+                        $(document).ready(function () {
+                            $("#jumpBtn").click(function () {
+                                var pagenum = $("#pageNum").val();
+                                if(isNaN(pagenum))
+                                    alert("请输入数字");
+                                else if(pagenum < 1 || pagenum > ${page.pages})
+                                    alert("请输入正确页码");
+                                else{
+                                    $("#jumpa").attr("href", "${pageContext.request.contextPath}/activity/getActivityByPage.action?currentPage=" + pagenum);
+                                    $("#jumpa").append("<span></span>");
+                                    $("#jumpa span").click();
+                                }
+                            })
+                        })
+                    </script>
                 </div>
             </div>
         </div>
@@ -211,8 +218,6 @@
         }
 
     </script>
-
-
 
 </div>
 </body>

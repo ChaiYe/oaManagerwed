@@ -1,12 +1,15 @@
 package com.officeAuto.ssm.controller;
 
 import com.officeAuto.ssm.model.*;
+import com.officeAuto.ssm.service.EmpAndInfoService;
 import com.officeAuto.ssm.service.EmployeeService;
 import com.officeAuto.ssm.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
 import java.util.Date;
@@ -18,6 +21,8 @@ public class EmployeeController {
 
     @Autowired
     private EmployeeService employeeService;
+    @Autowired
+    private EmpAndInfoService empAndInfoService;
 
     /**
      * 登录界面
@@ -37,16 +42,49 @@ public class EmployeeController {
      * @return 页面
      */
     @RequestMapping("/login")
-    public  String login(String account, String password, HttpSession session)
-    {
+    public  String login(String account, String password, HttpSession session) throws Exception {
+
         Employee employee = employeeService.login(account,password);
 
         if(employee==null)
             return "login";
 
+        EmployeeAndInfo employeeAndInfo = empAndInfoService.findByUuid(employee.getUuid());
+
+
         session.setAttribute("employee", employee);
 
         return  "management";
+    }
+
+    @RequestMapping("/loginAjax")
+    @ResponseBody
+    public boolean loginAjax(@RequestBody Employee employee, HttpSession session){
+
+        EmployeeAndInfo employeeAndInfo = empAndInfoService.login(employee.getAccount(),employee.getPassword());
+        //账号密码正确
+        if (employeeAndInfo != null){
+
+            int authority = 0;
+            for (Job j:employeeAndInfo.getJobs()) {
+                if(j.getAuthority() > authority)
+                    authority = j.getAuthority();
+            }
+            session.setAttribute("emplpyee", employeeAndInfo);
+            session.setAttribute("authority", authority);
+            return true;
+        }
+        else
+            return false;
+    }
+
+    /**
+     * 进入管理页面
+     * @return 页面
+     */
+    @RequestMapping("/managePage")
+    public String managePage(){
+        return "management";
     }
 
     /**
@@ -148,103 +186,4 @@ public class EmployeeController {
         employeeService.delete(delitems);
         return "redirect:/Employee/getEmployeeByPage.action";
     }
-
-    /*@RequestMapping("/login")
-    public String login(HttpServletRequest request,String account,String password, Model model,HttpSession session){
-
-
-
-        Employee employee=employeeService.login(account,password);
-
-        if(employee==null){
-            return "login";
-        }
-
-        session.setAttribute("employee", employee);
-
-
-
-        return  "management";
-    }
-*/
-
-    /*
-    *   @RequestMapping("/loginPage")
-    public String login(HttpServletRequest request)
-    {
-        return "login";
-    }
-
-
-
-    @RequestMapping("/login")
-    public @ResponseBody
-    String login(HttpServletRequest request,String account,String password, Model model,HttpSession session){
-
-
-
-        Employee employee=employeeService.login(account,password);
-
-        if(employee==null){
-            return "login";
-        }
-
-        session.setAttribute("employee", employee);
-
-
-
-        return  "management";
-    }
-    * */
-    /*@RequestMapping("/list")
-    public String list(HttpServletRequest request,Model model) {
-
-        List<EmployeeAndInfo> employeeAndInfos= employeeService.findEmpInfoList();
-
-        model.addAttribute("employeeAndInfos",employeeAndInfos);
-
-        return "leftBox/employeeInfo";
-    }
-
-    @RequestMapping("/delete")
-    public String delete(HttpServletRequest request,Integer id)
-    {
-        //TODO
-        employeeService.deleteByPrimaryKey(id);
-        return null;
-    }*/
-
-   /* @RequestMapping("/add")
-    public String  add(HttpServletRequest request,EmployeeAndInfo employeeAndInfo)
-    {
-        employeeAndInfo.setState("在职");
-        employeeAndInfo.setCreatetime(new Date());
-        employeeService.insert(employeeAndInfo);
-
-        return "redirect:/employee/list.action";
-    }*/
-
-   /* @RequestMapping("/query")
-    public String query(Integer queryAcount1,Integer queryAcount2,Model model) throws Exception
-    {
-        EmployeeQueryModel EmployeeQueryModel=new EmployeeQueryModel();
-        EmployeeQueryModel.setQueryAcount1(queryAcount1);
-        EmployeeQueryModel.setQueryAcount2(queryAcount2);
-        PageBean<EmployeeQueryModel> pageBeanQuery= new PageBean<EmployeeQueryModel>();
-
-        HashMap<String, Object> paraMap = new HashMap<String, Object>();
-
-        paraMap.put("EmployeeQuery",EmployeeQueryModel);
-
-        pageBeanQuery.setParaMap(paraMap);
-        List<Employee> Employees=employeeService.findByPageQuery(pageBeanQuery);
-
-        PageBean<Employee> EmployeePageBean= new PageBean<Employee>();
-        EmployeePageBean.setDatas(Employees);
-
-        model.addAttribute("EmployeePageBean",EmployeePageBean);
-        return "leftBox/EmployeeInfo";
-    }
-*/
-
 }

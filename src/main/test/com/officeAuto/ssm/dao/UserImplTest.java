@@ -1,8 +1,6 @@
 package com.officeAuto.ssm.dao;
 
-import com.officeAuto.ssm.dao.system.ActivityDao;
-import com.officeAuto.ssm.dao.system.AnnounceDao;
-import com.officeAuto.ssm.dao.system.DeptDao;
+import com.officeAuto.ssm.dao.system.*;
 import com.officeAuto.ssm.dao.useless.ActoptionMapper;
 import com.officeAuto.ssm.dao.useless.EmployeeMapper;
 import com.officeAuto.ssm.model.*;
@@ -37,12 +35,16 @@ public class UserImplTest {
 
     @Test
     public void testActivityDao(){
-        ActivityDao activityDao=(ActivityDao)applicationContext.getBean("activityDao");
-        PageBean<Activity> deptPageBean=new PageBean<Activity>();
-        List<Activity> activities=activityDao.findByPage(deptPageBean);
-        for(Activity activity:activities){
-            System.out.println(activity);
-        }
+//        ActivityDao activityDao=(ActivityDao)applicationContext.getBean("activityDao");
+//        PageBean<Activity> deptPageBean=new PageBean<Activity>();
+//        List<Activity> activities=activityDao.findByPage(deptPageBean);
+//        for(Activity activity:activities){
+//            System.out.println(activity);
+//        }
+        EmployeeAndInfoDao dao=(EmployeeAndInfoDao) applicationContext.getBean("employeeAndInfoDao");
+
+        EmployeeAndInfo employeeAndInfo = dao.login("A002", "123");
+        System.out.println(employeeAndInfo.getJobs().size()+"chenggogn");
     }
 
     @Test

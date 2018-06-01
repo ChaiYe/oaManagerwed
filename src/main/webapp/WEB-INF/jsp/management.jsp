@@ -31,11 +31,8 @@
         });
 
         /*function change(obj){
-
-
             console.log($(obj).parents("tr").children());
             $(obj).parents("tr").find("input").removeAttr("readonly").removeClass("inputs");
-
         }
         */
 
@@ -100,37 +97,30 @@
         <ul class="layui-nav">
 
             <li class="layui-nav-item">
-
-                <a href="" style="display: inline;padding-left: 0px">首页</a>
+                <a href="${pageContext.request.contextPath}/employee/homePage.action" style="display: inline;padding-left: 0px" target="infoContent">首页</a>
             </li>
 
             <li class="layui-nav-item">
-
                 <a href="" style="display: inline;padding-left: 0px">帮助</a>
             </li>
 
             <li class="layui-nav-item" style="float: right">
                 <a href=""><img src="http://t.cn/RCzsdCq" class="layui-nav-img">${sessionScope.employee.account}</a>
-
                 <dl class="layui-nav-child">
                     <dd><a href="javascript:;">个人主页</a></dd>
-                    <dd><a href="${pageContext.request.contextPath}/employee/logout.action">注销</a></dd>
+                    <dd><a href="${pageContext.request.contextPath}/employee/logout.action" >注销</a></dd>
                 </dl>
             </li>
             <li class="layui-nav-item" style="float: right">
                 <a href="">公司公告<span class="layui-badge-dot"></span></a>
             </li>
             <li class="layui-nav-item" style="float: right">
-
                 <a href="" style="display: inline;padding-left: 0px">活动<span class="layui-badge-dot"></span></a>
             </li>
         </ul>
     </div>
-
     <iframe name="infoContent" src="${pageContext.request.contextPath}/employee/homePage.action" frameborder="0"></iframe>
 </div>
-
-
 <div class="dh mainbox right" style="display: inline;">
     <div>
         <ul class="layui-nav layui-nav-tree layui-nav-side">
@@ -171,8 +161,6 @@
                     <dd><a href="">权限管理</a></dd>
                 </dl>
             </li>
-            <li class="layui-nav-item"><a href="">更多</a></li>
-
         </ul>
 
     </div>

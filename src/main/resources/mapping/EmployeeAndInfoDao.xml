@@ -3,22 +3,74 @@
 
 <mapper namespace="com.officeAuto.ssm.dao.system.EmployeeAndInfoDao" >
 
-  <select id="findAll" resultType="com.officeAuto.ssm.model.EmployeeAndInfo">
-    select employee.*,employeeinfo.*,job.name,dept.name from employee left join employeeinfo on employee.uuid=employeeinfo.id left join job on employee.uuid=job.employee left join dept  on dept.uuid=job.dept
-  </select>
+    <select id="findAll" resultType="com.officeAuto.ssm.model.EmployeeAndInfo">
+        select employee.*,employeeInfo.*,job.name,dept.name
+        from employee
+        left join employeeInfo on employee.uuid = employeeInfo.id
+        left join job on employee.uuid = job.employee
+        left join dept  on dept.uuid = job.dept
+    </select>
 
-  <select id="findByPage" resultType="com.officeAuto.ssm.model.EmployeeAndInfo">
-    select employee.*,employeeinfo.*,job.name,dept.name from employee left join employeeinfo on employee.uuid=employeeinfo.id left join job on employee.uuid=job.employee left join dept  on dept.uuid=job.dept  limit ${(currentPage-1)*pageSize},${(currentPage-1)*pageSize+pageSize}
-  </select>
+    <select id="findByPage" resultType="com.officeAuto.ssm.model.EmployeeAndInfo">
+        select employee.*,employeeInfo.*,job.name,dept.name
+        from employee
+        left join employeeInfo on employee.uuid=employeeInfo.id
+        left join job on employee.uuid=job.employee
+        left join dept  on dept.uuid=job.dept
+        limit ${(currentPage-1)*pageSize},${(currentPage-1)*pageSize+pageSize}
+    </select>
 
     <select id="findCount" resultType="java.lang.Integer">
-      select count(*) from employee left join employeeinfo on employee.uuid=employeeinfo.id left join job on employee.uuid=job.employee left join dept  on dept.uuid=job.dept
+        select count(*)
+        from employee
+        left join employeeInfo on employee.uuid=employeeInfo.id
+        left join job on employee.uuid=job.employee
+        left join dept  on dept.uuid=job.dept
     </select>
 
     <select id="findById" resultType="com.officeAuto.ssm.model.EmployeeAndInfo">
 
     </select>
 
+    <resultMap id="BaseResultMap" type="com.officeAuto.ssm.model.EmployeeAndInfo">
+        <result column="uuid" jdbcType="INTEGER" property="uuid" />
+        <result column="account" jdbcType="VARCHAR" property="account" />
+        <result column="password" jdbcType="VARCHAR" property="password" />
+        <result column="state" jdbcType="VARCHAR" property="state" />
+        <result column="createtime" jdbcType="DATE" property="createtime" />
+        <association property="employeeInfo" javaType="com.officeAuto.ssm.model.EmployeeInfo">
+            <id column="id" jdbcType="INTEGER" property="id" />
+            <result column="name" jdbcType="VARCHAR" property="name" />
+            <result column="sex" jdbcType="VARCHAR" property="sex" />
+            <result column="age" jdbcType="VARCHAR" property="age" />
+            <result column="phone" jdbcType="VARCHAR" property="phone" />
+            <result column="email" jdbcType="VARCHAR" property="email" />
+            <result column="address" jdbcType="VARCHAR" property="address" />
+        </association>
+        <collection property="jobs" ofType="com.officeAuto.ssm.model.Job">
+            <id column="job_uuid" jdbcType="INTEGER" property="uuid" />
+            <result column="job_name" jdbcType="VARCHAR" property="name" />
+            <result column="authority" jdbcType="INTEGER" property="authority" />
+            <result column="worktime" jdbcType="DATE" property="worktime" />
+            <result column="dept" jdbcType="INTEGER" property="dept" />
+            <result column="job_employee" jdbcType="INTEGER" property="employee" />
+        </collection>
+    </resultMap>
+
+    <select id="findByID" resultMap="BaseResultMap">
+        select employee.*, employeeinfo.*, job.uuid "job_uuid", job.name "job_name", job.authority, job.worktime, job.dept, job.employee "job_employee"
+        from employee, employeeinfo, job
+        where employee.uuid = #{uuid}  and job.employee = employee.uuid
+    </select>
+
+    <select id="login" resultMap="BaseResultMap">
+        select employee.*, employeeinfo.*, job.uuid "job_uuid", job.name "job_name", job.authority, job.worktime, job.dept, job.employee "job_employee"
+        from employee, employeeinfo, job
+        where employee.account = #{account}
+              and employee.password = #{password}
+              and employeeinfo.id = employee.uuid
+              and job.employee = employee.uuid
+    </select>
 
     <delete id="deleteById" parameterType="java.lang.Integer" >
 
