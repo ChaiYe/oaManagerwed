@@ -5,7 +5,7 @@ import java.util.List;
 public class EmployeeAndInfo extends Employee {
 
     private EmployeeInfo employeeInfo;
-    private List<Job> jobs;
+    private List<JobQueryModel> jobs;
 
     public EmployeeInfo getEmployeeInfo() {
         return employeeInfo;
@@ -15,11 +15,11 @@ public class EmployeeAndInfo extends Employee {
         this.employeeInfo = employeeInfo;
     }
 
-    public List<Job> getJobs() {
+    public List<JobQueryModel> getJobs() {
         return jobs;
     }
 
-    public void setJobs(List<Job> jobs) {
+    public void setJobs(List<JobQueryModel> jobs) {
         this.jobs = jobs;
     }
 }

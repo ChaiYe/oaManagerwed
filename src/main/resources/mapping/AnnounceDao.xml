@@ -3,9 +3,24 @@
 
 <mapper namespace="com.officeAuto.ssm.dao.system.AnnounceDao" >
 
+    <resultMap id="BaseResultMap" type="com.officeAuto.ssm.model.Announce">
+        <result column="uuid" jdbcType="INTEGER" property="uuid" />
+        <result column="title" jdbcType="VARCHAR" property="title" />
+        <result column="createtime" jdbcType="DATE" property="createtime" />
+        <result column="dept" jdbcType="INTEGER" property="dept" />
+        <result column="employee" jdbcType="INTEGER" property="employee" />
+    </resultMap>
+    <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.officeAuto.ssm.model.Announce">
+        <result column="descript" jdbcType="LONGVARCHAR" property="descript" />
+    </resultMap>
+
     <select id="findByPage" resultType="com.officeAuto.ssm.model.Announce">
       select * from announce limit ${(currentPage-1)*pageSize},${(currentPage-1)*pageSize+pageSize}
-  </select>
+    </select>
+
+    <select id="findAll" resultType="com.officeAuto.ssm.model.Announce">
+        select * from announce
+    </select>
 
     <select id="findCount" resultType="java.lang.Integer">
         select count(*) from announce
@@ -31,6 +46,13 @@
             </where>
         </if>
 
+    </select>
+
+    <select id="getRecentAnnounce" resultType="com.officeAuto.ssm.model.Announce">
+        select * from announce
+        where dept = #{deptId}
+        order by createtime
+        limit 0, #{size}
     </select>
 
 

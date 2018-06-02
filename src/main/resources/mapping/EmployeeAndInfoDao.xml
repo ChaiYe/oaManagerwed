@@ -3,13 +3,13 @@
 
 <mapper namespace="com.officeAuto.ssm.dao.system.EmployeeAndInfoDao" >
 
-    <select id="findAll" resultType="com.officeAuto.ssm.model.EmployeeAndInfo">
-        select employee.*,employeeInfo.*,job.name,dept.name
-        from employee
-        left join employeeInfo on employee.uuid = employeeInfo.id
-        left join job on employee.uuid = job.employee
-        left join dept  on dept.uuid = job.dept
-    </select>
+    <!--<select id="findAll" resultType="com.officeAuto.ssm.model.EmployeeAndInfo">-->
+        <!--select employee.*,employeeInfo.*,job.name,dept.name-->
+        <!--from employee-->
+        <!--left join employeeInfo on employee.uuid = employeeInfo.id-->
+        <!--left join job on employee.uuid = job.employee-->
+        <!--left join dept  on dept.uuid = job.dept-->
+    <!--</select>-->
 
     <select id="findByPage" resultType="com.officeAuto.ssm.model.EmployeeAndInfo">
         select employee.*,employeeInfo.*,job.name,dept.name
@@ -47,13 +47,19 @@
             <result column="email" jdbcType="VARCHAR" property="email" />
             <result column="address" jdbcType="VARCHAR" property="address" />
         </association>
-        <collection property="jobs" ofType="com.officeAuto.ssm.model.Job">
+        <collection property="jobs" ofType="com.officeAuto.ssm.model.JobQueryModel">
             <id column="job_uuid" jdbcType="INTEGER" property="uuid" />
             <result column="job_name" jdbcType="VARCHAR" property="name" />
+            <result column="job_descript" jdbcType="LONGVARCHAR" property="descript" />
             <result column="authority" jdbcType="INTEGER" property="authority" />
             <result column="worktime" jdbcType="DATE" property="worktime" />
             <result column="dept" jdbcType="INTEGER" property="dept" />
             <result column="job_employee" jdbcType="INTEGER" property="employee" />
+            <association property="depart" javaType="com.officeAuto.ssm.model.Dept">
+                <result column="dept_uuid" jdbcType="INTEGER" property="uuid" />
+                <result column="dept_name" jdbcType="VARCHAR" property="name" />
+                <result column="descript" jdbcType="LONGVARCHAR" property="descript" />
+            </association>
         </collection>
     </resultMap>
 
@@ -70,6 +76,12 @@
               and employee.password = #{password}
               and employeeinfo.id = employee.uuid
               and job.employee = employee.uuid
+    </select>
+
+    <select id="findAll" resultMap="BaseResultMap">
+        select employee.*, employeeinfo.*
+        from employee, employeeinfo
+        where employee.uuid = employeeinfo.id
     </select>
 
     <delete id="deleteById" parameterType="java.lang.Integer" >

@@ -59,6 +59,7 @@ public class ActivityServiceImpl implements ActivityService{
 
     @Override
     public List<Activity> findAll() throws  Exception {
+
         return ActivityDao.findAll();
     }
 
@@ -72,4 +73,5 @@ public class ActivityServiceImpl implements ActivityService{
         //return ActivityDao.findByPageQuery(pageBean);
         return null;
     }
+
 }

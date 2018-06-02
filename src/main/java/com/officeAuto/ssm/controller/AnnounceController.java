@@ -1,8 +1,11 @@
 package com.officeAuto.ssm.controller;
 
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.officeAuto.ssm.model.Announce;
 import com.officeAuto.ssm.model.AnnounceQueryModel;
+import com.officeAuto.ssm.model.EmployeeAndInfo;
 import com.officeAuto.ssm.service.AnnounceService;
 import com.officeAuto.ssm.service.DeptService;
 import com.officeAuto.ssm.utils.PageBean;
@@ -13,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
+import javax.servlet.http.HttpSession;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.HashMap;
@@ -25,22 +29,22 @@ public class AnnounceController {
     @Autowired
     private AnnounceService announceService;
 
+    private int pageSize = 5;
 
     @RequestMapping("/getAnnounceByPage")
     public String listPage(Integer currentPage,Model model) throws Exception
     {
-        PageBean<Announce> announcePageBean= new PageBean<Announce>();
-        if(currentPage!=null)
-        {
-            announcePageBean.setCurrentPage(currentPage);
-        }
-        List<Announce> announces = announceService.findByPage(announcePageBean);
-        announcePageBean.setDatas(announces);
+        if(currentPage==null)
+            currentPage = 1;
+        //在你需要进行分页的 MyBatis 查询方法前调用 PageHelper.startPage 静态方法即可，紧跟在这个方法后的第一个MyBatis 查询方法会被进行分页。
+        PageHelper.startPage(currentPage, pageSize);
+        List<Announce> list = announceService.findAll();
 
-        Integer totalCount = announceService.findCount();
-        announcePageBean.setTotalCount(totalCount);
+        //PageInfo类包装数据
+        PageInfo<Announce> p = new PageInfo<Announce>(list);
 
-        model.addAttribute("announcePageBean",announcePageBean);
+        model.addAttribute("page", p);
+        model.addAttribute("list", list);
 
         return  "leftBox/announceInfo";
     }
@@ -59,11 +63,12 @@ public class AnnounceController {
     }
 
     @RequestMapping("insert")
-    public String insert(Announce announce) throws Exception
+    public String insert(Announce announce, HttpSession session) throws Exception
     {
         announce.setCreatetime(new Date());
         announce.setDept(1);
-        announce.setEmployee(1);
+        EmployeeAndInfo employeeAndInfo = (EmployeeAndInfo)session.getAttribute("employee");
+        announce.setEmployee(employeeAndInfo.getUuid());
         announceService.insert(announce);
         return  "redirect:/announce/getAnnounceByPage.action";
     }

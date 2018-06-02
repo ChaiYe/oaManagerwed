@@ -108,8 +108,8 @@
                                     <c:if test="${obj.descript.length() > 6}">${fn:substring(obj.descript, 0, 6)}... ...</c:if>
                                     <c:if test="${obj.descript.length() <= 6}">${obj.descript}</c:if>
                                 </td>
-                                <td>${obj.begintime}</td>
-                                <td>${obj.endtime}</td>
+                                <td><fmt:formatDate value="${obj.begintime}" type="date" /></td>
+                                <td><fmt:formatDate value="${obj.endtime}" type="date" /></td>
                                 <td>${obj.state}</td>
                                 <td>${obj.employee}</td>
                                 <td>${obj.dept}</td>

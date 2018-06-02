@@ -1,5 +1,7 @@
 package com.officeAuto.ssm.controller;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.officeAuto.ssm.model.*;
 import com.officeAuto.ssm.service.EmpAndInfoService;
 import com.officeAuto.ssm.service.EmployeeService;
@@ -7,6 +9,7 @@ import com.officeAuto.ssm.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -23,6 +26,8 @@ public class EmployeeController {
     private EmployeeService employeeService;
     @Autowired
     private EmpAndInfoService empAndInfoService;
+
+    private int pageSize = 5;
 
     /**
      * 登录界面
@@ -57,6 +62,12 @@ public class EmployeeController {
         return  "management";
     }
 
+    /**
+     * ajax登录
+     * @param employee 员工账号密码
+     * @param session
+     * @return 账号密码是否匹配
+     */
     @RequestMapping("/loginAjax")
     @ResponseBody
     public boolean loginAjax(@RequestBody Employee employee, HttpSession session){
@@ -64,18 +75,33 @@ public class EmployeeController {
         EmployeeAndInfo employeeAndInfo = empAndInfoService.login(employee.getAccount(),employee.getPassword());
         //账号密码正确
         if (employeeAndInfo != null){
-
-            int authority = 0;
+            //找出最高权限
+            int authority = Integer.MIN_VALUE;
+            Job job = new Job();
             for (Job j:employeeAndInfo.getJobs()) {
-                if(j.getAuthority() > authority)
+                if(j.getAuthority() > authority){
                     authority = j.getAuthority();
+                    job = j;
+                }
             }
-            session.setAttribute("emplpyee", employeeAndInfo);
-            session.setAttribute("authority", authority);
+            session.setAttribute("employee", employeeAndInfo);
+            session.setAttribute("job", job);
             return true;
         }
         else
             return false;
+    }
+
+    /**
+     * 进入管理页面
+     * @return 页面
+     */
+    @RequestMapping("/employeeHome")
+    public String employeeHomePage(HttpSession session, ModelMap modelMap){
+
+        EmployeeAndInfo employeeAndInfo = (EmployeeAndInfo)session.getAttribute("employee");
+
+        return "employeeHome";
     }
 
     /**
@@ -117,21 +143,18 @@ public class EmployeeController {
     @RequestMapping("/getEmployeeByPage")
     public String listPage(Integer currentPage,Model model) throws Exception
     {
-        PageBean<Employee> EmployeePageBean= new PageBean<Employee>();
-        if(currentPage!=null)
-        {
-            EmployeePageBean.setCurrentPage(currentPage);
-        }
+        if(currentPage==null)
+            currentPage = 1;
+        //在你需要进行分页的 MyBatis 查询方法前调用 PageHelper.startPage 静态方法即可，紧跟在这个方法后的第一个MyBatis 查询方法会被进行分页。
+        PageHelper.startPage(currentPage, pageSize);
+        List<EmployeeAndInfo> list = empAndInfoService.findAll();
 
-        List<Employee> Employees = employeeService.findByPage(EmployeePageBean);
-        EmployeePageBean.setDatas(Employees);
+        //PageInfo类包装数据
+        PageInfo<EmployeeAndInfo> p = new PageInfo<EmployeeAndInfo>(list);
 
-        Integer totalCount = employeeService.findCount();
-        EmployeePageBean.setTotalCount(totalCount);
-
-        model.addAttribute("EmployeePageBean",EmployeePageBean);
-
-        return  "leftBox/EmployeeInfo";
+        model.addAttribute("page", p);
+        model.addAttribute("list", list);
+        return "leftBox/employeeInfo";
     }
 
     @RequestMapping("delete")

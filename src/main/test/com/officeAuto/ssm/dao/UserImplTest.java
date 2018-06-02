@@ -1,8 +1,7 @@
 package com.officeAuto.ssm.dao;
 
 import com.officeAuto.ssm.dao.system.*;
-import com.officeAuto.ssm.dao.useless.ActoptionMapper;
-import com.officeAuto.ssm.dao.useless.EmployeeMapper;
+
 import com.officeAuto.ssm.model.*;
 import com.officeAuto.ssm.utils.PageBean;
 import org.junit.Before;
@@ -19,19 +18,15 @@ public class UserImplTest {
     @Before
     public void setUp()  {
         //创建spring容器
-
         applicationContext = new ClassPathXmlApplicationContext("spring-mybatis.xml");
-
-
     }
 
-    /*@Test
-    public void testFindUserById()  {
-
-        UserDao userDao = (UserDao) applicationContext.getBean("userDao");
-        User user = userDao.selectUserById((long) 1);
-        System.out.println(user);
-    }*/
+    @Test
+    public void test(){
+        EmployeeAndInfoDao dao = (EmployeeAndInfoDao) applicationContext.getBean("employeeAndInfoDao");
+        List<EmployeeAndInfo> list =  dao.findAll();
+        System.out.println(list.get(0).getJobs().get(0).getDepart().getName());
+    }
 
     @Test
     public void testActivityDao(){
@@ -41,10 +36,10 @@ public class UserImplTest {
 //        for(Activity activity:activities){
 //            System.out.println(activity);
 //        }
-        EmployeeAndInfoDao dao=(EmployeeAndInfoDao) applicationContext.getBean("employeeAndInfoDao");
+        ActivityDao dao=(ActivityDao) applicationContext.getBean("activityDao");
 
-        EmployeeAndInfo employeeAndInfo = dao.login("A002", "123");
-        System.out.println(employeeAndInfo.getJobs().size()+"chenggogn");
+        List<Activity> list =  dao.findAll();
+        System.out.println(list.get(0).getBegintime().getYear());
     }
 
     @Test
@@ -105,48 +100,4 @@ public class UserImplTest {
         }
     }
 
-    @Test
-    public  void  testActoptionmapper(){
-        ActoptionMapper actoptionMapper=(ActoptionMapper) applicationContext.getBean("actoptionMapper");
-        Actoption actoption= actoptionMapper.selectByPrimaryKey(1);
-        System.out.println(actoption);
-    }
-
-    /*@Test
-    public  void  testDeptmapper(){
-        DeptMapper deptMapper=(DeptMapper) applicationContext.getBean("deptMapper");
-                Dept dept=deptMapper.selectByPrimaryKey(1);
-        System.out.println(dept);
-    }*/
-
-    @Test
-    public  void  testUserNameAndPwd(){
-        EmployeeMapper employeeMapper=(EmployeeMapper) applicationContext.getBean("employeeMapper");
-        Employee employee=employeeMapper.login("A001","123");
-        System.out.println(employee);
-    }
-
-    /*@Test
-    public void testEmpList(){
-        EmployeeMapper employeeMapper=(EmployeeMapper) applicationContext.getBean("employeeMapper");
-        List<EmployeeAndInfo> employeeAndInfos=employeeMapper.findEmpInfoList();
-        System.out.println(employeeAndInfos.get(1).getName());
-    }*/
-
-   /* @Test
-    public void testDeleteEmpById(){
-        EmployeeMapper employeeMapper=(EmployeeMapper) applicationContext.getBean("employeeMapper");
-        employeeMapper.deleteByPrimaryKey(3);
-        System.out.println("success");
-    }*/
-
-    /*@Test
-    public void testDeptListByPage(){
-        DeptMapper deptMapper=(DeptMapper) applicationContext.getBean("deptMapper");
-        List<Dept> depts= deptMapper.findDeptListByPage(1,2);
-        for (Dept dept:depts
-             ) {
-            System.out.println(dept);
-        }
-    }*/
 }

@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt"  prefix="fmt"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -33,7 +34,6 @@
 </head>
 <body>
 <div>
-
 
     <div class="info">
         <div class="crumbs-nav">
@@ -81,23 +81,30 @@
                         <th></th>
                         <th>公告标题</th>
                         <th>公告详情</th>
-                        <th>日期</th>
-                        <th>操作</th>
+                        <th>发布日期</th>
+                        <th>所属部门</th>
+                        <th>删除</th>
+                        <th>修改</th>
                     </tr>
                     </thead>
                     <tbody>
 
-                    <c:if test="${!empty announcePageBean.datas}">
-                        <c:forEach var="announce" items="${announcePageBean.datas}">
+                    <c:if test="${!empty list}">
+                        <c:forEach var="obj" items="${list}">
                             <tr class="oneMsg">
-                                <td><input type="checkbox" value="${announce.uuid}" name="del"></td>
-                                <td><input type="text" value="${announce.uuid}" readonly="readonly" class="inputs layui-input"/></td>
-                                <td><input type="text" value="${announce.descript}" readonly="readonly" class="inputs layui-input"/></td>
-                                <td><input type="text" value="${announce.createtime}" readonly="readonly" class="inputs layui-input"/></td>
+                                <td><input type="checkbox" value="${obj.uuid}" name="del"></td>
                                 <td>
-                                    <a href="${pageContext.request.contextPath}/announce/delete.action?uuid=${announce.uuid}" class="layui-btn layui-btn-sm">删除</a>
-                                    <a href="${pageContext.request.contextPath}/announce/jumpToEdit.action?uuid=${announce.uuid}" class="layui-btn layui-btn-sm change">修改</a>
+                                    <c:if test="${obj.title.length() > 6}">${fn:substring(obj.title, 0, 6)}... ...</c:if>
+                                    <c:if test="${obj.title.length() <= 6}">${obj.title}</c:if>
                                 </td>
+                                <td>
+                                    <c:if test="${obj.descript.length() > 6}">${fn:substring(obj.descript, 0, 6)}... ...</c:if>
+                                    <c:if test="${obj.descript.length() <= 6}">${obj.descript}</c:if>
+                                </td>
+                                <td><fmt:formatDate value="${obj.createtime}" type="date" /></td>
+                                <td>${obj.dept}</td>
+                                <td><a href="${pageContext.request.contextPath}/announce/delete.action?uuid=${obj.uuid}" class="layui-btn layui-btn-sm">删除</a></td>
+                                <td><a href="${pageContext.request.contextPath}/announce/jumpToEdit.action?uuid=${obj.uuid}" class="layui-btn layui-btn-sm change">修改</a></td>
                             </tr>
                         </c:forEach>
                     </c:if>
@@ -112,29 +119,60 @@
                     <div class="notContent hide">
                         无数据
                     </div>
+                    <!--页码-->
                     <div class="page">
-
-
-
                         <ul class="pageMenu clearfix">
-                            <li class="firstPage">首页</li>
-                            <li class="prevPage"> < </li>
+                            <a href="${pageContext.request.contextPath}/announce/getAnnounceByPage.action?currentPage=${page.firstPage}"><li class="firstPage">首页</li></a>
+                            <c:if test="${page.hasPreviousPage}">
+                                <a href="${pageContext.request.contextPath}/announce/getAnnounceByPage.action?currentPage=${page.prePage}">
+                                    <li class="prevPage"> < </li>
+                                </a>
+                            </c:if>
                             <div class="pageObj clearfix">
-                                <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${announcePageBean.currentPage-2}">${announcePageBean.currentPage-2}</a></li>
-                                <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${announcePageBean.currentPage-1}">${announcePageBean.currentPage-1}</a></li>
-                                <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${announcePageBean.currentPage}">${announcePageBean.currentPage}</a></li>
-                                <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${announcePageBean.currentPage+1}">${announcePageBean.currentPage+1}</a></li>
-                                <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${announcePageBean.currentPage+2}">${announcePageBean.currentPage+2}</a></li>
-
+                                <c:if test="${page.hasPreviousPage}">
+                                    <a href="${pageContext.request.contextPath}/announce/getAnnounceByPage.action?currentPage=${page.prePage}">
+                                        <li class="thispage">${page.prePage}</li>
+                                    </a>
+                                </c:if>
+                                <a style="color:blue" href="${pageContext.request.contextPath}/announce/getAnnounceByPage.action?currentPage=${page.pageNum}">
+                                    <li class="thispage">${page.pageNum}</li>
+                                </a>
+                                <c:if test="${page.hasNextPage}">
+                                    <a href="${pageContext.request.contextPath}/announce/getAnnounceByPage.action?currentPage=${page.nextPage}">
+                                        <li class="thispage">${page.nextPage}</li>
+                                    </a>
+                                </c:if>
                             </div>
-                            <li class="nextPage"> > </li>
-                            <li class="lastPage">尾页</li>
+                            <c:if test="${page.hasNextPage}">
+                                <a href="${pageContext.request.contextPath}/announce/getAnnounceByPage.action?currentPage=${page.nextPage}">
+                                    <li class="nextPage"> > </li></a>
+                            </c:if>
+                            <a href="${pageContext.request.contextPath}/announce/getAnnounceByPage.action?currentPage=${page.lastPage}">
+                                <li class="lastPage">尾页</li>
+                            </a>
                             <li class="last" style="font-size: 14px;">
-                                共<span class="totalPage"></span>页，跳转至 <input type="number" class="keuInput" value="1">
-                                <button type="button" class="btnSure">确定</button>
+                                共<span class="totalPage">${page.pages}</span>页，跳转至 <input type="text" class="keuInput" id="pageNum">
+                                <button type="button" class="btnSure" id="jumpBtn">确定</button><a href="" id="jumpa"></a>
                             </li>
                         </ul>
                     </div>
+                    <!--跳转页面检验-->
+                    <script type="text/javascript">
+                        $(document).ready(function () {
+                            $("#jumpBtn").click(function () {
+                                var pagenum = $("#pageNum").val();
+                                if(isNaN(pagenum))
+                                    alert("请输入数字");
+                                else if(pagenum < 1 || pagenum > ${page.pages})
+                                    alert("请输入正确页码");
+                                else{
+                                    $("#jumpa").attr("href", "${pageContext.request.contextPath}/announce/getAnnounceByPage.action?currentPage=" + pagenum);
+                                    $("#jumpa").append("<span></span>");
+                                    $("#jumpa span").click();
+                                }
+                            })
+                        })
+                    </script>
                 </div>
             </div>
         </div>

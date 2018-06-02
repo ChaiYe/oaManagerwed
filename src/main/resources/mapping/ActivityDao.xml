@@ -3,6 +3,16 @@
 <!--suppress ALL -->
 <mapper namespace="com.officeAuto.ssm.dao.system.ActivityDao" >
 
+    <resultMap id="BaseResultMap" type="com.officeAuto.ssm.model.Activity">
+        <result column="uuid" jdbcType="INTEGER" property="uuid" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="begintime" jdbcType="DATE" property="begintime" />
+        <result column="endtime" jdbcType="DATE" property="endtime" />
+        <result column="state" jdbcType="INTEGER" property="state" />
+        <result column="dept" jdbcType="INTEGER" property="dept" />
+        <result column="employee" jdbcType="INTEGER" property="employee" />
+    </resultMap>
+
     <select id="findAll" resultType="com.officeAuto.ssm.model.Activity">
         select * from activity
     </select>

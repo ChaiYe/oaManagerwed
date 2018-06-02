@@ -7,6 +7,7 @@ import com.officeAuto.ssm.model.Activity;
 import com.officeAuto.ssm.model.ActivityQueryModel;
 import com.officeAuto.ssm.service.ActivityService;
 import com.officeAuto.ssm.utils.PageBean;
+import org.apache.poi.ss.formula.functions.T;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,6 +24,8 @@ public class ActivityController {
     @Autowired
     private ActivityService activityService;
 
+    private  int pageSize = 5;
+
     /**
      * pagehelper 分页获取数据
      * @param currentPage 当前页面
@@ -36,8 +39,9 @@ public class ActivityController {
         if(currentPage==null)
             currentPage = 1;
         //在你需要进行分页的 MyBatis 查询方法前调用 PageHelper.startPage 静态方法即可，紧跟在这个方法后的第一个MyBatis 查询方法会被进行分页。
-        PageHelper.startPage(currentPage, 5);
+        PageHelper.startPage(currentPage, pageSize);
         List<Activity> list = activityService.findAll();
+
         //PageInfo类包装数据
         PageInfo<Activity> p = new PageInfo<Activity>(list);
 
