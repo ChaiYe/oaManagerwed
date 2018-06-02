@@ -125,7 +125,8 @@
                 },
                 success:function(data){
                     if(data){
-                        location.href = "${pageContext.request.contextPath}/employee/managePage.action";
+                        <%--location.href = "${pageContext.request.contextPath}/employee/managePage.action";--%>
+                        location.href = "${pageContext.request.contextPath}/employee/employeeHome.action";
                     }
                     else{
                         alert("账号或密码错误");
@@ -162,7 +163,8 @@
                                 else if(data==="success")
                                     alert("登录成功");
                                 else
-                                    window.location.href="http://localhost:8080/oaManagerwed/management/management.action";
+                                    // window.location.href="${pageContext.request.contextPath }/employee/management.action";
+                                    window.location.href="http://localhost:8080/oaManagerwed/management/employeeHome.action";
                         }
 
                     });

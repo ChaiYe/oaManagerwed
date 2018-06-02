@@ -14,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 
 import javax.servlet.http.HttpSession;
@@ -47,6 +48,14 @@ public class AnnounceController {
         model.addAttribute("list", list);
 
         return  "leftBox/announceInfo";
+    }
+
+    @RequestMapping("recentAjax")
+    @ResponseBody
+    public String getRecent(HttpSession session){
+        EmployeeAndInfo employeeAndInfo = (EmployeeAndInfo) session.getAttribute("employee");
+        List<Announce> list = announceService.getRecentAnnounce(employeeAndInfo.getJobs().get(0).getDept(), 1);
+        return null;
     }
 
     @RequestMapping("delete")

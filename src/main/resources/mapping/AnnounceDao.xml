@@ -51,7 +51,7 @@
     <select id="getRecentAnnounce" resultType="com.officeAuto.ssm.model.Announce">
         select * from announce
         where dept = #{deptId}
-        order by createtime
+        order by createtime desc
         limit 0, #{size}
     </select>
 

@@ -72,4 +72,9 @@ public class AnnounceServiceImpl  implements AnnounceService{
     public List<Announce> findByPageQuery(PageBean<AnnounceQueryModel> pageBean) throws  Exception {
         return announceDao.findByPageQuery(pageBean);
     }
+
+    @Override
+    public List<Announce> getRecentAnnounce(int deptId, int size) {
+        return announceDao.getRecentAnnounce(deptId, size);
+    }
 }

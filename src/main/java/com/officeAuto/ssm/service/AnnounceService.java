@@ -69,4 +69,12 @@ public interface AnnounceService {
      * @return 查询列表
      */
     public List<Announce> findByPageQuery(PageBean<AnnounceQueryModel> pageBean) throws Exception;
+
+    /**
+     * 查找最近的公告
+     * @param deptId 部门id
+     * @param size 查找大小
+     * @return
+     */
+    List<Announce> getRecentAnnounce(int deptId, int size);
 }
