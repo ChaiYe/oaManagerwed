@@ -96,14 +96,13 @@ public class EmployeeController {
     @RequestMapping("/employeeHome")
     public String employeeHomePage(HttpSession session, ModelMap modelMap){
 
-        EmployeeAndInfo employeeAndInfo = (EmployeeAndInfo)session.getAttribute("employee");
+//        EmployeeAndInfo employeeAndInfo = (EmployeeAndInfo)session.getAttribute("employee");
 
         return "employeeHome";
     }
 
     @RequestMapping("/showPic/{fileName}")
     public void showPicture(@PathVariable("fileName") String fileName, HttpServletResponse response){
-
         String [] path = fileName.split("\\.");
         File imgFile = new File(rootPath + "employeeImage\\" + path[0] + "." + path[1]);
         responseFile(response, imgFile);
@@ -144,7 +143,7 @@ public class EmployeeController {
 
         //写入数据库
         empAndInfoService.updateImg(employeeAndInfo.getUuid(), filename);
-        employeeAndInfo.getEmployeeInfo().setImage(longFileName);
+        employeeAndInfo.getEmployeeInfo().setImage(filename);
         session.setAttribute("employee", employeeAndInfo);
         return true;
     }
@@ -252,8 +251,7 @@ public class EmployeeController {
      * @param imgFile
      */
     private void responseFile(HttpServletResponse response, File imgFile) {
-        try(InputStream is = new FileInputStream(imgFile);
-            OutputStream os = response.getOutputStream();){
+        try(InputStream is = new FileInputStream(imgFile); OutputStream os = response.getOutputStream()){
             byte [] buffer = new byte[maxFileSize]; // 图片文件流缓存池
             while(is.read(buffer) != -1){
                 os.write(buffer);

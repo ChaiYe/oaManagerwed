@@ -216,33 +216,36 @@
             <a href="javascript:;" class="file">更改头像
                 <input type="file" name="imgFile" id="imgFile" accept="image/png, image/jpeg, image/gif, image/jpg">
             </a>
-            <button type="button" id="changeImg">修改</button>
         </form>
         <script>
             function checkData(fileInput){
                 var fileDir = fileInput.val();
-                if("" == fileDir){
+                if("" === fileDir){
                     alert("请选择图片！");
                     return false;
                 }
                 return true;
             }
-            $(document).ready(function () {
-                $("#changeImg").click(function(){
-                    if(checkData($('#imgFile'))){
-                        $('#imgForm').ajaxSubmit({
-                            url:'${pageContext.request.contextPath}/employee/imgUpload.action',
-                            dataType: 'text',
-                            success: function(){
-                                alert("成功上传");
-                                $('#imgFile').val("");
-                            },
-                            error: function () {
-                                alert("error")
-                            }
-                        });
+            function fileUpload(){
+                $('#imgForm').ajaxSubmit({
+                    url:'${pageContext.request.contextPath}/employee/imgUpload.action',
+                    dataType: 'text',
+                    success: function(){
+                        alert("成功上传");
+                        $('#imgFile').val("");
+                    },
+                    error: function () {
+                        alert("error")
                     }
-                })
+                });
+            }
+            $(document).ready(function () {
+                $('#imgFile').bind('input propertychange', function() {
+                    // alert("ssdasdsad");
+                    if (checkData($('#imgFile'))) {
+                        fileUpload();
+                    }
+                });
             })
         </script>
     </div>
