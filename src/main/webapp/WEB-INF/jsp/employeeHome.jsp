@@ -131,7 +131,7 @@
             font-weight: bold;
         }
         .model-item-subtitle{
-            color: gainsboro;
+            color: #919191;
             font-size: x-small;
             padding-left: 3px;
         }
@@ -151,7 +151,7 @@
         </li>
 
         <li class="layui-nav-item" style="float: right">
-            <a href=""><img src="http://t.cn/RCzsdCq" class="layui-nav-img">${sessionScope.employee.account}</a>
+            <a href=""><img src="../../img/31ca894c-2d67-4e35-854d-25b92aaff748.png" class="layui-nav-img">${sessionScope.employee.account}</a>
             <dl class="layui-nav-child">
                 <dd><a href="${pageContext.request.contextPath}/employee/employeeHome.action">个人主页</a></dd>
                 <c:if test="${sessionScope.job.authority > 1}"><dd><a href="${pageContext.request.contextPath}/employee/managePage.action" >管理</a></dd></c:if>
@@ -189,14 +189,11 @@
 
     <div style="width:20%;">
         <div class="self_info">
-
             <div class="self-info-name">
                 <h3>${sessionScope.employee.account}</h3>
                 <p>${sessionScope.employee.employeeInfo.name}</p>
             </div>
-
             <div class="self-info-message">
-
                 <div>
                     <div><i class="layui-icon">&#xe62e;</i></div>
                     <div>joined <fmt:formatDate value="${sessionScope.employee.createtime}" type="date" /></div>
@@ -209,8 +206,8 @@
         </div>
     </div>
 
+    <!--活动模块-->
     <div style="flex-grow: 1" class="item-panel">
-        <!--最近操作列表-->
         <div style="margin: 20px;">
             <h3>信息</h3>
             <hr class="layui-bg-gray">
@@ -237,56 +234,105 @@
             <hr class="layui-bg-gray">
             <div>end</div>
         </div>
-
     </div>
 
+    <!-- 公告模块-->
     <div style="width: 20%;margin-top: 0;">
+        <div id="comp_announce">
+            <h2>公司公告</h2>
+            <div class="model-item" v-for="item in items">
+                <div class="model-item-title">
+                    {{item.title}}
+                </div>
 
-        <div class="model-item">
-            <div class="model-item-title">标题</div>
+                <div class="model-item-subtitle">
+                   发布时间：{{item.createtime|dateFormat}}
+                </div>
 
-            <div class="model-item-subtitle">
-                副标题
-            </div>
-            <div class="model-item-content">
-                内容
-            </div>
-
-            <hr class="layui-bg-gray">
-
-            <div class="model-item-subtitle">
-                副标题
-            </div>
-            <div class="model-item-content">
-                内容
+                <div class="model-item-content" v-html="item.descript"></div>
             </div>
         </div>
         <script>
             var app = new Vue({
                 el: '#comp_announce',
                 data: {
-                    items:""
+                    items:[]
                 },
-                beforeCreate:function(){
-                    var url="${pageContext.request.contextPath}/";
-                    var _self=this;
-                    $.get(url,function(data){
-                        _self.items=data;
-                    })
+                created () {
+                    $.ajax({
+                        url:"${pageContext.request.contextPath}/announce/recentCompAjax.action",
+                        type:"post",
+                        dataType:"json",
+                        success:function(result){
+                            app.items = result;
+                        },
+                        error:function(){
+                            alert("请求失败");
+                        }
+                    });
+                },
+                filters:{
+                    dateFormat:function(val){
+                        var d = new Date(val);
+                        var year = d.getFullYear();
+                        var month = d.getMonth() + 1;
+                        var day = d.getDate() <10 ? '0' + d.getDate() : '' + d.getDate();
+                        var hour = d.getHours();
+                        var minutes = d.getMinutes();
+                        var seconds = d.getSeconds();
+                        return  year+ '年' + month + '月' + day + '日';
+                    }
                 }
             })
         </script>
-        <div id="#comp_announce"  v-for="item in items">
-            <div class="model-item">
-                <div class="model-item-title">{{item.title}}</div>
+
+        <div id="dept_announce">
+            <h2>部门公告</h2>
+            <div class="model-item" v-for="item in items">
+                <div class="model-item-title">
+                    {{item.title}}
+                </div>
+
                 <div class="model-item-subtitle">
-                    {{item.createtime}}
+                    发布时间：{{item.createtime|dateFormat}}
                 </div>
-                <div class="model-item-content">
-                    {{item.descript}}
-                </div>
+
+                <div class="model-item-content" v-html="item.descript"></div>
             </div>
         </div>
+        <script>
+            var dept = new Vue({
+                el: '#dept_announce',
+                data: {
+                    items:[]
+                },
+                created () {
+                    $.ajax({
+                        url:"${pageContext.request.contextPath}/announce/recentDeptAjax.action",
+                        type:"post",
+                        dataType:"json",
+                        success:function(result){
+                            dept.items = result;
+                        },
+                        error:function(){
+                            alert("请求失败");
+                        }
+                    });
+                },
+                filters:{
+                    dateFormat:function(val){
+                        var d = new Date(val);
+                        var year = d.getFullYear();
+                        var month = d.getMonth() + 1;
+                        var day = d.getDate() <10 ? '0' + d.getDate() : '' + d.getDate();
+                        var hour = d.getHours();
+                        var minutes = d.getMinutes();
+                        var seconds = d.getSeconds();
+                        return  year+ '年' + month + '月' + day + '日';
+                    }
+                }
+            })
+        </script>
     </div>
 
 </div>

@@ -12,7 +12,7 @@ public interface BaseDao<T> {
     public List<T> findByPage(PageBean<T> pageBean);
 
     /**只查询一个，常用于修改*/
-    public T findById(Serializable id);
+    public T findById(@Param("id") Serializable id);
 
     /**
      * 插入，用实体作为参数

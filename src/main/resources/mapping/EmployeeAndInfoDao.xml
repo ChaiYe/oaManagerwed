@@ -3,14 +3,6 @@
 
 <mapper namespace="com.officeAuto.ssm.dao.system.EmployeeAndInfoDao" >
 
-    <!--<select id="findAll" resultType="com.officeAuto.ssm.model.EmployeeAndInfo">-->
-        <!--select employee.*,employeeInfo.*,job.name,dept.name-->
-        <!--from employee-->
-        <!--left join employeeInfo on employee.uuid = employeeInfo.id-->
-        <!--left join job on employee.uuid = job.employee-->
-        <!--left join dept  on dept.uuid = job.dept-->
-    <!--</select>-->
-
     <select id="findByPage" resultType="com.officeAuto.ssm.model.EmployeeAndInfo">
         select employee.*,employeeInfo.*,job.name,dept.name
         from employee
@@ -23,13 +15,12 @@
     <select id="findCount" resultType="java.lang.Integer">
         select count(*)
         from employee
-        left join employeeInfo on employee.uuid=employeeInfo.id
-        left join job on employee.uuid=job.employee
-        left join dept  on dept.uuid=job.dept
     </select>
 
     <select id="findById" resultType="com.officeAuto.ssm.model.EmployeeAndInfo">
-
+        select *
+        from employee, employeeinfo
+        where employee.uuid = #{id} and employeeinfo.id = employee.uuid
     </select>
 
     <resultMap id="BaseResultMap" type="com.officeAuto.ssm.model.EmployeeAndInfo">
@@ -38,6 +29,9 @@
         <result column="password" jdbcType="VARCHAR" property="password" />
         <result column="state" jdbcType="VARCHAR" property="state" />
         <result column="createtime" jdbcType="DATE" property="createtime" />
+    </resultMap>
+
+    <resultMap id="empAndInfoMap" type="com.officeAuto.ssm.model.EmployeeAndInfo" extends="BaseResultMap">
         <association property="employeeInfo" javaType="com.officeAuto.ssm.model.EmployeeInfo">
             <id column="id" jdbcType="INTEGER" property="id" />
             <result column="name" jdbcType="VARCHAR" property="name" />
@@ -47,6 +41,9 @@
             <result column="email" jdbcType="VARCHAR" property="email" />
             <result column="address" jdbcType="VARCHAR" property="address" />
         </association>
+    </resultMap>
+
+    <resultMap id="empAndJobsMap" type="com.officeAuto.ssm.model.EmployeeAndInfo" extends="empAndInfoMap">
         <collection property="jobs" ofType="com.officeAuto.ssm.model.JobQueryModel">
             <id column="job_uuid" jdbcType="INTEGER" property="uuid" />
             <result column="job_name" jdbcType="VARCHAR" property="name" />
@@ -58,27 +55,42 @@
             <association property="depart" javaType="com.officeAuto.ssm.model.Dept">
                 <result column="dept_uuid" jdbcType="INTEGER" property="uuid" />
                 <result column="dept_name" jdbcType="VARCHAR" property="name" />
-                <result column="descript" jdbcType="LONGVARCHAR" property="descript" />
+                <result column="dept_descript" jdbcType="LONGVARCHAR" property="descript" />
             </association>
         </collection>
     </resultMap>
 
-    <select id="findByID" resultMap="BaseResultMap">
-        select employee.*, employeeinfo.*, job.uuid "job_uuid", job.name "job_name", job.authority, job.worktime, job.dept, job.employee "job_employee"
+    <select id="findByID" resultMap="empAndJobsMap">
+        select employee.*, employeeinfo.*,
+        job.uuid "job_uuid", job.name "job_name", job.descript "job_descript", job.authority, job.worktime, job.dept, job.employee "job_employee"
         from employee, employeeinfo, job
         where employee.uuid = #{uuid}  and job.employee = employee.uuid
     </select>
 
-    <select id="login" resultMap="BaseResultMap">
-        select employee.*, employeeinfo.*, job.uuid "job_uuid", job.name "job_name", job.authority, job.worktime, job.dept, job.employee "job_employee"
-        from employee, employeeinfo, job
+    <select id="login" resultMap="empAndJobsMap">
+        select employee.*, employeeinfo.*,
+        job.uuid "job_uuid", job.name "job_name", job.descript "job_descript", job.authority, job.worktime, job.dept, job.employee "job_employee",
+        dept.uuid "dept_uuid", dept.name "dept_name", dept.descript "dept_descript"
+        from employee, employeeinfo, job, dept
         where employee.account = #{account}
               and employee.password = #{password}
               and employeeinfo.id = employee.uuid
               and job.employee = employee.uuid
+              and job.dept = dept.uuid
     </select>
 
-    <select id="findAll" resultMap="BaseResultMap">
+    <select id="getInfo" resultMap="empAndJobsMap">
+        select employee.*, employeeinfo.*,
+        job.uuid "job_uuid", job.name "job_name", job.descript "job_descript", job.authority, job.worktime, job.dept, job.employee "job_employee",
+        dept.uuid "dept_uuid", dept.name "dept_name", dept.descript "dept_descript"
+        from employee, employeeinfo, job, dept
+        where employee.uuid = #{uuid}
+              and employeeinfo.id = employee.uuid
+              and job.employee = employee.uuid
+              and job.dept = dept.uuid
+    </select>
+
+    <select id="findAll" resultMap="empAndInfoMap">
         select employee.*, employeeinfo.*
         from employee, employeeinfo
         where employee.uuid = employeeinfo.id

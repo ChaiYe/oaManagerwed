@@ -72,9 +72,9 @@ public interface AnnounceService {
 
     /**
      * 查找最近的公告
-     * @param deptId 部门id
+     * @param deptName 部门名称
      * @param size 查找大小
      * @return
      */
-    List<Announce> getRecentAnnounce(int deptId, int size);
+    List<Announce> getRecentAnnounce(String deptName, int size);
 }

@@ -121,6 +121,4 @@
         where uuid = #{uuid,jdbcType=INTEGER}
     </update>
 
-
-
 </mapper>

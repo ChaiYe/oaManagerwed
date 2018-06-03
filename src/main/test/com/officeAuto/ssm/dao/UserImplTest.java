@@ -23,8 +23,9 @@ public class UserImplTest {
     @Test
     public void test(){
         EmployeeAndInfoDao dao = (EmployeeAndInfoDao) applicationContext.getBean("employeeAndInfoDao");
-        List<EmployeeAndInfo> list =  dao.findAll();
-        System.out.println(list.get(0).getJobs().get(0).getDepart().getName());
+//        List<EmployeeAndInfo> list =  dao.findAll();
+        EmployeeAndInfo employeeAndInfo = dao.login("A001", "123");
+        System.out.println(employeeAndInfo.getJobs().get(0).getDepart().getName());
     }
 
     @Test
@@ -55,7 +56,7 @@ public class UserImplTest {
     @Test
     public void testAnnounceDao(){
         AnnounceDao announceDao=(AnnounceDao) applicationContext.getBean("announceDao");
-        List<Announce> announces = announceDao.getRecentAnnounce(1,1);
+        List<Announce> announces = announceDao.getRecentAnnounce("公司",1);
         for(Announce announce:announces){
             System.out.println(announce);
         }

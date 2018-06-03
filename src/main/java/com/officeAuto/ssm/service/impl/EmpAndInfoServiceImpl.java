@@ -77,4 +77,9 @@ public class EmpAndInfoServiceImpl implements EmpAndInfoService {
         return employeeAndInfoDao.login(account, password);
     }
 
+    @Override
+    public EmployeeAndInfo getInfo(int uuid) {
+        return employeeAndInfoDao.getInfo(uuid);
+    }
+
 }

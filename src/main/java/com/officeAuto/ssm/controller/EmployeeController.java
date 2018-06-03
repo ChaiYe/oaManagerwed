@@ -72,9 +72,11 @@ public class EmployeeController {
     @ResponseBody
     public boolean loginAjax(@RequestBody Employee employee, HttpSession session){
 
-        EmployeeAndInfo employeeAndInfo = empAndInfoService.login(employee.getAccount(),employee.getPassword());
+        Employee e = employeeService.login(employee.getAccount(),employee.getPassword());
+
         //账号密码正确
-        if (employeeAndInfo != null){
+        if (e != null){
+            EmployeeAndInfo employeeAndInfo = empAndInfoService.getInfo(e.getUuid());
             //找出最高权限
             int authority = Integer.MIN_VALUE;
             Job job = new Job();

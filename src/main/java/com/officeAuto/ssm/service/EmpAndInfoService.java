@@ -78,4 +78,11 @@ public interface EmpAndInfoService {
      * @return 员工实体+员工信息+岗位信息
      */
     EmployeeAndInfo login(String account, String password);
+
+    /**
+     * 根据主键查信息
+     * @param uuid
+     * @return
+     */
+    EmployeeAndInfo getInfo(int uuid);
 }

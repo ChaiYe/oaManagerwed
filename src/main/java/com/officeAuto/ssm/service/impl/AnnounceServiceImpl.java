@@ -74,7 +74,7 @@ public class AnnounceServiceImpl  implements AnnounceService{
     }
 
     @Override
-    public List<Announce> getRecentAnnounce(int deptId, int size) {
-        return announceDao.getRecentAnnounce(deptId, size);
+    public List<Announce> getRecentAnnounce(String deptName, int size) {
+        return announceDao.getRecentAnnounce(deptName, size);
     }
 }

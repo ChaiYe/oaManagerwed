@@ -16,5 +16,5 @@ public interface AnnounceDao extends BaseDao<Announce> {
 
     public List<Announce> findByPageQuery(PageBean<AnnounceQueryModel> pageBean);
 
-    List<Announce> getRecentAnnounce(@Param("deptId")int deptId, @Param("size")int size);
+    List<Announce> getRecentAnnounce(@Param("deptName")String deptName, @Param("size")int size);
 }

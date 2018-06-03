@@ -49,8 +49,9 @@
     </select>
 
     <select id="getRecentAnnounce" resultType="com.officeAuto.ssm.model.Announce">
-        select * from announce
-        where dept = #{deptId}
+        select *
+        from announce, dept
+        where dept.name = #{deptName} and announce.dept = dept.uuid
         order by createtime desc
         limit 0, #{size}
     </select>

@@ -1,11 +1,10 @@
 package com.officeAuto.ssm.controller;
 
 
+import com.alibaba.fastjson.JSON;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.officeAuto.ssm.model.Announce;
-import com.officeAuto.ssm.model.AnnounceQueryModel;
-import com.officeAuto.ssm.model.EmployeeAndInfo;
+import com.officeAuto.ssm.model.*;
 import com.officeAuto.ssm.service.AnnounceService;
 import com.officeAuto.ssm.service.DeptService;
 import com.officeAuto.ssm.utils.PageBean;
@@ -14,11 +13,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 
 import javax.servlet.http.HttpSession;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -50,12 +51,53 @@ public class AnnounceController {
         return  "leftBox/announceInfo";
     }
 
-    @RequestMapping("recentAjax")
+    /**
+     * 公司公告
+     * @return
+     */
+    @RequestMapping("recentCompAjax")
     @ResponseBody
-    public String getRecent(HttpSession session){
+    public List getCompRecent(){
+        List<Announce> list = announceService.getRecentAnnounce("公司", 1);
+        return list;
+    }
+
+    /**
+     * 部门公告
+     * @param session
+     * @return
+     */
+    @RequestMapping("recentDeptAjax")
+    @ResponseBody
+    public List getDeptRecent(HttpSession session){
         EmployeeAndInfo employeeAndInfo = (EmployeeAndInfo) session.getAttribute("employee");
-        List<Announce> list = announceService.getRecentAnnounce(employeeAndInfo.getJobs().get(0).getDept(), 1);
-        return null;
+
+        List<JobQueryModel> jobs = employeeAndInfo.getJobs();
+        List<Announce> announces = new ArrayList<>();
+        List<Integer> deps = new ArrayList<>();
+
+        //循环该员工所有职位
+        for (JobQueryModel j : jobs) {
+            if(j.getDepart().getName().equals("公司"))
+                continue;
+            //重复的部门
+            boolean repeat = false;
+            int temp = j.getDepart().getUuid();
+            for(int i : deps) {
+                if (i == temp) {
+                    repeat = true;
+                    break;
+                }
+            }
+            if(repeat) continue;
+            //不重复
+            deps.add(temp);
+
+            //将该部门的公告查询出来
+            List<Announce> list = announceService.getRecentAnnounce(j.getDepart().getName(), 2);
+            announces.addAll(list);
+        }
+        return announces;
     }
 
     @RequestMapping("delete")
