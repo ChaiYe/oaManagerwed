@@ -1185,6 +1185,7 @@
     <column id="287" parent="237" name="title">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="288" parent="237" name="descript">
@@ -1358,166 +1359,171 @@
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="318" parent="240" name="PRIMARY">
+    <column id="318" parent="240" name="image">
+      <Position>8</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="319" parent="240" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="319" parent="240" name="info_employee">
+    <foreign-key id="320" parent="240" name="info_employee">
       <ColNames>id</ColNames>
       <RefSchemaName>officeauto</RefSchemaName>
       <RefTableName>employee</RefTableName>
       <RefColNames>uuid</RefColNames>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="320" parent="241" name="uuid">
+    <column id="321" parent="241" name="uuid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="321" parent="241" name="name">
+    <column id="322" parent="241" name="name">
       <Position>2</Position>
       <Comment>职位名称</Comment>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="322" parent="241" name="descript">
+    <column id="323" parent="241" name="descript">
       <Position>3</Position>
       <Comment>描述</Comment>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="323" parent="241" name="authority">
+    <column id="324" parent="241" name="authority">
       <Position>4</Position>
       <Comment>权限</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="324" parent="241" name="worktime">
+    <column id="325" parent="241" name="worktime">
       <Position>5</Position>
       <Comment>就职时间</Comment>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="325" parent="241" name="dept">
+    <column id="326" parent="241" name="dept">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="326" parent="241" name="employee">
+    <column id="327" parent="241" name="employee">
       <Position>7</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="327" parent="241" name="job_dept_idx">
+    <index id="328" parent="241" name="job_dept_idx">
       <ColNames>dept</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="328" parent="241" name="job_employee_idx">
+    <index id="329" parent="241" name="job_employee_idx">
       <ColNames>employee</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="329" parent="241" name="PRIMARY">
+    <key id="330" parent="241" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>uuid</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="330" parent="241" name="job_dept">
+    <foreign-key id="331" parent="241" name="job_dept">
       <ColNames>dept</ColNames>
       <RefSchemaName>officeauto</RefSchemaName>
       <RefTableName>dept</RefTableName>
       <RefColNames>uuid</RefColNames>
     </foreign-key>
-    <foreign-key id="331" parent="241" name="job_employee">
+    <foreign-key id="332" parent="241" name="job_employee">
       <ColNames>employee</ColNames>
       <RefSchemaName>officeauto</RefSchemaName>
       <RefTableName>employee</RefTableName>
       <RefColNames>uuid</RefColNames>
     </foreign-key>
-    <column id="332" parent="242" name="uuid">
+    <column id="333" parent="242" name="uuid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="333" parent="242" name="descipt">
+    <column id="334" parent="242" name="descipt">
       <Position>2</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="334" parent="242" name="createtime">
+    <column id="335" parent="242" name="createtime">
       <Position>3</Position>
       <Comment>制定时间</Comment>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="335" parent="242" name="begintime">
+    <column id="336" parent="242" name="begintime">
       <Position>4</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="336" parent="242" name="endtime">
+    <column id="337" parent="242" name="endtime">
       <Position>5</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="337" parent="242" name="state">
+    <column id="338" parent="242" name="state">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="338" parent="242" name="employee">
+    <column id="339" parent="242" name="employee">
       <Position>7</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="339" parent="242" name="plan_emplpyee_idx">
+    <index id="340" parent="242" name="plan_emplpyee_idx">
       <ColNames>employee</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="340" parent="242" name="PRIMARY">
+    <key id="341" parent="242" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>uuid</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="341" parent="242" name="plan_emplpyee">
+    <foreign-key id="342" parent="242" name="plan_emplpyee">
       <ColNames>employee</ColNames>
       <RefSchemaName>officeauto</RefSchemaName>
       <RefTableName>employee</RefTableName>
       <RefColNames>uuid</RefColNames>
     </foreign-key>
-    <column id="342" parent="243" name="uuid">
+    <column id="343" parent="243" name="uuid">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="343" parent="243" name="name">
+    <column id="344" parent="243" name="name">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="344" parent="243" name="url">
+    <column id="345" parent="243" name="url">
       <Position>3</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="345" parent="243" name="PRIMARY">
+    <key id="346" parent="243" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>uuid</ColNames>
       <Primary>1</Primary>

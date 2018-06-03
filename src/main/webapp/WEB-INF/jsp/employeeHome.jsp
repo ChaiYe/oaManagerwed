@@ -8,8 +8,8 @@
     <meta charset="utf-8" />
     <title>${sessionScope.employee.employeeInfo.name}</title>
 
-    <link rel="stylesheet" type="text/css" href="../../layui/css/layui.css"/>
     <script src="../../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.form.js"></script>
     <script src="../../js/vue.js"></script>
     <link rel="stylesheet" href="../../layui/css/layui.css">
     <script src="../../layui/layui.js"></script>
@@ -108,7 +108,14 @@
             margin: 0 auto;
         }
         .item-logo{
-            width: 40px;   height: 40px;   padding:12px;   background: #ececec;   border-radius:40px;   box-shadow: 0px 0px 1px rgba(0,0,0,0.4);   -moz-border-radius: 40px;   -webkit-border-radius: 40px;
+            width: 40px;
+            height: 40px;
+            padding:12px;
+            background: #ececec;
+            border-radius:40px;
+            box-shadow: 0px 0px 1px rgba(0,0,0,0.4);
+            -moz-border-radius: 40px;
+            -webkit-border-radius: 40px;
         }
         .item-panel{
             background: #f5f5f5;
@@ -135,15 +142,42 @@
             font-size: x-small;
             padding-left: 3px;
         }
-
+        /*文件上传样式*/
+        .file {
+            position: relative;
+            display: inline-block;
+            background: #ffffff;
+            border: 1px solid #ffffff;
+            border-radius: 4px;
+            padding: 4px 12px;
+            overflow: hidden;
+            color: #1E88C7;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 20px;
+        }
+        .file input {
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+        }
+        .file:hover {
+            background: #AADFFD;
+            border-color: #78C3F3;
+            color: #004974;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
+<!--导航条-->
 <div>
     <ul class="layui-nav">
 
         <li class="layui-nav-item">
-            <a href="${pageContext.request.contextPath}/employee/homePage.action" style="display: inline;padding-left: 0px" target="infoContent">首页</a>
+            <a href="${pageContext.request.contextPath}/employee/employeeHome.action" style="display: inline;padding-left: 0px" target="infoContent">首页</a>
         </li>
 
         <li class="layui-nav-item">
@@ -158,8 +192,9 @@
                 <dd><a href="${pageContext.request.contextPath}/employee/logout.action" >注销</a></dd>
             </dl>
         </li>
+
         <li class="layui-nav-item" style="float: right">
-            <a href="">公司公告<span class="layui-badge-dot"></span></a>
+            <a href="">公告<span class="layui-badge-dot"></span></a>
         </li>
         <li class="layui-nav-item" style="float: right">
             <a href="" style="display: inline;padding-left: 0px">活动<span class="layui-badge-dot"></span></a>
@@ -167,26 +202,62 @@
     </ul>
 </div>
 
+<!--头像、图片-->
 <div class="content">
 
     <div style="background: #AFB42B;height:120px;overflow: hidden;">
         <img src="../../img/152790724872243.png" style="float: right;height: 100%; padding-right:80px;" />
     </div>
 
-    <div style="background:#CDDC39;height: 40px;">
-        <a href="#" style="float: right;padding:10px 40px 0 0;color: white;">修改</a>
+    <!--图片上传模块-->
+    <div style="background:#CDDC39;height: 40px;padding-left: 75px">
+        <%--<a href="#" style="float: right;padding:10px 40px 0 0;color: white;">修改</a>--%>
+        <form method="POST" enctype="multipart/form-data" action="" id="imgForm">
+            <a href="javascript:;" class="file">更改头像
+                <input type="file" name="imgFile" id="imgFile" accept="image/png, image/jpeg, image/gif, image/jpg">
+            </a>
+            <button type="button" id="changeImg">修改</button>
+        </form>
+        <script>
+            function checkData(fileInput){
+                var fileDir = fileInput.val();
+                if("" == fileDir){
+                    alert("请选择图片！");
+                    return false;
+                }
+                return true;
+            }
+            $(document).ready(function () {
+                $("#changeImg").click(function(){
+                    if(checkData($('#imgFile'))){
+                        $('#imgForm').ajaxSubmit({
+                            url:'${pageContext.request.contextPath}/employee/imgUpload.action',
+                            dataType: 'text',
+                            success: function(){
+                                alert("成功上传");
+                                $('#imgFile').val("");
+                            },
+                            error: function () {
+                                alert("error")
+                            }
+                        });
+                    }
+                })
+            })
+        </script>
     </div>
 
     <div class="session1">
         <div class="commentAvatarDiv">
-            <img src='../../img/31ca894c-2d67-4e35-854d-25b92aaff748.png' alt="头像" class="commentAvatarImage"/>
+            <%--<img src="../../img/31ca894c-2d67-4e35-854d-25b92aaff748.png" alt="头像" class="commentAvatarImage"/>--%>
+            <img src="${pageContext.request.contextPath}/employee/showPic/${sessionScope.employee.employeeInfo.image}.action" alt="头像" class="commentAvatarImage"/>
         </div>
     </div>
 
 </div>
 
 <div class="taskContent">
-
+    <!--个人信息模块-->
     <div style="width:20%;">
         <div class="self_info">
             <div class="self-info-name">
@@ -202,12 +273,26 @@
                     <div><i class="layui-icon">&#xe637;</i></div>
                     <div>age ${sessionScope.employee.employeeInfo.age}</div>
                 </div>
+                <hr class="layui-bg-gray">
+                <div>
+                    <c:if test="${!empty sessionScope.employee.jobs}">
+                        <c:forEach var="job" items="${sessionScope.employee.jobs}">
+                            <div class="model-item-subtitle" style="padding-left: 0px">
+                                部门：${job.depart.name}<br/>
+                                职位：${job.name}<br/>
+                                入职时间：<fmt:formatDate value="${job.worktime}" type="date" />
+                                <hr class="layui-bg-gray">
+                            </div>
+                        </c:forEach>
+                    </c:if>
+                </div>
             </div>
         </div>
     </div>
 
     <!--活动模块-->
     <div style="flex-grow: 1" class="item-panel">
+
         <div style="margin: 20px;">
             <h3>信息</h3>
             <hr class="layui-bg-gray">
@@ -235,6 +320,7 @@
             <div>end</div>
         </div>
     </div>
+
 
     <!-- 公告模块-->
     <div style="width: 20%;margin-top: 0;">

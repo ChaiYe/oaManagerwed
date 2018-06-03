@@ -32,12 +32,6 @@ public class EmpAndInfoServiceImpl implements EmpAndInfoService {
     }
 
     @Override
-    public EmployeeAndInfo findByUuid(int uuid){
-        employeeAndInfoDao.findByID(uuid);
-        return null;
-    }
-
-    @Override
     public List<EmployeeAndInfo> findByPage(PageBean<EmployeeAndInfo> employeeAndInfoPageBean) throws  Exception{
         return employeeAndInfoDao.findByPage(employeeAndInfoPageBean);
     }
@@ -80,6 +74,11 @@ public class EmpAndInfoServiceImpl implements EmpAndInfoService {
     @Override
     public EmployeeAndInfo getInfo(int uuid) {
         return employeeAndInfoDao.getInfo(uuid);
+    }
+
+    @Override
+    public void updateImg(int uuid, String imgPath) {
+        employeeAndInfoDao.updateImg(uuid, imgPath);
     }
 
 }

@@ -17,14 +17,6 @@ public interface EmpAndInfoService {
     public EmployeeAndInfo findById(Serializable id) throws  Exception;
 
     /**
-     * 根据唯一主键查找
-     * @param uuid 主键
-     * @return
-     * @throws Exception
-     */
-    public EmployeeAndInfo findByUuid(int uuid);
-
-    /**
      * 分页查询实例
      * @param employeeAndInfoPageBean
      * @return
@@ -85,4 +77,11 @@ public interface EmpAndInfoService {
      * @return
      */
     EmployeeAndInfo getInfo(int uuid);
+
+    /**
+     * 更新头像
+     * @param uuid 实体主键
+     * @param imgPath 图片路径
+     */
+    void updateImg(int uuid, String imgPath);
 }

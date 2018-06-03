@@ -100,6 +100,7 @@ public class AnnounceController {
         return announces;
     }
 
+
     @RequestMapping("delete")
     public String delete(Integer uuid) throws Exception
     {

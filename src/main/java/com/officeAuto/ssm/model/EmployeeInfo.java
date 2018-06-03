@@ -15,6 +15,8 @@ public class EmployeeInfo {
 
     private String address;
 
+    private String image;
+
     public Integer getId() {
         return id;
     }
@@ -71,6 +73,13 @@ public class EmployeeInfo {
         this.address = address == null ? null : address.trim();
     }
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image == null ? null : image.trim();
+    }
     @Override
     public String toString() {
         return "EmployeeInfo{" +

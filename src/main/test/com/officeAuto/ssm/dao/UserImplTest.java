@@ -24,8 +24,9 @@ public class UserImplTest {
     public void test(){
         EmployeeAndInfoDao dao = (EmployeeAndInfoDao) applicationContext.getBean("employeeAndInfoDao");
 //        List<EmployeeAndInfo> list =  dao.findAll();
-        EmployeeAndInfo employeeAndInfo = dao.login("A001", "123");
-        System.out.println(employeeAndInfo.getJobs().get(0).getDepart().getName());
+//        EmployeeAndInfo employeeAndInfo = dao.login("A001", "123");
+//        System.out.println(employeeAndInfo.getJobs().get(0).getDepart().getName());
+        dao.updateImg(1, "");
     }
 
     @Test

@@ -3,26 +3,6 @@
 
 <mapper namespace="com.officeAuto.ssm.dao.system.EmployeeAndInfoDao" >
 
-    <select id="findByPage" resultType="com.officeAuto.ssm.model.EmployeeAndInfo">
-        select employee.*,employeeInfo.*,job.name,dept.name
-        from employee
-        left join employeeInfo on employee.uuid=employeeInfo.id
-        left join job on employee.uuid=job.employee
-        left join dept  on dept.uuid=job.dept
-        limit ${(currentPage-1)*pageSize},${(currentPage-1)*pageSize+pageSize}
-    </select>
-
-    <select id="findCount" resultType="java.lang.Integer">
-        select count(*)
-        from employee
-    </select>
-
-    <select id="findById" resultType="com.officeAuto.ssm.model.EmployeeAndInfo">
-        select *
-        from employee, employeeinfo
-        where employee.uuid = #{id} and employeeinfo.id = employee.uuid
-    </select>
-
     <resultMap id="BaseResultMap" type="com.officeAuto.ssm.model.EmployeeAndInfo">
         <result column="uuid" jdbcType="INTEGER" property="uuid" />
         <result column="account" jdbcType="VARCHAR" property="account" />
@@ -40,6 +20,7 @@
             <result column="phone" jdbcType="VARCHAR" property="phone" />
             <result column="email" jdbcType="VARCHAR" property="email" />
             <result column="address" jdbcType="VARCHAR" property="address" />
+            <result column="image" jdbcType="VARCHAR" property="image" />
         </association>
     </resultMap>
 
@@ -59,13 +40,6 @@
             </association>
         </collection>
     </resultMap>
-
-    <select id="findByID" resultMap="empAndJobsMap">
-        select employee.*, employeeinfo.*,
-        job.uuid "job_uuid", job.name "job_name", job.descript "job_descript", job.authority, job.worktime, job.dept, job.employee "job_employee"
-        from employee, employeeinfo, job
-        where employee.uuid = #{uuid}  and job.employee = employee.uuid
-    </select>
 
     <select id="login" resultMap="empAndJobsMap">
         select employee.*, employeeinfo.*,
@@ -88,12 +62,33 @@
               and employeeinfo.id = employee.uuid
               and job.employee = employee.uuid
               and job.dept = dept.uuid
+        order by job.dept
     </select>
 
     <select id="findAll" resultMap="empAndInfoMap">
         select employee.*, employeeinfo.*
         from employee, employeeinfo
         where employee.uuid = employeeinfo.id
+    </select>
+
+    <select id="findByPage" resultType="com.officeAuto.ssm.model.EmployeeAndInfo">
+        select employee.*,employeeInfo.*,job.name,dept.name
+        from employee
+        left join employeeInfo on employee.uuid=employeeInfo.id
+        left join job on employee.uuid=job.employee
+        left join dept  on dept.uuid=job.dept
+        limit ${(currentPage-1)*pageSize},${(currentPage-1)*pageSize+pageSize}
+    </select>
+
+    <select id="findCount" resultType="java.lang.Integer">
+        select count(*)
+        from employee
+    </select>
+
+    <select id="findById" resultType="com.officeAuto.ssm.model.EmployeeAndInfo">
+        select *
+        from employee, employeeinfo
+        where employee.uuid = #{id} and employeeinfo.id = employee.uuid
     </select>
 
     <delete id="deleteById" parameterType="java.lang.Integer" >
@@ -111,6 +106,12 @@
 
     <update id="update" parameterType="com.officeAuto.ssm.model.EmployeeAndInfo">
 
+    </update>
+
+    <update id="updateImg">
+        update employeeinfo
+        set image = #{imgPath}
+        where id = #{uuid}
     </update>
 
 </mapper>

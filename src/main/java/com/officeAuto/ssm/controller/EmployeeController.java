@@ -5,16 +5,21 @@ import com.github.pagehelper.PageInfo;
 import com.officeAuto.ssm.model.*;
 import com.officeAuto.ssm.service.EmpAndInfoService;
 import com.officeAuto.ssm.service.EmployeeService;
-import com.officeAuto.ssm.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.*;
 import java.util.Date;
 import java.util.List;
 
@@ -28,6 +33,8 @@ public class EmployeeController {
     private EmpAndInfoService empAndInfoService;
 
     private int pageSize = 5;
+    private int maxFileSize = 32505856;
+    private String rootPath = "D:\\OAstorage\\";
 
     /**
      * 登录界面
@@ -37,29 +44,6 @@ public class EmployeeController {
     public String login()
     {
         return "login";
-    }
-
-    /**
-     * 登录操作
-     * @param account 账号
-     * @param password 密码
-     * @param session 全局session
-     * @return 页面
-     */
-    @RequestMapping("/login")
-    public  String login(String account, String password, HttpSession session) throws Exception {
-
-        Employee employee = employeeService.login(account,password);
-
-        if(employee==null)
-            return "login";
-
-        EmployeeAndInfo employeeAndInfo = empAndInfoService.findByUuid(employee.getUuid());
-
-
-        session.setAttribute("employee", employee);
-
-        return  "management";
     }
 
     /**
@@ -95,7 +79,18 @@ public class EmployeeController {
     }
 
     /**
-     * 进入管理页面
+     * 注销操作
+     * @param session 删除session中的实体
+     * @return 登录页面
+     */
+    @RequestMapping("/logout")
+    public String logOut(HttpSession session){
+        session.setAttribute("employee", null);
+        return "login";
+    }
+
+    /**
+     * 进入个人页面
      * @return 页面
      */
     @RequestMapping("/employeeHome")
@@ -104,6 +99,54 @@ public class EmployeeController {
         EmployeeAndInfo employeeAndInfo = (EmployeeAndInfo)session.getAttribute("employee");
 
         return "employeeHome";
+    }
+
+    @RequestMapping("/showPic/{fileName}")
+    public void showPicture(@PathVariable("fileName") String fileName, HttpServletResponse response){
+
+        String [] path = fileName.split("\\.");
+        File imgFile = new File(rootPath + "employeeImage\\" + path[0] + "." + path[1]);
+        responseFile(response, imgFile);
+    }
+
+    @RequestMapping("imgUpload")
+    @ResponseBody
+    public boolean imgUpload(HttpServletRequest request, HttpSession session) throws Exception{
+        MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
+        MultipartFile file = multipartRequest.getFile("imgFile");
+        EmployeeAndInfo employeeAndInfo = (EmployeeAndInfo)session.getAttribute("employee");
+
+        if(employeeAndInfo == null || file.isEmpty()) return false;
+
+        //上传文件路径
+        String path = rootPath + "employeeImage";
+
+        //文件格式
+        String originalFilename = file.getOriginalFilename();
+        String format = originalFilename.substring(originalFilename.lastIndexOf(".")+1);
+
+        //上传文件名
+        String filename = employeeAndInfo.getEmployeeInfo().getImage();
+        if(filename == null || filename.equals(""))
+            filename = employeeAndInfo.getUuid() + "." + format;
+
+        File filepath = new File(path,filename);
+
+        //判断路径是否存在，如果不存在就创建一个
+        if (!filepath.getParentFile().exists()) {
+            filepath.getParentFile().mkdirs();
+        }
+
+        //文件的路径全名
+        String longFileName = path + File.separator + filename;
+        //将上传文件保存到一个目标文件当中
+        file.transferTo(new File(longFileName));
+
+        //写入数据库
+        empAndInfoService.updateImg(employeeAndInfo.getUuid(), filename);
+        employeeAndInfo.getEmployeeInfo().setImage(longFileName);
+        session.setAttribute("employee", employeeAndInfo);
+        return true;
     }
 
     /**
@@ -122,17 +165,6 @@ public class EmployeeController {
     @RequestMapping("/homePage")
     public String homePage(){
         return "leftBox/homepage";
-    }
-
-    /**
-     * 注销操作
-     * @param session 删除session中的实体
-     * @return 登录页面
-     */
-    @RequestMapping("/logout")
-    public String logOut(HttpSession session){
-        session.setAttribute("employee", null);
-        return "login";
     }
 
     /**
@@ -210,5 +242,25 @@ public class EmployeeController {
 
         employeeService.delete(delitems);
         return "redirect:/Employee/getEmployeeByPage.action";
+    }
+
+
+    /* 文件转换为字节数组*/
+    /**
+     * 响应输出图片文件
+     * @param response
+     * @param imgFile
+     */
+    private void responseFile(HttpServletResponse response, File imgFile) {
+        try(InputStream is = new FileInputStream(imgFile);
+            OutputStream os = response.getOutputStream();){
+            byte [] buffer = new byte[maxFileSize]; // 图片文件流缓存池
+            while(is.read(buffer) != -1){
+                os.write(buffer);
+            }
+            os.flush();
+        } catch (IOException ioe){
+            ioe.printStackTrace();
+        }
     }
 }

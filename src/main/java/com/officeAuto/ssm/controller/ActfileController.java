@@ -3,6 +3,8 @@ package com.officeAuto.ssm.controller;
 
 import com.officeAuto.ssm.model.Actfile;
 
+import com.officeAuto.ssm.model.Employee;
+import com.officeAuto.ssm.model.EmployeeAndInfo;
 import com.officeAuto.ssm.service.ActfileService;
 import com.officeAuto.ssm.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +12,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.util.Date;
 import java.util.HashMap;
@@ -66,12 +74,13 @@ public class ActfileController {
             String filePath = "D:\\OAstorage\\";
             //上传文件原始名称
             String originalFilename = file.getOriginalFilename();
+
             //获取上传文件的大小
             int size= (int) file.getSize();
             //获取上传文件的格式
             String format = originalFilename.substring(originalFilename.lastIndexOf(".")+1);
             //新的图片名称
-            String newFileName = UUID.randomUUID() +originalFilename.substring(originalFilename.lastIndexOf("."));
+            String newFileName = UUID.randomUUID() + originalFilename.substring(originalFilename.lastIndexOf("."));
             //新文件
             File newfile = new java.io.File(filePath+newFileName);
 
