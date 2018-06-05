@@ -72,9 +72,6 @@
     <insert id="insert" parameterType="com.officeAuto.ssm.model.Announce">
         insert into announce
         <trim prefix="(" suffix=")" suffixOverrides="," >
-            <if test="uuid != null" >
-                uuid,
-            </if>
             <if test="title != null" >
                 title,
             </if>
@@ -92,9 +89,6 @@
             </if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides="," >
-            <if test="uuid != null" >
-                #{uuid,jdbcType=INTEGER},
-            </if>
             <if test="title != null" >
                 #{title,jdbcType=VARCHAR},
             </if>

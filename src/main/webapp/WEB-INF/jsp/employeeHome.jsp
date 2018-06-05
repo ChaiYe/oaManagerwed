@@ -35,12 +35,64 @@
             var element = layui.element;
             //…
         });
+        layui.use('layer', function(){ //独立版的layer无需执行这一句
+            var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+
+            //触发事件
+            var active = {
+                offset: function(othis){
+                    var type = othis.data('type')
+                        ,text = othis.text();
+                    layer.open({
+                        type: 1
+                        ,offset: type //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
+                        ,id: 'layerDemo'+type //防止重复弹出
+                        ,content: '<div style="padding: 20px 100px;">'+ text +'</div>'
+                        ,btn: '关闭全部'
+                        ,btnAlign: 'c' //按钮居中
+                        ,shade: 0 //不显示遮罩
+                        ,yes: function(){
+                            layer.closeAll();
+                        }
+                    });
+                }
+            };
+
+            $('#layerDemo .layui-btn').on('click', function(){
+                var othis = $(this), method = othis.data('method');
+                active[method] ? active[method].call(this, othis) : '';
+            });
+        });
     </script>
 
     <style>
+        /*禁止显示滚动条*/
+        ::-webkit-scrollbar {display:none}
+
         /*图像*/
-        .commentAvatarDiv{   width: 100px;   height: 100px;   padding:5px;   background: #ececec;   border-radius:100px;   box-shadow: 0px 0px 1px rgba(0,0,0,0.4);   -moz-border-radius: 100px;   -webkit-border-radius: 100px;}
-        .commentAvatarImage{    width:100px;    height:100px;    line-height: 0;		/* remove line-height */     display: inline-block;	/* circle wraps image */   border-radius: 50%;	/* relative value */   -moz-border-radius: 50%;   -webkit-border-radius: 50%;   transition: linear 0.25s;}
+        .commentAvatarDiv{
+            width: 100px;
+            height: 100px;
+            padding:5px;
+            background: #ececec;
+            border-radius:100px;
+            box-shadow: 0px 0px 1px rgba(0,0,0,0.4);
+            -moz-border-radius: 100px;
+            -webkit-border-radius: 100px;
+        }
+        .commentAvatarImage{
+            width:100px;
+            height:100px;
+            line-height: 0;
+            /* remove line-height */
+            display: inline-block;
+            /* circle wraps image */
+            border-radius: 50%;
+            /* relative value */
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            transition: linear 0.25s;
+        }
         /*个人信息模块布局*/
         .content{
             height:180px;
@@ -76,7 +128,6 @@
         .self-info-message>div>div{
             display: inline;
         }
-
 
         /*最近操作列表下 子项*/
         /*布局*/
@@ -140,6 +191,19 @@
             color: #919191;
             font-size: x-small;
             padding-left: 3px;
+        }
+    </style>
+    <%--弹出动画--%>
+    <style>
+        /*activity-vote*/
+        .activity-vote{
+            height:18px;
+            overflow: hidden;
+            transition: height 0.5s;
+        }
+        .activity-vote:hover {
+            /*height:auto;*/
+            height: 200px;
         }
     </style>
     <%--文件上传框样式--%>
@@ -211,15 +275,12 @@
     <!--导航条-->
     <div>
         <ul class="layui-nav">
-
             <li class="layui-nav-item">
                 <a href="${pageContext.request.contextPath}/employee/employeeHome.action" style="display: inline;padding-left: 0px" target="infoContent">首页</a>
             </li>
-
             <li class="layui-nav-item">
                 <a href="" style="display: inline;padding-left: 0px">帮助</a>
             </li>
-
             <li class="layui-nav-item" style="float: right">
                 <a href="" id="smallAvatar"><img src="/employee/showPic/${sessionScope.employee.employeeInfo.image}.action" class="layui-nav-img"></a>
                 <dl class="layui-nav-child">
@@ -229,9 +290,8 @@
                     <dd><a href="${pageContext.request.contextPath}/employee/logout.action" >注销</a></dd>
                 </dl>
             </li>
-
             <li class="layui-nav-item" style="float: right">
-                <a href="">公告<span class="layui-badge-dot"></span></a>
+                <a href="${pageContext.request.contextPath}/announce/addAnnouncePage.action">公告<span class="layui-badge-dot"></span></a>
             </li>
             <li class="layui-nav-item" style="float: right">
                 <a href="" style="display: inline;padding-left: 0px">活动<span class="layui-badge-dot"></span></a>
@@ -371,7 +431,33 @@
                     </div>
                 </div>
                 <hr class="layui-bg-gray">
-                <div>end</div>
+                <div class="activity-vote">
+                    <div style="text-align:center">查看活动文件/投票</div>
+                    <div>
+                        <fieldset class="layui-elem-field">
+                            <legend>投票</legend>
+                            <div style="padding:20px">
+                                <p>
+                                    这里是你能那你说的福克斯的水电费水电费水多个发鬼地方鬼地方个的的富商大贾的电费撒发生水电费阿斯<br>蒂芬水电费水电费深度
+                                </p>
+                                <div>
+                                    <div>
+                                        <input type="radio" name="vote"/>A.选项A
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="vote"/>B.选项B
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="vote"/>C.选项C
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="vote"/>D.选项D
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -386,7 +472,7 @@
                     </div>
 
                     <div class="model-item-subtitle">
-                       发布时间：{{item.createtime|dateFormat}}
+                       {{item.createtime|dateFormat}}
                     </div>
 
                     <div class="model-item-content" v-html="item.descript"></div>
@@ -435,7 +521,7 @@
                     </div>
 
                     <div class="model-item-subtitle">
-                        发布时间：{{item.createtime|dateFormat}}
+                        {{item.createtime|dateFormat}}
                     </div>
 
                     <div class="model-item-content" v-html="item.descript"></div>

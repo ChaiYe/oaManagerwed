@@ -1,7 +1,6 @@
 package com.officeAuto.ssm.dao;
 
 import com.officeAuto.ssm.dao.system.*;
-
 import com.officeAuto.ssm.model.*;
 import com.officeAuto.ssm.utils.PageBean;
 import org.junit.Before;
@@ -27,13 +26,8 @@ public class UserImplTest {
 //        EmployeeAndInfo employeeAndInfo = dao.login("A001", "123");
 //        System.out.println(employeeAndInfo.getJobs().get(0).getDepart().getName());
 //        dao.updateImg(1, "");
-        EmployeeInfo employeeInfo = new EmployeeInfo();
-        employeeInfo.setId(1);
-        employeeInfo.setAge("25");
-        employeeInfo.setSex("男");
-        employeeInfo.setAddress("广东省肇庆市肇庆学院");
-        employeeInfo.setEmail("123@email.com");
-        System.out.println(dao.updateInfoSelective(employeeInfo));
+
+        System.out.println();
     }
 
     @Test

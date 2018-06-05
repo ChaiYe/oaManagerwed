@@ -11,12 +11,14 @@ import com.officeAuto.ssm.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 
+import javax.jws.WebParam;
 import javax.servlet.http.HttpSession;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -33,24 +35,6 @@ public class AnnounceController {
 
     private int pageSize = 5;
 
-    @RequestMapping("/getAnnounceByPage")
-    public String listPage(Integer currentPage,Model model) throws Exception
-    {
-        if(currentPage==null)
-            currentPage = 1;
-        //在你需要进行分页的 MyBatis 查询方法前调用 PageHelper.startPage 静态方法即可，紧跟在这个方法后的第一个MyBatis 查询方法会被进行分页。
-        PageHelper.startPage(currentPage, pageSize);
-        List<Announce> list = announceService.findAll();
-
-        //PageInfo类包装数据
-        PageInfo<Announce> p = new PageInfo<Announce>(list);
-
-        model.addAttribute("page", p);
-        model.addAttribute("list", list);
-
-        return  "leftBox/announceInfo";
-    }
-
     /**
      * 公司公告
      * @return
@@ -64,6 +48,7 @@ public class AnnounceController {
 
     /**
      * 部门公告
+     * 查询出当前用户在职的所有部门最近的公告
      * @param session
      * @return
      */
@@ -100,6 +85,74 @@ public class AnnounceController {
         return announces;
     }
 
+    /**
+     * 添加公告
+     * 遍历找出当前员工有权限发布公告的部门
+     * @param session
+     * @param modelMap
+     * @return
+     */
+    @RequestMapping("addAnnouncePage")
+    public String addAnnPage(HttpSession session, ModelMap modelMap){
+        List<JobQueryModel> jobs = ((EmployeeAndInfo)session.getAttribute("employee")).getJobs();
+        List<JobQueryModel> list = new ArrayList<>();
+        //遍历找出有权限的部门，并去除重复
+        for(JobQueryModel job : jobs){
+            boolean repeat = false;
+            if(job.getAuthority() > 1){
+                //遍历已加入的部门
+                for(JobQueryModel j : list){
+                    //相同部门，取权限高的
+                    if(job.getDept().equals(j.getDept())){
+                        repeat = true;
+                        //取权限高的
+                        if(job.getAuthority() > j.getAuthority()) j = job;
+                    }
+                }
+                if(!repeat) list.add(job);
+            }
+        }
+
+        modelMap.addAttribute("jobs", list);
+        return  "add_Announce";
+    }
+
+    /**
+     * 发布公告
+     * 持久化到数据库中
+     * @param announce
+     * @param session
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping("addAnnounce")
+    public String addAnn(Announce announce, HttpSession session) throws Exception {
+        EmployeeAndInfo employeeAndInfo = (EmployeeAndInfo)session.getAttribute("employee");
+        announce.setEmployee(employeeAndInfo.getUuid());
+        announce.setCreatetime(new Date());
+        announceService.insert(announce);
+        return "employeeHome";
+    }
+
+
+
+    /***************************************************后台公告管理*************************************************/
+    @RequestMapping("/getAnnounceByPage")
+    public String listPage(Integer currentPage,Model model) throws Exception {
+        if(currentPage==null)
+            currentPage = 1;
+        //在你需要进行分页的 MyBatis 查询方法前调用 PageHelper.startPage 静态方法即可，紧跟在这个方法后的第一个MyBatis 查询方法会被进行分页。
+        PageHelper.startPage(currentPage, pageSize);
+        List<Announce> list = announceService.findAll();
+
+        //PageInfo类包装数据
+        PageInfo<Announce> p = new PageInfo<Announce>(list);
+
+        model.addAttribute("page", p);
+        model.addAttribute("list", list);
+
+        return  "leftBox/announceInfo";
+    }
 
     @RequestMapping("delete")
     public String delete(Integer uuid) throws Exception

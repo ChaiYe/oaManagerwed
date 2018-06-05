@@ -123,9 +123,9 @@ public class EmployeeController {
         responseFile(response, imgFile);
     }
 
-    /* 文件转换为字节数组*/
     /**
      * 响应输出图片文件
+     * 文件转换为字节数组
      * @param response
      * @param imgFile
      */
@@ -140,7 +140,12 @@ public class EmployeeController {
             ioe.printStackTrace();
         }
     }
+
+
+    /*******************************************************个人信息管理**********************************************************/
+
     /**
+     * 更换头像
      * 图片异步上传
      * @param request
      * @param session
@@ -191,8 +196,6 @@ public class EmployeeController {
         session.setAttribute("employee", employeeAndInfo);
         return filename;
     }
-
-    /*******************************************************个人信息管理**********************************************************/
 
     /**
      * 个人信息修改页面

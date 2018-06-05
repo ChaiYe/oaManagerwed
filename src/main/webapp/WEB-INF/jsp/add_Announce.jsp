@@ -6,18 +6,18 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>${sessionScope.employee.employeeInfo.name}个人信息修改</title>
+    <title>发布公告</title>
     <script src="../../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="../../layui/layui.js " type="text/javascript" charset="utf-8"></script>
     <link rel="stylesheet" href="../../layui/css/layui.css" />
 
     <%--表单js--%>
     <script>
-        layui.use(['form', 'layedit', 'laydate'], function(){
+        layui.use(['form', 'layedit', 'laydate'], function() {
             var form = layui.form
-                ,layer = layui.layer
-                ,layedit = layui.layedit
-                ,laydate = layui.laydate;
+                , layer = layui.layer
+                , layedit = layui.layedit
+                , laydate = layui.laydate;
 
             //日期
             laydate.render({
@@ -28,27 +28,45 @@
             });
 
             //创建一个编辑器
-            var editIndex = layedit.build('LAY_demo_editor');
+            layedit.build('editor', {
+                tool: [
+                    'strong' //加粗
+                    , 'italic' //斜体
+                    , 'underline' //下划线
+                    , 'del' //删除线
+
+                    , '|' //分割线
+
+                    , 'left' //左对齐
+                    , 'center' //居中对齐
+                    , 'right' //右对齐
+                    , 'link' //超链接
+                    , 'unlink' //清除链接
+                    , 'face' //表情
+                    // ,'image' //插入图片
+                    // , 'help' //帮助
+                ]
+            });
 
             //自定义验证规则
             form.verify({
-                name : function(value){
-                    if(value.length < 1){
-                        return '名字不能少于1个字符';
+                title: function (value) {
+                    if (value.length < 1) {
+                        return '标题不能少于1个字符';
                     }
-                    if(value.length > 200){
-                        return '名字不能大于200个字符'
-                    }
-                }
-                ,age: function(value){
-                    if(isNaN(value) || value > 150 || value < 1){
-                        return '请输入正确年龄';
+                    if (value.length > 50) {
+                        return '标题不能大于200个字符'
                     }
                 }
-                ,phone: [/^0?(13[0-9]|14[5-9]|15[012356789]|166|17[0-8]|18[0-9]|19[89])[0-9]{8}$/, '请输入正确的手机号（11位）']
-                ,email: [/^[a-zA-Z\d]+(\.[a-zA-Z\d]+)*@([\da-zA-Z](-[\da-zA-Z])?)+(\.{1,2}[a-zA-Z]+)+$/, '请输入正确的邮箱，如1a23@123ab.com']
+                , descript: function (value) {
+                    if (value.length < 1) {
+                        return '内容不能少于1个字符';
+                    }
+                    if (value.length > 500) {
+                        return '内容不能大于500个字符'
+                    }
+                }
             });
-
             //监听指定开关
             form.on('switch(switchTest)', function(data){
                 layer.msg('开关checked：'+ (this.checked ? 'true' : 'false'), {
@@ -149,15 +167,12 @@
     <!--导航条-->
     <div>
         <ul class="layui-nav">
-
             <li class="layui-nav-item">
                 <a href="${pageContext.request.contextPath}/employee/employeeHome.action" style="display: inline;padding-left: 0px" target="infoContent">首页</a>
             </li>
-
             <li class="layui-nav-item">
                 <a href="" style="display: inline;padding-left: 0px">帮助</a>
             </li>
-
             <li class="layui-nav-item" style="float: right">
                 <a href="" id="smallAvatar"><img src="/employee/showPic/${sessionScope.employee.employeeInfo.image}.action" class="layui-nav-img"></a>
                 <dl class="layui-nav-child">
@@ -167,9 +182,8 @@
                     <dd><a href="${pageContext.request.contextPath}/employee/logout.action" >注销</a></dd>
                 </dl>
             </li>
-
             <li class="layui-nav-item" style="float: right">
-                <a href="">公告<span class="layui-badge-dot"></span></a>
+                <a href="${pageContext.request.contextPath}/announce/addAnnouncePage.action">公告<span class="layui-badge-dot"></span></a>
             </li>
             <li class="layui-nav-item" style="float: right">
                 <a href="" style="display: inline;padding-left: 0px">活动<span class="layui-badge-dot"></span></a>
@@ -182,8 +196,8 @@
         <div class="layui-col-md6 layui-col-md-offset3">
 
             <div class="description">
-                <div class="title">您的个人信息</div>
-                <div class="subtitle">管理这些基本信息（您的名称、电子邮件地址和电话号码），以便与其他人联系</div>
+                <div class="title">发布公告</div>
+                <div class="subtitle">请填写这些信息，以便于其他员工查看</div>
             </div>
 
             <div class="info-content">
@@ -193,55 +207,38 @@
                 <!--表单-->
                 <div class="edit-panel">
                     <div>
-                        <form action="${pageContext.request.contextPath}/employee/infoUpdate.action" method="post" class="layui-form">
+                        <form action="${pageContext.request.contextPath}/announce/addAnnounce.action" method="post" class="layui-form">
 
                             <div class="layui-form-item">
-                                <label class="layui-form-label">名称</label>
+                                <label class="layui-form-label">标题</label>
                                 <div class="layui-input-block">
-                                    <input type="text" name="name" lay-verify="required|name" autocomplete="off" placeholder="请输入姓名" value="${sessionScope.employee.employeeInfo.name}" class="layui-input">
-                                </div>
-                            </div>
-
-                            <div class="layui-form-item" pane>
-                                <label class="layui-form-label">性别</label>
-                                <div class="layui-input-block">
-                                    <input type="radio" name="sex" value="男" title="男" <c:if test="${sessionScope.employee.employeeInfo.sex == '男'}">checked="checked"</c:if> />
-                                    <input type="radio" name="sex" value="女" title="女" <c:if test="${sessionScope.employee.employeeInfo.sex == '女'}">checked="checked"</c:if>>
+                                    <input type="text" name="title" lay-verify="required|title" autocomplete="off" placeholder="请输入标题" class="layui-input">
                                 </div>
                             </div>
 
                             <div class="layui-form-item">
-                                <label class="layui-form-label">年龄</label>
+                                <label class="layui-form-label">部门</label>
                                 <div class="layui-input-block">
-                                    <input type="number" name="age" lay-verify="required|age" autocomplete="off" class="layui-input"  placeholder="请输入年龄" value="${sessionScope.employee.employeeInfo.age}">
+                                    <select name="dept" lay-verify="required">
+                                        <option value=""></option>
+                                        <c:forEach var="item" items="${jobs}">
+                                            <option value="${item.dept}">${item.depart.name}</option>
+                                        </c:forEach>
+                                    </select>
                                 </div>
                             </div>
 
                             <div class="layui-form-item">
-                                <label class="layui-form-label">电话</label>
+                                <label class="layui-form-label">内容</label>
                                 <div class="layui-input-block">
-                                    <input type="tel" name="phone" lay-verify="phone" autocomplete="off" class="layui-input"  placeholder="请输入手机号" value="${sessionScope.employee.employeeInfo.phone}">
-                                </div>
-                            </div>
-
-                            <div class="layui-inline">
-                                <label class="layui-form-label">邮箱</label>
-                                <div class="layui-input-inline">
-                                    <input type="text" name="email" lay-verify="email" autocomplete="off" class="layui-input"  placeholder="请输入邮箱" value="${sessionScope.employee.employeeInfo.email}">
-                                </div>
-                            </div>
-
-                            <div class="layui-form-item">
-                                <label class="layui-form-label">地址</label>
-                                <div class="layui-input-block">
-                                    <input type="text" name="address" class="layui-input" placeholder="请输入地址" value="${sessionScope.employee.employeeInfo.address}">
+                                    <textarea id="editor" name="descript"></textarea>
                                 </div>
                             </div>
 
                             <div class="layui-form-item">
                                 <label class="layui-form-label bug">&nbsp;</label>
                                 <div class="layui-input-block" id="submit-btn">
-                                    <button class="layui-btn layui-btn-primary" lay-submit="" style="width: 100%;">修改</button>
+                                    <button class="layui-btn layui-btn-primary" lay-submit="" style="width: 100%;">发布</button>
                                 </div>
                             </div>
                         </form>

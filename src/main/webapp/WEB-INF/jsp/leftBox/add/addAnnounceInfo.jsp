@@ -36,18 +36,17 @@
 
     <div class="panel-title">
         <span class="title">公告管理</span>
-
         <span class="small-title">添加公告信息</span>
     </div>
 
     <div class="crumbs-nav">
-                <span class="layui-breadcrumb">
-                    <a href="">信息中心</a>
-                    <span>&nbsp;/&nbsp;</span>
-                    <a href="">公告管理</a>
-                    <span>&nbsp;/&nbsp;</span>
-                    <a><cite>添加</cite></a>
-                </span>
+        <span class="layui-breadcrumb">
+            <a href="">信息中心</a>
+            <span>&nbsp;/&nbsp;</span>
+            <a href="">公告管理</a>
+            <span>&nbsp;/&nbsp;</span>
+            <a><cite>添加</cite></a>
+        </span>
     </div>
 
     <div>
