@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2018/5/13/013
-  Time: 10:03
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -125,7 +118,6 @@
                 },
                 success:function(data){
                     if(data){
-                        <%--location.href = "${pageContext.request.contextPath}/employee/managePage.action";--%>
                         location.href = "${pageContext.request.contextPath}/employee/employeeHome.action";
                     }
                     else{

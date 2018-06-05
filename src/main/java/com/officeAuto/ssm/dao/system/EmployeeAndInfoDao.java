@@ -3,6 +3,7 @@ package com.officeAuto.ssm.dao.system;
 import com.officeAuto.ssm.dao.BaseDao;
 import com.officeAuto.ssm.model.Employee;
 import com.officeAuto.ssm.model.EmployeeAndInfo;
+import com.officeAuto.ssm.model.EmployeeInfo;
 import org.apache.ibatis.annotations.Param;
 
 public interface EmployeeAndInfoDao extends BaseDao<EmployeeAndInfo> {
@@ -31,4 +32,12 @@ public interface EmployeeAndInfoDao extends BaseDao<EmployeeAndInfo> {
      */
     void updateImg(@Param("uuid")int uuid, @Param("imgPath")String imgPath);
 
+    /**
+     * 更新信息
+     * EmployeeInfo 实体必须设置id字段
+     * 某项信息没修改时不更新
+     * @param record EmployeeInfo 实体
+     * @return
+     */
+    int updateInfoSelective(@Param("record") EmployeeInfo record);
 }

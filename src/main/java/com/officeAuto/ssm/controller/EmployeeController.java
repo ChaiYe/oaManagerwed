@@ -1,5 +1,6 @@
 package com.officeAuto.ssm.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.officeAuto.ssm.model.*;
@@ -9,19 +10,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
+import javax.json.Json;
+import javax.json.JsonObject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.*;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/employee")
@@ -32,10 +34,14 @@ public class EmployeeController {
     @Autowired
     private EmpAndInfoService empAndInfoService;
 
+    //查询页面的大小
     private int pageSize = 5;
+    //可上传文件的最大值
     private int maxFileSize = 32505856;
+    //服务器中存放文件的路径
     private String rootPath = "D:\\OAstorage\\";
 
+    /*******************************************************登录**********************************************************/
     /**
      * 登录界面
      * @return 页面
@@ -95,27 +101,63 @@ public class EmployeeController {
      */
     @RequestMapping("/employeeHome")
     public String employeeHomePage(HttpSession session, ModelMap modelMap){
-
 //        EmployeeAndInfo employeeAndInfo = (EmployeeAndInfo)session.getAttribute("employee");
-
         return "employeeHome";
     }
 
+    /**
+     * 加载图片
+     * 以字节数组的形式
+     * 用response输出到页面
+     * @param fileName 要加载的图片文件名
+     * @param response
+     */
     @RequestMapping("/showPic/{fileName}")
     public void showPicture(@PathVariable("fileName") String fileName, HttpServletResponse response){
+        //将文件名分割成 文件名 和 格式
+        //“ . " 需要用两次转义
         String [] path = fileName.split("\\.");
+        //获取服务器中的文件
         File imgFile = new File(rootPath + "employeeImage\\" + path[0] + "." + path[1]);
+        //输出到页面
         responseFile(response, imgFile);
     }
 
+    /* 文件转换为字节数组*/
+    /**
+     * 响应输出图片文件
+     * @param response
+     * @param imgFile
+     */
+    private void responseFile(HttpServletResponse response, File imgFile) {
+        try(InputStream is = new FileInputStream(imgFile); OutputStream os = response.getOutputStream()){
+            byte [] buffer = new byte[(int)imgFile.length()]; // 图片文件流缓存池
+            while(is.read(buffer) != -1){
+                os.write(buffer);
+            }
+            os.flush();
+        } catch (IOException ioe){
+            ioe.printStackTrace();
+        }
+    }
+    /**
+     * 图片异步上传
+     * @param request
+     * @param session
+     * @return 写入数据库中的文件名，以json格式返回，便于页面获取新图片路径
+     * @throws Exception
+     */
     @RequestMapping("imgUpload")
     @ResponseBody
-    public boolean imgUpload(HttpServletRequest request, HttpSession session) throws Exception{
+    public String imgUpload(HttpServletRequest request, HttpSession session) throws Exception{
+        //获取上传的文件
         MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
+        //input file框的name属性，必须有，不然得不到文件
         MultipartFile file = multipartRequest.getFile("imgFile");
+        //取得登录的员工信息
         EmployeeAndInfo employeeAndInfo = (EmployeeAndInfo)session.getAttribute("employee");
 
-        if(employeeAndInfo == null || file.isEmpty()) return false;
+        if(employeeAndInfo == null || file.isEmpty()) return null;
 
         //上传文件路径
         String path = rootPath + "employeeImage";
@@ -124,7 +166,8 @@ public class EmployeeController {
         String originalFilename = file.getOriginalFilename();
         String format = originalFilename.substring(originalFilename.lastIndexOf(".")+1);
 
-        //上传文件名
+        //修改后的文件名
+        //以员工uuid作为文件名，每次上传覆盖原来相同格式的文件
         String filename = employeeAndInfo.getEmployeeInfo().getImage();
         if(filename == null || filename.equals(""))
             filename = employeeAndInfo.getUuid() + "." + format;
@@ -132,22 +175,46 @@ public class EmployeeController {
         File filepath = new File(path,filename);
 
         //判断路径是否存在，如果不存在就创建一个
-        if (!filepath.getParentFile().exists()) {
+        if (!filepath.getParentFile().exists())
             filepath.getParentFile().mkdirs();
-        }
+
 
         //文件的路径全名
         String longFileName = path + File.separator + filename;
         //将上传文件保存到一个目标文件当中
         file.transferTo(new File(longFileName));
 
-        //写入数据库
+        //写入数据库，只更新employeeInfo表的image字段
         empAndInfoService.updateImg(employeeAndInfo.getUuid(), filename);
+        //重新设置session
         employeeAndInfo.getEmployeeInfo().setImage(filename);
         session.setAttribute("employee", employeeAndInfo);
-        return true;
+        return filename;
     }
 
+    /*******************************************************个人信息管理**********************************************************/
+
+    /**
+     * 个人信息修改页面
+     * @return 页面
+     */
+    @RequestMapping("infoEditPage")
+    public String infoEditPage(){
+        return "employeeInfoEdit";
+    }
+
+    @RequestMapping("infoUpdate")
+    public String infoUpdate(EmployeeInfo employeeInfo, HttpSession session){
+        EmployeeAndInfo employee = (EmployeeAndInfo) session.getAttribute("employee");
+        employeeInfo.setId(employee.getUuid());
+        empAndInfoService.updateInfoSelective(employeeInfo);
+        employee.setEmployeeInfo(employeeInfo);
+        return "employeeInfoEdit";
+    }
+
+
+
+    /**********************************************************后台管理**********************************************************/
     /**
      * 进入管理页面
      * @return 页面
@@ -243,22 +310,4 @@ public class EmployeeController {
         return "redirect:/Employee/getEmployeeByPage.action";
     }
 
-
-    /* 文件转换为字节数组*/
-    /**
-     * 响应输出图片文件
-     * @param response
-     * @param imgFile
-     */
-    private void responseFile(HttpServletResponse response, File imgFile) {
-        try(InputStream is = new FileInputStream(imgFile); OutputStream os = response.getOutputStream()){
-            byte [] buffer = new byte[maxFileSize]; // 图片文件流缓存池
-            while(is.read(buffer) != -1){
-                os.write(buffer);
-            }
-            os.flush();
-        } catch (IOException ioe){
-            ioe.printStackTrace();
-        }
-    }
 }

@@ -151,20 +151,8 @@ public class ActfileController {
             delitems[i]=Integer.parseInt(str[i]);
         }
 
-
-
         actfileService.delete(delitems);
         return "redirect:/actfile/getActfileByPage.action";
-    }
-
-
-    @RequestMapping("findone")
-    public  String findone(Integer id,Model model) throws  Exception
-    {
-        id=6;
-        Actfile actfile=actfileService.findById(id);
-        model.addAttribute("actfile",actfile);
-        return "test";
     }
 
 }

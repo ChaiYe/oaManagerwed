@@ -2,6 +2,7 @@ package com.officeAuto.ssm.service.impl;
 
 import com.officeAuto.ssm.dao.system.EmployeeAndInfoDao;
 import com.officeAuto.ssm.model.EmployeeAndInfo;
+import com.officeAuto.ssm.model.EmployeeInfo;
 import com.officeAuto.ssm.service.EmpAndInfoService;
 import com.officeAuto.ssm.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -79,6 +80,13 @@ public class EmpAndInfoServiceImpl implements EmpAndInfoService {
     @Override
     public void updateImg(int uuid, String imgPath) {
         employeeAndInfoDao.updateImg(uuid, imgPath);
+    }
+
+    @Override
+    public int updateInfoSelective(EmployeeInfo record) {
+        if(record.getId() == null)
+            return 0;
+        return employeeAndInfoDao.updateInfoSelective(record);
     }
 
 }

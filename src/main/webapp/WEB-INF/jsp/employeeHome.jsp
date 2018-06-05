@@ -11,8 +11,8 @@
     <script src="../../js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="../../js/jquery.form.js"></script>
     <script src="../../js/vue.js"></script>
-    <link rel="stylesheet" href="../../layui/css/layui.css">
     <script src="../../layui/layui.js"></script>
+    <link rel="stylesheet" href="../../layui/css/layui.css">
     <script type="text/javascript">
 
         layui.use('laypage', function () {
@@ -146,8 +146,8 @@
         .file {
             position: relative;
             display: inline-block;
-            background: #ffffff;
-            border: 1px solid #ffffff;
+            background: rgba(0,0,0,0);
+            border: 1px solid rgba(0,0,0,0);
             border-radius: 4px;
             padding: 4px 12px;
             overflow: hidden;
@@ -188,6 +188,7 @@
             <a href=""><img src="../../img/31ca894c-2d67-4e35-854d-25b92aaff748.png" class="layui-nav-img">${sessionScope.employee.account}</a>
             <dl class="layui-nav-child">
                 <dd><a href="${pageContext.request.contextPath}/employee/employeeHome.action">个人主页</a></dd>
+                <dd><a href="${pageContext.request.contextPath}/employee/infoEditPage.action">个人信息</a></dd>
                 <c:if test="${sessionScope.job.authority > 1}"><dd><a href="${pageContext.request.contextPath}/employee/managePage.action" >管理</a></dd></c:if>
                 <dd><a href="${pageContext.request.contextPath}/employee/logout.action" >注销</a></dd>
             </dl>
@@ -201,7 +202,6 @@
         </li>
     </ul>
 </div>
-
 <!--头像、图片-->
 <div class="content">
 
@@ -211,13 +211,14 @@
 
     <!--图片上传模块-->
     <div style="background:#CDDC39;height: 40px;padding-left: 75px">
-        <%--<a href="#" style="float: right;padding:10px 40px 0 0;color: white;">修改</a>--%>
-        <form method="POST" enctype="multipart/form-data" action="" id="imgForm">
+        <form method="POST" enctype="multipart/form-data" id="imgForm">
             <a href="javascript:;" class="file">更改头像
                 <input type="file" name="imgFile" id="imgFile" accept="image/png, image/jpeg, image/gif, image/jpg">
             </a>
         </form>
+        <%--异步上传图片，不刷新页面--%>
         <script>
+            //数据检验
             function checkData(fileInput){
                 var fileDir = fileInput.val();
                 if("" === fileDir){
@@ -226,13 +227,18 @@
                 }
                 return true;
             }
+            //异步上传操作
             function fileUpload(){
                 $('#imgForm').ajaxSubmit({
-                    url:'${pageContext.request.contextPath}/employee/imgUpload.action',
-                    dataType: 'text',
-                    success: function(){
+                    url:'${pageContext.request.contextPath}/employee/imgUpload.action?' + new Date().getMilliseconds(),
+                    dataType: 'json',
+                    success: function(data){
                         alert("成功上传");
                         $('#imgFile').val("");
+                        //设定img的src，加时间戳以防浏览器缓存不加载
+                        var img = "<img src='${pageContext.request.contextPath}/employee/showPic/"
+                                + data +".action?" + new Date().getMilliseconds() + "'" + "alt='头像' class='commentAvatarImage'/>";
+                        $("#avatarDiv").html(img);
                     },
                     error: function () {
                         alert("error")
@@ -251,12 +257,17 @@
     </div>
 
     <div class="session1">
-        <div class="commentAvatarDiv">
-            <%--<img src="../../img/31ca894c-2d67-4e35-854d-25b92aaff748.png" alt="头像" class="commentAvatarImage"/>--%>
-            <img src="${pageContext.request.contextPath}/employee/showPic/${sessionScope.employee.employeeInfo.image}.action" alt="头像" class="commentAvatarImage"/>
+        <div class="commentAvatarDiv" id="avatarDiv">
+            <c:choose>
+                <c:when test="${sessionScope.employee.employeeInfo.image != null && sessionScope.employee.employeeInfo.image != ''}">
+                    <img src="/employee/showPic/${sessionScope.employee.employeeInfo.image}.action" alt="头像" class="commentAvatarImage"/>
+                </c:when>
+                <c:otherwise>
+                    <img src="../../img/icons_02.gif" alt="头像" class="commentAvatarImage" id="imgAvatar"/>
+                </c:otherwise>
+            </c:choose>
         </div>
     </div>
-
 </div>
 
 <div class="taskContent">
@@ -324,11 +335,10 @@
         </div>
     </div>
 
-
     <!-- 公告模块-->
     <div style="width: 20%;margin-top: 0;">
         <div id="comp_announce">
-            <h2>公司公告</h2>
+            <h2 v-show="items.length">公司公告</h2>
             <div class="model-item" v-for="item in items">
                 <div class="model-item-title">
                     {{item.title}}
@@ -376,7 +386,7 @@
         </script>
 
         <div id="dept_announce">
-            <h2>部门公告</h2>
+            <h2 v-show="items.length">部门公告</h2>
             <div class="model-item" v-for="item in items">
                 <div class="model-item-title">
                     {{item.title}}

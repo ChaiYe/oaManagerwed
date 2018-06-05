@@ -2,6 +2,7 @@ package com.officeAuto.ssm.service;
 
 import com.officeAuto.ssm.model.Employee;
 import com.officeAuto.ssm.model.EmployeeAndInfo;
+import com.officeAuto.ssm.model.EmployeeInfo;
 import com.officeAuto.ssm.utils.PageBean;
 
 import java.io.Serializable;
@@ -84,4 +85,13 @@ public interface EmpAndInfoService {
      * @param imgPath 图片路径
      */
     void updateImg(int uuid, String imgPath);
+
+    /**
+     * 更新employeeinfo 表
+     * EmployeeInfo 实体必须设置id字段
+     * 某项信息没修改时不更新
+     * @param record EmployeeInfo 实体
+     * @return 影响的记录数
+     */
+    int updateInfoSelective(EmployeeInfo record);
 }
