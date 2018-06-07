@@ -8,124 +8,11 @@
   <component name="ChangeListManager">
     <list default="true" id="0bc6e281-01c3-4673-8e4b-0cb9b0897242" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/ssm.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/ssm.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActivityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActivityController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/AnnounceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/AnnounceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/AnnounceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/AnnounceDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/EmployeeAndInfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/EmployeeAndInfoDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/AnnounceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/AnnounceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/EmpAndInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/EmpAndInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/AnnounceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/AnnounceServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/EmpAndInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/EmpAndInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/AnnounceDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/AnnounceDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/DeptDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/DeptDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/EmployeeAndInfoDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/EmployeeAndInfoDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/com/officeAuto/ssm/dao/UserImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/officeAuto/ssm/dao/UserImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_Announce.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_Announce.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_activity.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_activity.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employeeHome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employeeHome.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/css/layui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/css/layui.mobile.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/css/modules/code.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/css/modules/laydate/default/laydate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/css/modules/layer/default/icon-ext.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/css/modules/layer/default/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/css/modules/layer/default/layer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/css/modules/layer/default/loading-0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/css/modules/layer/default/loading-1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/css/modules/layer/default/loading-2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/font/iconfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/font/iconfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/font/iconfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/font/iconfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/10.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/11.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/12.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/13.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/14.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/15.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/16.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/17.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/18.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/19.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/20.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/21.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/22.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/23.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/24.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/25.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/26.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/27.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/28.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/29.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/30.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/31.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/32.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/33.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/34.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/35.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/36.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/37.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/38.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/39.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/4.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/40.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/41.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/42.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/43.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/44.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/45.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/46.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/47.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/48.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/49.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/5.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/50.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/51.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/52.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/53.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/54.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/55.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/56.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/57.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/58.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/59.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/6.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/60.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/61.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/62.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/63.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/64.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/65.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/66.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/67.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/68.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/69.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/7.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/70.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/71.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/8.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/images/face/9.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/carousel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/code.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/element.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/flow.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/form.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/laydate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/layedit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/layer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/laypage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/laytpl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/mobile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/table.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/tree.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/upload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/lay/modules/util.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/layui.all.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layui/layui.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -207,8 +94,8 @@
       <file leaf-file-name="EmployeeController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/EmployeeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="83" column="25" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
+            <state relative-caret-position="240">
+              <caret line="38" selection-start-line="38" selection-end-line="39" selection-end-column="39" />
               <folding>
                 <element signature="method#imgUpload#0;class#EmployeeController#0" />
                 <element signature="method#infoUpdate#0;class#EmployeeController#0" />
@@ -220,25 +107,61 @@
       <file leaf-file-name="AnnounceController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/AnnounceController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="440">
+              <caret line="105" column="7" lean-forward="true" selection-start-line="105" selection-start-column="7" selection-end-line="105" selection-end-column="7" />
+              <folding>
+                <element signature="method#getDeptRecent#0;class#AnnounceController#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="employeeHome.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employeeHome.jsp">
+      <file leaf-file-name="ActivityController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActivityController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1257">
-              <caret line="418" column="51" selection-start-line="418" selection-start-column="51" selection-end-line="418" selection-end-column="51" />
+            <state relative-caret-position="440">
+              <caret line="42" column="21" lean-forward="true" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Helper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/utils/Helper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
               <folding>
-                <element signature="n#script#4;n#head#0;n#html#0;n#!!top" />
-                <element signature="n#script#5;n#head#0;n#html#0;n#!!top" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_activity.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_activity.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="43">
+              <caret line="217" lean-forward="true" selection-start-line="217" selection-end-line="217" />
+              <folding>
+                <element signature="n#script#3;n#head#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
                 <element signature="n#style#1;n#head#0;n#html#0;n#!!top" />
-                <element signature="n#style#2;n#head#0;n#html#0;n#!!top" />
-                <element signature="n#style#3;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_Announce.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_Announce.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
+              <folding>
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#style#1;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#3;n#form#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -317,14 +240,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/management.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/ActivityServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/utils/DateHelper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapping/ActivityDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/JobDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/Job.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActivityController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActivityController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/InfoClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/JobQueryModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/EmployeeAndInfo.java" />
@@ -348,7 +267,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employeeInfoEdit.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/add/addAnnounceInfo.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/announceInfo.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_Announce.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/EmpAndInfoService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/EmployeeAndInfoDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/EmpAndInfoServiceImpl.java" />
@@ -365,9 +283,14 @@
         <option value="$PROJECT_DIR$/src/main/test/com/officeAuto/ssm/dao/UserImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/AnnounceService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/AnnounceServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/AnnounceController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employeeHome.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/mapping/AnnounceDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/AnnounceController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActivityController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActivityController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/utils/Helper.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employeeHome.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_activity.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_Announce.jsp" />
       </list>
     </option>
   </component>
@@ -486,14 +409,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ssm" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="oaManagerwed" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oaManagerwed" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="oaManagerwed" type="b2602c69:ProjectViewProjectNode" />
@@ -533,6 +449,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Test/oaManagerwed/src/main/webapp/WEB-INF/jsp/employeeHome.jsp" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/GitHubDesktop/app-1.2.0/resources/app/git/cmd/git.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -970,7 +887,7 @@
       <workItem from="1528189236267" duration="7869000" />
       <workItem from="1528266232671" duration="15844000" />
       <workItem from="1528300962393" duration="68000" />
-      <workItem from="1528330346905" duration="4469000" />
+      <workItem from="1528330346905" duration="8691000" />
     </task>
     <task id="LOCAL-00001" summary="add sqlSessionTemplate">
       <created>1527601536294</created>
@@ -1070,7 +987,14 @@
       <option name="project" value="LOCAL" />
       <updated>1528209929800</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="账号设置">
+      <created>1528335038994</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1528335038994</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1106,7 +1030,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="425162000" />
+    <option name="totallyTimeSpent" value="429384000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1119,7 +1043,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5272206" side_tool="true" weight="0.27068722" />
@@ -1134,7 +1057,7 @@
       <window_info anchor="right" id="JSF" order="6" weight="0.3295129" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info id="UI Designer" order="5" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.47277936" visible="true" weight="0.35343617" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.47277936" visible="true" weight="0.24964938" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49566162" weight="0.3253857" />
       <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.44305858" weight="0.32398316" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
@@ -1148,6 +1071,7 @@
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5091164" visible="true" weight="0.23352435" />
       <window_info anchor="right" id="Bean Validation" order="13" weight="0.3295129" />
       <window_info id="Web" order="9" sideWeight="0.47712418" side_tool="true" weight="0.23280802" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.18934081" />
       <window_info id="Learn" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Favorites" order="6" sideWeight="0.47712418" side_tool="true" weight="0.23280802" />
@@ -1160,7 +1084,6 @@
       <window_info anchor="bottom" id="Tail" order="16" />
       <window_info id="JRebel" order="7" sideWeight="0.44594595" side_tool="true" weight="0.31832972" />
       <window_info anchor="right" id="BPMNPalette" order="10" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32959327" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="JRebel Console" order="14" sideWeight="0.5791757" side_tool="true" weight="0.3285151" />
@@ -1211,7 +1134,8 @@
     <MESSAGE value="个人信息更新" />
     <MESSAGE value="调整页面代码" />
     <MESSAGE value="公告发布" />
-    <option name="LAST_COMMIT_MESSAGE" value="公告发布" />
+    <MESSAGE value="账号设置" />
+    <option name="LAST_COMMIT_MESSAGE" value="账号设置" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1262,27 +1186,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/Job.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="66" column="15" selection-start-line="66" selection-start-column="15" selection-end-line="66" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/add/addActivityInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="101" column="34" lean-forward="true" selection-start-line="101" selection-start-column="34" selection-end-line="101" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/add/addActfileInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-13">
@@ -1454,13 +1357,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_Announce.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="214" column="95" selection-start-line="214" selection-start-column="68" selection-end-line="214" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/EmpAndInfoService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="356">
@@ -1608,17 +1504,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/AnnounceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/EmployeeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="83" column="25" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="25" />
+        <state relative-caret-position="240">
+          <caret line="38" selection-start-line="38" selection-end-line="39" selection-end-column="39" />
           <folding>
             <element signature="method#imgUpload#0;class#EmployeeController#0" />
             <element signature="method#infoUpdate#0;class#EmployeeController#0" />
@@ -1626,10 +1515,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/AnnounceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="105" column="7" lean-forward="true" selection-start-line="105" selection-start-column="7" selection-end-line="105" selection-end-column="7" />
+          <folding>
+            <element signature="method#getDeptRecent#0;class#AnnounceController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActivityController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="42" column="21" lean-forward="true" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/utils/Helper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employeeHome.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1257">
-          <caret line="418" column="51" selection-start-line="418" selection-start-column="51" selection-end-line="418" selection-end-column="51" />
+        <state relative-caret-position="223">
+          <caret line="297" column="91" selection-start-line="297" selection-start-column="91" selection-end-line="297" selection-end-column="91" />
           <folding>
             <element signature="n#script#4;n#head#0;n#html#0;n#!!top" />
             <element signature="n#script#5;n#head#0;n#html#0;n#!!top" />
@@ -1638,6 +1554,33 @@
             <element signature="n#style#1;n#head#0;n#html#0;n#!!top" />
             <element signature="n#style#2;n#head#0;n#html#0;n#!!top" />
             <element signature="n#style#3;n#head#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_activity.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="217" lean-forward="true" selection-start-line="217" selection-end-line="217" />
+          <folding>
+            <element signature="n#script#3;n#head#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+            <element signature="n#style#1;n#head#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_Announce.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+            <element signature="n#style#1;n#head#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#3;n#form#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

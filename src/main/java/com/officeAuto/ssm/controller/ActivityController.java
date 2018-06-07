@@ -5,14 +5,20 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.officeAuto.ssm.model.Activity;
 import com.officeAuto.ssm.model.ActivityQueryModel;
+import com.officeAuto.ssm.model.EmployeeAndInfo;
+import com.officeAuto.ssm.model.JobQueryModel;
 import com.officeAuto.ssm.service.ActivityService;
+import com.officeAuto.ssm.utils.Helper;
 import com.officeAuto.ssm.utils.PageBean;
 import org.apache.poi.ss.formula.functions.T;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -24,8 +30,33 @@ public class ActivityController {
     @Autowired
     private ActivityService activityService;
 
-    private  int pageSize = 5;
+    private int pageSize = 5;
+    private Helper helper;
 
+    /**
+     * 添加活动
+     * 遍历找出当前员工有权限发布公告的部门
+     * @param session
+     * @param modelMap
+     * @return
+     */
+    @RequestMapping("addActivityPage")
+    public String addActivityPage(HttpSession session, ModelMap modelMap){
+        List<JobQueryModel> jobs = ((EmployeeAndInfo)session.getAttribute("employee")).getJobs();
+        List<JobQueryModel> list = new ArrayList<>();
+        //遍历找出有权限的部门，并去除重复
+        helper.jobsOption(jobs, list);
+        modelMap.addAttribute("jobs", list);
+        return "add_activity";
+    }
+
+
+
+
+
+
+
+/*******************************************************后台**********************************************************/
     /**
      * pagehelper 分页获取数据
      * @param currentPage 当前页面

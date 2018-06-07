@@ -13,11 +13,13 @@
 
     <%--表单js--%>
     <script>
-        layui.use(['form', 'layedit', 'laydate'], function() {
+        layui.use(['form', 'layedit', 'laydate', 'element'], function() {
+            <%--注意：导航 依赖 element 模块，否则无法进行功能性操作--%>
             var form = layui.form
                 , layer = layui.layer
                 , layedit = layui.layedit
-                , laydate = layui.laydate;
+                , laydate = layui.laydate
+                , element = layui.element;
 
             //日期
             laydate.render({
@@ -28,15 +30,13 @@
             });
 
             //创建一个编辑器
-            layedit.build('editor', {
+            var editor = layedit.build('editor', {
                 tool: [
                     'strong' //加粗
                     , 'italic' //斜体
                     , 'underline' //下划线
                     , 'del' //删除线
-
                     , '|' //分割线
-
                     , 'left' //左对齐
                     , 'center' //居中对齐
                     , 'right' //右对齐
@@ -47,7 +47,6 @@
                     // , 'help' //帮助
                 ]
             });
-
             //自定义验证规则
             form.verify({
                 title: function (value) {
@@ -59,10 +58,11 @@
                     }
                 }
                 , descript: function (value) {
-                    if (value.length < 1) {
-                        return '内容不能少于1个字符';
+                    var content = layedit.getText(editor);
+                    if (content.length < 10) {
+                        return '内容不能少于10个字符';
                     }
-                    if (value.length > 500) {
+                    if (content.length > 500) {
                         return '内容不能大于500个字符'
                     }
                 }
@@ -74,13 +74,6 @@
                 });
                 layer.tips('温馨提示：请注意开关状态的文字可以随意定义，而不仅仅是ON|OFF', data.othis)
             });
-        });
-    </script>
-    <%--注意：导航 依赖 element 模块，否则无法进行功能性操作--%>
-    <script>
-        layui.use('element', function () {
-            var element = layui.element;
-            //…
         });
     </script>
     <style>
@@ -196,7 +189,7 @@
     <div class="layui-col-md6 layui-col-md-offset3">
 
         <div class="description">
-            <div class="title">发布活动</div>
+            <div class="title">发布公告</div>
             <div class="subtitle">请填写这些信息，以便于其他员工查看</div>
         </div>
 
@@ -231,7 +224,7 @@
                         <div class="layui-form-item">
                             <label class="layui-form-label">内容</label>
                             <div class="layui-input-block">
-                                <textarea id="editor" name="descript"></textarea>
+                                <textarea id="editor" name="descript" lay-verify="descript"></textarea>
                             </div>
                         </div>
 
