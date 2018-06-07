@@ -3,6 +3,7 @@ package com.officeAuto.ssm.service.impl;
 import com.officeAuto.ssm.dao.system.AnnounceDao;
 import com.officeAuto.ssm.exception.AnnounceException;
 import com.officeAuto.ssm.model.Announce;
+import com.officeAuto.ssm.model.AnnounceDpet;
 import com.officeAuto.ssm.model.AnnounceQueryModel;
 import com.officeAuto.ssm.service.AnnounceService;
 import com.officeAuto.ssm.utils.PageBean;
@@ -76,5 +77,10 @@ public class AnnounceServiceImpl  implements AnnounceService{
     @Override
     public List<Announce> getRecentAnnounce(String deptName, int size) {
         return announceDao.getRecentAnnounce(deptName, size);
+    }
+
+    @Override
+    public List<AnnounceDpet> getAnnounceDept(int dept, int size) {
+        return announceDao.getRecentAnnounceWithDept(dept, size);
     }
 }

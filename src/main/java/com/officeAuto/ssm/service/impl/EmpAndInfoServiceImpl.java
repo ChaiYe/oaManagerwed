@@ -89,4 +89,20 @@ public class EmpAndInfoServiceImpl implements EmpAndInfoService {
         return employeeAndInfoDao.updateInfoSelective(record);
     }
 
+    @Override
+    public boolean accountUnique(String account) {
+        Integer num = employeeAndInfoDao.accountUnique(account);
+        return num == null;
+    }
+
+    @Override
+    public void updateAccount(int uuid, String account) {
+        employeeAndInfoDao.updateAccount(uuid, account);
+    }
+
+    @Override
+    public void updatePassword(int uuid, String password) {
+        employeeAndInfoDao.updatePassWord(uuid, password);
+    }
+
 }

@@ -94,4 +94,25 @@ public interface EmpAndInfoService {
      * @return 影响的记录数
      */
     int updateInfoSelective(EmployeeInfo record);
+
+    /**
+     * 判断账号是否唯一
+     * @param account 账号
+     * @return 唯一时为真
+     */
+    boolean accountUnique(String account);
+
+    /**
+     * 更新账号
+     * @param uuid 主码
+     * @param account 新账号
+     */
+    void updateAccount(int uuid, String account);
+
+    /**
+     * 更新密码
+     * @param uuid 主码
+     * @param password 新密码
+     */
+    void updatePassword(int uuid, String password);
 }

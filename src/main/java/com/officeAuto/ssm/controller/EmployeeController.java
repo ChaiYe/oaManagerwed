@@ -197,6 +197,46 @@ public class EmployeeController {
         return filename;
     }
 
+    @RequestMapping("accountSetPage")
+    public String accountPage(){
+        return "accountSetting";
+    }
+
+    @RequestMapping("accountUpdate")
+    @ResponseBody
+    public String accountUpdate(@RequestBody Map<String, String> map, HttpSession session){
+        EmployeeAndInfo employeeAndInfo = (EmployeeAndInfo)session.getAttribute("employee");
+        if(employeeAndInfo == null)
+            return "非法用户，请重新登录";
+
+        String account = map.get("account");
+        if(empAndInfoService.accountUnique(account)){
+            empAndInfoService.updateAccount(employeeAndInfo.getUuid(), account);
+            employeeAndInfo.setAccount("account");
+            session.setAttribute("employee", employeeAndInfo);
+            return "修改成功";
+        }
+        else return "账号名已被使用，请重新输入";
+    }
+
+    @RequestMapping("passwordUpdate")
+    @ResponseBody
+    public String passwordUpdate(@RequestBody Map<String, String> map, HttpSession session){
+        EmployeeAndInfo employeeAndInfo = (EmployeeAndInfo)session.getAttribute("employee");
+        if(employeeAndInfo == null)
+            return "非法用户，请重新登录";
+
+        String oldPassword = map.get("oldPassword");
+        String newPassword = map.get("newPassword");
+
+        if(!employeeAndInfo.getPassword().equals(oldPassword))
+            return "密码错误请输入正确的密码";
+
+        empAndInfoService.updatePassword(employeeAndInfo.getUuid(), newPassword);
+        return "修改成功";
+    }
+
+
     /**
      * 个人信息修改页面
      * @return 页面
@@ -206,6 +246,12 @@ public class EmployeeController {
         return "employeeInfoEdit";
     }
 
+    /**
+     * 个人信息更新
+     * @param employeeInfo
+     * @param session
+     * @return
+     */
     @RequestMapping("infoUpdate")
     public String infoUpdate(EmployeeInfo employeeInfo, HttpSession session){
         EmployeeAndInfo employee = (EmployeeAndInfo) session.getAttribute("employee");

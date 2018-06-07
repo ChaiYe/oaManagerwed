@@ -40,4 +40,28 @@ public interface EmployeeAndInfoDao extends BaseDao<EmployeeAndInfo> {
      * @return
      */
     int updateInfoSelective(@Param("record") EmployeeInfo record);
+
+    /**
+     * 判断账号是否唯一
+     * @param account 输入的账号
+     * @return
+     */
+    Integer accountUnique(@Param("account")String account);
+
+    /**
+     * 更新登录账号
+     * @param uuid 员工主码
+     * @param account 账号
+     * @return
+     */
+    Integer updateAccount(@Param("uuid")int uuid, @Param("account")String account);
+
+    /**
+     * 更新密码
+     * @param uuid 员工主键
+     * @param passWord 新密码
+     * @return
+     */
+    Integer updatePassWord(@Param("uuid")int uuid, @Param("passWord")String passWord);
+
 }

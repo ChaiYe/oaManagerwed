@@ -13,6 +13,13 @@
     <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.officeAuto.ssm.model.Announce">
         <result column="descript" jdbcType="LONGVARCHAR" property="descript" />
     </resultMap>
+    <resultMap id="AnnounceDpet" type="com.officeAuto.ssm.model.AnnounceDpet" extends="ResultMapWithBLOBs">
+        <association property="depart" javaType="com.officeAuto.ssm.model.Dept">
+            <id column="dept_uuid" jdbcType="INTEGER" property="uuid" />
+            <result column="name" jdbcType="VARCHAR" property="name" />
+            <result column="dept_descript" jdbcType="LONGVARCHAR" property="descript" />
+        </association>
+    </resultMap>
 
     <select id="findByPage" resultType="com.officeAuto.ssm.model.Announce">
       select * from announce limit ${(currentPage-1)*pageSize},${(currentPage-1)*pageSize+pageSize}
@@ -56,6 +63,13 @@
         limit 0, #{size}
     </select>
 
+    <select id="getRecentAnnounceWithDept" resultMap="AnnounceDpet">
+        select announce.*, dept.uuid "dept_uuid", dept.name, dept.descript "dept_descript"
+        from announce, dept
+        where dept.uuid = #{uuid} and announce.dept = dept.uuid
+        order by createtime desc
+        limit 0, #{size}
+    </select>
 
     <delete id="deleteById" parameterType="java.lang.Integer" >
         DELETE FROM announce WHERE uuid=#{id};

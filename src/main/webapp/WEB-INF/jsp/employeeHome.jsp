@@ -285,6 +285,7 @@
                 <a href="" id="smallAvatar"><img src="/employee/showPic/${sessionScope.employee.employeeInfo.image}.action" class="layui-nav-img"></a>
                 <dl class="layui-nav-child">
                     <dd><a href="${pageContext.request.contextPath}/employee/employeeHome.action">个人主页</a></dd>
+                    <dd><a href="${pageContext.request.contextPath}/employee/accountSetPage.action">账号设置</a></dd>
                     <dd><a href="${pageContext.request.contextPath}/employee/infoEditPage.action">个人信息</a></dd>
                     <c:if test="${sessionScope.job.authority > 1}"><dd><a href="${pageContext.request.contextPath}/employee/managePage.action" >管理</a></dd></c:if>
                     <dd><a href="${pageContext.request.contextPath}/employee/logout.action" >注销</a></dd>
@@ -473,9 +474,11 @@
 
                     <div class="model-item-subtitle">
                        {{item.createtime|dateFormat}}
+                        <span style="float: right">公司</span>
                     </div>
 
                     <div class="model-item-content" v-html="item.descript"></div>
+
                 </div>
             </div>
             <script>
@@ -511,20 +514,22 @@
                     }
                 })
             </script>
-
+            <div id="allDept">
             <!-- 部门公告-->
-            <div id="dept_announce">
-                <h2 v-show="items.length">部门公告</h2>
-                <div class="model-item" v-for="item in items">
-                    <div class="model-item-title">
-                        {{item.title}}
-                    </div>
+                <div id="dept_announce">
+                    <h2 v-show="items.length">部门公告</h2>
+                    <div class="model-item" v-for="item in items">
+                        <div class="model-item-title">
+                            {{item.title}}
+                        </div>
 
-                    <div class="model-item-subtitle">
-                        {{item.createtime|dateFormat}}
-                    </div>
+                        <div class="model-item-subtitle">
+                            {{item.createtime|dateFormat}}
+                            <span style="float: right">{{item.depart.name}}</span>
+                        </div>
 
-                    <div class="model-item-content" v-html="item.descript"></div>
+                        <div class="model-item-content" v-html="item.descript"></div>
+                    </div>
                 </div>
             </div>
             <script>
@@ -570,10 +575,10 @@
 
             <ul class="more-item">
                 <li>
-                    <a class="btn-floating orange modal-trigger" href="#" title="修改" style="transform: scaleY(0.7) scaleX(0.7) translateY(-80px) translateX(0px); opacity: 0;"><i class="layui-icon">&#xe654;</i> </a>
+                    <a class="btn-floating orange modal-trigger" href="#" title="修改" style="transform: scaleY(0.7) scaleX(0.7) translateY(-80px) translateX(0px); opacity: 0;"><span>修改</span></a>
                 </li>
                 <li>
-                    <a class="btn-floating blue modal-trigger" href="#" title="修改" style="transform: scaleY(0.7) scaleX(0.7) translateY(-80px) translateX(0px); opacity: 0;"><i class="layui-icon">&#xe670;</i> </a>
+                    <a class="btn-floating blue modal-trigger" href="#" title="修改" style="transform: scaleY(0.7) scaleX(0.7) translateY(-80px) translateX(0px); opacity: 0;"><span>修改</span></a>
                 </li>
             </ul>
         </div>

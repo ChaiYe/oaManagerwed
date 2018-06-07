@@ -21,10 +21,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.jws.WebParam;
 import javax.servlet.http.HttpSession;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 @Controller
 @RequestMapping("/announce")
@@ -58,14 +55,15 @@ public class AnnounceController {
         EmployeeAndInfo employeeAndInfo = (EmployeeAndInfo) session.getAttribute("employee");
 
         List<JobQueryModel> jobs = employeeAndInfo.getJobs();
-        List<Announce> announces = new ArrayList<>();
+//        List<Announce> announces = new ArrayList<>();
+        List<AnnounceDpet> announces = new ArrayList<>();
         List<Integer> deps = new ArrayList<>();
 
         //循环该员工所有职位
         for (JobQueryModel j : jobs) {
             if(j.getDepart().getName().equals("公司"))
                 continue;
-            //重复的部门
+            //判断是否重复
             boolean repeat = false;
             int temp = j.getDepart().getUuid();
             for(int i : deps) {
@@ -74,12 +72,14 @@ public class AnnounceController {
                     break;
                 }
             }
+            //重复跳过
             if(repeat) continue;
+
             //不重复
             deps.add(temp);
-
             //将该部门的公告查询出来
-            List<Announce> list = announceService.getRecentAnnounce(j.getDepart().getName(), 2);
+//            List<Announce> list = announceService.getRecentAnnounce(j.getDepart().getName(), 2);
+            List<AnnounceDpet> list = announceService.getAnnounceDept(j.getDept(), 2);
             announces.addAll(list);
         }
         return announces;

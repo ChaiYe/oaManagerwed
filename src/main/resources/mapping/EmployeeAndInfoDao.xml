@@ -91,6 +91,13 @@
         where employee.uuid = #{id} and employeeinfo.id = employee.uuid
     </select>
 
+    <select id="accountUnique" resultType="java.lang.Integer">
+        select *
+        from employee
+        where employee.account = #{account}
+    </select>
+
+
     <delete id="deleteById" parameterType="java.lang.Integer" >
 
     </delete>
@@ -137,6 +144,18 @@
             </if>
         </set>
         where id = #{record.id}
+    </update>
+
+    <update id="updateAccount">
+        update employee
+        set account = #{account}
+        where uuid = #{uuid}
+    </update>
+
+    <update id="updatePassWord">
+        update employee
+        set password = #{passWord}
+        where uuid = #{uuid}
     </update>
 
 </mapper>
