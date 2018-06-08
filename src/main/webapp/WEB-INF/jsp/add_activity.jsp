@@ -15,18 +15,81 @@
     <script>
         layui.use(['form', 'layedit', 'laydate', 'element'], function() {
             <%--注意：导航 依赖 element 模块，否则无法进行功能性操作--%>
-            var form = layui.form
-                , layer = layui.layer
-                , layedit = layui.layedit
-                , laydate = layui.laydate
-                , element = layui.element;
+            var $ = layui.$
+                ,form = layui.form
+                ,layer = layui.layer
+                ,layedit = layui.layedit
+                ,laydate = layui.laydate
+                ,element = layui.element;
 
             //日期
             laydate.render({
-                elem: '#date'
-            });
-            laydate.render({
-                elem: '#date1'
+                elem: '#begintime'
+                ,calendar: true         //开启公历节日
+                //限定可选日期
+                // ,min:
+                // ,max: '2080-10-14'
+                //前后若干天可选，这里以7天为例
+                ,min: 0
+                ,max: 30
+                //自定义颜色
+                ,theme: 'molv'
+                //底部按钮,内置可识别的值有：clear、now、confirm
+                ,btns: ['now', 'clear']
+                //初始赋值
+                ,value: new Date()
+                ,isInitValue: true
+                //选中后的回调
+                ,done: function(value, date){
+                    // layer.alert('你选择的日期是：' + value + '<br>获得的对象是' + JSON.stringify(date));
+                    $("#endtimeDiv").html('<input type="text" class="layui-input" id="endtime" name="endtime" placeholder="HH:mm:ss" lay-verify="required">');
+                    $("#endtimetip").html('请选择活动结束时间');
+
+                    var end = laydate.render({
+                        elem: '#endtime'
+                        ,calendar: true         //开启公历节日
+                        //自定义重要日
+                        ,mark: {
+                            // '0-10-14': '生日'
+                            // ,'0-12-31': '跨年' //每年的日期
+                            // ,'0-0-10': '工资' //每月某天
+                            // ,'0-0-15': '月中'
+                            // ,'2017-8-15': '' //如果为空字符，则默认显示数字+徽章
+                            // ,'2099-10-14': '呵呵'
+                        }
+
+                        //限定可选日期
+                        ,min: value
+                        ,max: '2080-10-14'
+                        //前后若干天可选，这里以7天为例
+                        // ,min: -7
+                        // ,max: 7
+
+                        //自定义颜色
+                        ,theme: 'molv'
+                        // ,theme: 'grid'
+                        // ,theme: '#393D49'
+
+                        //不出现底部栏
+                        // ,showBottom: false
+
+                        //底部按钮,内置可识别的值有：clear、now、confirm
+                        ,btns: ['now', 'clear']
+
+                        //初始赋值
+                        ,value: value
+                        ,isInitValue: true
+
+                        //选中后的回调
+                        // ,done: function(value, date){
+                        //     layer.alert('你选择的日期是：' + value + '<br>获得的对象是' + JSON.stringify(date));
+                        // }
+                        //日期切换的回调
+                        // ,change: function(value, date){
+                        //     layer.msg('你选择的日期是：' + value + '<br><br>获得的对象是' + JSON.stringify(date));
+                        // }
+                    });
+                }
             });
 
             //创建一个编辑器
@@ -47,6 +110,7 @@
                     // , 'help' //帮助
                 ]
             });
+
             //自定义验证规则
             form.verify({
                 title: function (value) {
@@ -60,7 +124,7 @@
                 , descript: function (value) {
                     var content = layedit.getText(editor);
                     if (content.length < 10) {
-                        return '内容不能少于10个字符';
+                        return '内容太短';
                     }
                     if (content.length > 500) {
                         return '内容不能大于500个字符'
@@ -68,11 +132,36 @@
                 }
             });
             //监听指定开关
-            form.on('switch(switchTest)', function(data){
-                layer.msg('开关checked：'+ (this.checked ? 'true' : 'false'), {
-                    offset: '6px'
+            form.on('switch(vote)', function(data){
+                $("#voteOption").toggle();
+            });
+            //监听 lay-filter="add" 按钮
+            form.on('submit(add)', function(data){
+                //表单所有有name属性的input框的值，存放在data.field中，格式为 name : value
+                // layer.alert(JSON.stringify(data.field), {
+                //     title: '最终的提交信息'
+                // });
+                $.ajax({
+                    type : "post",
+                    dataType: 'json',
+                    url : "${pageContext.request.contextPath}/activity/addActivityAjax.action",
+                    contentType : "application/json",
+                    data : JSON.stringify(data.field),
+                    async:false,
+                    error:function(data){
+                        alert("Error");
+                    },
+                    success:function(data){
+                        if(data.isSuccess){
+                            layer.alert(data.message, {title: '提示'});
+                            location.href = "${pageContext.request.contextPath}/employee/employeeHome.action";
+                        }
+                        else{
+                            // layer.alert(data.message, {title: '提示'});
+                        }
+                    }
                 });
-                layer.tips('温馨提示：请注意开关状态的文字可以随意定义，而不仅仅是ON|OFF', data.othis)
+                return false;
             });
         });
     </script>
@@ -186,7 +275,7 @@
 
 <!--页面主体-->
 <div class="layui-row">
-    <div class="layui-col-md6 layui-col-md-offset3">
+    <div class="layui-col-md8 layui-col-md-offset2">
 
         <div class="description">
             <div class="title">发布公告</div>
@@ -200,7 +289,7 @@
             <!--表单-->
             <div class="edit-panel">
                 <div>
-                    <form action="${pageContext.request.contextPath}/announce/addAnnounce.action" method="post" class="layui-form">
+                    <form action="" method="post" class="layui-form">
 
                         <div class="layui-form-item">
                             <label class="layui-form-label">标题</label>
@@ -222,16 +311,64 @@
                         </div>
 
                         <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">开始时间</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="begintime" class="layui-input" id="begintime" placeholder="yyyy-MM-dd" lay-verify="required">
+                                </div>
+                                <div class="layui-form-mid layui-word-aux">
+                                    请选择活动开始的时间
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label">结束时间</label>
+                                <div class="layui-input-inline" id="endtimeDiv" >
+
+                                </div>
+                                <div class="layui-form-mid layui-word-aux" id="endtimetip">
+                                    请先选择活动开始时间
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
                             <label class="layui-form-label">内容</label>
                             <div class="layui-input-block">
                                 <textarea id="editor" name="descript" lay-verify="descript"></textarea>
                             </div>
                         </div>
 
+                        <%--<div class="layui-form-item">--%>
+                            <%--<label class="layui-form-label">活动投票</label>--%>
+                            <%--<div class="layui-input-block">--%>
+                                <%--<input type="checkbox" name="open" lay-skin="switch" lay-filter="vote" lay-text="ON|OFF">--%>
+                            <%--</div>--%>
+                            <%--<i class="layui-icon" style="float: right">&#xe654;</i>--%>
+                        <%--</div>--%>
+
+                        <%--<div id="voteOption" style="display: none">--%>
+
+                            <%--<div class="layui-form-item">--%>
+                                <%--<label class="layui-form-label" >投票描述</label>--%>
+                                <%--<div class="layui-input-block">--%>
+                                    <%--<input type="text" name="title" lay-verify="required|title" autocomplete="off" placeholder="请输入标题" class="layui-input">--%>
+                                <%--</div>--%>
+                            <%--</div>--%>
+
+                            <%--<div class="layui-form-item">--%>
+                                <%--<div class="layui-form-item">--%>
+                                    <%--<label class="layui-form-label">选项1</label>--%>
+                                    <%--<div class="layui-input-block">--%>
+                                        <%--<input type="text" name="title" lay-verify="required|title" autocomplete="off" placeholder="请输入标题" class="layui-input">--%>
+                                    <%--</div>--%>
+                                <%--</div>--%>
+                            <%--</div>--%>
+                        <%--</div>--%>
+
                         <div class="layui-form-item">
                             <label class="layui-form-label bug">&nbsp;</label>
                             <div class="layui-input-block" id="submit-btn">
-                                <button class="layui-btn layui-btn-primary" lay-submit="" style="width: 100%;">发布</button>
+                                <button class="layui-btn layui-btn-primary" lay-submit="" style="width: 100%;" lay-filter="add">发布</button>
                             </div>
                         </div>
                     </form>

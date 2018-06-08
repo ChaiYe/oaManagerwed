@@ -2,6 +2,9 @@ package com.officeAuto.ssm.utils;
 
 import com.officeAuto.ssm.model.JobQueryModel;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class Helper {
@@ -36,5 +39,16 @@ public class Helper {
                 if(!repeat) list.add(job);
             }
         }
+    }
+
+    public static Date convert(String source) {
+        String pattern = source.length()==10 ? "yyyy-MM-dd" : "yyyy-MM-dd HH:mm:ss";
+        SimpleDateFormat format = new SimpleDateFormat(pattern);
+        try {
+            return format.parse(source);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

@@ -67,7 +67,7 @@
         select announce.*, dept.uuid "dept_uuid", dept.name, dept.descript "dept_descript"
         from announce, dept
         where dept.uuid = #{uuid} and announce.dept = dept.uuid
-        order by createtime desc
+        order by announce.createtime, announce.uuid desc
         limit 0, #{size}
     </select>
 

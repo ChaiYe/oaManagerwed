@@ -575,7 +575,7 @@
 
             <ul class="more-item">
                 <li>
-                    <a class="btn-floating orange modal-trigger" href="#" title="修改" style="transform: scaleY(0.7) scaleX(0.7) translateY(-80px) translateX(0px); opacity: 0;"><span>修改</span></a>
+                    <a class="btn-floating orange modal-trigger" href="${pageContext.request.contextPath}/activity/activityDetailPage.action" title="修改" style="transform: scaleY(0.7) scaleX(0.7) translateY(-80px) translateX(0px); opacity: 0;"><span>修改</span></a>
                 </li>
                 <li>
                     <a class="btn-floating blue modal-trigger" href="#" title="修改" style="transform: scaleY(0.7) scaleX(0.7) translateY(-80px) translateX(0px); opacity: 0;"><span>修改</span></a>
