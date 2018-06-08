@@ -3,20 +3,22 @@ package com.officeAuto.ssm.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.officeAuto.ssm.model.Activity;
-import com.officeAuto.ssm.model.ActivityQueryModel;
+import com.officeAuto.ssm.model.*;
 import com.officeAuto.ssm.service.ActivityService;
+import com.officeAuto.ssm.utils.DateConverter;
+import com.officeAuto.ssm.utils.Helper;
 import com.officeAuto.ssm.utils.PageBean;
 import org.apache.poi.ss.formula.functions.T;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
+import javax.servlet.http.HttpSession;
+import java.util.*;
 
 @Controller
 @RequestMapping("/activity")
@@ -25,8 +27,81 @@ public class ActivityController {
     @Autowired
     private ActivityService activityService;
 
-    private  int pageSize = 5;
+    private int pageSize = 5;
+    private Helper helper;
 
+    /**
+     * 添加活动
+     * 遍历找出当前员工有权限发布公告的部门
+     * @param session
+     * @param modelMap
+     * @return
+     */
+    @RequestMapping("addActivityPage")
+    public String addActivityPage(HttpSession session, ModelMap modelMap){
+        List<JobQueryModel> jobs = ((EmployeeAndInfo)session.getAttribute("employee")).getJobs();
+        List<JobQueryModel> list = new ArrayList<>();
+        //遍历找出有权限的部门，并去除重复
+        helper.jobsOption(jobs, list);
+        modelMap.addAttribute("jobs", list);
+        return "add_activity";
+    }
+
+    /**
+     * 添加活动（异步）
+     *
+     * @param map map中含有activity实体的数据，具体请看页面
+     * @param session
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping("addActivityAjax")
+    @ResponseBody
+    public Map addActivity(@RequestBody Map<String, String> map, HttpSession session) throws Exception {
+        //返回的数据
+        Map<String, Object> result = new HashMap<>();
+        boolean isSuccess;
+        String message;
+        EmployeeAndInfo employeeAndInfo = (EmployeeAndInfo)session.getAttribute("employee");
+
+        if(employeeAndInfo == null){
+            //失败信息
+            isSuccess = false;
+            message = "非法用户，请重新登录";
+        }
+        else{
+            //设置数据
+            Activity activity = new Activity();
+            activity.setEmployee(employeeAndInfo.getUuid());
+            activity.setDept(Integer.parseInt(map.get("dept")));
+            Date begin = helper.convert(map.get("begintime"));
+            Date now = new Date();
+            activity.setBegintime(begin);
+            activity.setEndtime(helper.convert(map.get("endtime")));
+            activity.setDescript(map.get("descript"));
+            activity.setName(map.get("title"));
+            //设置状态，开始时间在当前时间之后为1， 1是未开始， 2 是正在进行
+            activity.setState(now.before(begin) ? 1 : 2);
+            //持久化
+            activityService.insert(activity);
+            //成功信息
+            isSuccess = true;
+            message = "成功发布，请到详情页查看或修改";
+        }
+        //返回信息
+        result.put("isSuccess", isSuccess);
+        result.put("message", message);
+        return result;
+    }
+
+    @RequestMapping("activityDetailPage")
+    public String activityDetailPage(){
+        return "activityDetail";
+    }
+
+
+
+/*******************************************************后台**********************************************************/
     /**
      * pagehelper 分页获取数据
      * @param currentPage 当前页面

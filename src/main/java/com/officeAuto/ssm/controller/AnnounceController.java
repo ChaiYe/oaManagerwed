@@ -7,6 +7,7 @@ import com.github.pagehelper.PageInfo;
 import com.officeAuto.ssm.model.*;
 import com.officeAuto.ssm.service.AnnounceService;
 import com.officeAuto.ssm.service.DeptService;
+import com.officeAuto.ssm.utils.Helper;
 import com.officeAuto.ssm.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -31,7 +32,7 @@ public class AnnounceController {
     private AnnounceService announceService;
 
     private int pageSize = 5;
-
+    private Helper helper;
     /**
      * 公司公告
      * @return
@@ -97,22 +98,7 @@ public class AnnounceController {
         List<JobQueryModel> jobs = ((EmployeeAndInfo)session.getAttribute("employee")).getJobs();
         List<JobQueryModel> list = new ArrayList<>();
         //遍历找出有权限的部门，并去除重复
-        for(JobQueryModel job : jobs){
-            boolean repeat = false;
-            if(job.getAuthority() > 1){
-                //遍历已加入的部门
-                for(JobQueryModel j : list){
-                    //相同部门，取权限高的
-                    if(job.getDept().equals(j.getDept())){
-                        repeat = true;
-                        //取权限高的
-                        if(job.getAuthority() > j.getAuthority()) j = job;
-                    }
-                }
-                if(!repeat) list.add(job);
-            }
-        }
-
+        helper.jobsOption(jobs, list);
         modelMap.addAttribute("jobs", list);
         return  "add_Announce";
     }
