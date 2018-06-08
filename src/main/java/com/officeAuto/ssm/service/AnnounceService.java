@@ -80,4 +80,9 @@ public interface AnnounceService {
     List<Announce> getRecentAnnounce(String deptName, int size);
 
     List<AnnounceDpet> getAnnounceDept(int dept, int size);
+
+    /**
+     * 根据员工查找所有公告*/
+    List<AnnounceDpet> findAllWithDept(int id,int nowSize);
+
 }

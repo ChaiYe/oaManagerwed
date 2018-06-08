@@ -470,6 +470,7 @@
                 <div class="model-item" v-for="item in items">
                     <div class="model-item-title">
                         {{item.title}}
+
                     </div>
 
                     <div class="model-item-subtitle">
@@ -521,6 +522,7 @@
                     <div class="model-item" v-for="item in items">
                         <div class="model-item-title">
                             {{item.title}}
+
                         </div>
 
                         <div class="model-item-subtitle">
@@ -529,6 +531,8 @@
                         </div>
 
                         <div class="model-item-content" v-html="item.descript"></div>
+
+
                     </div>
                 </div>
             </div>
@@ -575,7 +579,7 @@
 
             <ul class="more-item">
                 <li>
-                    <a class="btn-floating orange modal-trigger" href="#" title="修改" style="transform: scaleY(0.7) scaleX(0.7) translateY(-80px) translateX(0px); opacity: 0;"><span>修改</span></a>
+                    <a class="btn-floating orange modal-trigger" href="${pageContext.request.contextPath}/announce/jumpToAllAnnounce.action" title="公告" style="transform: scaleY(0.7) scaleX(0.7) translateY(-80px) translateX(0px); opacity: 0;"><span>公告</span></a>
                 </li>
                 <li>
                     <a class="btn-floating blue modal-trigger" href="#" title="修改" style="transform: scaleY(0.7) scaleX(0.7) translateY(-80px) translateX(0px); opacity: 0;"><span>修改</span></a>

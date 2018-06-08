@@ -83,4 +83,9 @@ public class AnnounceServiceImpl  implements AnnounceService{
     public List<AnnounceDpet> getAnnounceDept(int dept, int size) {
         return announceDao.getRecentAnnounceWithDept(dept, size);
     }
+
+    @Override
+    public List<AnnounceDpet> findAllWithDept(int id,int nowSize) {
+        return announceDao.findAllWithDept(id,nowSize);
+    }
 }

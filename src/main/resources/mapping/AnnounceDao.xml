@@ -21,6 +21,8 @@
         </association>
     </resultMap>
 
+
+
     <select id="findByPage" resultType="com.officeAuto.ssm.model.Announce">
       select * from announce limit ${(currentPage-1)*pageSize},${(currentPage-1)*pageSize+pageSize}
     </select>
@@ -70,6 +72,22 @@
         order by createtime desc
         limit 0, #{size}
     </select>
+
+
+
+
+
+    <select id="findAllWithDept" resultMap="AnnounceDpet">
+        select distinct announce.createtime,dept.name,announce.title,announce.descript
+        from employee,job,dept,announce
+        where employee.uuid=job.employee and job.dept=dept.uuid and dept.uuid=announce.dept and employee.uuid=#{id}
+        order by announce.createtime desc
+        limit #{nowSize},1
+    </select>
+
+
+
+
 
     <delete id="deleteById" parameterType="java.lang.Integer" >
         DELETE FROM announce WHERE uuid=#{id};

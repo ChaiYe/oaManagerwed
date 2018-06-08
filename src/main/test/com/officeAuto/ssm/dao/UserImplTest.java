@@ -54,9 +54,9 @@ public class UserImplTest {
     @Test
     public void testAnnounceDao(){
         AnnounceDao announceDao=(AnnounceDao) applicationContext.getBean("announceDao");
-        List<Announce> announces = announceDao.getRecentAnnounce("公司",1);
-        for(Announce announce:announces){
-            System.out.println(announce);
+        List<AnnounceDpet> announceDpetss = announceDao.findAllWithDept(1,1);
+        for(AnnounceDpet announceDpet:announceDpetss){
+            System.out.println(announceDpet.getDepart().getName());
         }
     }
 

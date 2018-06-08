@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -49,6 +50,17 @@ public class ActivityController {
         model.addAttribute("list", list);
         return "leftBox/activityInfo";
     }
+
+
+    @RequestMapping("/getActivityLater")
+    public @ResponseBody
+   Activity getActivityLater() throws Exception{
+
+            Activity activity=activityService.findById(1);
+
+            return activity;
+    }
+
 
     @RequestMapping("delete")
     public String delete(Integer uuid) throws Exception

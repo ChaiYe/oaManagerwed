@@ -2,7 +2,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt"  prefix="fmt"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<%--
 <html>
 <head>
     <meta charset="utf-8" />
@@ -193,7 +194,7 @@
             padding-left: 3px;
         }
     </style>
-    <%--弹出动画--%>
+    &lt;%&ndash;弹出动画&ndash;%&gt;
     <style>
         /*activity-vote*/
         .activity-vote{
@@ -206,7 +207,7 @@
             height: 200px;
         }
     </style>
-    <%--文件上传框样式--%>
+    &lt;%&ndash;文件上传框样式&ndash;%&gt;
     <style>
         /*文件上传样式*/
         .file {
@@ -236,7 +237,7 @@
             text-decoration: none;
         }
     </style>
-    <%--右下角按钮样式--%>
+    &lt;%&ndash;右下角按钮样式&ndash;%&gt;
     <style>
         /*more*/
         .fixed-action-btn {
@@ -273,4 +274,207 @@
 </head>
 <body>
 
+</body>--%>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../../js/vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../layui/css/layui.css"/>
+    <style>
+        body{
+            background: #ebf2fa;
+        }
+        .header{
+            background: white;
+            height: 45px;
+        }
+        .content{
+            width: 50%;
+
+            margin: 0 auto;
+        }
+        .info{
+            margin:12px 0;
+            padding:12px 15px;
+            background: #ffffff;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+            border-radius: 2px;
+        }
+        .title{
+            color:#3d3d3d
+        }
+        .info-content{
+            padding: 12px;
+            color:#838383;
+            font-size: 12px;
+            line-height: 24px;
+        }
+        .edit div {
+            display: inline;
+            font-size:12px ;
+        }
+        .edit a{
+            color: #838383;
+            text-decoration: none;
+        }
+        .author{
+            color: #838383;
+            float: left;
+
+        }
+        .btn{
+
+            padding:8px;
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+<body @scroll="none()">
+
+<div class="header">
+    <div class="content btn">
+        <div style="float: right;">
+            <a class="layui-btn layui-btn-normal layui-btn-sm"><i class="layui-icon">&#xe642;</i> 发布公告</a>
+        </div>
+    </div>
+
+</div>
+
+<div class="content" id="all-announce" >
+
+    <div class="pin info">
+        <span style="color: orange;">[置顶]</span>
+        XX须知
+        <a style="float: right;color: skyblue; font-size:12px ;line-height:24px ;text-decoration: none;">现在去填写</a>
+    </div>
+
+
+    <div class="content-item" v-for="announceDept in announceDepts">
+        <div class="info">
+            <div class="title">
+                {{announceDept.title}}
+                <div style="float: right;font-size:smaller">部门：{{announceDept.depart.name}}</div>
+            </div>
+
+            <hr />
+
+            <div class="info-content" v-html="announceDept.descript">
+                <%--在座各位都是辣鸡<br />
+                没错都是辣鸡 不服跳楼？--%>
+               <%-- {{announceDept.descript}}--%>
+
+            </div>
+
+            <hr />
+            <div class="edit">
+                <div>
+                   <%-- <a href="#">编辑</a>--%>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <%--<a href="#">删除</a>--%>
+                </div>
+                <div class="author">
+                    <%--叮裆猫 发表于2015-06-25 18:58--%>
+                    {{announceDept.createtime|dateFormat}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div v-if="announceDepts.length!=0">
+        <div style="margin: 0 auto;width: 100%;text-align:center;  ">
+            <i class="layui-icon" style="height: 120px ;width: 120px ;font-size: 50px;color: #ccc" @click="loadmore">&#xe61a;</i>
+        </div>
+    </div>
+
+
+
+
+
+</div>
+<script src="../../js/axios.min.js"></script>
+<script>
+
+    var announceDeptVue=new Vue({
+        el:"#all-announce",
+        data(){
+            return {
+                announceDepts:[]
+            }
+        },
+        created(){
+            /*下拉刷新的关键*/
+            /*window.addEventListener('scroll', this.handleScroll, true);*/
+
+            axios.get("${pageContext.request.contextPath}/announce/allAnnounceJson.action").then(
+                function (res) {
+                    announceDeptVue.announceDepts=res.data;
+                    console.log(res);
+                }
+            ).catch(
+                function (err) {
+                    console.log(err);
+                }
+            )
+        },
+        filters:{
+            dateFormat:function(val){
+                var d = new Date(val);
+                var year = d.getFullYear();
+                var month = d.getMonth() + 1;
+                var day = d.getDate() <10 ? '0' + d.getDate() : '' + d.getDate();
+                var hour = d.getHours();
+                var minutes = d.getMinutes();
+                var seconds = d.getSeconds();
+                return  year+ '年' + month + '月' + day + '日';
+            }
+        },
+        methods:{
+            handleScroll(){
+                //scrollTop为滚动条在Y轴上的滚动距离。
+                //clientHeight为内容可视区域的高度。
+                //scrollHeight为内容可视区域的高度加上溢出（滚动）的距离。
+                console.log(this.$el.offsetHeight);
+                if(this.$el.scrollTop+this.$el.offsetHeight>=this.$el.scrollHeight){
+
+                    this.loadmore();
+                    this.scloll=true;
+                    this.list +=1;
+                }else{
+
+                    this.scloll=false;
+                }
+            },
+            loadmore : function () {
+                alert(announceDeptVue.$data.announceDepts.length);
+                axios.get("${pageContext.request.contextPath}/announce/allAnnounceJson.action",{
+                    params: {
+                        nowSize: announceDeptVue.$data.announceDepts.length
+                    }
+                }).then(
+                    function (res) {
+                        for(let i =0;i<res.data.length;i++)
+                        {
+                            announceDeptVue.announceDepts.push(res.data[i]);
+                        }
+
+                        console.log(announceDeptVue.announceDepts);
+                    }
+                ).catch(
+                    function (err) {
+                        console.log(err);
+                    }
+                )
+
+            },
+            none(){
+
+            }
+        }
+    });
+</script>
+
+
 </body>
+</html>
