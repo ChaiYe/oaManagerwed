@@ -19,4 +19,6 @@ public interface AnnounceDao extends BaseDao<Announce> {
     List<Announce> getRecentAnnounce(@Param("deptName")String deptName, @Param("size")int size);
 
     List<AnnounceDpet> getRecentAnnounceWithDept(@Param("uuid")int uuid, @Param("size")int size);
+
+    List<AnnounceDpet> findAllWithDept(@Param("id")Integer id,@Param("nowSize")Integer nowSize);
 }

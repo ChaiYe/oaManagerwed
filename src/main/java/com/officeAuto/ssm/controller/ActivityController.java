@@ -126,6 +126,17 @@ public class ActivityController {
         return "leftBox/activityInfo";
     }
 
+
+    @RequestMapping("/getActivityLater")
+    public @ResponseBody
+   Activity getActivityLater() throws Exception{
+
+            Activity activity=activityService.findById(1);
+
+            return activity;
+    }
+
+
     @RequestMapping("delete")
     public String delete(Integer uuid) throws Exception
     {
