@@ -227,4 +227,23 @@ public class AnnounceController {
         return "redirect:/announce/getAnnounceByPage.action";
     }
 
+    @RequestMapping("jumpToAllAnnounce")
+    public String jumpToAllAnnounce(HttpSession session,Model model){
+        return "allAnnounce";
+    }
+
+    @RequestMapping("allAnnounceJson")
+
+    public  @ResponseBody List<AnnounceDpet> allAnnounceJson(Integer nowSize,HttpSession session) {
+
+        if(nowSize==null){
+            nowSize=0;
+        }
+
+        Employee employee= (Employee) session.getAttribute("employee");
+
+        List<AnnounceDpet> announceDpets=announceService.findAllWithDept(employee.getUuid(),nowSize);
+
+        return announceDpets;
+    }
 }
