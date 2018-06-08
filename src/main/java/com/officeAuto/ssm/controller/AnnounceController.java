@@ -237,7 +237,6 @@ public class AnnounceController {
     }
 
     @RequestMapping("allAnnounceJson")
-
     public  @ResponseBody List<AnnounceDpet> allAnnounceJson(Integer nowSize,HttpSession session) {
 
         if(nowSize==null){
