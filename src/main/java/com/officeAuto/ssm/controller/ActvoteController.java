@@ -1,15 +1,18 @@
 package com.officeAuto.ssm.controller;
 
 
-import com.officeAuto.ssm.model.Actvote;
-import com.officeAuto.ssm.model.ActvoteQueryModel;
+import com.officeAuto.ssm.model.*;
 import com.officeAuto.ssm.service.ActvoteService;
+import com.officeAuto.ssm.utils.Helper;
 import com.officeAuto.ssm.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -20,7 +23,6 @@ public class ActvoteController {
 
     @Autowired
     private ActvoteService actvoteService;
-
 
     @RequestMapping("/getActvoteByPage")
     public String listPage(Integer currentPage,Model model) throws Exception
@@ -112,8 +114,6 @@ public class ActvoteController {
         for(int i=0;i<str.length;i++){
             delitems[i]=Integer.parseInt(str[i]);
         }
-
-
 
         actvoteService.delete(delitems);
         return "redirect:/actvote/getActvoteByPage.action";

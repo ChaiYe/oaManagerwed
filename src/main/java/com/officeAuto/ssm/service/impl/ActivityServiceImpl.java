@@ -18,12 +18,12 @@ public class ActivityServiceImpl implements ActivityService{
 
 
     @Autowired
-    private ActivityDao ActivityDao;
+    private ActivityDao activityDao;
 
     @Override
     public Activity findById(Serializable id)  throws Exception{
 
-        Activity Activity = ActivityDao.findById(id);
+        Activity Activity = activityDao.findById(id);
         if(Activity==null)
         {
            // throw  new ActivityException("该用户不存在");
@@ -34,44 +34,63 @@ public class ActivityServiceImpl implements ActivityService{
 
     @Override
     public List<Activity> findByPage(PageBean<Activity> ActivityPageBean) throws  Exception{
-        return ActivityDao.findByPage(ActivityPageBean);
+        return activityDao.findByPage(ActivityPageBean);
     }
 
     @Override
     public int insert(Activity Activity) throws  Exception {
-        return ActivityDao.insert(Activity);
+        return activityDao.insert(Activity);
     }
 
     @Override
     public int update(Activity Activity) throws  Exception {
-        return ActivityDao.update(Activity);
+        return activityDao.update(Activity);
     }
 
     @Override
     public int deleteById(Serializable id) throws  Exception {
-        return ActivityDao.deleteById(id);
+        return activityDao.deleteById(id);
     }
 
     @Override
     public int delete(Serializable[] ids) throws  Exception {
-        return ActivityDao.delete(ids);
+        return activityDao.delete(ids);
     }
 
     @Override
     public List<Activity> findAll() throws  Exception {
 
-        return ActivityDao.findAll();
+        return activityDao.findAll();
     }
 
     @Override
     public int findCount() throws  Exception {
-        return ActivityDao.findCount();
+        return activityDao.findCount();
     }
 
     @Override
     public List<Activity> findByPageQuery(PageBean<ActivityQueryModel> pageBean) throws  Exception {
-        //return ActivityDao.findByPageQuery(pageBean);
+        //return activityDao.findByPageQuery(pageBean);
         return null;
+    }
+
+    @Override
+    public List<ActivityQueryModel> getRecentActivity(int deptid, int size) {
+        return activityDao.getRecentActivity(deptid, size);
+    }
+
+    @Override
+    public List<ActivityQueryModel> getRecentActDept(Integer deptid, Integer size) throws Exception{
+        if(deptid == null)
+            throw new Exception();
+        return activityDao.getRecentActDept(deptid, size);
+    }
+
+    @Override
+    public ActivityQueryModel getById(Integer actid) throws Exception{
+        if(actid == null)
+            throw new Exception();
+        return activityDao.getById(actid);
     }
 
 }

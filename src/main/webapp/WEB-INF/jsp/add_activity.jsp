@@ -6,7 +6,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>发布公告</title>
+    <title>创建活动</title>
     <script src="../../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="../../layui/layui.js " type="text/javascript" charset="utf-8"></script>
     <link rel="stylesheet" href="../../layui/css/layui.css" />
@@ -278,7 +278,7 @@
     <div class="layui-col-md8 layui-col-md-offset2">
 
         <div class="description">
-            <div class="title">发布公告</div>
+            <div class="title">创建活动</div>
             <div class="subtitle">请填写这些信息，以便于其他员工查看</div>
         </div>
 
@@ -337,33 +337,6 @@
                                 <textarea id="editor" name="descript" lay-verify="descript"></textarea>
                             </div>
                         </div>
-
-                        <%--<div class="layui-form-item">--%>
-                            <%--<label class="layui-form-label">活动投票</label>--%>
-                            <%--<div class="layui-input-block">--%>
-                                <%--<input type="checkbox" name="open" lay-skin="switch" lay-filter="vote" lay-text="ON|OFF">--%>
-                            <%--</div>--%>
-                            <%--<i class="layui-icon" style="float: right">&#xe654;</i>--%>
-                        <%--</div>--%>
-
-                        <%--<div id="voteOption" style="display: none">--%>
-
-                            <%--<div class="layui-form-item">--%>
-                                <%--<label class="layui-form-label" >投票描述</label>--%>
-                                <%--<div class="layui-input-block">--%>
-                                    <%--<input type="text" name="title" lay-verify="required|title" autocomplete="off" placeholder="请输入标题" class="layui-input">--%>
-                                <%--</div>--%>
-                            <%--</div>--%>
-
-                            <%--<div class="layui-form-item">--%>
-                                <%--<div class="layui-form-item">--%>
-                                    <%--<label class="layui-form-label">选项1</label>--%>
-                                    <%--<div class="layui-input-block">--%>
-                                        <%--<input type="text" name="title" lay-verify="required|title" autocomplete="off" placeholder="请输入标题" class="layui-input">--%>
-                                    <%--</div>--%>
-                                <%--</div>--%>
-                            <%--</div>--%>
-                        <%--</div>--%>
 
                         <div class="layui-form-item">
                             <label class="layui-form-label bug">&nbsp;</label>

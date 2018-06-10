@@ -4,6 +4,7 @@ package com.officeAuto.ssm.controller;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.officeAuto.ssm.model.*;
+import com.officeAuto.ssm.service.ActMarkerService;
 import com.officeAuto.ssm.service.ActivityService;
 import com.officeAuto.ssm.utils.DateConverter;
 import com.officeAuto.ssm.utils.Helper;
@@ -13,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -26,9 +28,34 @@ public class ActivityController {
 
     @Autowired
     private ActivityService activityService;
+    @Autowired
+    private ActMarkerService actMarkerService;
 
     private int pageSize = 5;
     private Helper helper;
+
+    @RequestMapping("recentActivity")
+    @ResponseBody
+    public List<ActivityQueryModel> getRecentActivity(HttpSession session) throws Exception {
+        //查出该员工所有不重复的部门
+        EmployeeAndInfo employeeAndInfo = (EmployeeAndInfo) session.getAttribute("employee");
+        List<JobQueryModel> jobs = employeeAndInfo.getJobs();
+        List<JobQueryModel> list = Helper.jobNoRepeat(jobs);
+
+        //登录员工的所有任职部门近期活动
+        List<ActivityQueryModel> activityList = new ArrayList<>();
+        for (JobQueryModel j : list){
+            //获取活动
+            List<ActivityQueryModel> temp = activityService.getRecentActDept(j.getDept(), 2);
+            //遍历活动，获取每个活动的里程碑
+            for(ActivityQueryModel act : temp)
+                act.setMarkers(actMarkerService.getActivityMarker(act.getUuid(), 5));
+            //加入所有查询出来的记录
+            activityList.addAll(temp);
+        }
+
+        return activityList;
+    }
 
     /**
      * 添加活动
@@ -62,10 +89,11 @@ public class ActivityController {
         Map<String, Object> result = new HashMap<>();
         boolean isSuccess;
         String message;
+
         EmployeeAndInfo employeeAndInfo = (EmployeeAndInfo)session.getAttribute("employee");
 
+        //失败信息
         if(employeeAndInfo == null){
-            //失败信息
             isSuccess = false;
             message = "非法用户，请重新登录";
         }
@@ -94,12 +122,67 @@ public class ActivityController {
         return result;
     }
 
-    @RequestMapping("activityDetailPage")
-    public String activityDetailPage(){
+    /**
+     * 进入活动的详情页
+     * @param actid
+     * @param session
+     * @param model
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping("activityDetailPage/{activity}")
+    public String activityDetailPage(@PathVariable(value="activity") Integer actid, HttpSession session, ModelMap model) throws Exception {
+        ActivityQueryModel activityQueryModel = activityService.getById(actid);
+        model.addAttribute("activity", activityQueryModel);
         return "activityDetail";
     }
 
+    @RequestMapping("getActMarkersAjax/{actid}")
+    @ResponseBody
+    public List<Actmarker> getActMarkerAjax(@PathVariable("actid")Integer actid) throws Exception {
+        List<Actmarker> list = actMarkerService.getActivityMarker(actid, 10);
+        return list;
+    }
 
+    /**
+     * 当前用户是否有权限为活动添加里程碑
+     * 活动的申请人，或者高权限者
+     * @param deptid
+     * @param session
+     * @return
+     */
+    @RequestMapping("showAddMarker/{applyEmpl}/{deptid}")
+    @ResponseBody
+    public boolean showAddMarker(@PathVariable("deptid") Integer deptid, @PathVariable("applyEmpl")Integer applyEmpl, HttpSession session){
+        EmployeeAndInfo employeeAndInfo = (EmployeeAndInfo)session.getAttribute("employee");
+
+        if(employeeAndInfo == null)
+            return false;
+        //申请人
+        if(employeeAndInfo.getUuid().equals(applyEmpl))
+            return true;
+
+        List<JobQueryModel> jobs = employeeAndInfo.getJobs();
+        //该部门中高权限的人
+        for(JobQueryModel j : jobs){
+            if(j.getDept().equals(deptid) && j.getAuthority() > 1)
+                return true;
+        }
+        return false;
+    }
+
+    @RequestMapping("addMarkerAjax")
+    @ResponseBody
+    public boolean addMarkerAjax(@RequestBody Map<String, String> map) throws Exception {
+        Integer actid = Integer.parseInt(map.get("actid"));
+        String descript = map.get("marker");
+
+        Actmarker actmarker = new Actmarker();
+        actmarker.setActivity(actid);
+        actmarker.setDescript(descript);
+        actmarker.setCreatetime(new Date());
+        return actMarkerService.insert(actmarker) == 1;
+    }
 
 /*******************************************************后台**********************************************************/
     /**
@@ -130,10 +213,8 @@ public class ActivityController {
     @RequestMapping("/getActivityLater")
     public @ResponseBody
    Activity getActivityLater() throws Exception{
-
-            Activity activity=activityService.findById(1);
-
-            return activity;
+        Activity activity=activityService.findById(1);
+        return activity;
     }
 
 
@@ -177,40 +258,14 @@ public class ActivityController {
         return "redirect:/activity/getActivityByPage.action";
     }
 
-    /*@RequestMapping("/query")
-    public String query(Integer queryAcount1,Integer queryAcount2,Model model) throws Exception
-    {
-        ActivityQueryModel activityQueryModel=new ActivityQueryModel();
-        activityQueryModel.setQueryAcount1(queryAcount1);
-        activityQueryModel.setQueryAcount2(queryAcount2);
-        PageBean<ActivityQueryModel> pageBeanQuery= new PageBean<ActivityQueryModel>();
-
-        HashMap<String, Object> paraMap = new HashMap<String, Object>();
-
-        paraMap.put("activityQuery",activityQueryModel);
-
-        pageBeanQuery.setParaMap(paraMap);
-        List<Activity> activitys=activityService.findByPageQuery(pageBeanQuery);
-
-        PageBean<Activity> activityPageBean= new PageBean<Activity>();
-        activityPageBean.setDatas(activitys);
-
-        model.addAttribute("activityPageBean",activityPageBean);
-        return "leftBox/activityInfo";
-    }
-*/
-
     @RequestMapping("deletes")
     public  String deletes(String dels) throws Exception
     {
-
         String str[] = dels.split(",");
         Integer[] delitems=new Integer[str.length];
         for(int i=0;i<str.length;i++){
             delitems[i]=Integer.parseInt(str[i]);
         }
-
-
 
         activityService.delete(delitems);
         return "redirect:/activity/getActivityByPage.action";

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.officeAuto.ssm.dao.system.ActMarkerDao">
+  <resultMap id="BaseResultMap" type="com.officeAuto.ssm.model.Actmarker">
+    <result column="uuid" jdbcType="INTEGER" property="uuid" />
+    <result column="createtime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="activity" jdbcType="INTEGER" property="activity" />
+    <result column="descript" jdbcType="LONGVARCHAR" property="descript" />
+  </resultMap>
+
+  <select id="findAll" resultType="com.officeAuto.ssm.model.Actmarker">
+    select * from actmarker
+  </select>
+
+  <select id="getActivityMarker" resultType="com.officeAuto.ssm.model.Actmarker">
+    select * from actmarker
+    where activity = #{actid}
+    order by createtime desc
+    <if test="size != null">
+      limit 0, #{size}
+    </if>
+  </select>
+
+  <insert id="insert" parameterType="com.officeAuto.ssm.model.Actmarker">
+    insert into actmarker
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="uuid != null">
+        uuid,
+      </if>
+      <if test="createtime != null">
+        createtime,
+      </if>
+      <if test="activity != null">
+        activity,
+      </if>
+      <if test="descript != null">
+        descript,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="uuid != null">
+        #{uuid,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="activity != null">
+        #{activity,jdbcType=INTEGER},
+      </if>
+      <if test="descript != null">
+        #{descript,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+</mapper>

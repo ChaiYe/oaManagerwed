@@ -69,4 +69,29 @@ public interface ActivityService {
      * @return 查询列表
      */
     public List<Activity> findByPageQuery(PageBean<ActivityQueryModel> pageBean) throws Exception;
+
+    /**
+     * 查询部门最新开始的活动
+     * 与部门、里程碑联系
+     * @param deptid 部门主键
+     * @param size 数量
+     * @return
+     */
+    List<ActivityQueryModel> getRecentActivity(int deptid, int size);
+
+    /**
+     * 查询部门最新开始的活动
+     * 只与部门联系
+     * @param deptid 部门主键，必有
+     * @param size 不为空时，查出size条；空时，查出所有
+     * @return
+     */
+    List<ActivityQueryModel> getRecentActDept(Integer deptid, Integer size) throws Exception;
+
+    /**
+     * 根据主键取出活动、部门、活动里程碑
+     * @param actid
+     * @return
+     */
+    ActivityQueryModel getById(Integer actid) throws Exception;
 }

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <!--suppress ALL -->
 <mapper namespace="com.officeAuto.ssm.dao.system.ActivityDao" >
-
+    <!--活动各属性-->
     <resultMap id="BaseResultMap" type="com.officeAuto.ssm.model.Activity">
         <result column="uuid" jdbcType="INTEGER" property="uuid" />
         <result column="name" jdbcType="VARCHAR" property="name" />
@@ -11,7 +11,67 @@
         <result column="state" jdbcType="INTEGER" property="state" />
         <result column="dept" jdbcType="INTEGER" property="dept" />
         <result column="employee" jdbcType="INTEGER" property="employee" />
+        <result column="descript" jdbcType="VARCHAR" property="descript" />
     </resultMap>
+    <!--与部门实体联系-->
+    <resultMap id="ActDept" type="com.officeAuto.ssm.model.ActivityQueryModel" extends="BaseResultMap">
+        <association property="depart" javaType="com.officeAuto.ssm.model.Dept">
+            <result column="dept_uuid" jdbcType="INTEGER" property="uuid" />
+            <result column="dept_name" jdbcType="VARCHAR" property="name" />
+            <result column="dept_descript" jdbcType="LONGVARCHAR" property="descript" />
+        </association>
+    </resultMap>
+    <!--查出所有活动里程碑-->
+    <resultMap id="DeptActMarker" type="com.officeAuto.ssm.model.ActivityQueryModel" extends="ActDept">
+        <collection property="markers" ofType="com.officeAuto.ssm.model.Actmarker">
+            <result column="marker_uuid" jdbcType="INTEGER" property="uuid" />
+            <result column="marker_createtime" jdbcType="TIMESTAMP" property="createtime" />
+            <result column="marker_activity" jdbcType="INTEGER" property="activity" />
+            <result column="marker_descript" jdbcType="LONGVARCHAR" property="descript" />
+        </collection>
+    </resultMap>
+
+    <sql id="actmarkerCol">
+        actmarker.uuid "marker_uuid"
+        , actmarker.createtime "marker_createtime"
+        , actmarker.activity "marker_activity"
+        , actmarker.descript "marker_descript"
+    </sql>
+
+    <sql id="deptCol">
+        dept.uuid "dept_uuid", dept.name "dept_name", dept.descript "dept_descript",
+    </sql>
+
+    <select id="getRecentActivity" resultMap="DeptActMarker">
+        select
+        dept.uuid "dept_uuid", dept.name "dept_name" dept.descript "dept_descript"
+        ,activity.*
+        ,actmarker.uuid "marker_uuid", actmarker.createtime "marker_createtime", actmarker.activity "marker_activity", actmarker.descript "marker_descript"
+        from dept, activity, actmarker
+        where dept.uuid = #{deptid} and activity.dept = dept.uuid and activity.state &lt; 3 and activity.state &gt; 1 and actmarker.activity = activity.uuid
+        order by activity.begintime, activity.uuid desc
+        limit 0, #{size}
+    </select>
+
+    <select id="getRecentActDept" resultMap="ActDept">
+        select dept.uuid "dept_uuid", dept.name "dept_name", dept.descript "dept_descript", activity.*
+        from dept, activity
+        where dept.uuid = #{deptid} and activity.dept = dept.uuid and activity.state &lt; 3 and activity.state &gt; 1
+        order by activity.begintime, activity.uuid desc
+        <if test="size != null">
+            limit 0, #{size}
+        </if>
+    </select>
+
+    <select id="getById" resultMap="DeptActMarker">
+        select activity.*,
+        <include refid="deptCol"/>
+        <include refid="actmarkerCol"/>
+        from activity, dept, actmarker
+        where activity.uuid = #{actid}
+        and activity.dept = dept.uuid
+        and actmarker.activity = activity.uuid
+    </select>
 
     <select id="findAll" resultType="com.officeAuto.ssm.model.Activity">
         select * from activity

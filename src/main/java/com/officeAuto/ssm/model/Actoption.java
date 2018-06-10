@@ -9,6 +9,8 @@ public class Actoption {
 
     private Integer activity;
 
+    private Integer vote;
+
     public Integer getUuid() {
         return uuid;
     }
@@ -39,6 +41,14 @@ public class Actoption {
 
     public void setActivity(Integer activity) {
         this.activity = activity;
+    }
+
+    public Integer getVote() {
+        return vote;
+    }
+
+    public void setVote(Integer vote) {
+        this.vote = vote;
     }
 
     @Override

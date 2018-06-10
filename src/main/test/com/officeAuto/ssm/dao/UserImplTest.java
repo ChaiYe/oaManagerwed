@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.Date;
 import java.util.List;
 
 public class UserImplTest {
@@ -21,8 +22,8 @@ public class UserImplTest {
 
     @Test
     public void test(){
-        AnnounceDao dao = (AnnounceDao) applicationContext.getBean("announceDao");
-        List l = dao.getRecentAnnounceWithDept(1, 2);
+        VoteDao dao = (VoteDao) applicationContext.getBean("voteDao");
+        List<VoteQueryModel> voteQueryModel = dao.getByAct(1);
         System.out.println();
     }
 

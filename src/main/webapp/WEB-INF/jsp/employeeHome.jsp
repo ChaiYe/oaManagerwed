@@ -197,13 +197,18 @@
     <style>
         /*activity-vote*/
         .activity-vote{
-            height:18px;
+            /*height:18px;*/
+            /*overflow: hidden;*/
+            /*transition: height 0.5s;*/
             overflow: hidden;
-            transition: height 0.5s;
+            max-height: 20px;
+            -webkit-transition: max-height .75s;
+            transition: max-height .75s;
         }
         .activity-vote:hover {
             /*height:auto;*/
-            height: 200px;
+            /*height: 400px;*/
+            max-height:600px;
         }
     </style>
     <%--文件上传框样式--%>
@@ -282,7 +287,17 @@
                 <a href="" style="display: inline;padding-left: 0px">帮助</a>
             </li>
             <li class="layui-nav-item" style="float: right">
-                <a href="" id="smallAvatar"><img src="/employee/showPic/${sessionScope.employee.employeeInfo.image}.action" class="layui-nav-img"></a>
+                <a href="" id="smallAvatar">
+                    <%--<img src="/employee/showPic/${sessionScope.employee.employeeInfo.image}.action" class="layui-nav-img">--%>
+                    <c:choose>
+                        <c:when test="${sessionScope.employee.employeeInfo.image != null && sessionScope.employee.employeeInfo.image != ''}">
+                            <img src="/employee/showPic/${sessionScope.employee.employeeInfo.image}.action" class="layui-nav-img">
+                        </c:when>
+                        <c:otherwise>
+                            <img src="../../img/icons_02.gif" class="layui-nav-img">
+                        </c:otherwise>
+                    </c:choose>
+                </a>
                 <dl class="layui-nav-child">
                     <dd><a href="${pageContext.request.contextPath}/employee/employeeHome.action">个人主页</a></dd>
                     <dd><a href="${pageContext.request.contextPath}/employee/accountSetPage.action">账号设置</a></dd>
@@ -295,7 +310,7 @@
                 <a href="${pageContext.request.contextPath}/announce/addAnnouncePage.action">公告<span class="layui-badge-dot"></span></a>
             </li>
             <li class="layui-nav-item" style="float: right">
-                <a href="" style="display: inline;padding-left: 0px">活动<span class="layui-badge-dot"></span></a>
+                <a href="${pageContext.request.contextPath}/activity/addActivityPage.action" style="display: inline;padding-left: 0px">活动<span class="layui-badge-dot"></span></a>
             </li>
         </ul>
     </div>
@@ -405,81 +420,121 @@
             </div>
         </div>
 
+
         <!--活动模块-->
-        <div style="flex-grow: 1" class="item-panel">
+        <div style="flex-grow: 1">
+            <div>
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend>近期活动</legend>
+                </fieldset>
+            </div>
+            <div id="activity">
+                <div style="margin: 12px; padding-bottom: 5px" class="item-panel" v-for="item in items">
+                    <hr class="layui-bg-gray">
+                    <div style="margin: 20px;">
+                        <div style="margin: 10px;">
+                            <div class="item">
+                                <a :href="'${pageContext.request.contextPath}/activity/activityDetailPage/'+item.uuid +'.action'"><div class="item-logo"><i class="layui-icon">&#xe629;</i></div></a>
 
-            <div style="margin: 20px;">
-                <h3>信息</h3>
-                <hr class="layui-bg-gray">
-                <div style="margin: 10px;">
-                    <div class="item">
-                        <div class="item-logo"><i class="layui-icon">&#xe629;</i></div>
-
-                        <div class="item-content">
-                            <div class="item-content-title">
-                                分门别类
-                            </div>
-                            <div class="item-content-main">
-                                这里是一大堆的内容，你喜不喜欢
-                            </div>
-                            <div class="item-content-operate">
-                                <div><i class="layui-icon">&#xe63a;</i></div>
-                                <div><i class="layui-icon">&#xe609;</i></div>
-                                <div><i class="layui-icon">&#xe6c6;</i></div>
-                                <div><i class="layui-icon">&#xe62c;</i></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <hr class="layui-bg-gray">
-                <div class="activity-vote">
-                    <div style="text-align:center">查看活动文件/投票</div>
-                    <div>
-                        <fieldset class="layui-elem-field">
-                            <legend>投票</legend>
-                            <div style="padding:20px">
-                                <p>
-                                    这里是你能那你说的福克斯的水电费水电费水多个发鬼地方鬼地方个的的富商大贾的电费撒发生水电费阿斯<br>蒂芬水电费水电费深度
-                                </p>
-                                <div>
-                                    <div>
-                                        <input type="radio" name="vote"/>A.选项A
+                                <div class="item-content">
+                                    <div class="item-content-title">
+                                        {{item.name}}
                                     </div>
-                                    <div>
-                                        <input type="radio" name="vote"/>B.选项B
-                                    </div>
-                                    <div>
-                                        <input type="radio" name="vote"/>C.选项C
-                                    </div>
-                                    <div>
-                                        <input type="radio" name="vote"/>D.选项D
+                                    <div class="item-content-main" v-html="item.descript"></div>
+                                    <div class="item-content-operate">
+                                        <div><i class="layui-icon" style="color: green">&#xe637;</i>{{item.begintime|dateFormat}}</div>
+                                        <div><i class="layui-icon" style="color: red">&#xe637;</i>{{item.endtime|dateFormat}}</div>
+                                        <div><i class="layui-icon">&#xe613;</i>{{item.depart.name}}</div>
                                     </div>
                                 </div>
                             </div>
-                        </fieldset>
+                        </div>
+                        <hr class="layui-bg-gray">
+                        <div class="activity-vote">
+                            <div style="text-align:center">查看活动大事记</div>
+                            <div>
+                                <fieldset class="layui-elem-field">
+                                    <legend>里程碑</legend>
+                                    <div style="padding:20px">
+                                        <ul class="layui-timeline">
+                                            <li class="layui-timeline-item" v-for="i in item.markers">
+                                                <i class="layui-icon layui-timeline-axis"></i>
+                                                <div class="layui-timeline-content layui-text">
+                                                    <div class="layui-timeline-title">{{i.createtime|timeStampFormat}}，{{i.descript}}</div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </div >
             </div>
+            <script>
+                var activity = new Vue({
+                    el: '#activity',
+                    data: {
+                        items:[]
+                    },
+                    created () {
+                        $.ajax({
+                            url:"${pageContext.request.contextPath}/activity/recentActivity.action",
+                            type:"post",
+                            dataType:"json",
+                            success:function(result){
+                                activity.items = result;
+                            },
+                            error:function(){
+                                alert("请求失败");
+                            }
+                        });
+                    },
+                    filters:{
+                        dateFormat:function(val){
+                            var d = new Date(val);
+                            var year = d.getFullYear();
+                            var month = d.getMonth() + 1;
+                            var day = d.getDate() <10 ? '0' + d.getDate() : '' + d.getDate();
+                            var hour = d.getHours();
+                            var minutes = d.getMinutes();
+                            var seconds = d.getSeconds();
+                            return  year+ '年' + month + '月' + day + '日';
+                        }
+                        ,timeStampFormat:function(val){
+                            var d = new Date(val);
+                            var year = d.getFullYear();
+                            var month = d.getMonth() + 1;
+                            var day = d.getDate() <10 ? '0' + d.getDate() : '' + d.getDate();
+                            var hour = d.getHours();
+                            var minutes = d.getMinutes();
+                            var seconds = d.getSeconds();
+                            return  year+ '年' + month + '月' + day + '日' + ' '
+                                + hour + ':' + minutes + ':' + seconds;
+                        }
+                    }
+                })
+            </script>
         </div>
 
         <!-- 公告模块-->
         <div style="width: 20%;margin-top: 0;">
             <!-- 公司公告-->
             <div id="comp_announce">
-                <h2 v-show="items.length">公司公告</h2>
+                <%--<h2 v-show="items.length">公司公告</h2>--%>
+                <fieldset class="layui-elem-field layui-field-title" v-show="items.length">
+                    <legend>公司公告</legend>
+                </fieldset>
                 <div class="model-item" v-for="item in items">
                     <div class="model-item-title">
                         {{item.title}}
-
                     </div>
 
                     <div class="model-item-subtitle">
                        {{item.createtime|dateFormat}}
                         <span style="float: right">公司</span>
                     </div>
-
                     <div class="model-item-content" v-html="item.descript"></div>
-
                 </div>
             </div>
             <script>
@@ -515,24 +570,24 @@
                     }
                 })
             </script>
+
             <div id="allDept">
             <!-- 部门公告-->
                 <div id="dept_announce">
-                    <h2 v-show="items.length">部门公告</h2>
+                    <%--<h2 v-show="items.length">部门公告</h2>--%>
+                    <fieldset class="layui-elem-field layui-field-title" v-show="items.length">
+                        <legend>部门公告</legend>
+                    </fieldset>
                     <div class="model-item" v-for="item in items">
                         <div class="model-item-title">
                             {{item.title}}
-
                         </div>
 
                         <div class="model-item-subtitle">
                             {{item.createtime|dateFormat}}
                             <span style="float: right">{{item.depart.name}}</span>
                         </div>
-
                         <div class="model-item-content" v-html="item.descript"></div>
-
-
                     </div>
                 </div>
             </div>
@@ -582,7 +637,7 @@
                     <a class="btn-floating orange modal-trigger" href="${pageContext.request.contextPath}/announce/jumpToAllAnnounce.action" title="公告" style="transform: scaleY(0.7) scaleX(0.7) translateY(-80px) translateX(0px); opacity: 0;"><span>公告</span></a>
                 </li>
                 <li>
-                    <a class="btn-floating blue modal-trigger" href="${pageContext.request.contextPath}/activity/activityDetailPage.action" title="修改" style="transform: scaleY(0.7) scaleX(0.7) translateY(-80px) translateX(0px); opacity: 0;"><span>修改</span></a>
+                    <a class="btn-floating blue modal-trigger" href="" title="修改" style="transform: scaleY(0.7) scaleX(0.7) translateY(-80px) translateX(0px); opacity: 0;"><span>修改</span></a>
                 </li>
             </ul>
         </div>

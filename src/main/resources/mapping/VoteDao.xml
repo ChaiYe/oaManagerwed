@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.officeAuto.ssm.dao.system.VoteDao" >
+  <resultMap id="BaseResultMap" type="com.officeAuto.ssm.model.Vote">
+    <result column="uuid" jdbcType="INTEGER" property="uuid" />
+    <result column="begintime" jdbcType="TIMESTAMP" property="begintime" />
+    <result column="endtime" jdbcType="TIMESTAMP" property="endtime" />
+    <result column="activity" jdbcType="INTEGER" property="activity" />
+    <result column="employee" jdbcType="INTEGER" property="employee" />
+    <result column="descript" jdbcType="LONGVARCHAR" property="descript" />
+  </resultMap>
+
+  <resultMap id="VoteAndOption" type="com.officeAuto.ssm.model.VoteQueryModel" extends="BaseResultMap">
+    <collection property="options" ofType="com.officeAuto.ssm.model.Actoption">
+      <result column="option_uuid" jdbcType="INTEGER" property="uuid" />
+      <result column="option_descript" jdbcType="VARCHAR" property="descript" />
+      <result column="option_num" jdbcType="INTEGER" property="num" />
+      <result column="option_vote" jdbcType="INTEGER" property="vote" />
+    </collection>
+  </resultMap>
+
+  <select id="getByAct" resultMap="VoteAndOption">
+    select
+    vote.*, actoption.uuid "option_uuid", actoption.descript "option_descript", actoption.num "option_num", actoption.vote "option_vote"
+    from vote, actoption
+    where vote.activity = #{actid} and actoption.vote = vote.uuid
+  </select>
+
+  <insert id="insert" parameterType="com.officeAuto.ssm.model.Vote">
+    insert into vote (uuid, begintime, endtime,
+      activity, employee, descript
+      )
+    values (#{uuid,jdbcType=INTEGER}, #{begintime,jdbcType=TIMESTAMP}, #{endtime,jdbcType=TIMESTAMP},
+      #{activity,jdbcType=INTEGER}, #{employee,jdbcType=INTEGER}, #{descript,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+
+</mapper>
