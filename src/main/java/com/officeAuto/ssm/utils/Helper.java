@@ -10,12 +10,14 @@ import java.util.List;
 
 public class Helper {
 
-    public final int pageSize = 5;
+    public static final int pageSize = 5;
 
     //服务器中存放文件的路径
-    public final String rootPath = "D:\\OAstorage\\";
+    public static final String rootPath = "D:\\OAstorage\\";
+    //用户头像存放位置
+    public static final String imgPath = "employeeImage";
     //可上传文件的最大值
-    public final int maxFileSize = 32505856;
+    public static final int maxFileSize = 10485760;
 
     /**
      * 去除重复的部门
@@ -42,6 +44,11 @@ public class Helper {
         }
     }
 
+    /**
+     * 在输入的集合中去除重复的部门，相同部门取权限高的
+     * @param jobs
+     * @return
+     */
     public static List<JobQueryModel> jobNoRepeat(List<JobQueryModel> jobs){
         List<JobQueryModel> list = new ArrayList<>();
         for(JobQueryModel job : jobs){

@@ -6,6 +6,7 @@ import com.github.pagehelper.PageInfo;
 import com.officeAuto.ssm.model.*;
 import com.officeAuto.ssm.service.EmpAndInfoService;
 import com.officeAuto.ssm.service.EmployeeService;
+import com.officeAuto.ssm.utils.Helper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -36,10 +37,6 @@ public class EmployeeController {
 
     //查询页面的大小
     private int pageSize = 5;
-    //可上传文件的最大值
-    private int maxFileSize = 32505856;
-    //服务器中存放文件的路径
-    private String rootPath = "D:\\OAstorage\\";
 
     /*******************************************************登录**********************************************************/
     /**
@@ -118,7 +115,7 @@ public class EmployeeController {
         //“ . " 需要用两次转义
         String [] path = fileName.split("\\.");
         //获取服务器中的文件
-        File imgFile = new File(rootPath + "employeeImage\\" + path[0] + "." + path[1]);
+        File imgFile = new File(Helper.rootPath + "employeeImage\\" + path[0] + "." + path[1]);
         //输出到页面
         responseFile(response, imgFile);
     }
@@ -165,7 +162,7 @@ public class EmployeeController {
         if(employeeAndInfo == null || file.isEmpty()) return null;
 
         //上传文件路径
-        String path = rootPath + "employeeImage";
+        String path = Helper.rootPath + Helper.imgPath;
 
         //文件格式
         String originalFilename = file.getOriginalFilename();
@@ -177,12 +174,10 @@ public class EmployeeController {
         if(filename == null || filename.equals(""))
             filename = employeeAndInfo.getUuid() + "." + format;
 
-        File filepath = new File(path,filename);
-
         //判断路径是否存在，如果不存在就创建一个
+        File filepath = new File(path,filename);
         if (!filepath.getParentFile().exists())
             filepath.getParentFile().mkdirs();
-
 
         //文件的路径全名
         String longFileName = path + File.separator + filename;
@@ -197,11 +192,21 @@ public class EmployeeController {
         return filename;
     }
 
+    /**
+     * 账号设置页面
+     * @return
+     */
     @RequestMapping("accountSetPage")
     public String accountPage(){
         return "accountSetting";
     }
 
+    /**
+     * 账号更新操作
+     * @param map
+     * @param session
+     * @return
+     */
     @RequestMapping("accountUpdate")
     @ResponseBody
     public String accountUpdate(@RequestBody Map<String, String> map, HttpSession session){
@@ -219,6 +224,12 @@ public class EmployeeController {
         else return "账号名已被使用，请重新输入";
     }
 
+    /**
+     * 更新密码
+     * @param map
+     * @param session
+     * @return
+     */
     @RequestMapping("passwordUpdate")
     @ResponseBody
     public String passwordUpdate(@RequestBody Map<String, String> map, HttpSession session){

@@ -250,26 +250,36 @@
 <div>
     <ul class="layui-nav">
         <li class="layui-nav-item">
-            <a href="${pageContext.request.contextPath}/employee/employeeHome.action" style="display: inline;padding-left: 0px" target="infoContent">首页</a>
+            <a href="${pageContext.request.contextPath}/employee/employeeHome.action" style="display: inline;padding-left: 0px" >首页</a>
         </li>
         <li class="layui-nav-item">
             <a href="" style="display: inline;padding-left: 0px">帮助</a>
         </li>
         <li class="layui-nav-item" style="float: right">
-            <a href="" id="smallAvatar"><img src="/employee/showPic/${sessionScope.employee.employeeInfo.image}.action" class="layui-nav-img"></a>
+            <a href="" id="smallAvatar">
+                <c:choose>
+                    <c:when test="${sessionScope.employee.employeeInfo.image != null && sessionScope.employee.employeeInfo.image != ''}">
+                        <img src="${pageContext.request.contextPath}/employee/showPic/${sessionScope.employee.employeeInfo.image}.action" class="layui-nav-img">
+                    </c:when>
+                    <c:otherwise>
+                        <img src="../../img/icons_02.gif" class="layui-nav-img">
+                    </c:otherwise>
+                </c:choose>
+            </a>
             <dl class="layui-nav-child">
                 <dd><a href="${pageContext.request.contextPath}/employee/employeeHome.action">个人主页</a></dd>
+                <dd><a href="${pageContext.request.contextPath}/employee/accountSetPage.action">账号设置</a></dd>
                 <dd><a href="${pageContext.request.contextPath}/employee/infoEditPage.action">个人信息</a></dd>
                 <c:if test="${sessionScope.job.authority > 1}"><dd><a href="${pageContext.request.contextPath}/employee/managePage.action" >管理</a></dd></c:if>
                 <dd><a href="${pageContext.request.contextPath}/employee/logout.action" >注销</a></dd>
             </dl>
         </li>
         <li class="layui-nav-item" style="float: right">
-            <a href="${pageContext.request.contextPath}/announce/addAnnouncePage.action">公告<span class="layui-badge-dot"></span></a>
+            <a href="${pageContext.request.contextPath}/announce/jumpToAllAnnounce.action">公告<span class="layui-badge-dot"></span></a>
         </li>
-        <li class="layui-nav-item" style="float: right">
-            <a href="" style="display: inline;padding-left: 0px">活动<span class="layui-badge-dot"></span></a>
-        </li>
+        <%--<li class="layui-nav-item" style="float: right">--%>
+        <%--<a href="${pageContext.request.contextPath}/activity/addActivityPage.action" style="display: inline;padding-left: 0px">活动<span class="layui-badge-dot"></span></a>--%>
+        <%--</li>--%>
     </ul>
 </div>
 

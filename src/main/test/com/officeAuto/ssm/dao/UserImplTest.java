@@ -22,8 +22,8 @@ public class UserImplTest {
 
     @Test
     public void test(){
-        VoteDao dao = (VoteDao) applicationContext.getBean("voteDao");
-        List<VoteQueryModel> voteQueryModel = dao.getByAct(1);
+        ActfileDao dao = (ActfileDao) applicationContext.getBean("actfileDao");
+        List<ActFileAssociate> actFileAssociates = dao.getActFileByAct(1, null);
         System.out.println();
     }
 
@@ -37,8 +37,8 @@ public class UserImplTest {
 //        }
         ActivityDao dao=(ActivityDao) applicationContext.getBean("activityDao");
 
-        List<Activity> list =  dao.findAll();
-        System.out.println(list.get(0).getBegintime().getYear());
+        ActivityQueryModel activityQueryModel = dao.getById(7);
+        System.out.println();
     }
 
     @Test

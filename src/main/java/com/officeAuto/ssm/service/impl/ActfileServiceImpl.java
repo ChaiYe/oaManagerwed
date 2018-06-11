@@ -1,6 +1,7 @@
 package com.officeAuto.ssm.service.impl;
 
 import com.officeAuto.ssm.dao.system.ActfileDao;
+import com.officeAuto.ssm.model.ActFileAssociate;
 import com.officeAuto.ssm.model.Actfile;
 import com.officeAuto.ssm.model.ActfileQueryModel;
 import com.officeAuto.ssm.service.ActfileService;
@@ -18,12 +19,12 @@ public class ActfileServiceImpl implements ActfileService{
 
 
     @Autowired
-    private ActfileDao ActfileDao;
+    private ActfileDao actfileDao;
 
     @Override
     public Actfile findById(Serializable id)  throws Exception{
 
-        Actfile Actfile=ActfileDao.findById(id);
+        Actfile Actfile= actfileDao.findById(id);
         if(Actfile==null)
         {
            // throw  new ActfileException("该用户不存在");
@@ -34,42 +35,49 @@ public class ActfileServiceImpl implements ActfileService{
 
     @Override
     public List<Actfile> findByPage(PageBean<Actfile> ActfilePageBean) throws  Exception{
-        return ActfileDao.findByPage(ActfilePageBean);
+        return actfileDao.findByPage(ActfilePageBean);
     }
 
     @Override
     public int insert(Actfile Actfile) throws  Exception {
-        return ActfileDao.insert(Actfile);
+        return actfileDao.insert(Actfile);
     }
 
     @Override
     public int update(Actfile Actfile) throws  Exception {
-        return ActfileDao.update(Actfile);
+        return actfileDao.update(Actfile);
     }
 
     @Override
     public int deleteById(Serializable id) throws  Exception {
-        return ActfileDao.deleteById(id);
+        return actfileDao.deleteById(id);
     }
 
     @Override
     public int delete(Serializable[] ids) throws  Exception {
-        return ActfileDao.delete(ids);
+        return actfileDao.delete(ids);
     }
 
     @Override
     public List<Actfile> findAll() throws  Exception {
-        return ActfileDao.findAll();
+        return actfileDao.findAll();
     }
 
     @Override
     public int findCount() throws  Exception {
-        return ActfileDao.findCount();
+        return actfileDao.findCount();
     }
 
     @Override
     public List<Actfile> findByPageQuery(PageBean<ActfileQueryModel> pageBean) throws  Exception {
-        //return ActfileDao.findByPageQuery(pageBean);
+        //return actfileDao.findByPageQuery(pageBean);
         return null;
+    }
+
+    @Override
+    public List<ActFileAssociate> getActFileByAct(Integer actid, Integer size) throws Exception {
+        if(actid == null)
+            throw new Exception();
+        return actfileDao.getActFileByAct(actid, size);
     }
 }

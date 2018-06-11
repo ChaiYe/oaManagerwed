@@ -1,5 +1,6 @@
 package com.officeAuto.ssm.service;
 
+import com.officeAuto.ssm.model.ActFileAssociate;
 import com.officeAuto.ssm.model.Actfile;
 import com.officeAuto.ssm.model.ActfileQueryModel;
 import com.officeAuto.ssm.utils.PageBean;
@@ -69,4 +70,12 @@ public interface ActfileService {
      * @return 查询列表
      */
     public List<Actfile> findByPageQuery(PageBean<ActfileQueryModel> pageBean) throws Exception;
+
+    /**
+     * 取得活动所有文件
+     * @param actid 活动id，不可空
+     * @param size 不为空时，查询size条，空时查询所有
+     * @return
+     */
+    List<ActFileAssociate> getActFileByAct(Integer actid, Integer size) throws Exception;
 }

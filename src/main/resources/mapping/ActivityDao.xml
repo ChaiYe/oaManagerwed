@@ -39,7 +39,7 @@
     </sql>
 
     <sql id="deptCol">
-        dept.uuid "dept_uuid", dept.name "dept_name", dept.descript "dept_descript",
+        dept.uuid "dept_uuid", dept.name "dept_name", dept.descript "dept_descript"
     </sql>
 
     <select id="getRecentActivity" resultMap="DeptActMarker">
@@ -50,7 +50,9 @@
         from dept, activity, actmarker
         where dept.uuid = #{deptid} and activity.dept = dept.uuid and activity.state &lt; 3 and activity.state &gt; 1 and actmarker.activity = activity.uuid
         order by activity.begintime, activity.uuid desc
-        limit 0, #{size}
+        <if test="size != null">
+            limit 0, #{size}
+        </if>
     </select>
 
     <select id="getRecentActDept" resultMap="ActDept">
@@ -66,11 +68,9 @@
     <select id="getById" resultMap="DeptActMarker">
         select activity.*,
         <include refid="deptCol"/>
-        <include refid="actmarkerCol"/>
-        from activity, dept, actmarker
+        from activity, dept
         where activity.uuid = #{actid}
         and activity.dept = dept.uuid
-        and actmarker.activity = activity.uuid
     </select>
 
     <select id="findAll" resultType="com.officeAuto.ssm.model.Activity">

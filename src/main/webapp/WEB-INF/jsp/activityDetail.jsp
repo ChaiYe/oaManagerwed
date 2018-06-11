@@ -6,7 +6,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>发布公告</title>
+    <title>活动详情</title>
     <script src="../../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="../../layui/layui.js " type="text/javascript" charset="utf-8"></script>
     <script src="../../js/vue.js"></script>
@@ -113,74 +113,46 @@
             //     ]
             // });
 
+            var success=0;
+            var fail=0;
             //拖拽上传
             upload.render({
-                elem: '#upload'
-                ,url: '/upload/'
-                ,before: function(obj){ //obj参数包含的信息，跟 choose回调完全一致，可参见上文。
-                    layer.load(); //上传loading
-                }
-                ,done: function(res, index, upload){
-                    layer.closeAll('loading'); //关闭loading
-                }
-                ,error: function(index, upload){
-                    layer.closeAll('loading'); //关闭loading
-                }
-                ,accept: 'file' //允许上传的文件类型
-                ,size: 50 //设置文件最大可允许上传的大小，单位 KB
-            });
+                elem: '#upload',    //指向容器选择器，如：elem: '#id'。也可以是DOM对象
+                url: '${pageContext.request.contextPath}/activity/uploadFile/${activity.uuid}.action',    //服务端上传接口
+                // method: 'post',     //上传接口的 HTTP 类型,默认post
+                multiple: true,
+                size:10240,         //上传的单个图片大小,单位为kb
+                number:10,          //最多上传的数量
+                accept: 'file',        //指定允许上传时校验的文件类型，可选值有：images（图片）、file（所有文件）、video（视频）、audio（音频）
+                //acceptMime:       //规定打开文件选择框时，筛选出的文件类型，值为用逗号隔开的 MIME 类型列表。
+                                    // 如：acceptMime: 'image/*'（只显示图片文件）acceptMime: 'image/jpg, image/png'（只显示 jpg 和 png 文件）
+                field:'file',       //MultipartFile file 对应，layui默认就是file,要改动则相应改动
+                auto:true,          //自动上传
+                // bindAction: '#test9',   //指向一个按钮触发上传，一般配合 auto: false 来使用。值为选择器或DOM对象
+                before: function(obj) {
+                    //预读本地文件示例，不支持ie8
+                    obj.preview(function(index, file, result) {
 
-            //自定义验证规则
-            form.verify({
-                title: function (value) {
-                    if (value.length < 1) {
-                        return '标题不能少于1个字符';
+                    });
+                },
+                done: function(res, index, upload) {
+                    //每个图片上传结束的回调，成功的话，就把新图片的名字保存起来，作为数据提交
+                    if(res.code === 1){
+                        layer.msg(res.resultMsg);
+                        success++;
                     }
-                    if (value.length > 50) {
-                        return '标题不能大于200个字符'
+                    else if(res.code === 0){
+                        layer.msg(res.resultMsg);
+                        fail++;
                     }
+                },
+                allDone:function(obj){
+                    layer.msg("总共要上传文件总数为："+(fail+success)+"\n"
+                        +"其中上传成功文件数为："+success+"\n"
+                        +"其中上传失败文件数为："+fail
+                    )
+                    files.getFiles();
                 }
-                , descript: function (value) {
-                    var content = layedit.getText(editor);
-                    if (content.length < 10) {
-                        return '内容太短';
-                    }
-                    if (content.length > 500) {
-                        return '内容不能大于500个字符'
-                    }
-                }
-            });
-            //监听指定开关
-            form.on('switch(vote)', function(data){
-                $("#voteOption").toggle();
-            });
-            //监听 lay-filter="add" 按钮
-            form.on('submit(add)', function(data){
-                //表单所有有name属性的input框的值，存放在data.field中，格式为 name : value
-                // layer.alert(JSON.stringify(data.field), {
-                //     title: '最终的提交信息'
-                // });
-                <%--$.ajax({--%>
-                    <%--type : "post",--%>
-                    <%--dataType: 'json',--%>
-                    <%--url : "${pageContext.request.contextPath}/activity/addActivityAjax.action",--%>
-                    <%--contentType : "application/json",--%>
-                    <%--data : JSON.stringify(data.field),--%>
-                    <%--async:false,--%>
-                    <%--error:function(data){--%>
-                        <%--alert("Error");--%>
-                    <%--},--%>
-                    <%--success:function(data){--%>
-                        <%--if(data.isSuccess){--%>
-                            <%--layer.alert(data.message, {title: '提示'});--%>
-                            <%--location.href = "${pageContext.request.contextPath}/employee/employeeHome.action";--%>
-                        <%--}--%>
-                        <%--else{--%>
-                            <%--// layer.alert(data.message, {title: '提示'});--%>
-                        <%--}--%>
-                    <%--}--%>
-                <%--});--%>
-                return false;
             });
         });
     </script>
@@ -353,17 +325,16 @@
 <div>
     <ul class="layui-nav">
         <li class="layui-nav-item">
-            <a href="${pageContext.request.contextPath}/employee/employeeHome.action" style="display: inline;padding-left: 0px" target="infoContent">首页</a>
+            <a href="${pageContext.request.contextPath}/employee/employeeHome.action" style="display: inline;padding-left: 0px" >首页</a>
         </li>
         <li class="layui-nav-item">
             <a href="" style="display: inline;padding-left: 0px">帮助</a>
         </li>
         <li class="layui-nav-item" style="float: right">
             <a href="" id="smallAvatar">
-                <%--<img src="/employee/showPic/${sessionScope.employee.employeeInfo.image}.action" class="layui-nav-img">--%>
                 <c:choose>
                     <c:when test="${sessionScope.employee.employeeInfo.image != null && sessionScope.employee.employeeInfo.image != ''}">
-                        <img src="/employee/showPic/${sessionScope.employee.employeeInfo.image}.action" class="layui-nav-img">
+                        <img src="${pageContext.request.contextPath}/employee/showPic/${sessionScope.employee.employeeInfo.image}.action" class="layui-nav-img">
                     </c:when>
                     <c:otherwise>
                         <img src="../../img/icons_02.gif" class="layui-nav-img">
@@ -379,11 +350,11 @@
             </dl>
         </li>
         <li class="layui-nav-item" style="float: right">
-            <a href="${pageContext.request.contextPath}/announce/addAnnouncePage.action">公告<span class="layui-badge-dot"></span></a>
+            <a href="${pageContext.request.contextPath}/announce/jumpToAllAnnounce.action">公告<span class="layui-badge-dot"></span></a>
         </li>
-        <li class="layui-nav-item" style="float: right">
-            <a href="${pageContext.request.contextPath}/activity/addActivityPage.action" style="display: inline;padding-left: 0px">活动<span class="layui-badge-dot"></span></a>
-        </li>
+        <%--<li class="layui-nav-item" style="float: right">--%>
+        <%--<a href="${pageContext.request.contextPath}/activity/addActivityPage.action" style="display: inline;padding-left: 0px">活动<span class="layui-badge-dot"></span></a>--%>
+        <%--</li>--%>
     </ul>
 </div>
 
@@ -442,20 +413,6 @@
                                 <legend>活动时间线：里程碑</legend>
                             </fieldset>
                             <div id="markers">
-                                <%--jstl循环式--%>
-                                <%--<ul class="layui-timeline">
-                                <c:forEach var="i" items="${activity.markers}">
-                                    <li class="layui-timeline-item">
-                                        <i class="layui-icon layui-timeline-axis">&#xe756;</i>
-                                        <div class="layui-timeline-content layui-text">
-                                            <div class="layui-timeline-title">
-                                                <fmt:formatDate type="both" dateStyle="medium" timeStyle="medium" value="${i.createtime}" />，
-                                                ${i.descript}
-                                            </div>
-                                        </div>
-                                    </li>
-                                </c:forEach>
-                            </ul>--%>
                                 <ul class="layui-timeline">
                                     <li class="layui-timeline-item" v-for="i in items">
                                         <i class="layui-icon layui-timeline-axis"></i>
@@ -477,7 +434,7 @@
                                     },
                                     created () {
                                         this.getMarkers();
-                                        this.isShowBtn();
+                                        this.showBtn();
                                     },
                                     methods:{
                                         getMarkers: function () {
@@ -493,7 +450,7 @@
                                                 }
                                             });
                                         },
-                                        isShowBtn: function () {
+                                        showBtn: function () {
                                             $.ajax({
                                                 url:"${pageContext.request.contextPath}/activity/showAddMarker/${activity.employee}/${activity.dept}.action",
                                                 type:"post",
@@ -520,9 +477,7 @@
                                                 + hour + ':' + minutes + ':' + seconds;
                                         }
                                     }
-                                })
-                            </script>
-                            <script>
+                                });
                                 layui.use('layer', function(){ //独立版的layer无需执行这一句
                                     var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
                                     //触发事件
@@ -566,98 +521,121 @@
                             </script>
                         </div>
                     </div>
-                    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
-                        <legend>活动投票</legend>
-                    </fieldset>
-                    <%--活动投票--%>
-                    <div class="layui-collapse">
-                        <c:forEach items="${activity.markers}" var="i">
-                            <div id="vote${i.uuid}">
-                                <div class="layui-colla-item">
-                                    <h2 class="layui-colla-title">为什么JS社区大量采用未发布或者未广泛支持的语言特性？</h2>
-                                    <div class="layui-colla-content">
-                                        <form class="layui-form" action="" >
+                </div>
+                <%--活动投票--%>
+                <%--<fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+                    <legend>活动投票</legend>
+                </fieldset>
+                <div class="layui-collapse">
+                    <c:forEach items="${activity.markers}" var="i">
+                        <div id="vote${i.uuid}">
+                            <div class="layui-colla-item">
+                                <h2 class="layui-colla-title">为什么JS社区大量采用未发布或者未广泛支持的语言特性？</h2>
+                                <div class="layui-colla-content">
+                                    <form class="layui-form" action="" >
 
-                                            <input type="radio" name="sex" value="男" title="男" checked="">
-                                            <input type="radio" name="sex" value="女" title="女">
+                                        <input type="radio" name="sex" value="男" title="男" checked="">
+                                        <input type="radio" name="sex" value="女" title="女">
 
-                                            <div class="layui-form-item">
-                                                <button class="layui-btn" lay-submit="" lay-filter="demo2">跳转式提交</button>
-                                            </div>
-                                        </form>
-                                    </div>
+                                        <div class="layui-form-item">
+                                            <button class="layui-btn" lay-submit="" lay-filter="demo2">跳转式提交</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
-                        </c:forEach>
-                    </div>
-                </div>
+                        </div>
+                    </c:forEach>
+                </div>--%>
             </div>
         </div>
         <%--文件模块--%>
         <div class="layui-col-xs3">
             <div style="flex-grow: 1" class="item-panel">
                 <div style="margin: 20px;">
-                    <h3>文件列表</h3>
+                    <h3 style="padding-top: 10px">文件列表</h3>
+
                     <hr class="layui-bg-gray">
+
                     <div style="margin: 10px;">
                         <div class="item">
                             <div class="item-content" style="width:100%">
                                 <div class="layui-upload-drag" id="upload" style="width:100%">
                                     <i class="layui-icon"></i>
                                     <p>点击上传，或将文件拖拽到此处</p>
+                                    <p>多文件上传，最多不超过10个<br>
+                                        每个文件最大为10M</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <hr class="layui-bg-green">
-
-                    <div class="item">
-                        <div class="item-content">
-                            <div class="item-content">
-                                <div class="item-content-title">
-                                    文件名长长长长长长长长长长长长长长长长长
-                                </div>
-                                <div class="model-item-subtitle">
-                                    <%--{{item.createtime|dateFormat}}--%>
-                                    时间：2018-8-9
-                                    <div style="float: right">
-                                        <span>上传者：</span>
-                                        <span>部门-</span>
-                                        <span>张三</span>
-                                    </div>
+                    <%--文件展示列表--%>
+                    <div id="files">
+                        <div v-for="i in items">
+                            <hr class="layui-bg-green">
+                            <div class="item">
+                                <a :href="'${pageContext.request.contextPath}/activity/download/'+ i.uuid +'.action'"><i class="layui-icon" style="font-size: 50px;">&#xe655;</i></a>
+                                <div class="item-content">
+                                    <span class="model-item-subtitle">
+                                        {{i.name}}<br>
+                                        上传时间：{{i.createtime|dateFormat}}<br>
+                                        大小：{{i.size|sizeChange}}<br>
+                                        上传者: {{i.info.name}}
+                                    </span>
                                 </div>
                             </div>
                         </div>
-                       <i class="layui-icon" style="font-size: 50px; color: #1E9FFF;">&#xe601;</i>
                     </div>
-
-                    <hr class="layui-bg-green">
-
-                    <div class="item">
-                        <div class="item-content">
-                            <div class="item-content">
-                                <div class="item-content-title">
-                                    文件名长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长
-                                </div>
-                                <div class="model-item-subtitle">
-                                    <%--{{item.createtime|dateFormat}}--%>
-                                    时间：2018-8-9<br>
-                                    大小：500M
-                                    <div>
-                                        <span>公司-</span>
-                                        <span>张三</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <i class="layui-icon" style="font-size: 50px; color: #1E9FFF;">&#xe601;</i>
-                    </div>
+                    <script>
+                        var files = new Vue({
+                            el: '#files',
+                            data: {
+                                items : []
+                            },
+                            created () {
+                                this.getFiles();
+                            },
+                            methods:{
+                                getFiles: function () {
+                                    $.ajax({
+                                        url:"${pageContext.request.contextPath}/activity/getActFiles/${activity.uuid}.action",
+                                        type:"post",
+                                        dataType:"json",
+                                        success:function(result){
+                                            files.items = result;
+                                        },
+                                        error:function(){
+                                            alert("请求失败");
+                                        }
+                                    });
+                                },
+                            },
+                            filters:{
+                                dateFormat:function(val){
+                                    var d = new Date(val);
+                                    var year = d.getFullYear();
+                                    var month = d.getMonth() + 1;
+                                    var day = d.getDate() <10 ? '0' + d.getDate() : '' + d.getDate();
+                                    var hour = d.getHours();
+                                    var minutes = d.getMinutes();
+                                    var seconds = d.getSeconds();
+                                    return  year+ '年' + month + '月' + day + '日';
+                                }
+                                ,sizeChange:function (val) {
+                                    if(val > 1048576)
+                                        return (val/1048576).toFixed(2) + 'MB';
+                                    else if(val > 1024)
+                                        return (val/1024).toFixed(2) + 'KB';
+                                    else return val + 'B';
+                                }
+                            }
+                        })
+                    </script>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <!-- 右下角-->
 <div class="more" >
     <div class="fixed-action-btn" >

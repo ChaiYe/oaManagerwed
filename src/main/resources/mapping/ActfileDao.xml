@@ -1,16 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.officeAuto.ssm.dao.system.ActfileDao" >
+
+    <resultMap id="BaseResultMap" type="com.officeAuto.ssm.model.Actfile">
+        <result column="uuid" jdbcType="INTEGER" property="uuid" />
+        <result column="path" jdbcType="VARCHAR" property="path" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="format" jdbcType="VARCHAR" property="format" />
+        <result column="size" jdbcType="INTEGER" property="size" />
+        <result column="createtime" jdbcType="DATE" property="createtime" />
+        <result column="activity" jdbcType="INTEGER" property="activity" />
+        <result column="employee" jdbcType="INTEGER" property="employee" />
+    </resultMap>
+
+    <resultMap id="ActFileAssociate" type="com.officeAuto.ssm.model.ActFileAssociate" extends="BaseResultMap">
+        <association property="info" javaType="com.officeAuto.ssm.model.EmployeeInfo">
+            <id column="empl_id" jdbcType="INTEGER" property="id" />
+            <result column="empl_name" jdbcType="VARCHAR" property="name" />
+            <result column="empl_sex" jdbcType="VARCHAR" property="sex" />
+            <result column="empl_age" jdbcType="VARCHAR" property="age" />
+            <result column="empl_phone" jdbcType="VARCHAR" property="phone" />
+            <result column="empl_email" jdbcType="VARCHAR" property="email" />
+            <result column="empl_address" jdbcType="VARCHAR" property="address" />
+            <result column="empl_image" jdbcType="VARCHAR" property="image" />
+        </association>
+    </resultMap>
+
+    <select id="getActFileByAct" resultMap="ActFileAssociate">
+        select actfile.*,
+        employeeinfo.id "empl_id", employeeinfo.name "empl_name"
+        FROM actfile, employeeinfo
+        where actfile.activity = #{actid} and employeeinfo.id = actfile.employee
+        <if test="size != null">
+            limit 0, #{size}
+        </if>
+    </select>
+
+    <select id="findById" resultType="com.officeAuto.ssm.model.Actfile">
+        select * from Actfile where uuid=#{id}
+    </select>
+
     <select id="findByPage" resultType="com.officeAuto.ssm.model.Actfile">
         select * from Actfile limit ${(currentPage-1)*pageSize},${(currentPage-1) * pageSize + pageSize}
     </select>
 
     <select id="findCount" resultType="java.lang.Integer">
         select count(*) from Actfile
-    </select>
-
-    <select id="findById" resultType="com.officeAuto.ssm.model.Actfile">
-        select * from Actfile where uuid=#{id}
     </select>
 
     <select id="findByPageQuery" parameterType="com.officeAuto.ssm.model.ActfileQueryModel" resultType="com.officeAuto.ssm.model.Actfile">
@@ -30,7 +65,6 @@
         </if>
 
     </select>
-
 
     <delete id="deleteById" parameterType="java.lang.Integer" >
         DELETE FROM Actfile WHERE uuid=#{id};

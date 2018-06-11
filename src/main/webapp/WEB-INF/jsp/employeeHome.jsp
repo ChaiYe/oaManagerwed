@@ -263,7 +263,7 @@
             height: 50px;
             line-height: 50px;
             padding: 0;
-            background-color: #26a69a;
+            background-color: #02a67d;
             border-radius: 50%;
             transition: .3s;
             cursor: pointer;
@@ -272,7 +272,7 @@
             text-align:center;
         }
         .btn-floating>i{
-            size: 36px;
+            size: 50px;
         }
     </style>
 </head>
@@ -281,17 +281,16 @@
     <div>
         <ul class="layui-nav">
             <li class="layui-nav-item">
-                <a href="${pageContext.request.contextPath}/employee/employeeHome.action" style="display: inline;padding-left: 0px" target="infoContent">首页</a>
+                <a href="${pageContext.request.contextPath}/employee/employeeHome.action" style="display: inline;padding-left: 0px" >首页</a>
             </li>
             <li class="layui-nav-item">
                 <a href="" style="display: inline;padding-left: 0px">帮助</a>
             </li>
             <li class="layui-nav-item" style="float: right">
                 <a href="" id="smallAvatar">
-                    <%--<img src="/employee/showPic/${sessionScope.employee.employeeInfo.image}.action" class="layui-nav-img">--%>
                     <c:choose>
                         <c:when test="${sessionScope.employee.employeeInfo.image != null && sessionScope.employee.employeeInfo.image != ''}">
-                            <img src="/employee/showPic/${sessionScope.employee.employeeInfo.image}.action" class="layui-nav-img">
+                            <img src="${pageContext.request.contextPath}/employee/showPic/${sessionScope.employee.employeeInfo.image}.action" class="layui-nav-img">
                         </c:when>
                         <c:otherwise>
                             <img src="../../img/icons_02.gif" class="layui-nav-img">
@@ -307,11 +306,11 @@
                 </dl>
             </li>
             <li class="layui-nav-item" style="float: right">
-                <a href="${pageContext.request.contextPath}/announce/addAnnouncePage.action">公告<span class="layui-badge-dot"></span></a>
+                <a href="${pageContext.request.contextPath}/announce/jumpToAllAnnounce.action">公告<span class="layui-badge-dot"></span></a>
             </li>
-            <li class="layui-nav-item" style="float: right">
-                <a href="${pageContext.request.contextPath}/activity/addActivityPage.action" style="display: inline;padding-left: 0px">活动<span class="layui-badge-dot"></span></a>
-            </li>
+            <%--<li class="layui-nav-item" style="float: right">--%>
+                <%--<a href="${pageContext.request.contextPath}/activity/addActivityPage.action" style="display: inline;padding-left: 0px">活动<span class="layui-badge-dot"></span></a>--%>
+            <%--</li>--%>
         </ul>
     </div>
 
@@ -628,16 +627,17 @@
     </div>
 
     <!-- 右下角-->
-    <div class="more" >
+    <c:if test="${sessionScope.job.authority > 1}">
+        <div class="more" >
         <div class="fixed-action-btn" >
             <a class="btn-floating btn-large teal"  style="transform: translateY(100px) translateX(0px);"><i class="layui-icon">&#xe653;</i> </a>
 
             <ul class="more-item">
                 <li>
-                    <a class="btn-floating orange modal-trigger" href="${pageContext.request.contextPath}/announce/jumpToAllAnnounce.action" title="公告" style="transform: scaleY(0.7) scaleX(0.7) translateY(-80px) translateX(0px); opacity: 0;"><span>公告</span></a>
+                    <a class="btn-floating orange modal-trigger" href="${pageContext.request.contextPath}/announce/addAnnouncePage.action" title="公告" style="transform: scaleY(1) scaleX(1) translateY(-60px) translateX(0px); opacity: 0;"><span style="font-size: 10px">发布公告</span></a>
                 </li>
                 <li>
-                    <a class="btn-floating blue modal-trigger" href="" title="修改" style="transform: scaleY(0.7) scaleX(0.7) translateY(-80px) translateX(0px); opacity: 0;"><span>修改</span></a>
+                    <a class="btn-floating blue modal-trigger" href="${pageContext.request.contextPath}/activity/addActivityPage.action" title="修改" style="transform: scaleY(1) scaleX(1) translateY(-55px) translateX(0px); opacity: 0;"><span style="font-size: 10px">发布活动</span></a>
                 </li>
             </ul>
         </div>
@@ -656,5 +656,6 @@
             })
         </script>
     </div>
+    </c:if>
 </body>
 </html>

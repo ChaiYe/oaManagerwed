@@ -1,25 +1,31 @@
 package com.officeAuto.ssm.controller;
-
-
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.officeAuto.ssm.model.*;
 import com.officeAuto.ssm.service.ActMarkerService;
+import com.officeAuto.ssm.service.ActfileService;
 import com.officeAuto.ssm.service.ActivityService;
-import com.officeAuto.ssm.utils.DateConverter;
 import com.officeAuto.ssm.utils.Helper;
-import com.officeAuto.ssm.utils.PageBean;
-import org.apache.poi.ss.formula.functions.T;
+import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.*;
 
 @Controller
@@ -30,9 +36,10 @@ public class ActivityController {
     private ActivityService activityService;
     @Autowired
     private ActMarkerService actMarkerService;
+    @Autowired
+    private ActfileService actfileService;
 
     private int pageSize = 5;
-    private Helper helper;
 
     @RequestMapping("recentActivity")
     @ResponseBody
@@ -69,7 +76,7 @@ public class ActivityController {
         List<JobQueryModel> jobs = ((EmployeeAndInfo)session.getAttribute("employee")).getJobs();
         List<JobQueryModel> list = new ArrayList<>();
         //遍历找出有权限的部门，并去除重复
-        helper.jobsOption(jobs, list);
+        Helper.jobsOption(jobs, list);
         modelMap.addAttribute("jobs", list);
         return "add_activity";
     }
@@ -102,10 +109,10 @@ public class ActivityController {
             Activity activity = new Activity();
             activity.setEmployee(employeeAndInfo.getUuid());
             activity.setDept(Integer.parseInt(map.get("dept")));
-            Date begin = helper.convert(map.get("begintime"));
+            Date begin = Helper.convert(map.get("begintime"));
             Date now = new Date();
             activity.setBegintime(begin);
-            activity.setEndtime(helper.convert(map.get("endtime")));
+            activity.setEndtime(Helper.convert(map.get("endtime")));
             activity.setDescript(map.get("descript"));
             activity.setName(map.get("title"));
             //设置状态，开始时间在当前时间之后为1， 1是未开始， 2 是正在进行
@@ -137,6 +144,12 @@ public class ActivityController {
         return "activityDetail";
     }
 
+    /**
+     * 获取活动里程碑
+     * @param actid
+     * @return
+     * @throws Exception
+     */
     @RequestMapping("getActMarkersAjax/{actid}")
     @ResponseBody
     public List<Actmarker> getActMarkerAjax(@PathVariable("actid")Integer actid) throws Exception {
@@ -171,6 +184,12 @@ public class ActivityController {
         return false;
     }
 
+    /**
+     * 添加活动里程碑
+     * @param map
+     * @return
+     * @throws Exception
+     */
     @RequestMapping("addMarkerAjax")
     @ResponseBody
     public boolean addMarkerAjax(@RequestBody Map<String, String> map) throws Exception {
@@ -182,6 +201,122 @@ public class ActivityController {
         actmarker.setDescript(descript);
         actmarker.setCreatetime(new Date());
         return actMarkerService.insert(actmarker) == 1;
+    }
+
+    /**
+     * 上传文件
+     * @param actid 活动id
+     * @param session
+     * @param request
+     * @return
+     * @throws IOException
+     */
+    @RequestMapping("uploadFile/{actid}")
+    @ResponseBody
+    public Map<String, Object> fileUpload(@PathVariable("actid")Integer actid, HttpSession session,
+                             HttpServletRequest request) throws IOException {
+        //获取上传的文件
+        MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
+        //input file框的name属性，必须有，不然得不到文件
+        MultipartFile file = multipartRequest.getFile("file");
+
+        EmployeeAndInfo employeeAndInfo = (EmployeeAndInfo)session.getAttribute("employee");
+        Map<String, Object> dataMap = new HashMap<>();
+        String resultMsg = "";
+        if(employeeAndInfo == null){
+            dataMap.put("resultMsg", "非法用户，请重新登录");
+            return dataMap;
+        }
+        if(file.isEmpty()){
+            dataMap.put("resultMsg", "文件错误");
+            return dataMap;
+        }
+
+        try {
+            Long size = file.getSize();
+            // 获取原文件名
+            String oriName = file.getOriginalFilename();
+            // 获取原文件图片后缀，以最后的.作为截取
+            String extName = oriName.substring(oriName.lastIndexOf("."));
+            // 生成自定义的新文件名，这里以UUID.xxx作为格式（可以不自定义新文件名）
+            String uuid = UUID.randomUUID().toString();
+            String filename = uuid + extName;
+            //定义保存路径，为rootPath下的以活动主键为名的文件夹下
+            String path = Helper.rootPath + actid;
+
+            //判断路径是否存在，如果不存在就创建一个
+            File filepath = new File(path, filename);
+            if (!filepath.getParentFile().exists())
+                filepath.getParentFile().mkdirs();
+            //文件的路径全名
+            String longFileName = path + File.separator + filename;
+            //将上传文件保存到一个目标文件当中
+            file.transferTo(new File(longFileName));
+
+            //持久化
+            Actfile actfile = new Actfile();
+            actfile.setActivity(actid);
+            actfile.setEmployee(employeeAndInfo.getUuid());
+            actfile.setCreatetime(new Date());
+            actfile.setSize(size.intValue());
+            actfile.setFormat(extName);
+            actfile.setName(oriName);
+            actfile.setPath(longFileName);
+            actfileService.insert(actfile);
+
+            resultMsg = oriName + "上传成功";
+            //成功上传返回信息，code = 1 为成功 0 为失败
+            dataMap.put("resultMsg", resultMsg);
+            dataMap.put("code", 1);
+            return dataMap;
+        } catch (IllegalStateException | IOException e) {
+            resultMsg = "上传失败";
+            dataMap.put("resultMsg", resultMsg);
+            dataMap.put("code", 0);
+            return dataMap;
+        } catch (Exception e) {
+            e.printStackTrace();
+            resultMsg = "上传失败";
+            dataMap.put("resultMsg", resultMsg);
+            dataMap.put("code", 0);
+            return dataMap;
+        }
+    }
+
+    /**
+     * 获取所有文件
+     * @param actid
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping("getActFiles/{actid}")
+    @ResponseBody
+    public List<ActFileAssociate> getActFiles(@PathVariable("actid")Integer actid) throws Exception {
+        return actfileService.getActFileByAct(actid, null);
+    }
+
+    /**
+     * 下载文件
+     * @param fileId
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping("/download/{fileid}") //匹配的是href中的download请求
+    public ResponseEntity<byte[]> download(@PathVariable("fileid")Integer fileId) throws Exception {
+
+        Actfile actFile = actfileService.findById(fileId);
+
+        //新建一个文件
+        File file = new File(actFile.getPath());
+        //http头信息
+        HttpHeaders headers = new HttpHeaders();
+        //设置编码
+        String downloadFileName = new String(actFile.getName().getBytes("UTF-8"),"iso-8859-1");
+        // 以下载方式打开文件
+        headers.setContentDispositionFormData("attachment", downloadFileName);
+        //MediaType:互联网媒介类型  contentType：具体请求中的媒体类型信息
+        headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
+        return new ResponseEntity<byte[]>(FileUtils.readFileToByteArray(file),headers, HttpStatus.CREATED);
     }
 
 /*******************************************************后台**********************************************************/
