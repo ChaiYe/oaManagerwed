@@ -8,14 +8,596 @@
   <component name="ChangeListManager">
     <list default="true" id="0bc6e281-01c3-4673-8e4b-0cb9b0897242" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/ssm.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/ssm.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActivityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActivityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/ActivityDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/ActivityDao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/com/officeAuto/ssm/dao/UserImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/com/officeAuto/ssm/dao/UserImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/activityDetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/activityDetail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_Announce.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_Announce.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_activity.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_activity.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employeeHome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employeeHome.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/.idea/OAmanager.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/CHANGELOG.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/CONTRIBUTING.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/demos/agenda-views.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/demos/background-events.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/demos/basic-views.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/demos/default.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/demos/external-dragging.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/demos/gcal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/demos/js/theme-chooser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/demos/json.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/demos/json/events.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/demos/list-views.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/demos/locales.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/demos/php/get-events.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/demos/php/get-timezones.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/demos/php/utils.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/demos/selectable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/demos/themes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/demos/timezones.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/demos/week-numbers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/fullcalendar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/fullcalendar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/fullcalendar.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/fullcalendar.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/fullcalendar.print.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/fullcalendar.print.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/gcal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/gcal.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/lib/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/lib/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/lib/moment.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale-all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/af.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/ar-dz.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/ar-kw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/ar-ly.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/ar-ma.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/ar-sa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/ar-tn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/ar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/bg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/bs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/cs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/da.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/de-at.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/de-ch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/de.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/el.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/en-au.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/en-ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/en-gb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/en-ie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/en-nz.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/es-do.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/es-us.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/es.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/et.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/eu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/fa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/fi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/fr-ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/fr-ch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/fr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/gl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/he.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/hi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/hr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/hu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/id.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/is.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/it.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/ja.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/ka.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/kk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/ko.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/lb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/lt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/lv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/mk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/ms-my.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/ms.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/nb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/nl-be.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/nl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/nn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/pl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/pt-br.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/pt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/ro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/ru.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/sk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/sl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/sq.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/sr-cyrl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/sr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/sv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/th.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/tr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/uk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/vi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/zh-cn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/Calendar/fullcalendar-3.9.0/locale/zh-tw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/CHANGES.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/adapters/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/build-config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/ckeditor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/contents.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/af.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/ar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/az.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/bg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/bn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/bs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/cs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/cy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/da.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/de-ch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/de.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/el.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/en-au.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/en-ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/en-gb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/eo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/es-mx.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/es.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/et.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/eu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/fa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/fi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/fo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/fr-ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/fr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/gl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/gu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/he.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/hi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/hr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/hu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/id.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/is.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/it.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/ja.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/ka.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/km.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/ko.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/ku.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/lt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/lv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/mk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/mn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/ms.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/nb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/nl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/no.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/oc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/pl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/pt-br.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/pt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/ro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/ru.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/si.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/sk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/sl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/sq.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/sr-latn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/sr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/sv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/th.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/tr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/tt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/ug.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/uk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/vi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/zh-cn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/lang/zh.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/af.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/ar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/az.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/bg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/cs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/cy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/da.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/de-ch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/de.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/el.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/en-au.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/en-gb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/eo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/es-mx.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/es.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/et.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/eu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/fa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/fi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/fo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/fr-ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/fr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/gl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/gu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/he.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/hi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/hr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/hu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/id.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/it.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/ja.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/km.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/ko.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/ku.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/lt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/lv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/mk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/mn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/nb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/nl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/no.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/oc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/pl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/pt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/ro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/ru.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/si.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/sk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/sl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/sq.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/sr-latn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/sr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/sv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/th.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/tr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/tt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/ug.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/uk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/vi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/a11yhelp/dialogs/lang/zh.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/about/dialogs/about.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/about/dialogs/hidpi/logo_ckeditor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/about/dialogs/logo_ckeditor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/dialog/dialogDefinition.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/icons_hidpi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/image/dialogs/image.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/image/images/noimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/link/dialogs/anchor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/link/dialogs/link.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/link/images/anchor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/link/images/hidpi/anchor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/magicline/images/hidpi/icon-rtl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/magicline/images/hidpi/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/magicline/images/icon-rtl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/magicline/images/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/pastefromword/filter/default.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/scayt/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/scayt/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/scayt/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/scayt/dialogs/dialog.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/scayt/dialogs/options.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/scayt/dialogs/toolbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/_translationstatus.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/af.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/ar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/az.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/bg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/cs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/cy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/da.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/de-ch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/de.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/el.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/en-au.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/en-ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/en-gb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/eo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/es-mx.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/es.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/et.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/eu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/fa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/fi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/fr-ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/fr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/gl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/he.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/hr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/hu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/id.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/it.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/ja.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/km.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/ko.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/ku.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/lt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/lv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/nb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/nl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/no.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/oc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/pl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/pt-br.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/pt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/ro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/ru.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/si.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/sk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/sl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/sq.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/sv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/th.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/tr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/tt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/ug.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/uk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/vi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/lang/zh.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/specialchar/dialogs/specialchar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/table/dialogs/table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/tableselection/styles/tableselection.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/tabletools/dialogs/tableCell.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/widget/images/handle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/wsc/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/wsc/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/wsc/dialogs/ciframe.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/wsc/dialogs/tmpFrameset.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/wsc/dialogs/wsc.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/wsc/dialogs/wsc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/wsc/dialogs/wsc_ie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/css/samples.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/img/github-top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/img/header-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/img/header-separator.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/img/navigation-tip.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/js/sample.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/js/sf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/ajax.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/api.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/appendto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/assets/inlineall/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/assets/outputxhtml/outputxhtml.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/assets/posteddata.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/assets/sample.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/assets/uilanguages/languages.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/datafiltering.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/dialog/assets/my_dialog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/dialog/dialog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/divreplace.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/enterkey/enterkey.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/htmlwriter/assets/outputforflash/outputforflash.fla" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/htmlwriter/assets/outputforflash/outputforflash.swf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/htmlwriter/assets/outputforflash/swfobject.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/htmlwriter/outputforflash.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/htmlwriter/outputhtml.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/inlineall.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/inlinebycode.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/inlinetextarea.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/jquery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/magicline/magicline.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/readonly.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/replacebyclass.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/replacebycode.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/sample.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/sample.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/sample_posteddata.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/tabindex.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/toolbar/toolbar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/uicolor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/uilanguages.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/wysiwygarea/fullpage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/old/xhtmlstyle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/toolbarconfigurator/css/fontello.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/toolbarconfigurator/font/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/toolbarconfigurator/font/config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/toolbarconfigurator/font/fontello.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/toolbarconfigurator/font/fontello.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/toolbarconfigurator/font/fontello.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/toolbarconfigurator/font/fontello.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/toolbarconfigurator/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/toolbarconfigurator/js/abstracttoolbarmodifier.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/toolbarconfigurator/js/fulltoolbareditor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/toolbarconfigurator/js/toolbarmodifier.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/toolbarconfigurator/js/toolbartextmodifier.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/toolbarconfigurator/lib/codemirror/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/toolbarconfigurator/lib/codemirror/javascript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/Kunstmaan-BootstrapCK-Skin/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/Kunstmaan-BootstrapCK-Skin/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/Kunstmaan-BootstrapCK-Skin/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/Kunstmaan-BootstrapCK-Skin/dialog.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/Kunstmaan-BootstrapCK-Skin/editor.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/Kunstmaan-BootstrapCK-Skin/icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/Kunstmaan-BootstrapCK-Skin/images/dialog_sides.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/Kunstmaan-BootstrapCK-Skin/images/dialog_sides.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/Kunstmaan-BootstrapCK-Skin/images/dialog_sides_rtl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/Kunstmaan-BootstrapCK-Skin/images/mini.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/Kunstmaan-BootstrapCK-Skin/images/noimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/Kunstmaan-BootstrapCK-Skin/images/sprites.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/Kunstmaan-BootstrapCK-Skin/images/sprites_ie6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/Kunstmaan-BootstrapCK-Skin/images/toolbar_start.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/Kunstmaan-BootstrapCK-Skin/skin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/Kunstmaan-BootstrapCK-Skin/templates.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/moono-lisa/dialog.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/moono-lisa/dialog_ie.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/moono-lisa/dialog_ie8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/moono-lisa/dialog_iequirks.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/moono-lisa/editor.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/moono-lisa/editor_gecko.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/moono-lisa/editor_ie.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/moono-lisa/editor_ie8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/moono-lisa/editor_iequirks.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/moono-lisa/icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/moono-lisa/icons_hidpi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/moono-lisa/images/arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/moono-lisa/images/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/moono-lisa/images/hidpi/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/moono-lisa/images/hidpi/lock-open.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/moono-lisa/images/hidpi/lock.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/moono-lisa/images/hidpi/refresh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/moono-lisa/images/lock-open.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/moono-lisa/images/lock.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/moono-lisa/images/refresh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/moono-lisa/images/spinner.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/skins/moono-lisa/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/ckeditor/styles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/css/homepageGrid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/css/input/component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/css/leftBox/add.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/css/leftBox/frame.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/css/leftBox/table.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/css/leftBox/tableAndAdd.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/css/pageMenu.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/html/add/addActivity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/html/add/addAnnounce.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/html/add/addEmployee.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/html/leftBox/activity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/html/leftBox/announce.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/html/leftBox/dept.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/html/leftBox/employee.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/html/leftBox/homepage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/html/leftBox/table.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/html/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/html/management.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/img/OA管理系统.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/img/loginBg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/js/homepageGrid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/js/jquery-1.11.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/js/modify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/js/page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/js/popup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/js/vue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/css/layui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/css/layui.mobile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/css/modules/code.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/css/modules/laydate/default/laydate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/css/modules/layer/default/icon-ext.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/css/modules/layer/default/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/css/modules/layer/default/layer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/css/modules/layer/default/loading-0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/css/modules/layer/default/loading-1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/css/modules/layer/default/loading-2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/font/iconfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/font/iconfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/font/iconfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/font/iconfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/10.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/11.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/14.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/15.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/17.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/18.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/19.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/21.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/22.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/23.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/24.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/25.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/26.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/27.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/28.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/29.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/30.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/31.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/33.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/34.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/35.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/36.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/37.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/38.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/39.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/40.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/41.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/42.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/43.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/44.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/45.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/46.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/47.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/48.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/49.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/50.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/51.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/52.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/53.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/54.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/55.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/56.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/57.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/58.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/59.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/60.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/61.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/62.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/63.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/64.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/65.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/66.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/67.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/68.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/69.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/70.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/71.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/8.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/images/face/9.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/lay/modules/carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/lay/modules/code.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/lay/modules/element.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/lay/modules/flow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/lay/modules/form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/lay/modules/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/lay/modules/laydate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/lay/modules/layedit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/lay/modules/layer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/lay/modules/laypage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/lay/modules/laytpl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/lay/modules/mobile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/lay/modules/table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/lay/modules/tree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/lay/modules/upload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/lay/modules/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/layui.all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/layui/layui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/test/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/test/Ckeditor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/test/Js/classie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/test/elementtable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/test/input box.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/test/popup.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/test/table.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/test/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/OAmanager/test/test.json" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,9 +607,6 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/oaManagerwed$oaManager.ic" NAME="oaManager Coverage Results" MODIFIED="1528100401683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -56,15 +635,26 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="officeauto: schema" type="c314c289:MysqlImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="officeauto@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="officeauto: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="employee: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="officeauto@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="officeauto: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="employeeinfo: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="ErrorTreeViewConfiguration">
     <option name="hideWarnings" value="true" />
     <option name="HIDE_WARNINGS" value="true" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="oaManagerwed" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="525">
@@ -119,10 +709,16 @@
       <file leaf-file-name="employeeHome.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employeeHome.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="352" column="41" selection-start-line="352" selection-start-column="41" selection-end-line="352" selection-end-column="41" />
+            <state relative-caret-position="600">
+              <caret line="281" column="29" selection-start-line="281" selection-start-column="29" selection-end-line="281" selection-end-column="29" />
               <folding>
+                <element signature="n#script#4;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#script#5;n#head#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#style#1;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#style#2;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#style#3;n#head#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -152,20 +748,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Email</find>
-      <find>BaseResultMap</find>
-      <find>selectByPrimaryKey</find>
-      <find>ResultMapWithBLOBs</find>
-      <find>offset</find>
-      <find>name</find>
-      <find>json</find>
-      <find>员</find>
-      <find>../../../</find>
-      <find>dept</find>
-      <find>Update_By_Example_Where_Clause</find>
-      <find>../../</find>
-      <find>che</find>
-      <find>Example_Where_Clause</find>
       <find>Job</find>
       <find>Actfile</find>
       <find>TEXT</find>
@@ -180,7 +762,22 @@
       <find>oaManager.wed</find>
       <find>oaManagerwed</find>
       <find>个人主页</find>
-      <find>ale</find>
+      <find>查看所有</find>
+      <find>ResultMapWithBLOBs</find>
+      <find>sess</find>
+      <find>rec</find>
+      <find>@RequestBody</find>
+      <find>all-announce</find>
+      <find>dateFormat</find>
+      <find>1</find>
+      <find>handleScroll</find>
+      <find>信息</find>
+      <find>投票</find>
+      <find>session</find>
+      <find>修改</find>
+      <find>actoption</find>
+      <find>hr</find>
+      <find>AnnounceDpet</find>
     </findStrings>
     <replaceStrings>
       <replace>userName</replace>
@@ -202,66 +799,73 @@
       <replace>Employee</replace>
       <replace>actfile</replace>
       <replace>file</replace>
+      <replace>vote</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/TestController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/testVueComponent.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/AnnounceDpet.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapping/DeptDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/AnnounceDao.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/add/addJobInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/add/addPlanInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/add/addActivityInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/employeeHome.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/AnnounceWithDept.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/AnnounceService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/AnnounceServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapping/AnnounceDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/Actmarker.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/ActivityQueryModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActvoteController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/ActMarker.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapping/ActMarkerDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/ActivityService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/ActivityServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/ActivityDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/Vote.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/voteDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/Actoption.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/VoteQueryModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/VoteDao.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapping/VoteDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/ActMarkerService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/ActMarkerServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/ActMarkerDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/ActfileQueryModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/ActfileDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/ActfileService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/ActfileServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/ActFileAssociate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/utils/FileOperateUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapping/ActfileDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/accountSetting.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employeeInfoEdit.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/allAnnounce.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/utils/Helper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/utils/FileOperaterUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/utils/FileOperater.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/EmployeeController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/EmployeeController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_Announce.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/AnnounceController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/activityDetail.jsp" />
         <option value="$PROJECT_DIR$/src/main/test/com/officeAuto/ssm/dao/UserImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapping/ActivityDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employeeHome.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActivityController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActivityController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/AnnounceDao.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/allAnnounce.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/AnnounceController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_activity.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/applyActivity.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/EmployeeAndInfoDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/EmployeeAndInfoDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/EmployeeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/EmployeeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/EmployeeDao.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/EmployeeDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/EmpAndInfoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/EmpAndInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/EmployeeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/EmployeeController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/retrieve_password.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/vote.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/Vote.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/VoteDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActivityController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActivityController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/activityDetail.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/interceptor/HandlerInterceptor1.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/voteinfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/utils/DateConverter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/ActvoteService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/ActvoteServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/ActvoteDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/VoteService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/VoteServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/VoteController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/VoteDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/personVote.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/Actvote.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/ActvoteDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActvoteController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employeeHome.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/AnnounceDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/jobInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/planInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/actfileInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
       </list>
     </option>
   </component>
@@ -322,7 +926,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -371,62 +974,50 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="oaManagerwed" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oaManagerwed" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Test/oaManagerwed/src/main/webapp/WEB-INF/jsp/employeeHome.jsp" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/GitHubDesktop/app-1.2.0/resources/app/git/cmd/git.exe" />
+    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/GitHubDesktop/app-1.2.2/resources/app/git/cmd/git.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Test\oaManagerwed\src\main\webapp\WEB-INF\jsp" />
       <recent name="D:\Test\oaManagerwed\src\main\webapp\img" />
       <recent name="H:\oaManagerwed\src\main\webapp\OAmanager\js" />
       <recent name="H:\oaManagerwed\src\main\webapp\WEB-INF\jsp\leftBox" />
       <recent name="H:\oaManagerwed\src\main\webapp\WEB-INF\jsp" />
+      <recent name="H:\oaManagerwed\src\main\webapp" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.officeAuto.ssm.dao" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.officeAuto.ssm.model" />
       <recent name="com.officeAuto.ssm.dao.system" />
       <recent name="com.officeAuto.ssm.service.impl" />
       <recent name="com.officeAuto.ssm.service" />
       <recent name="com.officeAuto.ssm.controller" />
+      <recent name="com.officeAuto.ssm.dao" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Test\oaManagerwed\src\main\resources\mapping" />
-      <recent name="D:\Test\oaManagerwed\src\main\webapp" />
-      <recent name="D:\Test\oaManagerwed\src\main\webapp\WEB-INF\jsp\leftBox" />
-      <recent name="D:\Test\oaManagerwed\src\main\webapp\js" />
+      <recent name="H:\oaManagerwed\oaManagerwed\src\main\webapp\js" />
+      <recent name="D:\Test\oaManagerwed\src\main\webapp\WEB-INF" />
       <recent name="D:\Test\oaManagerwed\src\main\webapp\img" />
+      <recent name="D:\Test\oaManagerwed\src\main\resources" />
+      <recent name="H:\oaManagerwed\src\main\webapp\WEB-INF\jsp\leftBox\add" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -443,7 +1034,9 @@
   </component>
   <component name="RunManager" selected="Tomcat Server.oaManager">
     <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HEIGHT" value="0" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="WIDTH" value="0" />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -595,7 +1188,7 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="oaManager" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="9">
+    <configuration name="oaManager" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat9" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="9">
       <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
       <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
       <deployment>
@@ -732,6 +1325,7 @@
         <item itemvalue="JUnit.UserImplTest.testAnnounceDao" />
         <item itemvalue="JUnit.UserImplTest.testFindDeptDao" />
         <item itemvalue="JUnit.UserImplTest.testUserNameAndPwd" />
+        <item itemvalue="JUnit.UserImplTest.testActivityDao" />
       </list>
     </recent_temporary>
   </component>
@@ -825,31 +1419,31 @@
       <workItem from="1527770143454" duration="11438000" />
       <workItem from="1527811329521" duration="29093000" />
       <workItem from="1527905359188" duration="10368000" />
-      <workItem from="1527925236798" duration="20273000" />
-      <workItem from="1527994183730" duration="32077000" />
-      <workItem from="1528072428953" duration="27386000" />
-      <workItem from="1528164799472" duration="12244000" />
-      <workItem from="1528189236267" duration="7869000" />
-      <workItem from="1528266232671" duration="15844000" />
-      <workItem from="1528300962393" duration="68000" />
-      <workItem from="1528330346905" duration="12286000" />
-      <workItem from="1528374423056" duration="11070000" />
-      <workItem from="1528416559843" duration="15679000" />
-      <workItem from="1528451294053" duration="609000" />
-      <workItem from="1528452818663" duration="10371000" />
-      <workItem from="1528508296431" duration="10393000" />
-      <workItem from="1528525514969" duration="14139000" />
-      <workItem from="1528594273682" duration="34278000" />
-      <workItem from="1528680833878" duration="322000" />
-      <workItem from="1528682599102" duration="246000" />
-      <workItem from="1528808157514" duration="2019000" />
-      <workItem from="1528811199259" duration="398000" />
-      <workItem from="1528812397235" duration="202000" />
-      <workItem from="1528815654280" duration="1037000" />
-      <workItem from="1528871240159" duration="634000" />
-      <workItem from="1528875638645" duration="5212000" />
-      <workItem from="1528934878542" duration="7628000" />
-      <workItem from="1528943400074" duration="225000" />
+      <workItem from="1528341019428" duration="941000" />
+      <workItem from="1528346062662" duration="2830000" />
+      <workItem from="1528368672857" duration="16214000" />
+      <workItem from="1528414324404" duration="18000" />
+      <workItem from="1528446954321" duration="97000" />
+      <workItem from="1528447249531" duration="297000" />
+      <workItem from="1528447629172" duration="1225000" />
+      <workItem from="1528452384217" duration="342000" />
+      <workItem from="1528457749213" duration="2665000" />
+      <workItem from="1528602101509" duration="633000" />
+      <workItem from="1528617637113" duration="72000" />
+      <workItem from="1528643084496" duration="45000" />
+      <workItem from="1528684882435" duration="141000" />
+      <workItem from="1528809923090" duration="1523000" />
+      <workItem from="1528811490324" duration="61000" />
+      <workItem from="1528811803678" duration="979000" />
+      <workItem from="1528814771618" duration="1024000" />
+      <workItem from="1528848731917" duration="4318000" />
+      <workItem from="1528863519862" duration="2977000" />
+      <workItem from="1528872732311" duration="3710000" />
+      <workItem from="1528876515005" duration="7638000" />
+      <workItem from="1528890190779" duration="13967000" />
+      <workItem from="1528934913077" duration="5504000" />
+      <workItem from="1528943060447" duration="122000" />
+      <workItem from="1528943732666" duration="604000" />
     </task>
     <task id="LOCAL-00001" summary="add sqlSessionTemplate">
       <created>1527601536294</created>
@@ -901,126 +1495,63 @@
       <updated>1527910942924</updated>
     </task>
     <task id="LOCAL-00008" summary="改emploeeHome">
-      <created>1527925298941</created>
+      <created>1528447048633</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1527925298941</updated>
+      <updated>1528447048633</updated>
     </task>
-    <task id="LOCAL-00009" summary="公告vue">
-      <created>1527994820341</created>
+    <task id="LOCAL-00009" summary="修改tomcat名为9&#10;sdks名为9">
+      <created>1528447960700</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1527994820341</updated>
+      <updated>1528447960700</updated>
     </task>
-    <task id="LOCAL-00010" summary="异步上传头像">
-      <created>1528029466063</created>
+    <task id="LOCAL-00010" summary="修改tomcat名为9&#10;sdks名为9">
+      <created>1528943177019</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1528029466063</updated>
+      <updated>1528943177019</updated>
     </task>
-    <task id="LOCAL-00011" summary="异步上传头像,修复bug：没改session里面的数据，导致刷新无法显示图面">
-      <created>1528032797641</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1528032797641</updated>
-    </task>
-    <task id="LOCAL-00012" summary="个人信息更新">
-      <created>1528178551436</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1528178551436</updated>
-    </task>
-    <task id="LOCAL-00013" summary="调整页面代码">
-      <created>1528181008002</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1528181008002</updated>
-    </task>
-    <task id="LOCAL-00014" summary="公告发布">
-      <created>1528209929800</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1528209929800</updated>
-    </task>
-    <task id="LOCAL-00015" summary="账号设置">
-      <created>1528335038994</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1528335038994</updated>
-    </task>
-    <task id="LOCAL-00016" summary="公告富文本验证修复，把一些公共属性和方法移动到helper类中">
-      <created>1528339633786</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1528339633786</updated>
-    </task>
-    <task id="LOCAL-00017" summary="添加活动表相关，活动里程碑相关，&#10;主页面的活动显示里程碑，&#10;活动详情页里程碑完善：合并为Vue，可以动态添加里程碑（申请人和部门高权限者），&#10;Vue异步刷新里程碑数据">
-      <created>1528602920752</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1528602920752</updated>
-    </task>
-    <task id="LOCAL-00018" summary="文件上传下载功能">
-      <created>1528681054288</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1528681054288</updated>
-    </task>
-    <task id="LOCAL-00019" summary="添加活动表相关，活动里程碑相关，&#10;主页面的活动显示里程碑，&#10;活动详情页里程碑完善：合并为Vue，可以动态添加里程碑（申请人和部门高权限者），&#10;Vue异步刷新里程碑数据">
-      <created>1528811335729</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1528811335729</updated>
-    </task>
-    <option name="localTasksCounter" value="20" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test - 2018.06.09 at 22h 14m 41s.xml">
+    <history-entry file="Test - 2018.06.01 at 22h 41m 05s.xml">
       <configuration name="Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Test - 2018.06.09 at 22h 16m 15s.xml">
+    <history-entry file="Test - 2018.06.01 at 22h 42m 09s.xml">
       <configuration name="Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Test - 2018.06.10 at 16h 17m 50s.xml">
+    <history-entry file="Test - 2018.06.01 at 22h 42m 18s.xml">
       <configuration name="Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Test - 2018.06.10 at 16h 31m 26s.xml">
+    <history-entry file="Test - 2018.06.01 at 22h 51m 28s.xml">
       <configuration name="Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserImplTest_testActivityDao - 2018.06.10 at 23h 04m 06s.xml">
-      <configuration name="UserImplTest.testActivityDao" configurationId="JUnit" />
+    <history-entry file="UserImplTest_testAnnounceDao - 2018.06.02 at 11h 54m 16s.xml">
+      <configuration name="UserImplTest.testAnnounceDao" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserImplTest_testActivityDao - 2018.06.10 at 23h 05m 14s.xml">
-      <configuration name="UserImplTest.testActivityDao" configurationId="JUnit" />
+    <history-entry file="UserImplTest_testAnnounceDao - 2018.06.02 at 11h 57m 19s.xml">
+      <configuration name="UserImplTest.testAnnounceDao" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserImplTest_testActivityDao - 2018.06.10 at 23h 05m 50s.xml">
-      <configuration name="UserImplTest.testActivityDao" configurationId="JUnit" />
+    <history-entry file="UserImplTest_testAnnounceDao - 2018.06.07 at 19h 13m 37s.xml">
+      <configuration name="UserImplTest.testAnnounceDao" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="UserImplTest_testActivityDao - 2018.06.10 at 23h 06m 09s.xml">
-      <configuration name="UserImplTest.testActivityDao" configurationId="JUnit" />
+    <history-entry file="UserImplTest_testAnnounceDao - 2018.06.07 at 19h 14m 39s.xml">
+      <configuration name="UserImplTest.testAnnounceDao" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Test - 2018.06.14 at 09h 14m 10s.xml">
-      <configuration name="Test" configurationId="JUnit" />
+    <history-entry file="UserImplTest_testAnnounceDao - 2018.06.07 at 19h 15m 31s.xml">
+      <configuration name="UserImplTest.testAnnounceDao" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Test - 2018.06.14 at 09h 19m 01s.xml">
-      <configuration name="Test" configurationId="JUnit" />
+    <history-entry file="UserImplTest_testAnnounceDao - 2018.06.07 at 19h 33m 28s.xml">
+      <configuration name="UserImplTest.testAnnounceDao" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="547477000" />
+    <option name="totallyTimeSpent" value="372879000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1033,52 +1564,94 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5308023" side_tool="true" weight="0.26507714" />
-      <window_info anchor="bottom" id="Application Servers" order="8" sideWeight="0.4978308" weight="0.3253857" />
-      <window_info anchor="right" id="Maven Projects" order="12" weight="0.3295129" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.25490198" side_tool="true" weight="0.47761193" />
+      <window_info anchor="bottom" id="Application Servers" order="8" sideWeight="0.4978308" weight="0.325887" />
+      <window_info anchor="right" id="Maven Projects" order="12" weight="0.3291757" />
+      <window_info anchor="right" id="CDI" order="8" weight="0.329718" />
       <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32959327" />
-      <window_info anchor="right" id="CDI" order="8" />
-      <window_info id="Capture Tool" order="10" />
-      <window_info id="Designer" order="3" />
+      <window_info id="Capture Tool" order="9" />
+      <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Database" order="11" weight="0.3295129" />
-      <window_info id="Structure" order="2" sideWeight="0.47712418" side_tool="true" weight="0.23280802" />
-      <window_info anchor="right" id="JSF" order="6" weight="0.3295129" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info id="UI Designer" order="5" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.46919772" weight="0.26507714" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49566162" weight="0.3253857" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info id="Image Layers" order="4" />
-      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32819074" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.4534384" weight="0.25946704" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8758134" weight="0.30715287" />
+      <window_info anchor="right" id="JSF" order="5" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.2489154" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.74509805" weight="0.30014026" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49566162" weight="0.325887" />
+      <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.44305858" weight="0.32325888" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.3285151" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.4534384" weight="0.33941093" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.61408883" weight="0.03547963" />
       <window_info anchor="bottom" id="Spring" order="13" weight="0.32819074" />
-      <window_info anchor="bottom" id="Terminal" order="17" weight="0.32819074" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5114943" visible="true" weight="0.21489972" />
-      <window_info anchor="right" id="Bean Validation" order="13" weight="0.3295129" />
-      <window_info id="Web" order="9" sideWeight="0.48850575" side_tool="true" weight="0.21991403" />
-      <window_info id="Learn" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="14" weight="0.3285151" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5540541" visible="true" weight="0.29083094" />
+      <window_info anchor="right" id="Bean Validation" order="7" weight="0.3295129" />
+      <window_info id="Web" order="8" sideWeight="0.50765866" side_tool="true" weight="0.29229936" />
+      <window_info id="Learn" order="7" />
       <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info id="Favorites" order="6" sideWeight="0.47712418" side_tool="true" weight="0.23280802" />
-      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.3295129" />
-      <window_info anchor="bottom" id="JRebel Executor" order="15" weight="0.26253298" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="JRebel Executor" order="16" weight="0.26253298" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" x="88" y="88" width="1744" height="834" id="Documentation" internal_type="FLOATING" order="13" type="FLOATING" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Thumbnails" order="1" sideWeight="0.4908836" side_tool="true" weight="0.22707736" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="bottom" id="Tail" order="16" />
-      <window_info id="JRebel" order="7" sideWeight="0.44594595" side_tool="true" weight="0.31832972" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Tail" order="17" />
+      <window_info id="JRebel" order="6" sideWeight="0.44594595" side_tool="true" weight="0.31832972" />
       <window_info anchor="right" id="BPMNPalette" order="10" />
-      <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.44305858" weight="0.32398316" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.18934081" />
-      <window_info anchor="right" id="Commander" order="1" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32959327" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="JRebel Console" order="14" sideWeight="0.5791757" side_tool="true" weight="0.3285151" />
+      <window_info anchor="bottom" id="JRebel Console" order="15" sideWeight="0.5791757" side_tool="true" weight="0.3285151" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="bottom" id="Application Servers" order="8" sideWeight="0.4978308" weight="0.325887" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.61408883" weight="0.22715843" />
+      <window_info anchor="bottom" id="Spring" order="13" weight="0.32819074" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Web" order="8" sideWeight="0.50765866" side_tool="true" weight="0.29229936" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="14" weight="0.3285151" />
+      <window_info id="Capture Tool" order="9" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info id="JRebel" order="6" sideWeight="0.44594595" side_tool="true" weight="0.31832972" />
+      <window_info anchor="right" id="JSF" order="5" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5079957" side_tool="true" weight="0.24178712" />
+      <window_info id="Learn" order="7" />
+      <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.44305858" weight="0.32325888" />
+      <window_info anchor="right" x="88" y="88" width="1744" height="834" id="Documentation" internal_type="FLOATING" order="13" type="FLOATING" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5540541" visible="true" weight="0.2462039" />
+      <window_info anchor="right" id="BPMNPalette" order="10" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.3285151" />
+      <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32959327" />
+      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.4534384" weight="0.33941093" />
+      <window_info anchor="right" id="Maven Projects" order="12" weight="0.3291757" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32959327" />
+      <window_info anchor="bottom" id="JRebel Executor" order="16" weight="0.26253298" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="JRebel Console" order="15" sideWeight="0.5791757" side_tool="true" weight="0.3285151" />
+      <window_info anchor="right" id="Database" order="11" weight="0.3295129" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49566162" weight="0.325887" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.2489154" />
+      <window_info anchor="right" id="CDI" order="8" />
+      <window_info anchor="bottom" id="Tail" order="17" />
+      <window_info anchor="right" id="Bean Validation" order="7" weight="0.3295129" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49200428" weight="0.4524887" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1119,44 +1692,16 @@
     <MESSAGE value="pagehelper的使用，改activity页面和controller" />
     <MESSAGE value="修改了employeeAndInfo，将employee，employeeInfo，jobs，关联起来。修改login，改为ajax形式，将session中的employee换成employeeAndInfo，session名仍为employee" />
     <MESSAGE value="改emploeeHome" />
-    <MESSAGE value="公告vue" />
-    <MESSAGE value="异步上传头像" />
-    <MESSAGE value="异步上传头像,修复bug：没改session里面的数据，导致刷新无法显示图面" />
-    <MESSAGE value="个人信息更新" />
-    <MESSAGE value="调整页面代码" />
-    <MESSAGE value="公告发布" />
-    <MESSAGE value="账号设置" />
-    <MESSAGE value="公告富文本验证修复，把一些公共属性和方法移动到helper类中" />
-    <MESSAGE value="文件上传下载功能" />
-    <MESSAGE value="添加活动表相关，活动里程碑相关，&#10;主页面的活动显示里程碑，&#10;活动详情页里程碑完善：合并为Vue，可以动态添加里程碑（申请人和部门高权限者），&#10;Vue异步刷新里程碑数据" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加活动表相关，活动里程碑相关，&#10;主页面的活动显示里程碑，&#10;活动详情页里程碑完善：合并为Vue，可以动态添加里程碑（申请人和部门高权限者），&#10;Vue异步刷新里程碑数据" />
+    <MESSAGE value="修改tomcat名为9&#10;sdks名为9" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改tomcat名为9&#10;sdks名为9" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="235" />
+      <option name="time" value="236" />
     </breakpoint-manager>
-  </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
-      <expression>
-        <expression-string>buffer</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>imgFile.length()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>a</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
       <expression>
         <expression-string>employeeAndInfo</expression-string>
         <language-id>JAVA</language-id>
@@ -1172,298 +1717,338 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/AnnounceDao.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/EmpAndInfoService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="24" />
+        <state relative-caret-position="4080">
+          <caret line="123" column="54" selection-start-line="123" selection-start-column="54" selection-end-line="123" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActvoteController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/jre/lib/rt.jar!/sun/reflect/DelegatingMethodAccessorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/Activity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/PlanDao.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
+          <caret line="86" column="40" selection-start-line="86" selection-start-column="24" selection-end-line="86" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/EmployeeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/EmpAndInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="108" column="61" selection-start-line="108" selection-start-column="61" selection-end-line="108" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/PlanController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="50" column="11" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/management.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-80">
+          <caret line="107" column="112" selection-start-line="107" selection-start-column="80" selection-end-line="107" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/edit/editAnnounceInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="65" column="85" selection-start-line="65" selection-start-column="69" selection-end-line="65" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employeeInfoEdit.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3040">
+          <caret line="272" column="14" selection-start-line="272" selection-start-column="14" selection-end-line="272" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/JobController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3974">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/utils/Helper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2240">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3600" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/utils/DateConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/exception/AnnounceException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/ActivityDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/interceptor/HandlerInterceptor1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        <state relative-caret-position="-859">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/Actoption.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/voteinfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+        <state>
+          <caret selection-end-line="3" selection-end-column="70" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/VoteQueryModel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/ActvoteServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+        <state relative-caret-position="181">
+          <caret line="77" column="49" selection-start-line="77" selection-start-column="49" selection-end-line="77" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/VoteService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/VoteDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/VoteDao.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/VoteServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="23" column="135" selection-start-line="23" selection-start-column="135" selection-end-line="23" selection-end-column="135" />
+        <state relative-caret-position="366">
+          <caret line="26" column="40" lean-forward="true" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/BaseDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/PlanService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="1000">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/ActMarkerDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/EmployeeAndInfoDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="407">
+          <caret line="71" column="39" lean-forward="true" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/ActMarkerService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActvoteController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/Actfile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/lang/Long.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/BaseQueryModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/ActfileQueryModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/EmployeeDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" selection-start-line="5" selection-end-line="9" selection-end-column="76" />
+        <state relative-caret-position="173">
+          <caret line="137" column="64" selection-start-line="137" selection-start-column="64" selection-end-line="137" selection-end-column="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/EmployeeAndInfoDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="15" selection-start-line="15" selection-end-line="22" selection-end-column="73" />
+        <state relative-caret-position="2914">
+          <caret line="163" column="149" lean-forward="true" selection-start-line="163" selection-start-column="7" selection-end-line="163" selection-end-column="149" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/ActMarkerDao.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/ActvoteDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="18" selection-start-line="18" selection-end-line="20" selection-end-column="9" />
+        <state relative-caret-position="200">
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/ActfileDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/BaseDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        <state relative-caret-position="-1007">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/Actvote.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+        <state relative-caret-position="200">
+          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <element signature="e#506#507#0" />
+            <element signature="e#533#534#0" />
+            <element signature="e#574#575#0" />
+            <element signature="e#606#607#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/ActfileService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/ActvoteService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="79" column="33" selection-start-line="79" selection-start-column="33" selection-end-line="79" selection-end-column="33" />
+        <state relative-caret-position="230">
+          <caret line="30" column="15" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/ActFileAssociate.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/retrieve_password.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+        <state relative-caret-position="240">
+          <caret line="12" column="77" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="12" selection-end-column="77" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/ActfileDao.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/VoteDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="200">
+          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mvc.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/AnnounceService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
+        <state relative-caret-position="-1495">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/utils/FileOperateUtil.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/EmpAndInfoController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/ActvoteDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="130">
+          <caret line="85" column="53" lean-forward="true" selection-start-line="85" selection-start-column="53" selection-end-line="85" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/Job.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/ActoptionQueryModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/accountSetting.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="213" column="6" selection-start-line="213" selection-start-column="6" selection-end-line="213" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employeeInfoEdit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="148" column="4" selection-start-line="148" selection-start-column="4" selection-end-line="183" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/ActfileServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="79" selection-start-line="79" selection-end-line="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/ActMarkerServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/ActivityQueryModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="69">
+          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/allAnnounce.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="216" column="71" lean-forward="true" selection-start-line="216" selection-start-column="71" selection-end-line="216" selection-end-column="71" />
+        <state relative-caret-position="2047">
+          <caret line="218" column="69" lean-forward="true" selection-start-line="218" selection-start-column="69" selection-end-line="218" selection-end-column="69" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/ActivityService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/VoteController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="95" column="27" selection-start-line="95" selection-start-column="27" selection-end-line="95" selection-end-column="27" />
+        <state relative-caret-position="1040">
+          <caret line="70" column="45" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/ActivityServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/AnnounceDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="92" column="32" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="32" />
+        <state relative-caret-position="1880">
+          <caret line="94" selection-start-line="94" selection-end-line="95" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/EmpAndInfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-825">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/employeeInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/testVue.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/actfileInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="35" column="17" lean-forward="true" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_Announce.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="209" column="52" lean-forward="true" selection-start-line="209" selection-start-column="52" selection-end-line="209" selection-end-column="52" />
+        <state relative-caret-position="1880">
+          <caret line="94" column="59" selection-start-line="94" selection-start-column="59" selection-end-line="94" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/AnnounceController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="105" column="7" lean-forward="true" selection-start-line="105" selection-start-column="7" selection-end-line="105" selection-end-column="7" />
+        <state relative-caret-position="370">
+          <caret line="244" selection-start-line="244" selection-end-line="244" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/utils/FileOperater.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        <state relative-caret-position="80">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/utils/Helper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/jobInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="66" column="9" lean-forward="true" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
+        <state relative-caret-position="489">
+          <caret line="102" column="33" lean-forward="true" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/announceInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/activityInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/planInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+        <state relative-caret-position="623">
+          <caret line="100" column="39" selection-start-line="100" selection-start-column="39" selection-end-line="100" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/personVote.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="21" column="100" lean-forward="true" selection-start-line="21" selection-start-column="100" selection-end-line="21" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/EmployeeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3280">
+          <caret line="191" column="24" selection-start-line="191" selection-start-column="24" selection-end-line="191" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActivityController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2180">
+          <caret line="136" column="22" selection-start-line="101" selection-start-column="7" selection-end-line="136" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_activity.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3180">
+          <caret line="159" column="71" selection-start-line="159" selection-start-column="71" selection-end-line="159" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/applyActivity.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6760">
+          <caret line="338" column="13" selection-start-line="338" selection-start-column="13" selection-end-line="338" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/activityDetail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5960">
+          <caret line="298" column="45" selection-start-line="298" selection-start-column="45" selection-end-line="298" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -1477,54 +2062,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/EmployeeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3280">
-          <caret line="191" column="24" selection-start-line="191" selection-start-column="24" selection-end-line="191" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/ActivityDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="120" column="116" selection-start-line="120" selection-start-column="116" selection-end-line="120" selection-end-column="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_activity.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3180">
-          <caret line="159" column="71" selection-start-line="159" selection-start-column="71" selection-end-line="159" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActivityController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2180">
-          <caret line="136" column="22" selection-start-line="101" selection-start-column="7" selection-end-line="136" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/activityDetail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5960">
-          <caret line="298" column="45" selection-start-line="298" selection-start-column="45" selection-end-line="298" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/applyActivity.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6760">
-          <caret line="338" column="13" selection-start-line="338" selection-start-column="13" selection-end-line="338" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employeeHome.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="352" column="41" selection-start-line="352" selection-start-column="41" selection-end-line="352" selection-end-column="41" />
+        <state relative-caret-position="600">
+          <caret line="281" column="29" selection-start-line="281" selection-start-column="29" selection-end-line="281" selection-end-column="29" />
           <folding>
+            <element signature="n#script#4;n#head#0;n#html#0;n#!!top" />
+            <element signature="n#script#5;n#head#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+            <element signature="n#style#1;n#head#0;n#html#0;n#!!top" />
+            <element signature="n#style#2;n#head#0;n#html#0;n#!!top" />
+            <element signature="n#style#3;n#head#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
@@ -1560,6 +2109,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>vue</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1571,7 +2121,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>9</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1588,7 +2138,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -1596,7 +2145,7 @@
       </state>
       <state key="ProjectJDKs.UI">
         <settings>
-          <last-edited>9</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1609,17 +2158,6 @@
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
           <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ScopeChooserConfigurable.UI">
-        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>
