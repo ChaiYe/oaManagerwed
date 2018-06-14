@@ -308,9 +308,9 @@
             <li class="layui-nav-item" style="float: right">
                 <a href="${pageContext.request.contextPath}/announce/jumpToAllAnnounce.action">公告<span class="layui-badge-dot"></span></a>
             </li>
-            <%--<li class="layui-nav-item" style="float: right">--%>
-                <%--<a href="${pageContext.request.contextPath}/activity/addActivityPage.action" style="display: inline;padding-left: 0px">活动<span class="layui-badge-dot"></span></a>--%>
-            <%--</li>--%>
+            <li class="layui-nav-item" style="float: right">
+                <a href="${pageContext.request.contextPath}/activity/applyActivityPage.action" style="display: inline;padding-left: 0px">申请活动<span class="layui-badge-dot"></span></a>
+            </li>
         </ul>
     </div>
 

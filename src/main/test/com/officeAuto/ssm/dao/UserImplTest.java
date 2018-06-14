@@ -22,8 +22,18 @@ public class UserImplTest {
 
     @Test
     public void test(){
-        ActfileDao dao = (ActfileDao) applicationContext.getBean("actfileDao");
-        List<ActFileAssociate> actFileAssociates = dao.getActFileByAct(1, null);
+        ActivityDao dao = (ActivityDao) applicationContext.getBean("activityDao");
+
+        Activity activity = new Activity();
+        activity.setName("testGetUuid");
+        activity.setState(0);
+        activity.setDescript("shuoldBeDelete");
+        activity.setEndtime(new Date());
+        activity.setBegintime(new Date());
+        activity.setDept(6);
+        activity.setEmployee(2);
+        int a = dao.insert(activity);
+        System.out.println(activity.getUuid());
         System.out.println();
     }
 

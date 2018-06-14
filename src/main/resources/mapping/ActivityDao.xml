@@ -118,7 +118,7 @@
         </foreach>
     </delete>
 
-    <insert id="insert" parameterType="com.officeAuto.ssm.model.Activity">
+    <insert id="insert" parameterType="com.officeAuto.ssm.model.Activity" useGeneratedKeys="true" keyProperty="uuid">
         insert into activity
         <trim prefix="(" suffix=")" suffixOverrides="," >
             <if test="uuid != null" >

@@ -153,11 +153,12 @@
                     },
                     success:function(data){
                         if(data.isSuccess){
-                            layer.alert(data.message, {title: '提示'});
-                            location.href = "${pageContext.request.contextPath}/employee/employeeHome.action";
+                            // layer.alert(data.message, {title: '提示'});
+                            location.href = "${pageContext.request.contextPath}/activity/activityDetailPage/" + data.actid + ".action";
                         }
                         else{
                             // layer.alert(data.message, {title: '提示'});
+                            location.href = "${pageContext.request.contextPath}/employee/employeeHome.actiom";
                         }
                     }
                 });
@@ -243,6 +244,7 @@
             size: 36px;
         }
     </style>
+
 </head>
 <body>
 

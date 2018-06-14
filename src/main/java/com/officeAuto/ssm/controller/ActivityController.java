@@ -41,6 +41,12 @@ public class ActivityController {
 
     private int pageSize = 5;
 
+    /**
+     * 近期活动
+     * @param session
+     * @return
+     * @throws Exception
+     */
     @RequestMapping("recentActivity")
     @ResponseBody
     public List<ActivityQueryModel> getRecentActivity(HttpSession session) throws Exception {
@@ -98,6 +104,7 @@ public class ActivityController {
         String message;
 
         EmployeeAndInfo employeeAndInfo = (EmployeeAndInfo)session.getAttribute("employee");
+        Activity activity = new Activity();
 
         //失败信息
         if(employeeAndInfo == null){
@@ -106,7 +113,6 @@ public class ActivityController {
         }
         else{
             //设置数据
-            Activity activity = new Activity();
             activity.setEmployee(employeeAndInfo.getUuid());
             activity.setDept(Integer.parseInt(map.get("dept")));
             Date begin = Helper.convert(map.get("begintime"));
@@ -122,11 +128,28 @@ public class ActivityController {
             //成功信息
             isSuccess = true;
             message = "成功发布，请到详情页查看或修改";
+            result.put("actid", activity.getUuid());
         }
         //返回信息
         result.put("isSuccess", isSuccess);
         result.put("message", message);
+        result.put("actid", activity.getUuid());
         return result;
+    }
+
+    /**
+     * 申请活动
+     * @param session
+     * @param modelMap
+     * @return
+     */
+    @RequestMapping("applyActivityPage")
+    public String applyActivity(HttpSession session, ModelMap modelMap){
+        List<JobQueryModel> jobs = ((EmployeeAndInfo)session.getAttribute("employee")).getJobs();
+        List<JobQueryModel> list = list = Helper.jobNoRepeat(jobs);
+
+        modelMap.addAttribute("depts", list);
+        return "applyActivity";
     }
 
     /**
