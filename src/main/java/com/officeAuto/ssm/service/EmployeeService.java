@@ -85,4 +85,6 @@ public interface EmployeeService {
      * @return
      */
     Integer  findByPhone(String phone);
+
+    void add(EmployeeAndInfo employeeAndInfo);
 }

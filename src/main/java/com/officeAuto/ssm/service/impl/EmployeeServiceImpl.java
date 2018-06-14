@@ -3,6 +3,7 @@ package com.officeAuto.ssm.service.impl;
 
 import com.officeAuto.ssm.dao.system.EmployeeDao;
 import com.officeAuto.ssm.model.Employee;
+import com.officeAuto.ssm.model.EmployeeAndInfo;
 import com.officeAuto.ssm.service.EmployeeService;
 import com.officeAuto.ssm.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -73,6 +74,11 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public Integer findByPhone(String phone) {
         return employeeDao.findByPhone(phone);
+    }
+
+    @Override
+    public void add(EmployeeAndInfo employeeAndInfo) {
+        employeeDao.add(employeeAndInfo);
     }
 
 

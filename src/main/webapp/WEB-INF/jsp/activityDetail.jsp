@@ -317,6 +317,9 @@
         .btn-floating>i{
             size: 36px;
         }
+        .item-content-main{
+            line-height: 24px;
+        }
     </style>
 </head>
 <body>
@@ -375,7 +378,10 @@
                     <div style="margin: 10px;">
                         <%--主题信息--%>
                         <div class="item">
-                            <div class="item-logo"><i class="layui-icon">&#xe629;</i></div>
+                            <a href="${pageContext.request.contextPath}/vote/jumpToPersonVoteList.action?activityId=${activity.uuid}">
+                                <div class="item-logo"><i class="layui-icon">&#xe629;</i></div>
+                            </a>
+
                             <div class="item-content">
                                 <div class="item-content-title">
                                     ${activity.name}
@@ -404,15 +410,18 @@
                                         </c:otherwise>
                                     </c:choose>
                                     <div><i class="layui-icon">&#xe613;</i>${activity.depart.name}</div>
+
+                                    <div>
+                                        <a href="${pageContext.request.contextPath}/vote/jumpToAddVote.action?activity=${activity.uuid}">添加投票</a>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
                         <%--里程碑--%>
 
 
-                         <div>
-                             <a href="${pageContext.request.contextPath}/vote/jumpToAddVote.action?activity=${activity.uuid}">添加投票</a>
-                         </div>
+
                         <div>
                             <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
                                 <legend>活动时间线：里程碑</legend>
@@ -556,7 +565,7 @@
         <%--文件模块--%>
         <div class="layui-col-xs3">
             <div style="flex-grow: 1" class="item-panel">
-                <div style="margin: 20px;">
+                <div style="margin:0 20px;">
                     <h3 style="padding-top: 10px">文件列表</h3>
 
                     <hr class="layui-bg-gray">

@@ -70,4 +70,6 @@ public interface EmployeeAndInfoDao extends BaseDao<EmployeeAndInfo> {
      * @param password  新密码
      */
     void forgetPassword(@Param("phone")String phone, @Param("passWord")String password) ;
+
+    void add(EmployeeInfo employeeInfo);
 }

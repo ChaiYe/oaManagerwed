@@ -41,4 +41,9 @@
       )
   </insert>
 
+
+  <select id="findByActivity" resultType="com.officeAuto.ssm.model.Vote">
+    select * from vote WHERE  activity=#{activityId}
+  </select>
+
 </mapper>

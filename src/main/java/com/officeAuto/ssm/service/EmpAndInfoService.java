@@ -122,4 +122,6 @@ public interface EmpAndInfoService {
      * @param password 新密码
      */
     void forgetPassword(String phone, String password);
+
+    void add(EmployeeInfo employeeInfo);
 }

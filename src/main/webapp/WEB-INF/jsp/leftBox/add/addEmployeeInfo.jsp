@@ -64,14 +64,14 @@
                         <div class="layui-form-item">
                             <label class="layui-form-label">账号</label>
                             <div class="layui-input-block">
-                                <input type="text" name="account" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input" value="A004">
+                                <input type="text" name="account" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input" >
                             </div>
                         </div>
 
                         <div class="layui-form-item">
                             <label class="layui-form-label">姓名</label>
                             <div class="layui-input-block">
-                                <input type="text" name="name" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input" value="王城">
+                                <input type="text" name="name" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input" >
                             </div>
                         </div>
 
@@ -80,9 +80,9 @@
                         <div class="layui-form-item">
                             <label class="layui-form-label">密码框</label>
                             <div class="layui-input-inline">
-                                <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input" value="123">
+                                <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input" >
                             </div>
-                            <div class="layui-form-mid layui-word-aux">辅助文字</div>
+
                         </div>
                         <div class="layui-form-item">
                             <label class="layui-form-label">性别</label>
@@ -98,25 +98,25 @@
                         <div class="layui-form-item">
                             <label class="layui-form-label">生日</label>
                             <div class="layui-inline">
-                                <input type="text" class="layui-input" id="test1">
+                                <input type="text" class="layui-input" id="date">
                             </div>
                         </div>
                         <div class="layui-form-item">
                             <label class="layui-form-label">电话</label>
                             <div class="layui-input-block">
-                                <input type="text" name="phone" required  lay-verify="required" placeholder="请输入电话号码" autocomplete="off" class="layui-input" value="1883423544">
+                                <input type="text" name="phone" required  lay-verify="required" placeholder="请输入电话号码" autocomplete="off" class="layui-input" >
                             </div>
                         </div>
                         <div class="layui-form-item">
                             <label class="layui-form-label">住址</label>
                             <div class="layui-input-block">
-                                <input type="text" name="address" required  lay-verify="required" placeholder="请输入住址" autocomplete="off" class="layui-input" value="广东省肇庆市">
+                                <input type="text" name="address" required  lay-verify="required" placeholder="请输入住址" autocomplete="off" class="layui-input" >
                             </div>
                         </div>
                         <div class="layui-form-item">
                             <label class="layui-form-label">邮件</label>
                             <div class="layui-input-block">
-                                <input type="text" name="email" required  lay-verify="required" placeholder="请输入邮件" autocomplete="off" class="layui-input" value="2344341214@qq.com">
+                                <input type="text" name="email" required  lay-verify="required" placeholder="请输入邮件" autocomplete="off" class="layui-input">
                             </div>
                         </div>
                         <div class="layui-form-item">
@@ -140,6 +140,23 @@
                         });
 
                     </script>--%>
+                    <script>
+                        layui.use(['form', 'layedit', 'laydate'], function(){
+                            var form = layui.form
+                                ,layer = layui.layer
+                                ,layedit = layui.layedit
+                                ,laydate = layui.laydate;
+
+                            //日期
+                            laydate.render({
+                                elem: '#date'
+                            });
+                            laydate.render({
+                                elem: '#date1'
+                            });
+                        });
+
+                    </script>
                 </div>
             </div>
         </div>

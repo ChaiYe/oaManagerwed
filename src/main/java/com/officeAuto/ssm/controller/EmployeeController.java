@@ -347,7 +347,7 @@ public class EmployeeController {
     public String delete(Integer uuid) throws Exception
     {
         employeeService.deleteById(uuid);
-        return  "redirect:/Employee/getEmployeeByPage.action";
+        return  "redirect:/employee/getEmployeeByPage.action";
     }
 
     @RequestMapping("jumpToAdd")
@@ -357,13 +357,13 @@ public class EmployeeController {
     }
 
     @RequestMapping("insert")
-    public String insert(Employee Employee) throws Exception
+    public String insert(Employee employee) throws Exception
     {
-        Employee.setCreatetime(new Date());
-        /*Employee.setDept(1);
-        Employee.setEmployee(1);*/
-        employeeService.insert(Employee);
-        return  "redirect:/Employee/getEmployeeByPage.action";
+        employee.setCreatetime(new Date());
+        employee.setState("在职");
+
+        employeeService.insert(employee);
+        return  "redirect:/employee/getEmployeeByPage.action";
     }
 
     @RequestMapping("jumpToEdit")
@@ -379,7 +379,7 @@ public class EmployeeController {
     {
         Employee.setUuid(uuid);
         employeeService.update(Employee);
-        return "redirect:/Employee/getEmployeeByPage.action";
+        return "redirect:/employee/getEmployeeByPage.action";
     }
 
     @RequestMapping("deletes")
@@ -393,7 +393,19 @@ public class EmployeeController {
         }
 
         employeeService.delete(delitems);
-        return "redirect:/Employee/getEmployeeByPage.action";
+        return "redirect:/employee/getEmployeeByPage.action";
+    }
+
+    @RequestMapping("add")
+    public String add(Employee employee,EmployeeInfo employeeInfo) throws Exception
+    {
+        employee.setCreatetime(new Date());
+        employee.setState("在职");
+        employee.setUuid(employeeService.findCount()+1);
+        employeeInfo.setId(employee.getUuid());
+        employeeService.insert(employee);
+        empAndInfoService.add(employeeInfo);
+        return  "redirect:/employee/getEmployeeByPage.action";
     }
 
 }

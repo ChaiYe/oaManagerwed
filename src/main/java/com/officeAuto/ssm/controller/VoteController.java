@@ -2,11 +2,10 @@ package com.officeAuto.ssm.controller;
 
 
 
-import com.officeAuto.ssm.model.Actfile;
-import com.officeAuto.ssm.model.Actvote;
-import com.officeAuto.ssm.model.Employee;
-import com.officeAuto.ssm.model.Vote;
+import com.officeAuto.ssm.model.*;
+import com.officeAuto.ssm.service.ActivityService;
 import com.officeAuto.ssm.service.ActvoteService;
+import com.officeAuto.ssm.service.DeptService;
 import com.officeAuto.ssm.service.VoteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
@@ -21,6 +20,7 @@ import javax.servlet.http.HttpSession;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 @Controller
 @RequestMapping("/vote")
@@ -30,6 +30,11 @@ public class VoteController {
     private VoteService voteService;
     @Autowired
     private ActvoteService actvoteService;
+    @Autowired
+    private DeptService deptService;
+    @Autowired
+    private ActivityService activityService;
+
 
     @InitBinder
     public void InitBinder(WebDataBinder binder){
@@ -55,8 +60,11 @@ public class VoteController {
     }
 
     @RequestMapping("jumpToAddVote")
-    public String jumpToAddVote(String activity, Model model)
-    {
+    public String jumpToAddVote(String activity, Model model) throws Exception {
+       /* List<Dept> depts =deptService.findAll();*/
+        List<Activity> activities=activityService.findAll();
+        model.addAttribute("activities",activities);
+        /*model.addAttribute("depts",depts);*/
         model.addAttribute("activity",activity);
         return "voteinfo";
     }
@@ -72,10 +80,24 @@ public class VoteController {
 
         }
         else{
+            Date date=new Date();
             Vote vote=voteService.findById(voteId);
+            model.addAttribute("date",date);
             model.addAttribute("vote",vote);
         }
 
         return "personVote";
+    }
+
+
+    @RequestMapping("jumpToPersonVoteList")
+    public  String jumpToPersonVoteList(Integer activityId,Model model){
+
+        List <Vote> votes= voteService.findByActivity(activityId);
+
+        model.addAttribute("votes",votes);
+        model.addAttribute("activityId",activityId);
+
+        return "personVoteList";
     }
 }

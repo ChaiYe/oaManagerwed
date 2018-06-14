@@ -1,6 +1,7 @@
 package com.officeAuto.ssm.dao.system;
 
 import com.officeAuto.ssm.dao.BaseDao;
+import com.officeAuto.ssm.model.Activity;
 import com.officeAuto.ssm.model.Vote;
 import com.officeAuto.ssm.model.VoteQueryModel;
 import org.apache.ibatis.annotations.Param;
@@ -14,5 +15,5 @@ public interface VoteDao extends BaseDao<Vote> {
     List<VoteQueryModel> getByAct(@Param("actid")Integer actid);
 
 
-
+    List<Vote> findByActivity(Integer activityId);
 }

@@ -118,22 +118,22 @@
 
 
                         <ul class="pageMenu clearfix">
-                            <li class="firstPage">首页</li>
+                            <%--<li class="firstPage">首页</li>--%>
                             <li class="prevPage"> < </li>
                             <div class="pageObj clearfix">
-                                <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${actoptionPageBean.currentPage-2}">${actoptionPageBean.currentPage-2}</a></li>
-                                <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${actoptionPageBean.currentPage-1}">${actoptionPageBean.currentPage-1}</a></li>
+                                <%--<li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${actoptionPageBean.currentPage-2}">${actoptionPageBean.currentPage-2}</a></li>
+                                <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${actoptionPageBean.currentPage-1}">${actoptionPageBean.currentPage-1}</a></li>--%>
                                 <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${actoptionPageBean.currentPage}">${actoptionPageBean.currentPage}</a></li>
                                 <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${actoptionPageBean.currentPage+1}">${actoptionPageBean.currentPage+1}</a></li>
                                 <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${actoptionPageBean.currentPage+2}">${actoptionPageBean.currentPage+2}</a></li>
 
                             </div>
                             <li class="nextPage"> > </li>
-                            <li class="lastPage">尾页</li>
-                            <li class="last" style="font-size: 14px;">
+                           <%-- <li class="lastPage">尾页</li>--%>
+                            <%--<li class="last" style="font-size: 14px;">
                                 共<span class="totalPage"></span>页，跳转至 <input type="number" class="keuInput" value="1">
                                 <button type="button" class="btnSure">确定</button>
-                            </li>
+                            </li>--%>
                         </ul>
                     </div>
                 </div>

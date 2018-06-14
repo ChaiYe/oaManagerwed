@@ -8,6 +8,36 @@
   <component name="ChangeListManager">
     <list default="true" id="0bc6e281-01c3-4673-8e4b-0cb9b0897242" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/EmployeeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/EmployeeController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/VoteController.java" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/VoteController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/EmployeeAndInfoDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/EmployeeAndInfoDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/EmployeeDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/EmployeeDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/VoteDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/VoteDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/EmpAndInfoService.java" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/EmpAndInfoService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/EmployeeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/EmployeeService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/VoteService.java" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/VoteService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/EmpAndInfoServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/EmpAndInfoServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/EmployeeServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/EmployeeServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/VoteServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/VoteServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/EmployeeAndInfoDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/EmployeeAndInfoDao.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/EmployeeDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/EmployeeDao.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/VoteDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/VoteDao.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/activityDetail.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/activityDetail.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employeeHome.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employeeHome.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/actfileInfo.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/actfileInfo.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/activityInfo.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/activityInfo.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/actoptionInfo.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/actoptionInfo.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/add/addEmployeeInfo.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/add/addEmployeeInfo.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/announceInfo.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/announceInfo.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/deptInfo.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/deptInfo.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/employeeInfo.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/employeeInfo.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/jobInfo.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/jobInfo.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/planInfo.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/planInfo.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/management.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/management.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/personVote.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/personVote.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/retrieve_password.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/retrieve_password.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/voteinfo.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/voteinfo.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -68,118 +98,132 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="525">
-      <file leaf-file-name="AnnounceDao.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/AnnounceDao.xml">
+      <file leaf-file-name="EmployeeinfoDao.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/EmployeeinfoDao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2162">
-              <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1528937958155" expanded="true" signature="2027:2120" ph="select * fro... announce" />
-                <marker date="1528937958155" expanded="true" signature="2217:2239" ph="select * fro... announce" />
-                <marker date="1528937958155" expanded="true" signature="2322:2351" ph="select count... announce" />
-                <marker date="1528937958155" expanded="true" signature="2449:2488" ph="select * fro... announce" />
-                <marker date="1528937958155" expanded="true" signature="3248:3410" ph="select * fro... announce" />
-                <marker date="1528937958155" expanded="true" signature="3503:3759" ph="select annou... announce" />
-                <marker date="1528937958155" expanded="true" signature="3846:4140" ph="select disti... employee" />
-                <marker date="1528937958155" expanded="true" signature="3846:4141" ph="select annou... employee" />
-                <marker date="1528937958155" expanded="true" signature="4233:4270" ph="DELETE FROM announce... " />
-                <marker date="1528937958155" expanded="true" signature="5803:6465" ph="update announce... " />
+                <marker date="1528340998807" expanded="true" signature="295:384" ph="select * fro... dept" />
+                <marker date="1528340998807" expanded="true" signature="465:490" ph="select count... dept" />
+                <marker date="1528340998807" expanded="true" signature="584:619" ph="select * fro... dept" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VoteController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/VoteController.java">
+      <file leaf-file-name="EmployeeService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/EmployeeService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1196">
-              <caret line="70" column="45" lean-forward="false" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="45" />
+            <state relative-caret-position="3360">
+              <caret line="88" column="22" lean-forward="false" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AnnounceController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/AnnounceController.java">
+      <file leaf-file-name="EmployeeAndInfoDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/EmployeeAndInfoDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="244" column="0" lean-forward="true" selection-start-line="244" selection-start-column="0" selection-end-line="244" selection-end-column="0" />
+            <state relative-caret-position="2720">
+              <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/EmployeeDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/EmployeeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="404" column="47" lean-forward="false" selection-start-line="404" selection-start-column="47" selection-end-line="404" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeAndInfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/EmployeeAndInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JobDao.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/JobDao.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3720">
+              <caret line="93" column="17" lean-forward="false" selection-start-line="48" selection-start-column="8" selection-end-line="93" selection-end-column="17" />
               <folding>
-                <element signature="e#4280#4290#0" expanded="true" />
-                <element signature="e#6119#6139#0" expanded="true" />
-                <element signature="e#6197#6213#0" expanded="true" />
-                <element signature="e#6458#6468#0" expanded="true" />
+                <marker date="1528341741711" expanded="true" signature="288:376" ph="select * fro... Job" />
+                <marker date="1528341741711" expanded="true" signature="459:483" ph="select count... Job" />
+                <marker date="1528341741711" expanded="true" signature="576:610" ph="select * fro... Job" />
+                <marker date="1528341741711" expanded="true" signature="1338:1370" ph="DELETE FROM Job... " />
+                <marker date="1528341741711" expanded="true" signature="3243:4011" ph="update job... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activityDetail.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/activityDetail.jsp">
+      <file leaf-file-name="VoteDao.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/VoteDao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9499">
-              <caret line="413" column="91" lean-forward="false" selection-start-line="413" selection-start-column="78" selection-end-line="413" selection-end-column="91" />
+            <state relative-caret-position="1760">
+              <caret line="44" column="72" lean-forward="false" selection-start-line="44" selection-start-column="72" selection-end-line="44" selection-end-column="72" />
+              <folding>
+                <marker date="1528979139355" expanded="true" signature="1296:1530" ph="select vote.... vote" />
+                <marker date="1528979139355" expanded="true" signature="1619:1654" ph="select * fro... vote" />
+                <marker date="1528979139355" expanded="true" signature="1741:2187" ph="insert into vote... " />
+                <marker date="1528979139355" expanded="true" signature="2280:2328" ph="select * fro... vote" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeInfo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/EmployeeInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activityInfo.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/activityInfo.jsp">
+      <file leaf-file-name="EmployeeAndInfoDao.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/EmployeeAndInfoDao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="announceInfo.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/announceInfo.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jobInfo.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/jobInfo.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2185">
-              <caret line="95" column="120" lean-forward="false" selection-start-line="95" selection-start-column="120" selection-end-line="95" selection-end-column="120" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="planInfo.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/planInfo.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2300">
-              <caret line="100" column="39" lean-forward="false" selection-start-line="100" selection-start-column="39" selection-end-line="100" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="employeeInfo.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/employeeInfo.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="actfileInfo.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/actfileInfo.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2162">
-              <caret line="94" column="59" lean-forward="false" selection-start-line="94" selection-start-column="59" selection-end-line="94" selection-end-column="59" />
-              <folding />
+            <state relative-caret-position="7880">
+              <caret line="197" column="14" lean-forward="false" selection-start-line="197" selection-start-column="14" selection-end-line="197" selection-end-column="14" />
+              <folding>
+                <marker date="1528989459865" expanded="true" signature="2715:3257" ph="select emplo... employee" />
+                <marker date="1528989459865" expanded="true" signature="3333:3845" ph="select emplo... employee" />
+                <marker date="1528989459865" expanded="true" signature="3921:4036" ph="select emplo... employee" />
+                <marker date="1528989459865" expanded="true" signature="4143:4457" ph="select emplo... employee" />
+                <marker date="1528989459865" expanded="true" signature="4540:4577" ph="select count... employee" />
+                <marker date="1528989459865" expanded="true" signature="4682:4798" ph="select * fro... employee" />
+                <marker date="1528989459865" expanded="true" signature="4885:4959" ph="select * fro... employee" />
+                <marker date="1528989459865" expanded="true" signature="5330:5407" ph="update employeeinfo... " />
+                <marker date="1528989459865" expanded="true" signature="5469:6266" ph="update employeeinfo... " />
+                <marker date="1528989459865" expanded="true" signature="6322:6399" ph="update employee... " />
+                <marker date="1528989459865" expanded="true" signature="6457:6536" ph="update employee... " />
+                <marker date="1528989459865" expanded="true" signature="6595:6729" ph="update employee... " />
+                <marker date="1528989459865" expanded="true" signature="6595:6737" ph="update employee... " />
+                <marker date="1528989459865" expanded="true" signature="6792:6804" ph="insert into employeeinfo... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -199,13 +243,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Job</find>
-      <find>Actfile</find>
-      <find>TEXT</find>
-      <find>job</find>
-      <find>pageBean</find>
-      <find>Dept</find>
-      <find>Announce</find>
       <find>Query</find>
       <find>descript</find>
       <find>announce</find>
@@ -225,10 +262,17 @@
       <find>信息</find>
       <find>投票</find>
       <find>session</find>
-      <find>修改</find>
       <find>actoption</find>
       <find>hr</find>
       <find>AnnounceDpet</find>
+      <find>item-logo</find>
+      <find>添加投票</find>
+      <find>添加</find>
+      <find>add</find>
+      <find>ins</find>
+      <find>.item-panel</find>
+      <find>修改</find>
+      <find>item-panel</find>
     </findStrings>
     <replaceStrings>
       <replace>userName</replace>
@@ -271,57 +315,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/add/addJobInfo.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/add/addPlanInfo.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/add/addActivityInfo.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/employeeHome.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/AnnounceWithDept.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/AnnounceService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/AnnounceServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/test/com/officeAuto/ssm/dao/UserImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/AnnounceDao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/allAnnounce.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/AnnounceController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_activity.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapping/EmployeeAndInfoDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/EmployeeAndInfoDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/EmployeeService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/EmployeeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/EmployeeDao.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapping/EmployeeDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/EmpAndInfoService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/EmpAndInfoServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/EmployeeController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/EmployeeController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/retrieve_password.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/vote.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/Vote.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/VoteDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActivityController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActivityController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/activityDetail.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/interceptor/HandlerInterceptor1.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/voteinfo.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/utils/DateConverter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/ActvoteService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/ActvoteServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/ActvoteDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/VoteService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/VoteServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/VoteController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapping/VoteDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/personVote.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/Actvote.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapping/ActvoteDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActvoteController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employeeHome.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/mapping/AnnounceDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/jobInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/personVote.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/VoteService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/VoteServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/VoteDao.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/VoteDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/VoteController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/voteinfo.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/planInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/announceInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/actoptionInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/deptInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/employeeInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/jobInfo.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/actfileInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/activityInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/EmployeeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/EmployeeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/EmployeeDao.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/EmployeeDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/management.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/personVoteList.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/activityDetail.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employeeHome.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/retrieve_password.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/add/addEmployeeInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/EmpAndInfoService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/EmpAndInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/EmployeeAndInfoDao.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapping/EmployeeAndInfoDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/EmployeeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/EmployeeController.java" />
       </list>
     </option>
   </component>
@@ -392,7 +436,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -470,6 +513,25 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ssm" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oaManagerwed" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oaManagerwed" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oaManagerwed" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oaManagerwed" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ssm" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -502,32 +564,14 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="oaManagerwed" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oaManagerwed" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="oaManagerwed" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oaManagerwed" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="leftBox" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1025,7 +1069,10 @@
       <workItem from="1528876515005" duration="7638000" />
       <workItem from="1528890190779" duration="13967000" />
       <workItem from="1528934913077" duration="5504000" />
-      <workItem from="1528943060447" duration="122000" />
+      <workItem from="1528943060447" duration="785000" />
+      <workItem from="1528945583299" duration="596000" />
+      <workItem from="1528974941486" duration="15535000" />
+      <workItem from="1528990535838" duration="60000" />
     </task>
     <task id="LOCAL-00001" summary="add sqlSessionTemplate">
       <created>1527601536294</created>
@@ -1097,7 +1144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1528943177019</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="修改tomcat名为9&#10;sdks名为9">
+      <created>1528943214684</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1528943214684</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1133,7 +1187,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="372275000" />
+    <option name="totallyTimeSpent" value="389129000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1145,35 +1199,34 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1113" height="593" extended-state="6" />
-    <editor active="true" />
+    <frame x="-12" y="-12" width="1944" height="1034" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47761193" sideWeight="0.25490198" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.325887" sideWeight="0.4978308" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3285151" sideWeight="0.5791757" order="15" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291757" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26253298" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2489154" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30063966" sideWeight="0.74509805" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.110381074" sideWeight="0.74509805" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.325887" sideWeight="0.49566162" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3285151" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33941093" sideWeight="0.4534384" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.03547963" sideWeight="0.61408883" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.4534384" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18002628" sideWeight="0.61408883" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819074" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3285151" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29131654" sideWeight="0.5540541" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38557485" sideWeight="0.5540541" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29229936" sideWeight="0.50765866" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31832972" sideWeight="0.44594595" order="6" side_tool="true" content_ui="tabs" />
@@ -1280,7 +1333,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="102" />
+      <option name="time" value="106" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1301,263 +1354,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/EmployeeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/PlanServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-240">
-          <caret line="19" column="4" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="20" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/EmployeeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2574">
-          <caret line="86" column="13" lean-forward="false" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/EmpAndInfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4080">
-          <caret line="123" column="54" lean-forward="false" selection-start-line="123" selection-start-column="54" selection-end-line="123" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/PlanDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="86" column="40" lean-forward="false" selection-start-line="86" selection-start-column="24" selection-end-line="86" selection-end-column="40" />
-          <folding>
-            <marker date="1528340998819" expanded="true" signature="290:379" ph="select * fro... Plan" />
-            <marker date="1528340998819" expanded="true" signature="462:487" ph="select count... Plan" />
-            <marker date="1528340998819" expanded="true" signature="581:616" ph="select * fro... Plan" />
-            <marker date="1528340998819" expanded="true" signature="1347:1380" ph="DELETE FROM Plan... " />
-            <marker date="1528340998819" expanded="true" signature="3270:4048" ph="update plan... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/EmployeeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="39" column="8" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/EmpAndInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="108" column="61" lean-forward="false" selection-start-line="108" selection-start-column="61" selection-end-line="108" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/PlanController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="50" column="11" lean-forward="false" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/management.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-80">
-          <caret line="107" column="112" lean-forward="false" selection-start-line="107" selection-start-column="80" selection-end-line="107" selection-end-column="112" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/edit/editAnnounceInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="65" column="85" lean-forward="false" selection-start-line="65" selection-start-column="69" selection-end-line="65" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_activity.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1320">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employeeInfoEdit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3040">
-          <caret line="272" column="14" lean-forward="false" selection-start-line="272" selection-start-column="14" selection-end-line="272" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/JobController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3974">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/EmployeeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8352">
-          <caret line="243" column="9" lean-forward="true" selection-start-line="243" selection-start-column="9" selection-end-line="243" selection-end-column="9" />
-          <folding>
-            <element signature="e#7099#7100#0" expanded="false" />
-            <element signature="e#7141#7142#0" expanded="false" />
-            <element signature="e#8342#8343#0" expanded="false" />
-            <element signature="e#8383#8384#0" expanded="false" />
-            <element signature="e#9120#9121#0" expanded="false" />
-            <element signature="e#9155#9156#0" expanded="false" />
-            <element signature="e#9264#9265#0" expanded="false" />
-            <element signature="e#9305#9306#0" expanded="false" />
-            <element signature="e#10335#10336#0" expanded="false" />
-            <element signature="e#10388#10389#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/utils/Helper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2240">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3600">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/utils/DateConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/exception/AnnounceException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/interceptor/HandlerInterceptor1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-859">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/voteinfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/ActvoteServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="77" column="49" lean-forward="false" selection-start-line="77" selection-start-column="49" selection-end-line="77" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/VoteService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/VoteDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/VoteServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="26" column="40" lean-forward="true" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/PlanService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1000">
-          <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/EmployeeAndInfoDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="71" column="39" lean-forward="true" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActvoteController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="137" column="64" lean-forward="false" selection-start-line="137" selection-start-column="64" selection-end-line="137" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/EmployeeAndInfoDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2914">
-          <caret line="163" column="149" lean-forward="true" selection-start-line="163" selection-start-column="7" selection-end-line="163" selection-end-column="149" />
-          <folding>
-            <marker date="1528868087345" expanded="true" signature="2715:3257" ph="select emplo... employee" />
-            <marker date="1528868087345" expanded="true" signature="3333:3845" ph="select emplo... employee" />
-            <marker date="1528868087345" expanded="true" signature="3921:4036" ph="select emplo... employee" />
-            <marker date="1528868087345" expanded="true" signature="4143:4457" ph="select emplo... employee" />
-            <marker date="1528868087345" expanded="true" signature="4540:4577" ph="select count... employee" />
-            <marker date="1528868087345" expanded="true" signature="4682:4798" ph="select * fro... employee" />
-            <marker date="1528868087345" expanded="true" signature="4885:4959" ph="select * fro... employee" />
-            <marker date="1528868087345" expanded="true" signature="5330:5407" ph="update employeeinfo... " />
-            <marker date="1528868087345" expanded="true" signature="5469:6266" ph="update employeeinfo... " />
-            <marker date="1528868087345" expanded="true" signature="6322:6399" ph="update employee... " />
-            <marker date="1528868087345" expanded="true" signature="6457:6536" ph="update employee... " />
-            <marker date="1528868087345" expanded="true" signature="6595:6729" ph="update employee... " />
-            <marker date="1528868087345" expanded="true" signature="6595:6737" ph="update employee... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/personVote.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="21" column="100" lean-forward="true" selection-start-line="21" selection-start-column="100" selection-end-line="21" selection-end-column="112" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/ActvoteDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="9" column="39" lean-forward="false" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/BaseDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1007">
@@ -1569,12 +1365,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding>
-            <element signature="e#506#507#0" expanded="false" />
-            <element signature="e#533#534#0" expanded="false" />
-            <element signature="e#574#575#0" expanded="false" />
-            <element signature="e#606#607#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1582,36 +1372,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="30" column="15" lean-forward="false" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/retrieve_password.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="77" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="12" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/VoteDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="29" column="22" lean-forward="false" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
-          <folding>
-            <marker date="1528899580487" expanded="true" signature="1296:1530" ph="select vote.... vote" />
-            <marker date="1528899580487" expanded="true" signature="1619:1654" ph="select * fro... vote" />
-            <marker date="1528899580487" expanded="true" signature="1741:2187" ph="insert into vote... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employeeHome.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="442" column="41" lean-forward="true" selection-start-line="442" selection-start-column="41" selection-end-line="442" selection-end-column="41" />
-          <folding>
-            <marker date="1528906730846" expanded="true" signature="1837:1857" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1656,21 +1416,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2047">
           <caret line="218" column="69" lean-forward="true" selection-start-line="218" selection-start-column="69" selection-end-line="218" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/VoteController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1196">
-          <caret line="70" column="45" lean-forward="false" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/AnnounceDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2162">
+        <state relative-caret-position="40">
           <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
           <folding>
             <marker date="1528937958155" expanded="true" signature="2027:2120" ph="select * fro... announce" />
@@ -1687,72 +1438,364 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/activityDetail.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/AnnounceController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9499">
-          <caret line="413" column="91" lean-forward="false" selection-start-line="413" selection-start-column="78" selection-end-line="413" selection-end-column="91" />
+        <state relative-caret-position="2027">
+          <caret line="252" column="0" lean-forward="false" selection-start-line="252" selection-start-column="0" selection-end-line="252" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/activityInfo.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/VoteService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/VoteDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/VoteServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="34" column="35" lean-forward="true" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/DeptDao.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1528341741709" expanded="true" signature="714:803" ph="select * fro... Dept" />
+            <marker date="1528341741709" expanded="true" signature="886:911" ph="select count... Dept" />
+            <marker date="1528341741709" expanded="true" signature="1005:1040" ph="select * fro... Dept" />
+            <marker date="1528341741709" expanded="true" signature="1771:1804" ph="DELETE FROM Dept... " />
+            <marker date="1528341741709" expanded="true" signature="2928:3241" ph="update dept... " />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/announceInfo.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/add_activity.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-5160">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/accountSetting.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-360">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/jobInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2185">
-          <caret line="95" column="120" lean-forward="false" selection-start-line="95" selection-start-column="120" selection-end-line="95" selection-end-column="120" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/planInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2300">
-          <caret line="100" column="39" lean-forward="false" selection-start-line="100" selection-start-column="39" selection-end-line="100" selection-end-column="39" />
-          <folding />
+        <state relative-caret-position="449">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/employeeInfo.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/actoptionInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="440">
+          <caret line="131" column="31" lean-forward="false" selection-start-line="131" selection-start-column="27" selection-end-line="131" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/jobInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/actfileInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2162">
-          <caret line="94" column="59" lean-forward="false" selection-start-line="94" selection-start-column="59" selection-end-line="94" selection-end-column="59" />
+        <state relative-caret-position="360">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/activityInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-320">
+          <caret line="47" column="27" lean-forward="false" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="163" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/employeeInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="58" column="154" lean-forward="false" selection-start-line="58" selection-start-column="152" selection-end-line="58" selection-end-column="154" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.2.5.RELEASE/spring-web-4.2.5.RELEASE.jar!/org/springframework/web/bind/annotation/support/HandlerMethodInvoker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3098">
+          <caret line="157" column="0" lean-forward="false" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/EmployeeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="80" column="22" lean-forward="false" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/EmployeeDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="94" column="0" lean-forward="true" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding>
+            <marker date="1528984991578" expanded="true" signature="736:788" ph="select * fro... employee" />
+            <marker date="1528984991578" expanded="true" signature="888:981" ph="select * fro... employee" />
+            <marker date="1528984991578" expanded="true" signature="1064:1093" ph="select count... employee" />
+            <marker date="1528984991578" expanded="true" signature="1179:1290" ph="select count... employee" />
+            <marker date="1528984991578" expanded="true" signature="1388:1427" ph="select * fro... employee" />
+            <marker date="1528984991578" expanded="true" signature="1532:1604" ph="select * fro... employee" />
+            <marker date="1528984991578" expanded="true" signature="1692:1729" ph="DELETE FROM employee... " />
+            <marker date="1528984991578" expanded="true" signature="2046:2278" ph="insert into employee... " />
+            <marker date="1528984991578" expanded="true" signature="3632:4182" ph="update employee... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/deptInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="59" column="87" lean-forward="false" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/announceInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2609">
+          <caret line="140" column="32" lean-forward="true" selection-start-line="140" selection-start-column="32" selection-end-line="140" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/homepage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3901">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employeeHome.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="401" column="0" lean-forward="false" selection-start-line="401" selection-start-column="0" selection-end-line="401" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/personVote.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="11" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/retrieve_password.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="81" column="47" lean-forward="false" selection-start-line="81" selection-start-column="47" selection-end-line="81" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/management.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2604">
+          <caret line="105" column="0" lean-forward="true" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/personVoteList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="25" column="28" lean-forward="true" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/voteinfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3570">
+          <caret line="125" column="0" lean-forward="true" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/activityDetail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="571" column="0" lean-forward="true" selection-start-line="571" selection-start-column="0" selection-end-line="571" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="59" column="118" lean-forward="false" selection-start-line="59" selection-start-column="62" selection-end-line="59" selection-end-column="118" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/AnnounceController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/EmpAndInfoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="244" column="0" lean-forward="true" selection-start-line="244" selection-start-column="0" selection-end-line="244" selection-end-column="0" />
+        <state relative-caret-position="-732">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/add/addEmployeeInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3920">
+          <caret line="61" column="100" lean-forward="false" selection-start-line="61" selection-start-column="100" selection-end-line="61" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/VoteController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1680">
+          <caret line="66" column="44" lean-forward="false" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/EmpAndInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/EmpAndInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3040">
+          <caret line="114" column="28" lean-forward="true" selection-start-line="114" selection-start-column="28" selection-end-line="114" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/EmployeeAndInfoDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7880">
+          <caret line="197" column="14" lean-forward="false" selection-start-line="197" selection-start-column="14" selection-end-line="197" selection-end-column="14" />
           <folding>
-            <element signature="e#4280#4290#0" expanded="true" />
-            <element signature="e#6119#6139#0" expanded="true" />
-            <element signature="e#6197#6213#0" expanded="true" />
-            <element signature="e#6458#6468#0" expanded="true" />
+            <marker date="1528989459865" expanded="true" signature="2715:3257" ph="select emplo... employee" />
+            <marker date="1528989459865" expanded="true" signature="3333:3845" ph="select emplo... employee" />
+            <marker date="1528989459865" expanded="true" signature="3921:4036" ph="select emplo... employee" />
+            <marker date="1528989459865" expanded="true" signature="4143:4457" ph="select emplo... employee" />
+            <marker date="1528989459865" expanded="true" signature="4540:4577" ph="select count... employee" />
+            <marker date="1528989459865" expanded="true" signature="4682:4798" ph="select * fro... employee" />
+            <marker date="1528989459865" expanded="true" signature="4885:4959" ph="select * fro... employee" />
+            <marker date="1528989459865" expanded="true" signature="5330:5407" ph="update employeeinfo... " />
+            <marker date="1528989459865" expanded="true" signature="5469:6266" ph="update employeeinfo... " />
+            <marker date="1528989459865" expanded="true" signature="6322:6399" ph="update employee... " />
+            <marker date="1528989459865" expanded="true" signature="6457:6536" ph="update employee... " />
+            <marker date="1528989459865" expanded="true" signature="6595:6729" ph="update employee... " />
+            <marker date="1528989459865" expanded="true" signature="6595:6737" ph="update employee... " />
+            <marker date="1528989459865" expanded="true" signature="6792:6804" ph="insert into employeeinfo... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/EmployeeAndInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/EmployeeinfoDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1528340998807" expanded="true" signature="295:384" ph="select * fro... dept" />
+            <marker date="1528340998807" expanded="true" signature="465:490" ph="select count... dept" />
+            <marker date="1528340998807" expanded="true" signature="584:619" ph="select * fro... dept" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/JobDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3720">
+          <caret line="93" column="17" lean-forward="false" selection-start-line="48" selection-start-column="8" selection-end-line="93" selection-end-column="17" />
+          <folding>
+            <marker date="1528341741711" expanded="true" signature="288:376" ph="select * fro... Job" />
+            <marker date="1528341741711" expanded="true" signature="459:483" ph="select count... Job" />
+            <marker date="1528341741711" expanded="true" signature="576:610" ph="select * fro... Job" />
+            <marker date="1528341741711" expanded="true" signature="1338:1370" ph="DELETE FROM Job... " />
+            <marker date="1528341741711" expanded="true" signature="3243:4011" ph="update job... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapping/VoteDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1760">
+          <caret line="44" column="72" lean-forward="false" selection-start-line="44" selection-start-column="72" selection-end-line="44" selection-end-column="72" />
+          <folding>
+            <marker date="1528979139355" expanded="true" signature="1296:1530" ph="select vote.... vote" />
+            <marker date="1528979139355" expanded="true" signature="1619:1654" ph="select * fro... vote" />
+            <marker date="1528979139355" expanded="true" signature="1741:2187" ph="insert into vote... " />
+            <marker date="1528979139355" expanded="true" signature="2280:2328" ph="select * fro... vote" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/EmployeeInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/EmployeeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3360">
+          <caret line="88" column="22" lean-forward="false" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/EmployeeAndInfoDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2720">
+          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/EmployeeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/EmployeeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="404" column="47" lean-forward="false" selection-start-line="404" selection-start-column="47" selection-end-line="404" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>

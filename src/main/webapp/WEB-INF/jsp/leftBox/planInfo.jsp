@@ -47,8 +47,8 @@
                 <span class="panel-header-left">公告管理</span>
                 <span class="panel-header-right">
                         <a href="${pageContext.request.contextPath}/plan/jumpToAdd.action" class="layui-btn layui-btn-sm panel-header-right-btn">添加</a>
-                        <a href="${pageContext.request.contextPath}/plan/findone.action?id=100" class="layui-btn layui-btn-sm panel-header-right-btn">添加</a>
-
+                       <%-- <a href="${pageContext.request.contextPath}/plan/findone.action?id=100" class="layui-btn layui-btn-sm panel-header-right-btn">添加</a>
+--%>
                     </span>
             </div>
             <div class="content-page">
@@ -57,18 +57,18 @@
                     <div style="margin-top: 24px">
                         <div style="display: inline;">
                             <div style="display: inline;">
-                                每页显示条数：<input type="text"/>
+                               <%-- 每页显示条数：<input type="text"/>--%>
                                 <a href="javascript:void(0);" onclick="deletes()">批量删除</a>
                             </div>
                         </div>
                         <div style="display: inline;float: right">
-                            <div style="display: inline;">
+                            <%--<div style="display: inline;">
                                 筛选：<input type="text" name="queryAcount1"/>
                                             ~
                                 <input type="text" name="queryAcount2">
 
                                 <input type="submit" value="提交">
-                            </div>
+                            </div>--%>
                         </div>
 
                     </div>
@@ -123,22 +123,56 @@
 
 
                         <ul class="pageMenu clearfix">
-                            <li class="firstPage">首页</li>
+                            <%--<li class="firstPage">首页</li>--%>
                             <li class="prevPage"> < </li>
                             <div class="pageObj clearfix">
-                                <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${planPageBean.currentPage-2}">${planPageBean.currentPage-2}</a></li>
-                                <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${planPageBean.currentPage-1}">${planPageBean.currentPage-1}</a></li>
+                               <%-- <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${planPageBean.currentPage-2}">${planPageBean.currentPage-2}</a></li>
+                                <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${planPageBean.currentPage-1}">${planPageBean.currentPage-1}</a></li>--%>
                                 <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${planPageBean.currentPage}">${planPageBean.currentPage}</a></li>
                                 <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${planPageBean.currentPage+1}">${planPageBean.currentPage+1}</a></li>
                                 <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${planPageBean.currentPage+2}">${planPageBean.currentPage+2}</a></li>
 
                             </div>
                             <li class="nextPage"> > </li>
-                            <li class="lastPage">尾页</li>
-                            <li class="last" style="font-size: 14px;">
+                            <%--<li class="lastPage">尾页</li>--%>
+                            <%--<li class="last" style="font-size: 14px;">
                                 共<span class="totalPage"></span>页，跳转至 <input type="number" class="keuInput" value="1">
                                 <button type="button" class="btnSure">确定</button>
-                            </li>
+                            </li>--%>
+
+                                   <%-- <a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${page.firstPage}"><li class="firstPage">首页</li></a>
+                                    <c:if test="${page.hasPreviousPage}">
+                                        <a href="${pageContext.request.contextPath}/activity/getActivityByPage.action?currentPage=${page.prePage}">
+                                            <li class="prevPage"> < </li>
+                                        </a>
+                                    </c:if>
+                                    <div class="pageObj clearfix">
+                                        <c:if test="${page.hasPreviousPage}">
+                                            <a href="${pageContext.request.contextPath}/activity/getActivityByPage.action?currentPage=${page.prePage}">
+                                                <li class="thispage">${page.prePage}</li>
+                                            </a>
+                                        </c:if>
+                                        <a style="color:blue" href="${pageContext.request.contextPath}/activity/getActivityByPage.action?currentPage=${page.pageNum}">
+                                            <li class="thispage">${page.pageNum}</li>
+                                        </a>
+                                        <c:if test="${page.hasNextPage}">
+                                            <a href="${pageContext.request.contextPath}/activity/getActivityByPage.action?currentPage=${page.nextPage}">
+                                                <li class="thispage">${page.nextPage}</li>
+                                            </a>
+                                        </c:if>
+                                    </div>
+                                    <c:if test="${page.hasNextPage}">
+                                        <a href="${pageContext.request.contextPath}/activity/getActivityByPage.action?currentPage=${page.nextPage}">
+                                            <li class="nextPage"> > </li></a>
+                                    </c:if>
+                                    <a href="${pageContext.request.contextPath}/activity/getActivityByPage.action?currentPage=${page.lastPage}">
+                                        <li class="lastPage">尾页</li>
+                                    </a>
+                                    <li class="last" style="font-size: 14px;">
+                                        共<span class="totalPage">${page.pages}</span>页，跳转至 <input type="text" class="keuInput" id="pageNum">
+                                        <button type="button" class="btnSure" id="jumpBtn">确定</button><a href="" id="jumpa"></a>
+                                    </li>
+                                --%>
                         </ul>
                     </div>
                 </div>

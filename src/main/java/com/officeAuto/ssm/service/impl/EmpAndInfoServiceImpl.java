@@ -110,4 +110,9 @@ public class EmpAndInfoServiceImpl implements EmpAndInfoService {
         employeeAndInfoDao.forgetPassword(phone,password);
     }
 
+    @Override
+    public void add(EmployeeInfo employeeInfo) {
+        employeeAndInfoDao.add(employeeInfo);
+    }
+
 }

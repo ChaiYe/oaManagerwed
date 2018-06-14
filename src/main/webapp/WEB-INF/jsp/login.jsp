@@ -63,7 +63,7 @@
             <h2 id="welcome">欢迎登录</h2>
             <a href="javascript:void(0);" id="register">
                 <div id="register_msg" class="green">
-                    立即注册
+
                     <i class="layui-icon" style="font-size: 15px; color: #1E9FFF;">&#xe602;</i>
                 </div>
             </a>
@@ -88,7 +88,7 @@
 
         <div class="layui-form-item">
             <span></span>
-            <span><a href="#" id="forget">忘记密码</a></span>
+            <span><a href="${pageContext.request.contextPath}/employee/jumpToUpdate.action" id="forget">忘记密码</a></span>
         </div>
 
         <div>

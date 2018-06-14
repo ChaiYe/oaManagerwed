@@ -79,7 +79,7 @@
 
                     success:function(result){
                         console.log(result);
-                        alert(result);
+                        alert(result.toString());
 
                     },
                     error:function(e){

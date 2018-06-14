@@ -90,6 +90,11 @@
         </trim>
     </insert>
 
+
+    <insert id="add">
+
+    </insert>
+
     <update id="update" parameterType="com.officeAuto.ssm.model.Employee">
         update employee
         <set >

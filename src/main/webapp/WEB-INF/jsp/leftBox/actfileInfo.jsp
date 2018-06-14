@@ -46,7 +46,7 @@
                 <span class="panel-header-left">公告管理</span>
                 <span class="panel-header-right">
                         <a href="${pageContext.request.contextPath}/actfile/jumpToAdd.action" class="layui-btn layui-btn-sm panel-header-right-btn">添加</a>
-                        <a href="${pageContext.request.contextPath}/actfile/findone.action?id=100" class="layui-btn layui-btn-sm panel-header-right-btn">添加</a>
+
                     </span>
             </div>
             <div class="content-page">
@@ -55,18 +55,18 @@
                     <div style="margin-top: 24px">
                         <div style="display: inline;">
                             <div style="display: inline;">
-                                每页显示条数：<input type="text"/>
+                               <%-- 每页显示条数：<input type="text"/>--%>
                                 <a href="javascript:void(0);" onclick="deletes()">批量删除</a>
                             </div>
                         </div>
                         <div style="display: inline;float: right">
-                            <div style="display: inline;">
+                            <%--<div style="display: inline;">
                                 筛选：<input type="text" name="queryAcount1"/>
                                             ~
                                 <input type="text" name="queryAcount2">
 
                                 <input type="submit" value="提交">
-                            </div>
+                            </div>--%>
                         </div>
 
                     </div>
@@ -126,10 +126,10 @@
                             </div>
                             <li class="nextPage"> > </li>
                             <li class="lastPage">尾页</li>
-                            <li class="last" style="font-size: 14px;">
+                           <%-- <li class="last" style="font-size: 14px;">
                                 共<span class="totalPage"></span>页，跳转至 <input type="number" class="keuInput" value="1">
                                 <button type="button" class="btnSure">确定</button>
-                            </li>
+                            </li>--%>
                         </ul>
                     </div>
                 </div>

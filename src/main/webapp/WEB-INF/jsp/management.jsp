@@ -107,15 +107,15 @@
             <li class="layui-nav-item" style="float: right">
                 <a href=""><img src="http://t.cn/RCzsdCq" class="layui-nav-img">${sessionScope.employee.account}</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="javascript:;">个人主页</a></dd>
+                    <dd><a href="${pageContext.request.contextPath}/employee/infoEditPage.action">个人主页</a></dd>
                     <dd><a href="${pageContext.request.contextPath}/employee/logout.action" >注销</a></dd>
                 </dl>
             </li>
             <li class="layui-nav-item" style="float: right">
-                <a href="">公司公告<span class="layui-badge-dot"></span></a>
+                <a href="${pageContext.request.contextPath}/employee/employeeHome.action">公告<span class="layui-badge-dot"></span></a>
             </li>
             <li class="layui-nav-item" style="float: right">
-                <a href="" style="display: inline;padding-left: 0px">活动<span class="layui-badge-dot"></span></a>
+                <%--<a href="" style="display: inline;padding-left: 0px">活动<span class="layui-badge-dot"></span></a>--%>
             </li>
         </ul>
     </div>
@@ -128,39 +128,39 @@
                 <img src="../../img/OA管理系统.png" alt="OA管理系统" width="200px" height="45px" style="padding: 7px;"/>
             </li>
             <li class="layui-nav-item layui-nav-itemed">
-                <a href="javascript:;">默认展开</a>
+                <a href="javascript:;">个人任务</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="javascript:;">选项1</a></dd>
-                    <dd><a href="javascript:;">选项2</a></dd>
-                    <dd><a href="">跳转</a></dd>
+                    <dd><a href="${pageContext.request.contextPath}/plan/getPlanByPage.action" target="infoContent">个人计划</a></dd>
                 </dl>
-            </li>
+            </li>-
             <li class="layui-nav-item">
-                <a href="javascript:;">信息中心</a>
+                <a href="javascript:;">活动中心</a>
                 <dl class="layui-nav-child">
                     <dd><a href="${pageContext.request.contextPath}/activity/getActivityByPage.action" target="infoContent">活动管理</a></dd>
                     <dd><a href="${pageContext.request.contextPath}/actfile/getActfileByPage.action" target="infoContent">活动文件</a></dd>
                     <dd><a href="${pageContext.request.contextPath}/announce/getAnnounceByPage.action" target="infoContent">公告管理</a></dd>
-                    <dd><a href="${pageContext.request.contextPath}/actoption/getActoptionByPage.action" target="infoContent">投票管理</a></dd>
+                    <%--<dd><a href="${pageContext.request.contextPath}/actoption/getActoptionByPage.action" target="infoContent">投票管理</a></dd>--%>
                 </dl>
             </li>
+
+
             <li class="layui-nav-item">
                 <a href="javascript:;">人事管理</a>
                 <dl class="layui-nav-child">
                     <dd><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action" target="infoContent">部门管理</a></dd>
                     <dd><a href="${pageContext.request.contextPath}/job/getJobByPage.action" target="infoContent">职位管理</a></dd>
                     <dd><a href="${pageContext.request.contextPath}/employee/getEmployeeByPage.action" target="infoContent">员工管理</a></dd>
-                    <dd><a href="${pageContext.request.contextPath}/plan/getPlanByPage.action" target="infoContent">个人计划</a></dd>
-                    <dd><a href="">财务管理</a></dd>
+
+                   <%-- <dd><a href="">财务管理</a></dd>--%>
                 </dl>
             </li>
-            <li class="layui-nav-item">
+            <%--<li class="layui-nav-item">
                 <a href="javascript:;">系统管理</a>
                 <dl class="layui-nav-child">
                     <dd><a href="">角色授权</a></dd>
                     <dd><a href="">权限管理</a></dd>
                 </dl>
-            </li>
+            </li>--%>
         </ul>
 
     </div>

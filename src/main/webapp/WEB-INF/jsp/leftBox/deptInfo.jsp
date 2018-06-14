@@ -54,10 +54,10 @@
 
                 <div style="margin-top: 24px">
                     <div style="display: inline;">
-                        <div style="display: inline;">每页显示条数：<input type="text"/></div>
+                        <%--<div style="display: inline;">每页显示条数：<input type="text"/></div>--%>
                     </div>
                     <div style="display: inline;float: right">
-                        <div style="display: inline;">筛选：<input type="text"/></div>
+                       <%-- <div style="display: inline;">筛选：<input type="text"/></div>--%>
                     </div>
                 </div>
 
@@ -111,18 +111,18 @@
                             <li class="firstPage">首页</li>
                             <li class="prevPage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${deptPageBean.currentPage-1}"><</a>  </li>
 
-                                    <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${deptPageBean.currentPage-2}">${deptPageBean.currentPage-2}</a></li>
-                                    <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${deptPageBean.currentPage-1}">${deptPageBean.currentPage-1}</a></li>
+                                   <%-- <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${deptPageBean.currentPage-2}">${deptPageBean.currentPage-2}</a></li>
+                                    <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${deptPageBean.currentPage-1}">${deptPageBean.currentPage-1}</a></li>--%>
                                     <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${deptPageBean.currentPage}">${deptPageBean.currentPage}</a></li>
                                     <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${deptPageBean.currentPage+1}">${deptPageBean.currentPage+1}</a></li>
                                     <li class="thispage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${deptPageBean.currentPage+2}">${deptPageBean.currentPage+2}</a></li>
 
                             <li class="nextPage"><a href="${pageContext.request.contextPath}/dept/getDeptByPage.action?currentPage=${deptPageBean.currentPage+1}">> </a></li>
                             <li class="lastPage">尾页</li>
-                            <li class="last" style="font-size: 14px;">
+                           <%-- <li class="last" style="font-size: 14px;">
                                 共<span class="totalPage">${deptPageBean.totalPage}</span>页，跳转至 <input type="number" class="keuInput" value="1">
                                 <button type="button" class="btnSure">确定</button>
-                            </li>
+                            </li>--%>
                         </ul>
                     </div>
                 </div>

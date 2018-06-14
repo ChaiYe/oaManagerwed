@@ -163,5 +163,62 @@
     <update id="forgetPassword" >
        update employee inner join  employeeinfo on employee.uuid=employeeinfo.id set employee.password=#{passWord}  where employeeinfo.phone=#{phone}
     </update>
+    
+    
+    <insert id="add">
+        insert into employeeinfo
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="id != null" >
+                id,
+            </if>
+            <if test="name != null" >
+                name,
+            </if>
+            <if test="sex != null" >
+                sex,
+            </if>
+            <if test="age != null" >
+                age,
+            </if>
+            <if test="phone != null" >
+                phone,
+            </if>
+            <if test="email != null" >
+                email,
+            </if>
+            <if test="address != null" >
+            address,
+            </if>
+            <if test="image != null" >
+                image,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+        <if test="id != null" >
+            #{id,jdbcType=INTEGER},
+        </if>
+        <if test="name != null" >
+            #{name,jdbcType=VARCHAR},
+        </if>
+        <if test="sex != null" >
+            #{sex,jdbcType=VARCHAR},
+        </if>
+        <if test="age != null" >
+            #{age,jdbcType=VARCHAR},
+        </if>
+        <if test="phone != null" >
+            #{phone,jdbcType=VARCHAR},
+        </if>
+        <if test="email != null" >
+            #{email,jdbcType=VARCHAR},
+        </if>
+        <if test="address != null" >
+            #{address,jdbcType=VARCHAR},
+        </if>
+        <if test="image != null" >
+            #{image,jdbcType=LONGVARCHAR},
+        </if>
+        </trim>
+    </insert>
 
 </mapper>

@@ -18,32 +18,40 @@
         <div>亲，您已经投过票咯</div>
     </c:if>
 
+
+
     <c:if test="${vote!=null}">
-        <form class="layui-form layui-form-pane" action="${pageContext.request.contextPath}/actvote/insertSelect.action">
+        <c:choose>
+            <c:when test="${vote.endtime<date}">
+                <div>亲，投票已过期</div>
+            </c:when>
+            <c:otherwise>
+                 <form class="layui-form layui-form-pane" action="${pageContext.request.contextPath}/actvote/insertSelect.action">
 
-            <input type="hidden" name="vote" value="${vote.uuid}">
-            <div class="layui-form-item">
-                <div>
-                        ${vote.descript}
+                <input type="hidden" name="vote" value="${vote.uuid}">
+                <div class="layui-form-item">
+                    <div>
+                            ${vote.descript}
+                    </div>
+                    <div>
+                        <ul>
+                            <li><input type="radio" name="voted" value="${vote.optionA}" title="${vote.optionA}"></li>
+                            <li><input type="radio" name="voted" value="${vote.optionB}" title="${vote.optionB}"></li>
+                            <li><input type="radio" name="voted" value="${vote.optionC}" title="${vote.optionC}"></li>
+                            <li><input type="radio" name="voted" value="${vote.optionD}" title="${vote.optionD}"></li>
+                        </ul>
+
+                    </div>
                 </div>
-                <div>
-                    <ul>
-                        <li><input type="radio" name="voted" value="${vote.optionA}" title="${vote.optionA}"></li>
-                        <li><input type="radio" name="voted" value="${vote.optionB}" title="${vote.optionB}"></li>
-                        <li><input type="radio" name="voted" value="${vote.optionC}" title="${vote.optionC}"></li>
-                        <li><input type="radio" name="voted" value="${vote.optionD}" title="${vote.optionD}"></li>
-                    </ul>
-
-                </div>
-            </div>
 
 
-            <button type="submit" class="layui-btn">立即提交</button>
-            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                <button type="submit" class="layui-btn">立即提交</button>
+                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
 
 
-        </form>
-
+            </form>
+            </c:otherwise>
+        </c:choose>
     </c:if>
 
     <script>

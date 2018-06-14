@@ -16,6 +16,22 @@
 
         <input type="hidden" name="activity" value="${activity}">
 
+        <%--<div class="layui-form-item">
+                <label class="layui-form-label">部门</label>
+                <div class="layui-input-inline">
+                    <c:forEach items="" var="item">
+                        <select name="activity">
+                            <option value="">请选择问题</option>
+                            <option value="">请选择问题</option>
+                            <option value="">请选择问题</option>
+                            <option value="">请选择问题</option>
+                        </select>
+                        </c:forEach>
+                </div>
+        </div>--%>
+
+
+
         <div class="layui-form-item layui-form-text">
             <label class="layui-form-label">文本域</label>
             <div class="layui-input-block">
@@ -56,33 +72,58 @@
             <div class="layui-inline">
                 <label class="layui-form-label">结束时间</label>
                 <div class="layui-input-inline">
-                    <input type="text" name="endtime" id="date2"  placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+                    <input type="text" name="endtime" id="date2"  placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input" lay-filter="endtime">
                 </div>
             </div>
         </div>
 
-        <script>
-            layui.use(['form', 'layedit', 'laydate'], function(){
-                var form = layui.form
-                    ,layer = layui.layer
-                    ,layedit = layui.layedit
-                    ,laydate = layui.laydate;
 
-                //日期
-                laydate.render({
-                    elem: '#date1'
-                });
-                laydate.render({
-                    elem: '#date2'
-                });
-            });
-
-        </script>
         <button class="layui-btn" lay-submit="">立即提交</button>
         <button type="reset" class="layui-btn layui-btn-primary">重置</button>
 
 
     </form>
+
+
+    <script>
+        layui.use(['form', 'layedit', 'laydate'], function(){
+            var form = layui.form
+                ,layer = layui.layer
+                ,layedit = layui.layedit
+                ,laydate = layui.laydate;
+
+            //日期
+            laydate.render({
+                elem: '#date1'
+            });
+            laydate.render({
+                elem: '#date2'
+            });
+
+
+
+            form.verify({
+                endtime: function(value){
+                    var  begintiem=$("#date1").val();
+
+                    var endtime=$("#date2").val();
+                    alert("开始时间"+begintiem);
+                    console.log(begintiem);
+                    alert("结束时间"+endtime);
+                    console.log(endtiem);
+                    if(begintiem>endtime){
+                        return '结束时间必须大于开始时间';
+                    }
+                }
+
+            });
+
+
+
+        });
+
+    </script>
+
 </div>
 
 </body>

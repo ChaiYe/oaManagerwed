@@ -283,8 +283,11 @@
             size: 50px;
         }
         .item-panel{
-            line-height: 24px;
+
             color: #666666;
+        }
+        .item-content-main{
+            line-height: 24px;
         }
     </style>
 </head>
@@ -396,8 +399,7 @@
             </div>
 
         </div>
-        <div style="float: right"><a href="${pageContext.request.contextPath}/employee/jumpToUpdate.action">修改</a></div>
-        <div style="float: right"><a href="${pageContext.request.contextPath}/vote/jumpToPersonVote.action?voteId=2">投票</a></div>
+
     </div>
     <!--信息部分-->
     <div class="taskContent">
@@ -437,7 +439,7 @@
 
 
         <!--活动模块-->
-        <div style="flex-grow: 1;max-width: 50%">
+        <div style="flex-grow: 1;max-width: 50%;margin-top: 0px">
             <div>
                 <fieldset class="layui-elem-field layui-field-title">
                     <legend>近期活动</legend>
