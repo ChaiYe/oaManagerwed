@@ -8,33 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0bc6e281-01c3-4673-8e4b-0cb9b0897242" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActivityController.java" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActivityController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActvoteController.java" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/ActvoteController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/EmployeeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/EmployeeController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/interceptor/HandlerInterceptor1.java" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/interceptor/HandlerInterceptor1.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/ActvoteDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/ActvoteDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/EmployeeAndInfoDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/EmployeeAndInfoDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/EmployeeDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/EmployeeDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/VoteDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/dao/system/VoteDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/Actvote.java" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/Actvote.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/Vote.java" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/model/Vote.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/ActvoteService.java" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/ActvoteService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/EmpAndInfoService.java" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/EmpAndInfoService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/EmployeeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/EmployeeService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/ActvoteServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/ActvoteServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/EmpAndInfoServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/EmpAndInfoServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/EmployeeServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/service/impl/EmployeeServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/ActvoteDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/ActvoteDao.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/AnnounceDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/AnnounceDao.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/EmployeeAndInfoDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/EmployeeAndInfoDao.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/EmployeeDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/EmployeeDao.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/VoteDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapping/VoteDao.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/activityDetail.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/activityDetail.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employeeHome.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/employeeHome.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/actfileInfo.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/actfileInfo.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/jobInfo.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/jobInfo.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/planInfo.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/leftBox/planInfo.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -129,9 +102,14 @@
       <file leaf-file-name="AnnounceController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/AnnounceController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="249" column="29" lean-forward="false" selection-start-line="249" selection-start-column="29" selection-end-line="249" selection-end-column="29" />
-              <folding />
+            <state relative-caret-position="171">
+              <caret line="244" column="0" lean-forward="true" selection-start-line="244" selection-start-column="0" selection-end-line="244" selection-end-column="0" />
+              <folding>
+                <element signature="e#4280#4290#0" expanded="true" />
+                <element signature="e#6119#6139#0" expanded="true" />
+                <element signature="e#6197#6213#0" expanded="true" />
+                <element signature="e#6458#6468#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1047,7 +1025,7 @@
       <workItem from="1528876515005" duration="7638000" />
       <workItem from="1528890190779" duration="13967000" />
       <workItem from="1528934913077" duration="5504000" />
-      <workItem from="1528943060447" duration="72000" />
+      <workItem from="1528943060447" duration="122000" />
     </task>
     <task id="LOCAL-00001" summary="add sqlSessionTemplate">
       <created>1527601536294</created>
@@ -1112,7 +1090,14 @@
       <option name="project" value="LOCAL" />
       <updated>1528447960700</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="修改tomcat名为9&#10;sdks名为9">
+      <created>1528943177019</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1528943177019</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1148,7 +1133,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="372225000" />
+    <option name="totallyTimeSpent" value="372275000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1376,6 +1361,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="50" column="11" lean-forward="false" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1414,6 +1400,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3974">
           <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1421,6 +1408,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8352">
           <caret line="243" column="9" lean-forward="true" selection-start-line="243" selection-start-column="9" selection-end-line="243" selection-end-column="9" />
+          <folding>
+            <element signature="e#7099#7100#0" expanded="false" />
+            <element signature="e#7141#7142#0" expanded="false" />
+            <element signature="e#8342#8343#0" expanded="false" />
+            <element signature="e#8383#8384#0" expanded="false" />
+            <element signature="e#9120#9121#0" expanded="false" />
+            <element signature="e#9155#9156#0" expanded="false" />
+            <element signature="e#9264#9265#0" expanded="false" />
+            <element signature="e#9305#9306#0" expanded="false" />
+            <element signature="e#10335#10336#0" expanded="false" />
+            <element signature="e#10388#10389#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1487,6 +1486,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1508,6 +1508,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="407">
           <caret line="71" column="39" lean-forward="true" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1515,6 +1516,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
           <caret line="137" column="64" lean-forward="false" selection-start-line="137" selection-start-column="64" selection-end-line="137" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1552,6 +1554,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="9" column="39" lean-forward="false" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1566,6 +1569,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <element signature="e#506#507#0" expanded="false" />
+            <element signature="e#533#534#0" expanded="false" />
+            <element signature="e#574#575#0" expanded="false" />
+            <element signature="e#606#607#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1639,6 +1648,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="49" column="60" lean-forward="true" selection-start-line="49" selection-start-column="60" selection-end-line="49" selection-end-column="60" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1735,9 +1745,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/officeAuto/ssm/controller/AnnounceController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="249" column="29" lean-forward="false" selection-start-line="249" selection-start-column="29" selection-end-line="249" selection-end-column="29" />
-          <folding />
+        <state relative-caret-position="171">
+          <caret line="244" column="0" lean-forward="true" selection-start-line="244" selection-start-column="0" selection-end-line="244" selection-end-column="0" />
+          <folding>
+            <element signature="e#4280#4290#0" expanded="true" />
+            <element signature="e#6119#6139#0" expanded="true" />
+            <element signature="e#6197#6213#0" expanded="true" />
+            <element signature="e#6458#6468#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
