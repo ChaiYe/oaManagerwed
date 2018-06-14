@@ -152,10 +152,16 @@
         where uuid = #{uuid}
     </update>
 
-    <update id="updatePassWord">
+    <update id="updatePassWord" >
         update employee
         set password = #{passWord}
         where uuid = #{uuid}
+    </update>
+
+
+
+    <update id="forgetPassword" >
+       update employee inner join  employeeinfo on employee.uuid=employeeinfo.id set employee.password=#{passWord}  where employeeinfo.phone=#{phone}
     </update>
 
 </mapper>

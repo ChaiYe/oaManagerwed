@@ -127,4 +127,15 @@ public class ActvoteController {
         return "redirect:/actvote/getActvoteByPage.action";
     }
 
+    @RequestMapping("insertSelect")
+    public String insertSelect(HttpSession session,Actvote actvote) throws Exception {
+       Employee employee= (Employee) session.getAttribute("employee");
+       actvote.setVotetime(new Date());
+       actvote.setEmployee(employee.getUuid());
+
+        actvoteService.insert(actvote);
+
+        return  "redirect:/vote/jumpToPersonVote.action?voteId=2";
+    }
+
 }

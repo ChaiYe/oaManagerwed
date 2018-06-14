@@ -26,12 +26,18 @@
     where vote.activity = #{actid} and actoption.vote = vote.uuid
   </select>
 
+
+  <select id="findById" resultType="com.officeAuto.ssm.model.Vote">
+      select * from vote where uuid=#{id}
+  </select>
+
   <insert id="insert" parameterType="com.officeAuto.ssm.model.Vote">
     insert into vote (uuid, begintime, endtime,
-      activity, employee, descript
+      activity, employee, descript,optionA,optionB,optionC,optionD
       )
     values (#{uuid,jdbcType=INTEGER}, #{begintime,jdbcType=TIMESTAMP}, #{endtime,jdbcType=TIMESTAMP},
-      #{activity,jdbcType=INTEGER}, #{employee,jdbcType=INTEGER}, #{descript,jdbcType=LONGVARCHAR}
+      #{activity,jdbcType=INTEGER}, #{employee,jdbcType=INTEGER}, #{descript,jdbcType=LONGVARCHAR},#{optionA,jdbcType=VARCHAR},#{optionB,jdbcType=VARCHAR},
+      #{optionC,jdbcType=VARCHAR},#{optionD,jdbcType=VARCHAR}
       )
   </insert>
 

@@ -69,4 +69,14 @@ public interface ActvoteService {
      * @return 查询列表
      */
     public List<Actvote> findByPageQuery(PageBean<ActvoteQueryModel> pageBean) throws Exception;
+
+
+    /**
+     * 根据投票活动的编号和用户ID判断用户是否已经投过票
+     * @param voteId 投票活动的编号
+     * @param empId 用户ID
+     * @return
+     */
+    public Integer checkVoted(Integer voteId,Integer empId);
+
 }

@@ -77,9 +77,11 @@
                     <thead>
                     <tr>
                         <th></th>
-                        <th>公告标题</th>
-                        <th>公告详情</th>
-                        <th>日期</th>
+                        <th>存储地址</th>
+                        <th>文件名称</th>
+                        <th>文件格式</th>
+                        <th>文件大小</th>
+                        <th>提交时间</th>
                         <th>操作</th>
                     </tr>
                     </thead>
@@ -89,7 +91,7 @@
                         <c:forEach var="actfile" items="${actfilePageBean.datas}">
                             <tr class="oneMsg">
                                 <td><input type="checkbox" value="${actfile.uuid}" name="del"></td>
-                                <td><input type="text" value="${actfile.uuid}" readonly="readonly" class="inputs layui-input"/></td>
+                                <input type="hidden" value="${actfile.uuid}" readonly="readonly" class="inputs layui-input"/>
                                 <td><input type="text" value="${actfile.path}" readonly="readonly" class="inputs layui-input"/></td>
                                 <td><input type="text" value="${actfile.name}" readonly="readonly" class="inputs layui-input"/></td>
                                 <td><input type="text" value="${actfile.format}" readonly="readonly" class="inputs layui-input"/></td>
@@ -97,7 +99,7 @@
                                 <td><input type="text" value="${actfile.createtime}" readonly="readonly" class="inputs layui-input"/></td>
                                 <td>
                                     <a href="${pageContext.request.contextPath}/actfile/delete.action?uuid=${actfile.uuid}" class="layui-btn layui-btn-sm">删除</a>
-                                    <a href="${pageContext.request.contextPath}/actfile/jumpToEdit.action?uuid=${actfile.uuid}" class="layui-btn layui-btn-sm change">修改</a>
+
                                 </td>
                             </tr>
                         </c:forEach>

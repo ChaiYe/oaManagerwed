@@ -39,7 +39,7 @@
         <div class="crumbs-nav">
                 <span class="layui-breadcrumb">
                     <a href="" style="color: #00F7DE">信息中心</a>
-                    <a><cite style="color: #00F7DE">公告管理</cite></a>
+                    <a><cite style="color: #00F7DE">/公告管理</cite></a>
                 </span>
         </div>
         <div style="border: #009688 1px solid">
@@ -79,9 +79,11 @@
                     <thead>
                     <tr>
                         <th></th>
-                        <th>公告标题</th>
-                        <th>公告详情</th>
-                        <th>日期</th>
+                        <th>职位编号</th>
+                        <th>职位名称</th>
+                        <th>职位描述</th>
+                        <th>权限级别</th>
+                        <%--<th>创建日期</th>--%>
                         <th>操作</th>
                     </tr>
                     </thead>
@@ -91,11 +93,10 @@
                         <c:forEach var="job" items="${jobPageBean.datas}">
                             <tr class="oneMsg">
                                 <td><input type="checkbox" value="${job.uuid}" name="del"></td>
-                                <td><input type="text" value="${job.uuid}" readonly="readonly" class="inputs layui-input"/></td>
+                               <input type="hidden" value="${job.uuid}" readonly="readonly" class="inputs layui-input"/>
                                 <td><input type="text" value="${job.name}" readonly="readonly" class="inputs layui-input"/></td>
                                 <td><input type="text" value="${job.descript}" readonly="readonly" class="inputs layui-input"/></td>
-                                <td><input type="text" value="${job.authority}" readonly="readonly" class="inputs layui-input"/></td>
-                                <td><input type="text" value="${job.worktime}" readonly="readonly" class="inputs layui-input"/></td>
+                                <td><input type="text" value="${job.authority}" readonly="readonly" class="inputs layui-input"/></td><td><input type="text" value="${job.worktime}" readonly="readonly" class="inputs layui-input"/></td>
                                 <td>
                                     <a href="${pageContext.request.contextPath}/job/delete.action?uuid=${job.uuid}" class="layui-btn layui-btn-sm">删除</a>
                                     <a href="${pageContext.request.contextPath}/job/jumpToEdit.action?uuid=${job.uuid}" class="layui-btn layui-btn-sm change">修改</a>

@@ -79,9 +79,12 @@
                     <thead>
                     <tr>
                         <th></th>
-                        <th>公告标题</th>
-                        <th>公告详情</th>
-                        <th>日期</th>
+                        <%--<th>计划编号</th>--%>
+                        <th>计划详情</th>
+                        <th>创建日期</th>
+                        <th>开始日期</th>
+                        <th>结束日期</th>
+                        <th>状态</th>
                         <th>操作</th>
                     </tr>
                     </thead>
@@ -90,13 +93,13 @@
                     <c:if test="${!empty planPageBean.datas}">
                         <c:forEach var="plan" items="${planPageBean.datas}">
                             <tr class="oneMsg">
-                                <td><input type="checkbox" value="${plan.uuid}" name="del"></td>
-                                <td><input type="text" value="${plan.uuid}" readonly="readonly" class="inputs layui-input"/></td>
-                                <td><input type="text" value="${plan.descipt}" readonly="readonly" class="inputs layui-input"/></td>
-                                <td><input type="text" value="${plan.createtime}" readonly="readonly" class="inputs layui-input"/></td>
-                                <td><input type="text" value="${plan.begintime}" readonly="readonly" class="inputs layui-input"/></td>
-                                <td><input type="text" value="${plan.endtime}" readonly="readonly" class="inputs layui-input"/></td>
-                                <td><input type="text" value="${plan.state}" readonly="readonly" class="inputs layui-input"/></td>
+                                <td ><input type="checkbox" value="${plan.uuid}" name="del"></td>
+                                <input type="hidden" value="${plan.uuid}" readonly="readonly" class="inputs layui-input"/>
+                                <td style="width:32px;"><input type="text" value="${plan.descipt}" readonly="readonly" class="inputs layui-input"/></td>
+                                <td style="width:32px;"><input type="text" value="${plan.createtime}" readonly="readonly" class="inputs layui-input"/></td>
+                                <td style="width:32px;"><input type="text" value="${plan.begintime}" readonly="readonly" class="inputs layui-input"/></td>
+                                <td style="width:32px;"><input type="text" value="${plan.endtime}" readonly="readonly" class="inputs layui-input"/></td>
+                                <td style="width:24px;"><input type="text" value="${plan.state}" readonly="readonly" class="inputs layui-input"/></td>
                                 <td>
                                     <a href="${pageContext.request.contextPath}/plan/delete.action?uuid=${plan.uuid}" class="layui-btn layui-btn-sm">删除</a>
                                     <a href="${pageContext.request.contextPath}/plan/jumpToEdit.action?uuid=${plan.uuid}" class="layui-btn layui-btn-sm change">修改</a>

@@ -22,6 +22,11 @@
         select count(*) from employee
     </select>
 
+
+    <select id="findByPhone" resultType="java.lang.Integer">
+        select count(*) from employee,employeeInfo WHERE  employeeInfo.id=employee.uuid and employeeInfo.phone=#{phone}
+    </select>
+
     <select id="findById" resultType="com.officeAuto.ssm.model.Employee">
         select * from employee where uuid=#{id}
     </select>

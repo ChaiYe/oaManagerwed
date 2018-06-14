@@ -7,7 +7,7 @@ public class Actvote {
 
     private Date votetime;
 
-    private Integer actoption;
+    private Integer vote;
 
     private Integer employee;
 
@@ -27,12 +27,12 @@ public class Actvote {
         this.votetime = votetime;
     }
 
-    public Integer getActoption() {
-        return actoption;
+    public Integer getVote() {
+        return vote;
     }
 
-    public void setActoption(Integer actoption) {
-        this.actoption = actoption;
+    public void setVote(Integer vote) {
+        this.vote = vote;
     }
 
     public Integer getEmployee() {

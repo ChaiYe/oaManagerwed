@@ -114,5 +114,12 @@ public interface EmpAndInfoService {
      * @param uuid 主码
      * @param password 新密码
      */
-    void updatePassword(int uuid, String password);
+    void updatePassword(int uuid, String password) ;
+
+    /**
+     * 忘记密码
+     * @param phone 绑定的手机号
+     * @param password 新密码
+     */
+    void forgetPassword(String phone, String password);
 }

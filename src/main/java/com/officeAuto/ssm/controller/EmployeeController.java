@@ -225,6 +225,32 @@ public class EmployeeController {
     }
 
     /**
+     * 跳转修改密码页面
+     * @return
+     */
+    @RequestMapping("jumpToUpdate")
+    public String jumpToUpdate(){
+        return "retrieve_password";
+    }
+
+    @RequestMapping("forgetPassword")
+    public @ResponseBody String forgetPassword(String phone,String password){
+
+        Integer num=employeeService.findByPhone(phone);
+
+        if(num>0)
+        {
+                empAndInfoService.forgetPassword(phone,password);
+        }
+        else{
+            return "该手机号不存在";
+        }
+
+
+        return "成功更新密码";
+    }
+
+    /**
      * 更新密码
      * @param map
      * @param session

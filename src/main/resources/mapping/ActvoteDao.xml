@@ -55,8 +55,8 @@
             <if test="votetime != null" >
                 votetime,
             </if>
-            <if test="actoption != null" >
-                actoption,
+            <if test="vote != null" >
+                vote,
             </if>
             <if test="employee != null" >
                 employee,
@@ -69,8 +69,8 @@
             <if test="votetime != null" >
                 #{votetime,jdbcType=DATE},
             </if>
-            <if test="actoption != null" >
-                #{actoption,jdbcType=INTEGER},
+            <if test="vote!= null" >
+                #{vote,jdbcType=INTEGER},
             </if>
             <if test="employee != null" >
                 #{employee,jdbcType=INTEGER},
@@ -85,8 +85,8 @@
             <if test="votetime != null" >
                 votetime = #{votetime,jdbcType=DATE},
             </if>
-            <if test="actoption != null" >
-                actoption = #{actoption,jdbcType=INTEGER},
+            <if test="vote != null" >
+                vote = #{vote,jdbcType=INTEGER},
             </if>
             <if test="employee != null" >
                 employee = #{employee,jdbcType=INTEGER},
@@ -94,5 +94,10 @@
         </set>
         where uuid = #{uuid,jdbcType=INTEGER}
     </update>
-    
+
+
+    <select id="checkVoted" resultType="java.lang.Integer">
+          select count(*) from actvote WHERE vote=#{voteId} AND employee=#{empId}
+    </select>
+
 </mapper>

@@ -25,7 +25,7 @@ public class HandlerInterceptor1 implements HandlerInterceptor {
         // 截取/后的所有字符
         String clazzName = uri.substring(startLength + 1);
 
-        System.out.println("不来的胜多负少的"+clazzName);
+
 
         if("login.action".equals(clazzName)){
             return true;

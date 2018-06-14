@@ -150,7 +150,7 @@
                     layer.msg("总共要上传文件总数为："+(fail+success)+"\n"
                         +"其中上传成功文件数为："+success+"\n"
                         +"其中上传失败文件数为："+fail
-                    );
+                    )
                     files.getFiles();
                 }
             });
@@ -408,6 +408,11 @@
                             </div>
                         </div>
                         <%--里程碑--%>
+
+
+                         <div>
+                             <a href="${pageContext.request.contextPath}/vote/jumpToAddVote.action?activity=${activity.uuid}">添加投票</a>
+                         </div>
                         <div>
                             <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
                                 <legend>活动时间线：里程碑</legend>

@@ -105,4 +105,9 @@ public class EmpAndInfoServiceImpl implements EmpAndInfoService {
         employeeAndInfoDao.updatePassWord(uuid, password);
     }
 
+    @Override
+    public void forgetPassword(String phone, String password) {
+        employeeAndInfoDao.forgetPassword(phone,password);
+    }
+
 }

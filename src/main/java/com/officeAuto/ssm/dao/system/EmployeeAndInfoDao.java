@@ -64,4 +64,10 @@ public interface EmployeeAndInfoDao extends BaseDao<EmployeeAndInfo> {
      */
     Integer updatePassWord(@Param("uuid")int uuid, @Param("passWord")String passWord);
 
+    /**
+     * 忘记密码
+     * @param phone 绑定的手机号码
+     * @param password  新密码
+     */
+    void forgetPassword(@Param("phone")String phone, @Param("passWord")String password) ;
 }

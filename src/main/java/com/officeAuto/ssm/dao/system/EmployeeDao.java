@@ -13,4 +13,5 @@ public interface EmployeeDao extends BaseDao<Employee> {
 
     Employee findByUuid(@Param("uuid")int uuid);
 
+    Integer findByPhone(String phone);
 }

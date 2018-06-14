@@ -78,4 +78,11 @@ public interface EmployeeService {
      * @return
      */
     Employee login(String account, String password);
+
+    /**
+     * 根据用户电话查找用户
+     * @param phone
+     * @return
+     */
+    Integer  findByPhone(String phone);
 }

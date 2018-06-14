@@ -12,4 +12,7 @@ import java.util.List;
 public interface VoteDao extends BaseDao<Vote> {
 
     List<VoteQueryModel> getByAct(@Param("actid")Integer actid);
+
+
+
 }

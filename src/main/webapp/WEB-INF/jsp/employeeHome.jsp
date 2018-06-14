@@ -184,13 +184,21 @@
             margin: 5px;
         }
         .model-item-title{
-            font-size: 21px;
+            color:#333;
+            font-size: 18px;
             font-weight: bold;
+            padding: 10px 0;
         }
         .model-item-subtitle{
             color: #919191;
             font-size: x-small;
             padding-left: 3px;
+            padding-bottom: 5px;
+        }
+        .model-item-content{
+            padding: 10px 3px;
+            line-height: 24px;
+            color: #666;
         }
     </style>
     <%--弹出动画--%>
@@ -273,6 +281,10 @@
         }
         .btn-floating>i{
             size: 50px;
+        }
+        .item-panel{
+            line-height: 24px;
+            color: #666666;
         }
     </style>
 </head>
@@ -382,7 +394,10 @@
                     </c:otherwise>
                 </c:choose>
             </div>
+
         </div>
+        <div style="float: right"><a href="${pageContext.request.contextPath}/employee/jumpToUpdate.action">修改</a></div>
+        <div style="float: right"><a href="${pageContext.request.contextPath}/vote/jumpToPersonVote.action?voteId=2">投票</a></div>
     </div>
     <!--信息部分-->
     <div class="taskContent">
@@ -410,6 +425,7 @@
                                     部门：${job.depart.name}<br/>
                                     职位：${job.name}<br/>
                                     入职时间：<fmt:formatDate value="${job.worktime}" type="date" />
+                                    <%--添加职位信息分割线--%>
                                     <hr class="layui-bg-gray">
                                 </div>
                             </c:forEach>
@@ -421,7 +437,7 @@
 
 
         <!--活动模块-->
-        <div style="flex-grow: 1">
+        <div style="flex-grow: 1;max-width: 50%">
             <div>
                 <fieldset class="layui-elem-field layui-field-title">
                     <legend>近期活动</legend>
@@ -637,7 +653,7 @@
                     <a class="btn-floating orange modal-trigger" href="${pageContext.request.contextPath}/announce/addAnnouncePage.action" title="公告" style="transform: scaleY(1) scaleX(1) translateY(-60px) translateX(0px); opacity: 0;"><span style="font-size: 10px">发布公告</span></a>
                 </li>
                 <li>
-                    <a class="btn-floating blue modal-trigger" href="${pageContext.request.contextPath}/activity/addActivityPage.action" title="修改" style="transform: scaleY(1) scaleX(1) translateY(-55px) translateX(0px); opacity: 0;"><span style="font-size: 10px">发布活动</span></a>
+                    <a class="btn-floating blue modal-trigger" href="${pageContext.request.contextPath}/activity/addActivityPage.action" title="发布活动" style="transform: scaleY(1) scaleX(1) translateY(-55px) translateX(0px); opacity: 0;"><span style="font-size: 10px">发布活动</span></a>
                 </li>
             </ul>
         </div>

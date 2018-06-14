@@ -70,5 +70,10 @@ public class EmployeeServiceImpl implements EmployeeService {
         return employeeDao.findByActAndPwd(account,password);
     }
 
+    @Override
+    public Integer findByPhone(String phone) {
+        return employeeDao.findByPhone(phone);
+    }
+
 
 }

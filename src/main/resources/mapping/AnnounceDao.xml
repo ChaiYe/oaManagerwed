@@ -20,7 +20,15 @@
             <result column="dept_descript" jdbcType="LONGVARCHAR" property="descript" />
         </association>
     </resultMap>
-
+   <!-- <resultMap id="AnnounceDpets" type="com.officeAuto.ssm.model.AnnounceDpet" extends="ResultMapWithBLOBs">
+        <collection property="displayVenueReserveDtoList" ofType="com.officeAuto.ssm.model.Dept">
+            <association property="depart" javaType="com.officeAuto.ssm.model.Dept">
+                <id column="dept_uuid" jdbcType="INTEGER" property="uuid" />
+                <result column="name" jdbcType="VARCHAR" property="name" />
+                <result column="dept_descript" jdbcType="LONGVARCHAR" property="descript" />
+            </association>
+        </collection>
+    </resultMap>-->
 
 
     <select id="findByPage" resultType="com.officeAuto.ssm.model.Announce">
@@ -78,11 +86,11 @@
 
 
     <select id="findAllWithDept" resultMap="AnnounceDpet">
-        select distinct announce.createtime,dept.name,announce.title,announce.descript
+        select  announce.createtime,dept.name,announce.title,announce.descript
         from employee,job,dept,announce
         where employee.uuid=job.employee and job.dept=dept.uuid and dept.uuid=announce.dept and employee.uuid=#{id}
         order by announce.createtime desc
-        limit #{nowSize},1
+        limit #{nowSize},3
     </select>
 
 

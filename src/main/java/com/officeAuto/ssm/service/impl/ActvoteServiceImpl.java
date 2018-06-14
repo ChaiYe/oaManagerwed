@@ -72,4 +72,9 @@ public class ActvoteServiceImpl implements ActvoteService{
         return null;
         //return actvoteDao.findByPageQuery(pageBean);
     }
+
+    @Override
+    public Integer checkVoted(Integer voteId, Integer empId) {
+        return actvoteDao.checkVoted(voteId,empId);
+    }
 }

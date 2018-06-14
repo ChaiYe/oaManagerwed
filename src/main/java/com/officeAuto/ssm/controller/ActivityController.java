@@ -45,7 +45,7 @@ public class ActivityController {
     @ResponseBody
     public List<ActivityQueryModel> getRecentActivity(HttpSession session) throws Exception {
         //查出该员工所有不重复的部门
-        EmployeeAndInfo employeeAndInfo = (EmployeeAndInfo) session.getAttribute("employee");
+        EmployeeAndInfo employeeAndInfo = (EmployeeAndInfo)session .getAttribute("employee");
         List<JobQueryModel> jobs = employeeAndInfo.getJobs();
         List<JobQueryModel> list = Helper.jobNoRepeat(jobs);
 
